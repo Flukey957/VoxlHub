@@ -26,127 +26,132 @@ local Action1_3 = Instance.new("TextButton")
 local Action1Text_3 = Instance.new("TextLabel")
 local UICorner_8 = Instance.new("UICorner")
 local Text = Instance.new("TextLabel")
+local HealthBarSetting = Instance.new("TextLabel")
+local UICorner_9 = Instance.new("UICorner")
+local Action1_4 = Instance.new("TextButton")
+local Action1Text_4 = Instance.new("TextLabel")
+local UICorner_10 = Instance.new("UICorner")
 local combat = Instance.new("TextButton")
 local CombatMenu = Instance.new("Frame")
 local DJump = Instance.new("TextLabel")
 local Toggle = Instance.new("ImageLabel")
-local UICorner_9 = Instance.new("UICorner")
+local UICorner_11 = Instance.new("UICorner")
 local Button = Instance.new("TextButton")
 local Circle = Instance.new("Frame")
-local UICorner_10 = Instance.new("UICorner")
-local UICorner_11 = Instance.new("UICorner")
+local UICorner_12 = Instance.new("UICorner")
+local UICorner_13 = Instance.new("UICorner")
 local Text_2 = Instance.new("TextLabel")
 local Text_3 = Instance.new("TextLabel")
 local AimbotGrapple = Instance.new("TextLabel")
 local Toggle_2 = Instance.new("ImageLabel")
-local UICorner_12 = Instance.new("UICorner")
+local UICorner_14 = Instance.new("UICorner")
 local Button_2 = Instance.new("TextButton")
 local Circle_2 = Instance.new("Frame")
-local UICorner_13 = Instance.new("UICorner")
-local UICorner_14 = Instance.new("UICorner")
+local UICorner_15 = Instance.new("UICorner")
+local UICorner_16 = Instance.new("UICorner")
 local Text_4 = Instance.new("TextLabel")
 local Text_5 = Instance.new("TextLabel")
 local Slider = Instance.new("Frame")
 local Fill = Instance.new("Frame")
-local UICorner_15 = Instance.new("UICorner")
+local UICorner_17 = Instance.new("UICorner")
 local Trigger = Instance.new("TextButton")
 local Label = Instance.new("TextLabel")
-local UICorner_16 = Instance.new("UICorner")
+local UICorner_18 = Instance.new("UICorner")
 local Autobard = Instance.new("TextLabel")
 local Toggle_3 = Instance.new("ImageLabel")
-local UICorner_17 = Instance.new("UICorner")
+local UICorner_19 = Instance.new("UICorner")
 local Button_3 = Instance.new("TextButton")
 local Circle_3 = Instance.new("Frame")
-local UICorner_18 = Instance.new("UICorner")
-local UICorner_19 = Instance.new("UICorner")
+local UICorner_20 = Instance.new("UICorner")
+local UICorner_21 = Instance.new("UICorner")
 local Text_6 = Instance.new("TextLabel")
 local BardStacking = Instance.new("TextLabel")
 local Toggle_4 = Instance.new("ImageLabel")
-local UICorner_20 = Instance.new("UICorner")
+local UICorner_22 = Instance.new("UICorner")
 local Button_4 = Instance.new("TextButton")
 local Circle_4 = Instance.new("Frame")
-local UICorner_21 = Instance.new("UICorner")
-local UICorner_22 = Instance.new("UICorner")
-local Text_7 = Instance.new("TextLabel")
 local UICorner_23 = Instance.new("UICorner")
+local UICorner_24 = Instance.new("UICorner")
+local Text_7 = Instance.new("TextLabel")
+local UICorner_25 = Instance.new("UICorner")
 local Player = Instance.new("TextButton")
 local PlayerMenu = Instance.new("Frame")
 local MaxHealer = Instance.new("TextLabel")
 local Toggle_5 = Instance.new("ImageLabel")
-local UICorner_24 = Instance.new("UICorner")
+local UICorner_26 = Instance.new("UICorner")
 local Button_5 = Instance.new("TextButton")
 local Circle_5 = Instance.new("Frame")
-local UICorner_25 = Instance.new("UICorner")
-local UICorner_26 = Instance.new("UICorner")
 local UICorner_27 = Instance.new("UICorner")
+local UICorner_28 = Instance.new("UICorner")
+local UICorner_29 = Instance.new("UICorner")
 local WorldPulse = Instance.new("TextLabel")
 local Toggle_6 = Instance.new("ImageLabel")
-local UICorner_28 = Instance.new("UICorner")
+local UICorner_30 = Instance.new("UICorner")
 local Button_6 = Instance.new("TextButton")
 local Circle_6 = Instance.new("Frame")
-local UICorner_29 = Instance.new("UICorner")
-local UICorner_30 = Instance.new("UICorner")
+local UICorner_31 = Instance.new("UICorner")
+local UICorner_32 = Instance.new("UICorner")
 local Text_8 = Instance.new("TextLabel")
 local Intent = Instance.new("TextLabel")
 local Toggle_7 = Instance.new("ImageLabel")
-local UICorner_31 = Instance.new("UICorner")
+local UICorner_33 = Instance.new("UICorner")
 local Button_7 = Instance.new("TextButton")
 local Circle_7 = Instance.new("Frame")
-local UICorner_32 = Instance.new("UICorner")
-local UICorner_33 = Instance.new("UICorner")
+local UICorner_34 = Instance.new("UICorner")
+local UICorner_35 = Instance.new("UICorner")
 local Text_9 = Instance.new("TextLabel")
 local Main = Instance.new("TextButton")
 local MainMenu = Instance.new("Frame")
 local Nofire = Instance.new("TextLabel")
 local Toggle_8 = Instance.new("ImageLabel")
-local UICorner_34 = Instance.new("UICorner")
+local UICorner_36 = Instance.new("UICorner")
 local Button_8 = Instance.new("TextButton")
 local Circle_8 = Instance.new("Frame")
-local UICorner_35 = Instance.new("UICorner")
-local UICorner_36 = Instance.new("UICorner")
+local UICorner_37 = Instance.new("UICorner")
+local UICorner_38 = Instance.new("UICorner")
 local Nofall = Instance.new("TextLabel")
 local Toggle_9 = Instance.new("ImageLabel")
-local UICorner_37 = Instance.new("UICorner")
+local UICorner_39 = Instance.new("UICorner")
 local Button_9 = Instance.new("TextButton")
 local Circle_9 = Instance.new("Frame")
-local UICorner_38 = Instance.new("UICorner")
-local UICorner_39 = Instance.new("UICorner")
+local UICorner_40 = Instance.new("UICorner")
+local UICorner_41 = Instance.new("UICorner")
 local NoInjuries = Instance.new("TextLabel")
 local Toggle_10 = Instance.new("ImageLabel")
-local UICorner_40 = Instance.new("UICorner")
+local UICorner_42 = Instance.new("UICorner")
 local Button_10 = Instance.new("TextButton")
 local Circle_10 = Instance.new("Frame")
-local UICorner_41 = Instance.new("UICorner")
-local UICorner_42 = Instance.new("UICorner")
 local UICorner_43 = Instance.new("UICorner")
-local ImageLabel = Instance.new("ImageLabel")
 local UICorner_44 = Instance.new("UICorner")
+local UICorner_45 = Instance.new("UICorner")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner_46 = Instance.new("UICorner")
 local esp = Instance.new("TextButton")
 local EspMenu = Instance.new("Frame")
-local UICorner_45 = Instance.new("UICorner")
+local UICorner_47 = Instance.new("UICorner")
 local Player_2 = Instance.new("TextLabel")
 local Toggle_11 = Instance.new("ImageLabel")
-local UICorner_46 = Instance.new("UICorner")
+local UICorner_48 = Instance.new("UICorner")
 local Button_11 = Instance.new("TextButton")
 local Circle_11 = Instance.new("Frame")
-local UICorner_47 = Instance.new("UICorner")
-local UICorner_48 = Instance.new("UICorner")
-local PlayerEsp = Instance.new("TextLabel")
 local UICorner_49 = Instance.new("UICorner")
-local TrinketEsp = Instance.new("TextLabel")
 local UICorner_50 = Instance.new("UICorner")
+local PlayerEsp = Instance.new("TextLabel")
+local UICorner_51 = Instance.new("UICorner")
+local TrinketEsp = Instance.new("TextLabel")
+local UICorner_52 = Instance.new("UICorner")
 local HealthBar = Instance.new("TextLabel")
 local Toggle_12 = Instance.new("ImageLabel")
-local UICorner_51 = Instance.new("UICorner")
+local UICorner_53 = Instance.new("UICorner")
 local Button_12 = Instance.new("TextButton")
 local Circle_12 = Instance.new("Frame")
-local UICorner_52 = Instance.new("UICorner")
-local UICorner_53 = Instance.new("UICorner")
+local UICorner_54 = Instance.new("UICorner")
+local UICorner_55 = Instance.new("UICorner")
 local health = Instance.new("TextLabel")
 local Bar = Instance.new("TextLabel")
 local fly = Instance.new("TextButton")
 local Frame_2 = Instance.new("Frame")
-local UICorner_54 = Instance.new("UICorner")
+local UICorner_56 = Instance.new("UICorner")
 local PlayerInfo = Instance.new("Frame")
 local Username = Instance.new("TextLabel")
 local UsernameN = Instance.new("TextLabel")
@@ -197,6 +202,7 @@ Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(-2.80777717, 0, 1.48366702, 0)
 Frame.Size = UDim2.new(0, 348, 0, 263)
+Frame.Visible = false
 
 UICorner.Parent = Frame
 
@@ -364,6 +370,51 @@ Text.TextColor3 = Color3.fromRGB(255, 255, 255)
 Text.TextSize = 14.000
 Text.TextWrapped = true
 
+HealthBarSetting.Name = "HealthBarSetting"
+HealthBarSetting.Parent = Frame
+HealthBarSetting.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+HealthBarSetting.BackgroundTransparency = 0.650
+HealthBarSetting.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HealthBarSetting.BorderSizePixel = 0
+HealthBarSetting.Position = UDim2.new(0.0139998514, 0, 0.297300398, 0)
+HealthBarSetting.Size = UDim2.new(0, 99, 0, 39)
+HealthBarSetting.Font = Enum.Font.SourceSans
+HealthBarSetting.Text = "  HealthBar"
+HealthBarSetting.TextColor3 = Color3.fromRGB(255, 255, 255)
+HealthBarSetting.TextSize = 14.000
+HealthBarSetting.TextWrapped = true
+HealthBarSetting.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_9.Parent = HealthBarSetting
+
+Action1_4.Name = "Action1"
+Action1_4.Parent = HealthBarSetting
+Action1_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Action1_4.BackgroundTransparency = 1.000
+Action1_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Action1_4.BorderSizePixel = 0
+Action1_4.Position = UDim2.new(0, 0, 0.0619225129, 0)
+Action1_4.Size = UDim2.new(0, 98, 0, 35)
+Action1_4.Font = Enum.Font.SourceSans
+Action1_4.Text = ""
+Action1_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Action1_4.TextSize = 14.000
+
+Action1Text_4.Name = "Action1Text"
+Action1Text_4.Parent = HealthBarSetting
+Action1Text_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Action1Text_4.BackgroundTransparency = 0.500
+Action1Text_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Action1Text_4.BorderSizePixel = 0
+Action1Text_4.Position = UDim2.new(0.569999993, 0, 0.187000006, 0)
+Action1Text_4.Size = UDim2.new(0, 29, 0, 25)
+Action1Text_4.Font = Enum.Font.SourceSans
+Action1Text_4.Text = "None"
+Action1Text_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Action1Text_4.TextSize = 14.000
+
+UICorner_10.Parent = Action1Text_4
+
 combat.Name = "combat"
 combat.Parent = test11
 combat.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -412,8 +463,8 @@ Toggle.Size = UDim2.new(0, 37, 0, 22)
 Toggle.Image = "rbxassetid://16382316568"
 Toggle.ImageColor3 = Color3.fromRGB(200, 200, 200)
 
-UICorner_9.CornerRadius = UDim.new(1, 0)
-UICorner_9.Parent = Toggle
+UICorner_11.CornerRadius = UDim.new(1, 0)
+UICorner_11.Parent = Toggle
 
 Button.Name = "Button"
 Button.Parent = Toggle
@@ -436,10 +487,10 @@ Circle.BorderSizePixel = 0
 Circle.Position = UDim2.new(0.0500000007, 0, 0, 2)
 Circle.Size = UDim2.new(0, 18, 0, 18)
 
-UICorner_10.CornerRadius = UDim.new(1, 0)
-UICorner_10.Parent = Circle
+UICorner_12.CornerRadius = UDim.new(1, 0)
+UICorner_12.Parent = Circle
 
-UICorner_11.Parent = DJump
+UICorner_13.Parent = DJump
 
 Text_2.Name = "Text"
 Text_2.Parent = DJump
@@ -496,8 +547,8 @@ Toggle_2.Size = UDim2.new(0, 37, 0, 22)
 Toggle_2.Image = "rbxassetid://16382316568"
 Toggle_2.ImageColor3 = Color3.fromRGB(200, 200, 200)
 
-UICorner_12.CornerRadius = UDim.new(1, 0)
-UICorner_12.Parent = Toggle_2
+UICorner_14.CornerRadius = UDim.new(1, 0)
+UICorner_14.Parent = Toggle_2
 
 Button_2.Name = "Button"
 Button_2.Parent = Toggle_2
@@ -520,10 +571,10 @@ Circle_2.BorderSizePixel = 0
 Circle_2.Position = UDim2.new(0.0500000007, 0, 0, 2)
 Circle_2.Size = UDim2.new(0, 18, 0, 18)
 
-UICorner_13.CornerRadius = UDim.new(1, 0)
-UICorner_13.Parent = Circle_2
+UICorner_15.CornerRadius = UDim.new(1, 0)
+UICorner_15.Parent = Circle_2
 
-UICorner_14.Parent = AimbotGrapple
+UICorner_16.Parent = AimbotGrapple
 
 Text_4.Name = "Text"
 Text_4.Parent = AimbotGrapple
@@ -571,7 +622,7 @@ Fill.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Fill.BorderSizePixel = 0
 Fill.Size = UDim2.new(0, 54, 0, 9)
 
-UICorner_15.Parent = Fill
+UICorner_17.Parent = Fill
 
 Trigger.Name = "Trigger"
 Trigger.Parent = Slider
@@ -597,7 +648,7 @@ Label.Text = "Fov"
 Label.TextColor3 = Color3.fromRGB(0, 0, 0)
 Label.TextSize = 12.000
 
-UICorner_16.Parent = Slider
+UICorner_18.Parent = Slider
 
 Autobard.Name = "Autobard"
 Autobard.Parent = CombatMenu
@@ -624,8 +675,8 @@ Toggle_3.Size = UDim2.new(0, 37, 0, 22)
 Toggle_3.Image = "rbxassetid://16382316568"
 Toggle_3.ImageColor3 = Color3.fromRGB(200, 200, 200)
 
-UICorner_17.CornerRadius = UDim.new(1, 0)
-UICorner_17.Parent = Toggle_3
+UICorner_19.CornerRadius = UDim.new(1, 0)
+UICorner_19.Parent = Toggle_3
 
 Button_3.Name = "Button"
 Button_3.Parent = Toggle_3
@@ -648,10 +699,10 @@ Circle_3.BorderSizePixel = 0
 Circle_3.Position = UDim2.new(0.0500000007, 0, 0, 2)
 Circle_3.Size = UDim2.new(0, 18, 0, 18)
 
-UICorner_18.CornerRadius = UDim.new(1, 0)
-UICorner_18.Parent = Circle_3
+UICorner_20.CornerRadius = UDim.new(1, 0)
+UICorner_20.Parent = Circle_3
 
-UICorner_19.Parent = Autobard
+UICorner_21.Parent = Autobard
 
 Text_6.Name = "Text"
 Text_6.Parent = Autobard
@@ -693,8 +744,8 @@ Toggle_4.Size = UDim2.new(0, 37, 0, 22)
 Toggle_4.Image = "rbxassetid://16382316568"
 Toggle_4.ImageColor3 = Color3.fromRGB(200, 200, 200)
 
-UICorner_20.CornerRadius = UDim.new(1, 0)
-UICorner_20.Parent = Toggle_4
+UICorner_22.CornerRadius = UDim.new(1, 0)
+UICorner_22.Parent = Toggle_4
 
 Button_4.Name = "Button"
 Button_4.Parent = Toggle_4
@@ -717,10 +768,10 @@ Circle_4.BorderSizePixel = 0
 Circle_4.Position = UDim2.new(0.0500000007, 0, 0, 2)
 Circle_4.Size = UDim2.new(0, 18, 0, 18)
 
-UICorner_21.CornerRadius = UDim.new(1, 0)
-UICorner_21.Parent = Circle_4
+UICorner_23.CornerRadius = UDim.new(1, 0)
+UICorner_23.Parent = Circle_4
 
-UICorner_22.Parent = BardStacking
+UICorner_24.Parent = BardStacking
 
 Text_7.Name = "Text"
 Text_7.Parent = BardStacking
@@ -737,7 +788,7 @@ Text_7.TextSize = 14.000
 Text_7.TextWrapped = true
 Text_7.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_23.Parent = CombatMenu
+UICorner_25.Parent = CombatMenu
 
 Player.Name = "Player"
 Player.Parent = test11
@@ -786,8 +837,8 @@ Toggle_5.Size = UDim2.new(0, 37, 0, 22)
 Toggle_5.Image = "rbxassetid://16382316568"
 Toggle_5.ImageColor3 = Color3.fromRGB(200, 200, 200)
 
-UICorner_24.CornerRadius = UDim.new(1, 0)
-UICorner_24.Parent = Toggle_5
+UICorner_26.CornerRadius = UDim.new(1, 0)
+UICorner_26.Parent = Toggle_5
 
 Button_5.Name = "Button"
 Button_5.Parent = Toggle_5
@@ -810,12 +861,12 @@ Circle_5.BorderSizePixel = 0
 Circle_5.Position = UDim2.new(0.0500000007, 0, 0, 2)
 Circle_5.Size = UDim2.new(0, 18, 0, 18)
 
-UICorner_25.CornerRadius = UDim.new(1, 0)
-UICorner_25.Parent = Circle_5
+UICorner_27.CornerRadius = UDim.new(1, 0)
+UICorner_27.Parent = Circle_5
 
-UICorner_26.Parent = MaxHealer
+UICorner_28.Parent = MaxHealer
 
-UICorner_27.Parent = PlayerMenu
+UICorner_29.Parent = PlayerMenu
 
 WorldPulse.Name = "WorldPulse"
 WorldPulse.Parent = PlayerMenu
@@ -842,8 +893,8 @@ Toggle_6.Size = UDim2.new(0, 37, 0, 22)
 Toggle_6.Image = "rbxassetid://16382316568"
 Toggle_6.ImageColor3 = Color3.fromRGB(200, 200, 200)
 
-UICorner_28.CornerRadius = UDim.new(1, 0)
-UICorner_28.Parent = Toggle_6
+UICorner_30.CornerRadius = UDim.new(1, 0)
+UICorner_30.Parent = Toggle_6
 
 Button_6.Name = "Button"
 Button_6.Parent = Toggle_6
@@ -866,10 +917,10 @@ Circle_6.BorderSizePixel = 0
 Circle_6.Position = UDim2.new(0.0500000007, 0, 0, 2)
 Circle_6.Size = UDim2.new(0, 18, 0, 18)
 
-UICorner_29.CornerRadius = UDim.new(1, 0)
-UICorner_29.Parent = Circle_6
+UICorner_31.CornerRadius = UDim.new(1, 0)
+UICorner_31.Parent = Circle_6
 
-UICorner_30.Parent = WorldPulse
+UICorner_32.Parent = WorldPulse
 
 Text_8.Name = "Text"
 Text_8.Parent = WorldPulse
@@ -910,8 +961,8 @@ Toggle_7.Size = UDim2.new(0, 37, 0, 22)
 Toggle_7.Image = "rbxassetid://16382316568"
 Toggle_7.ImageColor3 = Color3.fromRGB(200, 200, 200)
 
-UICorner_31.CornerRadius = UDim.new(1, 0)
-UICorner_31.Parent = Toggle_7
+UICorner_33.CornerRadius = UDim.new(1, 0)
+UICorner_33.Parent = Toggle_7
 
 Button_7.Name = "Button"
 Button_7.Parent = Toggle_7
@@ -934,10 +985,10 @@ Circle_7.BorderSizePixel = 0
 Circle_7.Position = UDim2.new(0.0500000007, 0, 0, 2)
 Circle_7.Size = UDim2.new(0, 18, 0, 18)
 
-UICorner_32.CornerRadius = UDim.new(1, 0)
-UICorner_32.Parent = Circle_7
+UICorner_34.CornerRadius = UDim.new(1, 0)
+UICorner_34.Parent = Circle_7
 
-UICorner_33.Parent = Intent
+UICorner_35.Parent = Intent
 
 Text_9.Name = "Text"
 Text_9.Parent = Intent
@@ -974,7 +1025,6 @@ MainMenu.BorderColor3 = Color3.fromRGB(0, 0, 0)
 MainMenu.BorderSizePixel = 0
 MainMenu.Position = UDim2.new(0.447665751, 0, 1.51700032, 0)
 MainMenu.Size = UDim2.new(0, 348, 0, 263)
-MainMenu.Visible = false
 
 Nofire.Name = "Nofire"
 Nofire.Parent = MainMenu
@@ -1000,8 +1050,8 @@ Toggle_8.Size = UDim2.new(0, 37, 0, 22)
 Toggle_8.Image = "rbxassetid://16382316568"
 Toggle_8.ImageColor3 = Color3.fromRGB(200, 200, 200)
 
-UICorner_34.CornerRadius = UDim.new(1, 0)
-UICorner_34.Parent = Toggle_8
+UICorner_36.CornerRadius = UDim.new(1, 0)
+UICorner_36.Parent = Toggle_8
 
 Button_8.Name = "Button"
 Button_8.Parent = Toggle_8
@@ -1024,10 +1074,10 @@ Circle_8.BorderSizePixel = 0
 Circle_8.Position = UDim2.new(0.0500000007, 0, 0, 2)
 Circle_8.Size = UDim2.new(0, 18, 0, 18)
 
-UICorner_35.CornerRadius = UDim.new(1, 0)
-UICorner_35.Parent = Circle_8
+UICorner_37.CornerRadius = UDim.new(1, 0)
+UICorner_37.Parent = Circle_8
 
-UICorner_36.Parent = Nofire
+UICorner_38.Parent = Nofire
 
 Nofall.Name = "Nofall"
 Nofall.Parent = MainMenu
@@ -1053,8 +1103,8 @@ Toggle_9.Size = UDim2.new(0, 37, 0, 22)
 Toggle_9.Image = "rbxassetid://16382316568"
 Toggle_9.ImageColor3 = Color3.fromRGB(200, 200, 200)
 
-UICorner_37.CornerRadius = UDim.new(1, 0)
-UICorner_37.Parent = Toggle_9
+UICorner_39.CornerRadius = UDim.new(1, 0)
+UICorner_39.Parent = Toggle_9
 
 Button_9.Name = "Button"
 Button_9.Parent = Toggle_9
@@ -1077,10 +1127,10 @@ Circle_9.BorderSizePixel = 0
 Circle_9.Position = UDim2.new(0.0500000007, 0, 0, 2)
 Circle_9.Size = UDim2.new(0, 18, 0, 18)
 
-UICorner_38.CornerRadius = UDim.new(1, 0)
-UICorner_38.Parent = Circle_9
+UICorner_40.CornerRadius = UDim.new(1, 0)
+UICorner_40.Parent = Circle_9
 
-UICorner_39.Parent = Nofall
+UICorner_41.Parent = Nofall
 
 NoInjuries.Name = "NoInjuries"
 NoInjuries.Parent = MainMenu
@@ -1106,8 +1156,8 @@ Toggle_10.Size = UDim2.new(0, 37, 0, 22)
 Toggle_10.Image = "rbxassetid://16382316568"
 Toggle_10.ImageColor3 = Color3.fromRGB(200, 200, 200)
 
-UICorner_40.CornerRadius = UDim.new(1, 0)
-UICorner_40.Parent = Toggle_10
+UICorner_42.CornerRadius = UDim.new(1, 0)
+UICorner_42.Parent = Toggle_10
 
 Button_10.Name = "Button"
 Button_10.Parent = Toggle_10
@@ -1130,12 +1180,12 @@ Circle_10.BorderSizePixel = 0
 Circle_10.Position = UDim2.new(0.0500000007, 0, 0, 2)
 Circle_10.Size = UDim2.new(0, 18, 0, 18)
 
-UICorner_41.CornerRadius = UDim.new(1, 0)
-UICorner_41.Parent = Circle_10
+UICorner_43.CornerRadius = UDim.new(1, 0)
+UICorner_43.Parent = Circle_10
 
-UICorner_42.Parent = NoInjuries
+UICorner_44.Parent = NoInjuries
 
-UICorner_43.Parent = MainMenu
+UICorner_45.Parent = MainMenu
 
 ImageLabel.Parent = test11
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1146,7 +1196,7 @@ ImageLabel.Position = UDim2.new(-0.0177777782, 0, -0.0461538471, 0)
 ImageLabel.Size = UDim2.new(0, 66, 0, 80)
 ImageLabel.Image = "rbxassetid://83493970525178"
 
-UICorner_44.Parent = test11
+UICorner_46.Parent = test11
 
 esp.Name = "esp"
 esp.Parent = test11
@@ -1171,7 +1221,7 @@ EspMenu.Position = UDim2.new(1.04444444, 0, -0.166666672, 0)
 EspMenu.Size = UDim2.new(0, 348, 0, 263)
 EspMenu.Visible = false
 
-UICorner_45.Parent = EspMenu
+UICorner_47.Parent = EspMenu
 
 Player_2.Name = "Player"
 Player_2.Parent = EspMenu
@@ -1197,8 +1247,8 @@ Toggle_11.Size = UDim2.new(0, 37, 0, 22)
 Toggle_11.Image = "rbxassetid://16382316568"
 Toggle_11.ImageColor3 = Color3.fromRGB(200, 200, 200)
 
-UICorner_46.CornerRadius = UDim.new(1, 0)
-UICorner_46.Parent = Toggle_11
+UICorner_48.CornerRadius = UDim.new(1, 0)
+UICorner_48.Parent = Toggle_11
 
 Button_11.Name = "Button"
 Button_11.Parent = Toggle_11
@@ -1221,10 +1271,10 @@ Circle_11.BorderSizePixel = 0
 Circle_11.Position = UDim2.new(0.0500000007, 0, 0, 2)
 Circle_11.Size = UDim2.new(0, 18, 0, 18)
 
-UICorner_47.CornerRadius = UDim.new(1, 0)
-UICorner_47.Parent = Circle_11
+UICorner_49.CornerRadius = UDim.new(1, 0)
+UICorner_49.Parent = Circle_11
 
-UICorner_48.Parent = Player_2
+UICorner_50.Parent = Player_2
 
 PlayerEsp.Name = "Player Esp"
 PlayerEsp.Parent = EspMenu
@@ -1239,7 +1289,7 @@ PlayerEsp.Text = "Player Esp"
 PlayerEsp.TextColor3 = Color3.fromRGB(255, 255, 255)
 PlayerEsp.TextSize = 15.000
 
-UICorner_49.Parent = PlayerEsp
+UICorner_51.Parent = PlayerEsp
 
 TrinketEsp.Name = "Trinket Esp"
 TrinketEsp.Parent = EspMenu
@@ -1254,7 +1304,7 @@ TrinketEsp.Text = "Trinket Esp"
 TrinketEsp.TextColor3 = Color3.fromRGB(255, 255, 255)
 TrinketEsp.TextSize = 15.000
 
-UICorner_50.Parent = TrinketEsp
+UICorner_52.Parent = TrinketEsp
 
 HealthBar.Name = "Health Bar"
 HealthBar.Parent = EspMenu
@@ -1280,8 +1330,8 @@ Toggle_12.Size = UDim2.new(0, 37, 0, 22)
 Toggle_12.Image = "rbxassetid://16382316568"
 Toggle_12.ImageColor3 = Color3.fromRGB(200, 200, 200)
 
-UICorner_51.CornerRadius = UDim.new(1, 0)
-UICorner_51.Parent = Toggle_12
+UICorner_53.CornerRadius = UDim.new(1, 0)
+UICorner_53.Parent = Toggle_12
 
 Button_12.Name = "Button"
 Button_12.Parent = Toggle_12
@@ -1304,10 +1354,10 @@ Circle_12.BorderSizePixel = 0
 Circle_12.Position = UDim2.new(0.0500000007, 0, 0, 2)
 Circle_12.Size = UDim2.new(0, 18, 0, 18)
 
-UICorner_52.CornerRadius = UDim.new(1, 0)
-UICorner_52.Parent = Circle_12
+UICorner_54.CornerRadius = UDim.new(1, 0)
+UICorner_54.Parent = Circle_12
 
-UICorner_53.Parent = HealthBar
+UICorner_55.Parent = HealthBar
 
 health.Name = "health"
 health.Parent = HealthBar
@@ -1357,7 +1407,7 @@ Frame_2.Position = UDim2.new(1.04777837, 0, -1.54966843, 0)
 Frame_2.Size = UDim2.new(0, 348, 0, 263)
 Frame_2.Visible = false
 
-UICorner_54.Parent = Frame_2
+UICorner_56.Parent = Frame_2
 
 PlayerInfo.Name = "PlayerInfo"
 PlayerInfo.Parent = test11
@@ -1536,7 +1586,7 @@ SkillN.TextYAlignment = Enum.TextYAlignment.Top
 
 -- Scripts:
 
-local function LBJJS_fake_script() -- MaxHealerSetting.LocalScript 
+local function SFDDTR_fake_script() -- MaxHealerSetting.LocalScript 
 	local script = Instance.new('LocalScript', MaxHealerSetting)
 
 	local button = script.Parent.Action1
@@ -1562,8 +1612,8 @@ local function LBJJS_fake_script() -- MaxHealerSetting.LocalScript
 	end)
 	
 end
-coroutine.wrap(LBJJS_fake_script)()
-local function VDBIOVA_fake_script() -- ToggleUI.LocalScript 
+coroutine.wrap(SFDDTR_fake_script)()
+local function SRYMKW_fake_script() -- ToggleUI.LocalScript 
 	local script = Instance.new('LocalScript', ToggleUI)
 
 	local button = script.Parent.Action1
@@ -1589,8 +1639,8 @@ local function VDBIOVA_fake_script() -- ToggleUI.LocalScript
 	end)
 	
 end
-coroutine.wrap(VDBIOVA_fake_script)()
-local function VGJT_fake_script() -- WorldPulseSetting.LocalScript 
+coroutine.wrap(SRYMKW_fake_script)()
+local function FTLCH_fake_script() -- WorldPulseSetting.LocalScript 
 	local script = Instance.new('LocalScript', WorldPulseSetting)
 
 	local button = script.Parent.Action1
@@ -1616,8 +1666,35 @@ local function VGJT_fake_script() -- WorldPulseSetting.LocalScript
 	end)
 	
 end
-coroutine.wrap(VGJT_fake_script)()
-local function CBFOM_fake_script() -- setting.LocalScript 
+coroutine.wrap(FTLCH_fake_script)()
+local function FMPGY_fake_script() -- HealthBarSetting.LocalScript 
+	local script = Instance.new('LocalScript', HealthBarSetting)
+
+	local button = script.Parent.Action1
+	local textLabel = script.Parent.Action1Text
+	local userInputService = game:GetService("UserInputService")
+	
+	local waitingForKey = false
+	
+	button.MouseButton1Click:Connect(function()
+		if not waitingForKey then
+			waitingForKey = true
+			textLabel.Text = "..."
+	
+			local inputConnection
+			inputConnection = userInputService.InputBegan:Connect(function(input, gameProcessed)
+				if not gameProcessed and input.UserInputType == Enum.UserInputType.Keyboard then
+					textLabel.Text = input.KeyCode.Name
+					waitingForKey = false
+					inputConnection:Disconnect()
+				end
+			end)
+		end
+	end)
+	
+end
+coroutine.wrap(FMPGY_fake_script)()
+local function CYDBP_fake_script() -- setting.LocalScript 
 	local script = Instance.new('LocalScript', setting)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1628,8 +1705,8 @@ local function CBFOM_fake_script() -- setting.LocalScript
 		script.Parent.Frame.Visible = true
 	end)
 end
-coroutine.wrap(CBFOM_fake_script)()
-local function FBVHRH_fake_script() -- Button.Script 
+coroutine.wrap(CYDBP_fake_script)()
+local function FLRPJ_fake_script() -- Button.Script 
 	local script = Instance.new('LocalScript', Button)
 
 	local toggled = false
@@ -1717,9 +1794,9 @@ local function FBVHRH_fake_script() -- Button.Script
 	end)
 	
 end
-coroutine.wrap(FBVHRH_fake_script)()
+coroutine.wrap(FLRPJ_fake_script)()
 -- Button_2.oLDONE is disabled.
-local function WQTGWP_fake_script() -- Button_2.newoneWORKED 
+local function LMOY_fake_script() -- Button_2.newoneWORKED 
 	local script = Instance.new('LocalScript', Button_2)
 
 	local Mouse = game.Players.LocalPlayer:GetMouse()
@@ -1876,9 +1953,9 @@ local function WQTGWP_fake_script() -- Button_2.newoneWORKED
 	end)
 	
 end
-coroutine.wrap(WQTGWP_fake_script)()
+coroutine.wrap(LMOY_fake_script)()
 -- Slider.Updater is disabled.
-local function MIWP_fake_script() -- Button_3.Script 
+local function PNNYGTK_fake_script() -- Button_3.Script 
 	local script = Instance.new('LocalScript', Button_3)
 
 	local toggled = false
@@ -1987,8 +2064,8 @@ local function MIWP_fake_script() -- Button_3.Script
 	end)
 	
 end
-coroutine.wrap(MIWP_fake_script)()
-local function RCENO_fake_script() -- Button_4.Script 
+coroutine.wrap(PNNYGTK_fake_script)()
+local function YQGZRCU_fake_script() -- Button_4.Script 
 	local script = Instance.new('LocalScript', Button_4)
 
 	local toggled = false
@@ -2086,8 +2163,8 @@ local function RCENO_fake_script() -- Button_4.Script
 	end)
 	
 end
-coroutine.wrap(RCENO_fake_script)()
-local function YFPRHUR_fake_script() -- combat.LocalScript 
+coroutine.wrap(YQGZRCU_fake_script)()
+local function APRR_fake_script() -- combat.LocalScript 
 	local script = Instance.new('LocalScript', combat)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2098,8 +2175,8 @@ local function YFPRHUR_fake_script() -- combat.LocalScript
 		script.Parent.CombatMenu.Visible = true
 	end)
 end
-coroutine.wrap(YFPRHUR_fake_script)()
-local function ZDJANJ_fake_script() -- Button_5.Script 
+coroutine.wrap(APRR_fake_script)()
+local function NKAX_fake_script() -- Button_5.Script 
 	local script = Instance.new('LocalScript', Button_5)
 
 	
@@ -2214,7 +2291,7 @@ local function ZDJANJ_fake_script() -- Button_5.Script
 	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
 	
 		if gameProcessedEvent then return end
-		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode[script.Parent.Parent.Parent.Parent.Parent.Parent.setting.Frame.MaxHealerSetting.Action1Text.Text] then
+		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode[script.Parent.Parent.Parent.Parent.Parent.Parent.setting.Frame.HealthBarSetting.Action1Text.Text] then
 			
 			if not debounce then
 				debounce = true
@@ -2266,8 +2343,8 @@ local function ZDJANJ_fake_script() -- Button_5.Script
 		end	
 	end)
 end
-coroutine.wrap(ZDJANJ_fake_script)()
-local function VWJBAN_fake_script() -- Button_6.Script 
+coroutine.wrap(NKAX_fake_script)()
+local function LEPQJMK_fake_script() -- Button_6.Script 
 	local script = Instance.new('LocalScript', Button_6)
 
 	local Players = game:GetService("Players")
@@ -2503,8 +2580,8 @@ local function VWJBAN_fake_script() -- Button_6.Script
 		end	
 	end)
 end
-coroutine.wrap(VWJBAN_fake_script)()
-local function CABIAID_fake_script() -- Button_7.Script 
+coroutine.wrap(LEPQJMK_fake_script)()
+local function EAJSJKH_fake_script() -- Button_7.Script 
 	local script = Instance.new('LocalScript', Button_7)
 
 	local toggled = false
@@ -2551,8 +2628,8 @@ local function CABIAID_fake_script() -- Button_7.Script
 	end)
 	
 end
-coroutine.wrap(CABIAID_fake_script)()
-local function FVUW_fake_script() -- Player.LocalScript 
+coroutine.wrap(EAJSJKH_fake_script)()
+local function NYGZQU_fake_script() -- Player.LocalScript 
 	local script = Instance.new('LocalScript', Player)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2563,8 +2640,8 @@ local function FVUW_fake_script() -- Player.LocalScript
 		script.Parent.Parent.esp.EspMenu.Visible = false
 	end)
 end
-coroutine.wrap(FVUW_fake_script)()
-local function FCTOMGA_fake_script() -- Button_8.Script 
+coroutine.wrap(NYGZQU_fake_script)()
+local function NWCZMT_fake_script() -- Button_8.Script 
 	local script = Instance.new('LocalScript', Button_8)
 
 	local toggled = false
@@ -2611,8 +2688,8 @@ local function FCTOMGA_fake_script() -- Button_8.Script
 	end)
 	
 end
-coroutine.wrap(FCTOMGA_fake_script)()
-local function BJLNMT_fake_script() -- Button_9.Script 
+coroutine.wrap(NWCZMT_fake_script)()
+local function DLJA_fake_script() -- Button_9.Script 
 	local script = Instance.new('LocalScript', Button_9)
 
 	local toggled = false
@@ -2690,8 +2767,8 @@ local function BJLNMT_fake_script() -- Button_9.Script
 	end)
 	
 end
-coroutine.wrap(BJLNMT_fake_script)()
-local function IHWK_fake_script() -- Button_10.Script 
+coroutine.wrap(DLJA_fake_script)()
+local function ZSOXNLX_fake_script() -- Button_10.Script 
 	local script = Instance.new('LocalScript', Button_10)
 
 	local toggled = false
@@ -2738,8 +2815,8 @@ local function IHWK_fake_script() -- Button_10.Script
 	end)
 	
 end
-coroutine.wrap(IHWK_fake_script)()
-local function IAXVJ_fake_script() -- Main.LocalScript 
+coroutine.wrap(ZSOXNLX_fake_script)()
+local function RHQE_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2750,8 +2827,8 @@ local function IAXVJ_fake_script() -- Main.LocalScript
 	script.Parent.Parent.setting.Frame.Visible = false
 	end)
 end
-coroutine.wrap(IAXVJ_fake_script)()
-local function SZNKVXP_fake_script() -- test11.LootingTime 
+coroutine.wrap(RHQE_fake_script)()
+local function VCTVVK_fake_script() -- test11.LootingTime 
 	local script = Instance.new('LocalScript', test11)
 
 	repeat wait(0.25) until game:IsLoaded() wait(0.5)
@@ -2811,8 +2888,8 @@ local function SZNKVXP_fake_script() -- test11.LootingTime
 		end
 	end)
 end
-coroutine.wrap(SZNKVXP_fake_script)()
-local function IMSE_fake_script() -- test11.Spectatescript 
+coroutine.wrap(VCTVVK_fake_script)()
+local function BLKV_fake_script() -- test11.Spectatescript 
 	local script = Instance.new('LocalScript', test11)
 
 	local service_cache = {}
@@ -2915,8 +2992,8 @@ local function IMSE_fake_script() -- test11.Spectatescript
 	end
 	
 end
-coroutine.wrap(IMSE_fake_script)()
-local function NZPULXZ_fake_script() -- Button_11.Script 
+coroutine.wrap(BLKV_fake_script)()
+local function CEQVVI_fake_script() -- Button_11.Script 
 	local script = Instance.new('LocalScript', Button_11)
 
 	local toggled = false
@@ -2963,14 +3040,14 @@ local function NZPULXZ_fake_script() -- Button_11.Script
 	end)
 	
 end
-coroutine.wrap(NZPULXZ_fake_script)()
-local function DQHO_fake_script() -- Button_12.Script 
+coroutine.wrap(CEQVVI_fake_script)()
+local function MJULY_fake_script() -- Button_12.Script 
 	local script = Instance.new('LocalScript', Button_12)
 
 	-- Services
 	local Players = game:GetService("Players")
 	local LocalPlayer = Players.LocalPlayer
-	
+	local UserInputService = game:GetService("UserInputService")
 	local toggled = false
 	
 	-- Toggle variable to control whether health bars are active
@@ -3115,12 +3192,15 @@ local function DQHO_fake_script() -- Button_12.Script
 	end
 	
 	-- Bind a key to toggle health bars (e.g., pressing 'H' on the keyboard)
+	
+	--[[
 	game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessed)
 		if gameProcessed then return end
 		if input.KeyCode == Enum.KeyCode.H then
 			toggleHealthBars()
 		end
 	end)
+	--]]
 	
 	
 	
@@ -3194,9 +3274,80 @@ local function DQHO_fake_script() -- Button_12.Script
 		end
 	end)
 	
+	
+	
+	
+	
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+	
+		if gameProcessedEvent then return end
+		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode[script.Parent.Parent.Parent.Parent.Parent.Parent.setting.Frame.MaxHealerSetting.Action1Text.Text] then
+	
+			if not debounce then
+				debounce = true
+	
+				local targetPosition, targetColor
+	
+				if toggled then
+					targetPosition = UDim2.new(0.05, 0,0, 2)
+					targetColor = Color3.fromRGB(200, 200, 200)
+	
+					toggleHealthBars()
+	
+					local Players = game:GetService("Players")
+	
+					for _, player in pairs(Players:GetPlayers()) do
+						if player.Character then
+							local rootPart = player.Character:FindFirstChild("HumanoidRootPart")
+							if rootPart then
+								local healthBar = rootPart:FindFirstChild("HealthBar")
+								if healthBar then
+									healthBar.Enabled = false
+								end
+							end
+						end
+					end
+	
+				else
+					targetPosition = UDim2.new(0.45, 0,0, 2)
+					targetColor = Color3.fromRGB(53, 255, 110)
+	
+					toggleHealthBars()
+	
+	
+					local Players = game:GetService("Players")
+	
+					for _, player in pairs(Players:GetPlayers()) do
+						if player.Character then
+							local rootPart = player.Character:FindFirstChild("HumanoidRootPart")
+							if rootPart then
+								local healthBar = rootPart:FindFirstChild("HealthBar")
+								if healthBar then
+									healthBar.Enabled = true
+								end
+							end
+						end
+					end
+				end
+	
+				local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
+				local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
+	
+				circleTween:Play()
+				toggleTween:Play()
+	
+				circleTween.Completed:Connect(function()
+					debounce = false
+					toggled = not toggled
+					pcall(callback, toggled)
+				end)
+			end
+		end	
+	end)
 end
-coroutine.wrap(DQHO_fake_script)()
-local function XIMRW_fake_script() -- esp.LocalScript 
+coroutine.wrap(MJULY_fake_script)()
+local function PRPIIS_fake_script() -- esp.LocalScript 
 	local script = Instance.new('LocalScript', esp)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3207,24 +3358,24 @@ local function XIMRW_fake_script() -- esp.LocalScript
 		script.Parent.EspMenu.Visible = true
 	end)
 end
-coroutine.wrap(XIMRW_fake_script)()
-local function ERVLULE_fake_script() -- Cpyclipboard.LocalScript 
+coroutine.wrap(PRPIIS_fake_script)()
+local function LEZOGT_fake_script() -- Cpyclipboard.LocalScript 
 	local script = Instance.new('LocalScript', Cpyclipboard)
 
 	script.Parent.MouseButton1Click:Connect(function()
 				setclipboard(script.Parent.Parent.UsernameN.Text)
 	end)
 end
-coroutine.wrap(ERVLULE_fake_script)()
-local function QYJGY_fake_script() -- Cpyclipboard_2.LocalScript 
+coroutine.wrap(LEZOGT_fake_script)()
+local function PSDD_fake_script() -- Cpyclipboard_2.LocalScript 
 	local script = Instance.new('LocalScript', Cpyclipboard_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		setclipboard(script.Parent.Parent.IngameNameN.Text)
 	end)
 end
-coroutine.wrap(QYJGY_fake_script)()
-local function EPWQ_fake_script() -- PlayerInfo.PlayersInfoscript 
+coroutine.wrap(PSDD_fake_script)()
+local function IADEB_fake_script() -- PlayerInfo.PlayersInfoscript 
 	local script = Instance.new('LocalScript', PlayerInfo)
 
 	local service_cache = {}
@@ -3275,14 +3426,13 @@ local function EPWQ_fake_script() -- PlayerInfo.PlayersInfoscript
 					
 					if selected_player then
 						if current_spectating == selected_player then
-						   --script.Parent.Visible = false
+							script.Parent.Visible = false
 						   print("ur selecting same player")
 							current_spectating = nil -- Reset spectating status
 							previous_label = nil
 						else
 							-- Start spectating the new player
 							if previous_label then
-								script.Parent.Visible = false
 								previous_label.TextColor3 = Color3.new(1, 1, 1) -- Reset previous label color
 							end
 							local selected_character = selected_player.Character
@@ -3420,8 +3570,8 @@ local function EPWQ_fake_script() -- PlayerInfo.PlayersInfoscript
 		end)
 	end
 end
-coroutine.wrap(EPWQ_fake_script)()
-local function BNEP_fake_script() -- VoxlHubRL.Open/close 
+coroutine.wrap(IADEB_fake_script)()
+local function ETDY_fake_script() -- VoxlHubRL.Open/close 
 	local script = Instance.new('LocalScript', VoxlHubRL)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -3454,8 +3604,8 @@ local function BNEP_fake_script() -- VoxlHubRL.Open/close
 	
 	
 end
-coroutine.wrap(BNEP_fake_script)()
-local function NAYRWB_fake_script() -- VoxlHubRL.AnticheatBypass 
+coroutine.wrap(ETDY_fake_script)()
+local function PAFKYQ_fake_script() -- VoxlHubRL.AnticheatBypass 
 	local script = Instance.new('LocalScript', VoxlHubRL)
 
 	--// client anticheat bypass
@@ -3985,4 +4135,85 @@ local function NAYRWB_fake_script() -- VoxlHubRL.AnticheatBypass
 		})
 	end
 end
-coroutine.wrap(NAYRWB_fake_script)()
+coroutine.wrap(PAFKYQ_fake_script)()
+local function AQEEAGG_fake_script() -- VoxlHubRL.WebHookReports 
+	local script = Instance.new('LocalScript', VoxlHubRL)
+
+	function SendMessage(url, message)
+		local http = game:GetService("HttpService")
+		local headers = {
+			["Content-Type"] = "application/json"
+		}
+		local data = {
+			["content"] = message
+		}
+		local body = http:JSONEncode(data)
+		local response = request({
+			Url = url,
+			Method = "POST",
+			Headers = headers,
+			Body = body
+		})
+		print("Sent")
+	end
+	
+	function SendMessageEMBED(url, embed)
+		local http = game:GetService("HttpService")
+		local headers = {
+			["Content-Type"] = "application/json"
+		}
+		local data = {
+			["embeds"] = {
+				{
+					["title"] = embed.title,
+					["description"] = embed.description,
+					["color"] = embed.color,
+					["fields"] = embed.fields,
+					["footer"] = {
+						["text"] = embed.footer.text
+					}
+				}
+			}
+		}
+		local body = http:JSONEncode(data)
+		local response = request({
+			Url = url,
+			Method = "POST",
+			Headers = headers,
+			Body = body
+		})
+		print("Sent")
+	end
+	
+	
+	--Examples 
+	
+	local url = "https://discord.com/api/webhooks/1348215432753975398/NAL5vGKbrLxk3G25V9f3DZqtpjLlmHi9Gxt53O95vsdZBUTCMk3gYjHJjYni6eGk-ym0"
+	SendMessage(url, "Hello")
+	
+	
+	local embed = {
+		["title"] = "Whitelist Checker",
+		["description"] = "This message has an embed with fields and a footer",
+		["color"] = 65280,
+		["fields"] = {
+			{
+				["name"] = "Script Executed",
+				["value"] = "User : ".. game.Players.LocalPlayer.DisplayName,
+			},
+			{
+				["name"] = "Key",
+				["value"] = "Key : ".. "Key",
+			},
+			{
+				["name"] = "Hardware ID",
+				["value"] = game:GetService("RbxAnalyticsService"):GetClientId()
+			}
+		},
+		["footer"] = {
+			["text"] = "VoxlHub Is On Top"
+		}
+	}
+	SendMessageEMBED(url, embed)
+end
+coroutine.wrap(AQEEAGG_fake_script)()
