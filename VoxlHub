@@ -179,7 +179,7 @@ test11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 test11.BackgroundTransparency = 0.600
 test11.BorderColor3 = Color3.fromRGB(0, 0, 0)
 test11.BorderSizePixel = 0
-test11.Position = UDim2.new(0.68190819, 0, 0.567372441, 0)
+test11.Position = UDim2.new(0.760, 0, 0.665, 0)
 test11.Size = UDim2.new(0, 450, 0, 325)
 
 setting.Name = "setting"
@@ -1415,9 +1415,8 @@ PlayerInfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 PlayerInfo.BackgroundTransparency = 0.600
 PlayerInfo.BorderColor3 = Color3.fromRGB(0, 0, 0)
 PlayerInfo.BorderSizePixel = 0
-PlayerInfo.Position = UDim2.new(-0.615555584, 0, 0, 0)
+PlayerInfo.Position = UDim2.new(0.2588889, 0, -1.54461539, 0)
 PlayerInfo.Size = UDim2.new(0, 243, 0, 322)
-PlayerInfo.Visible = false
 
 Username.Name = "Username"
 Username.Parent = PlayerInfo
@@ -1586,7 +1585,7 @@ SkillN.TextYAlignment = Enum.TextYAlignment.Top
 
 -- Scripts:
 
-local function SFDDTR_fake_script() -- MaxHealerSetting.LocalScript 
+local function NQXTQMA_fake_script() -- MaxHealerSetting.LocalScript 
 	local script = Instance.new('LocalScript', MaxHealerSetting)
 
 	local button = script.Parent.Action1
@@ -1612,8 +1611,8 @@ local function SFDDTR_fake_script() -- MaxHealerSetting.LocalScript
 	end)
 	
 end
-coroutine.wrap(SFDDTR_fake_script)()
-local function SRYMKW_fake_script() -- ToggleUI.LocalScript 
+coroutine.wrap(NQXTQMA_fake_script)()
+local function GYMGWQ_fake_script() -- ToggleUI.LocalScript 
 	local script = Instance.new('LocalScript', ToggleUI)
 
 	local button = script.Parent.Action1
@@ -1639,8 +1638,8 @@ local function SRYMKW_fake_script() -- ToggleUI.LocalScript
 	end)
 	
 end
-coroutine.wrap(SRYMKW_fake_script)()
-local function FTLCH_fake_script() -- WorldPulseSetting.LocalScript 
+coroutine.wrap(GYMGWQ_fake_script)()
+local function DTTFT_fake_script() -- WorldPulseSetting.LocalScript 
 	local script = Instance.new('LocalScript', WorldPulseSetting)
 
 	local button = script.Parent.Action1
@@ -1666,8 +1665,8 @@ local function FTLCH_fake_script() -- WorldPulseSetting.LocalScript
 	end)
 	
 end
-coroutine.wrap(FTLCH_fake_script)()
-local function FMPGY_fake_script() -- HealthBarSetting.LocalScript 
+coroutine.wrap(DTTFT_fake_script)()
+local function GGVMSRJ_fake_script() -- HealthBarSetting.LocalScript 
 	local script = Instance.new('LocalScript', HealthBarSetting)
 
 	local button = script.Parent.Action1
@@ -1693,8 +1692,8 @@ local function FMPGY_fake_script() -- HealthBarSetting.LocalScript
 	end)
 	
 end
-coroutine.wrap(FMPGY_fake_script)()
-local function CYDBP_fake_script() -- setting.LocalScript 
+coroutine.wrap(GGVMSRJ_fake_script)()
+local function IBACTFX_fake_script() -- setting.LocalScript 
 	local script = Instance.new('LocalScript', setting)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1705,8 +1704,8 @@ local function CYDBP_fake_script() -- setting.LocalScript
 		script.Parent.Frame.Visible = true
 	end)
 end
-coroutine.wrap(CYDBP_fake_script)()
-local function FLRPJ_fake_script() -- Button.Script 
+coroutine.wrap(IBACTFX_fake_script)()
+local function ZZDWFSC_fake_script() -- Button.Script 
 	local script = Instance.new('LocalScript', Button)
 
 	local toggled = false
@@ -1794,9 +1793,9 @@ local function FLRPJ_fake_script() -- Button.Script
 	end)
 	
 end
-coroutine.wrap(FLRPJ_fake_script)()
+coroutine.wrap(ZZDWFSC_fake_script)()
 -- Button_2.oLDONE is disabled.
-local function LMOY_fake_script() -- Button_2.newoneWORKED 
+local function RLDXU_fake_script() -- Button_2.newoneWORKED 
 	local script = Instance.new('LocalScript', Button_2)
 
 	local Mouse = game.Players.LocalPlayer:GetMouse()
@@ -1953,9 +1952,9 @@ local function LMOY_fake_script() -- Button_2.newoneWORKED
 	end)
 	
 end
-coroutine.wrap(LMOY_fake_script)()
+coroutine.wrap(RLDXU_fake_script)()
 -- Slider.Updater is disabled.
-local function PNNYGTK_fake_script() -- Button_3.Script 
+local function EXCBH_fake_script() -- Button_3.Script 
 	local script = Instance.new('LocalScript', Button_3)
 
 	local toggled = false
@@ -2064,8 +2063,8 @@ local function PNNYGTK_fake_script() -- Button_3.Script
 	end)
 	
 end
-coroutine.wrap(PNNYGTK_fake_script)()
-local function YQGZRCU_fake_script() -- Button_4.Script 
+coroutine.wrap(EXCBH_fake_script)()
+local function TBKLHBD_fake_script() -- Button_4.Script 
 	local script = Instance.new('LocalScript', Button_4)
 
 	local toggled = false
@@ -2163,8 +2162,8 @@ local function YQGZRCU_fake_script() -- Button_4.Script
 	end)
 	
 end
-coroutine.wrap(YQGZRCU_fake_script)()
-local function APRR_fake_script() -- combat.LocalScript 
+coroutine.wrap(TBKLHBD_fake_script)()
+local function OJXORT_fake_script() -- combat.LocalScript 
 	local script = Instance.new('LocalScript', combat)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2175,8 +2174,8 @@ local function APRR_fake_script() -- combat.LocalScript
 		script.Parent.CombatMenu.Visible = true
 	end)
 end
-coroutine.wrap(APRR_fake_script)()
-local function NKAX_fake_script() -- Button_5.Script 
+coroutine.wrap(OJXORT_fake_script)()
+local function RSYXU_fake_script() -- Button_5.Script 
 	local script = Instance.new('LocalScript', Button_5)
 
 	
@@ -2291,7 +2290,7 @@ local function NKAX_fake_script() -- Button_5.Script
 	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
 	
 		if gameProcessedEvent then return end
-		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode[script.Parent.Parent.Parent.Parent.Parent.Parent.setting.Frame.HealthBarSetting.Action1Text.Text] then
+		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode[script.Parent.Parent.Parent.Parent.Parent.Parent.setting.Frame.MaxHealerSetting.Action1Text.Text] then
 			
 			if not debounce then
 				debounce = true
@@ -2343,8 +2342,8 @@ local function NKAX_fake_script() -- Button_5.Script
 		end	
 	end)
 end
-coroutine.wrap(NKAX_fake_script)()
-local function LEPQJMK_fake_script() -- Button_6.Script 
+coroutine.wrap(RSYXU_fake_script)()
+local function VFFL_fake_script() -- Button_6.Script 
 	local script = Instance.new('LocalScript', Button_6)
 
 	local Players = game:GetService("Players")
@@ -2580,8 +2579,8 @@ local function LEPQJMK_fake_script() -- Button_6.Script
 		end	
 	end)
 end
-coroutine.wrap(LEPQJMK_fake_script)()
-local function EAJSJKH_fake_script() -- Button_7.Script 
+coroutine.wrap(VFFL_fake_script)()
+local function FLSL_fake_script() -- Button_7.Script 
 	local script = Instance.new('LocalScript', Button_7)
 
 	local toggled = false
@@ -2628,8 +2627,8 @@ local function EAJSJKH_fake_script() -- Button_7.Script
 	end)
 	
 end
-coroutine.wrap(EAJSJKH_fake_script)()
-local function NYGZQU_fake_script() -- Player.LocalScript 
+coroutine.wrap(FLSL_fake_script)()
+local function VOXTGNO_fake_script() -- Player.LocalScript 
 	local script = Instance.new('LocalScript', Player)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2640,8 +2639,8 @@ local function NYGZQU_fake_script() -- Player.LocalScript
 		script.Parent.Parent.esp.EspMenu.Visible = false
 	end)
 end
-coroutine.wrap(NYGZQU_fake_script)()
-local function NWCZMT_fake_script() -- Button_8.Script 
+coroutine.wrap(VOXTGNO_fake_script)()
+local function VZYVKGO_fake_script() -- Button_8.Script 
 	local script = Instance.new('LocalScript', Button_8)
 
 	local toggled = false
@@ -2688,8 +2687,8 @@ local function NWCZMT_fake_script() -- Button_8.Script
 	end)
 	
 end
-coroutine.wrap(NWCZMT_fake_script)()
-local function DLJA_fake_script() -- Button_9.Script 
+coroutine.wrap(VZYVKGO_fake_script)()
+local function RFVNW_fake_script() -- Button_9.Script 
 	local script = Instance.new('LocalScript', Button_9)
 
 	local toggled = false
@@ -2767,8 +2766,8 @@ local function DLJA_fake_script() -- Button_9.Script
 	end)
 	
 end
-coroutine.wrap(DLJA_fake_script)()
-local function ZSOXNLX_fake_script() -- Button_10.Script 
+coroutine.wrap(RFVNW_fake_script)()
+local function EAMQLFQ_fake_script() -- Button_10.Script 
 	local script = Instance.new('LocalScript', Button_10)
 
 	local toggled = false
@@ -2815,8 +2814,8 @@ local function ZSOXNLX_fake_script() -- Button_10.Script
 	end)
 	
 end
-coroutine.wrap(ZSOXNLX_fake_script)()
-local function RHQE_fake_script() -- Main.LocalScript 
+coroutine.wrap(EAMQLFQ_fake_script)()
+local function KALKN_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2827,8 +2826,8 @@ local function RHQE_fake_script() -- Main.LocalScript
 	script.Parent.Parent.setting.Frame.Visible = false
 	end)
 end
-coroutine.wrap(RHQE_fake_script)()
-local function VCTVVK_fake_script() -- test11.LootingTime 
+coroutine.wrap(KALKN_fake_script)()
+local function WDWBJ_fake_script() -- test11.LootingTime 
 	local script = Instance.new('LocalScript', test11)
 
 	repeat wait(0.25) until game:IsLoaded() wait(0.5)
@@ -2888,112 +2887,9 @@ local function VCTVVK_fake_script() -- test11.LootingTime
 		end
 	end)
 end
-coroutine.wrap(VCTVVK_fake_script)()
-local function BLKV_fake_script() -- test11.Spectatescript 
-	local script = Instance.new('LocalScript', test11)
-
-	local service_cache = {}
-	local services = setmetatable({}, {
-		__index = function(self, index)
-			local cached_service = service_cache[index]
-			if not cached_service then 
-				service_cache[index] = select(2, pcall(game.GetService, game, index))
-				return service_cache[index]
-			end 
-			return cached_service
-		end
-	})
-	
-	local player = services.Players.LocalPlayer
-	local camera = workspace.CurrentCamera
-	local current_spectating = nil  -- Track the currently spectated player
-	local previous_label = nil -- Track the previously selected label
-	
-	do -- click spectate
-		local selected_label
-		local mouse_button_2 = Enum.UserInputType.MouseButton2
-	
-		services.UserInputService.InputBegan:Connect(function(input, processed)
-			local gui_children = player.PlayerGui.LeaderboardGui.MainFrame.ScrollingFrame:GetChildren()
-	
-			for index = 1, #gui_children do
-				local value = gui_children[index]
-	
-				value.MouseEnter:Connect(function()
-					selected_label = value
-				end)
-	
-				value.MouseLeave:Connect(function()
-					if selected_label == value then
-						selected_label = nil
-					end
-				end)
-			end
-	
-			if input.UserInputType == mouse_button_2 then
-				if selected_label then
-					-- Get the player based on the selected label's text
-					local selected_text = selected_label.Text:gsub("[^%w%s_]+", "")
-					local selected_player = services.Players:FindFirstChild(selected_text)
-	
-					if selected_player then
-						-- Check if we're already spectating the selected player
-						if current_spectating == selected_player then
-							-- If already spectating, reset to own character
-							if previous_label then
-								previous_label.TextColor3 = Color3.new(1, 1, 1) -- Reset color to default
-							end
-							local character = player.Character
-							if character then
-								local humanoid = character:FindFirstChildOfClass("Humanoid")
-								if humanoid then
-									camera.CameraSubject = humanoid
-								end
-							end
-							current_spectating = nil -- Reset spectating status
-							previous_label = nil -- Reset previous label
-						else
-							-- Start spectating the new player
-							if previous_label then
-								previous_label.TextColor3 = Color3.new(1, 1, 1) -- Reset previous label color
-							end
-							local selected_character = selected_player.Character
-							if selected_character then
-								local selected_humanoid = selected_character:FindFirstChildOfClass("Humanoid")
-								if selected_humanoid then
-									camera.CameraSubject = selected_humanoid
-									current_spectating = selected_player -- Update spectating status
-									selected_label.TextColor3 = Color3.new(0, 1, 0) -- Change text color to green
-									previous_label = selected_label -- Track the newly selected label
-								end
-							end
-						end
-					end
-				elseif not selected_label and current_spectating then
-					-- If no label is selected, keep spectating the current player
-					return
-				else
-					-- Reset to own character if no player is selected and not spectating anyone
-					if previous_label then
-						previous_label.TextColor3 = Color3.new(1, 1, 1) -- Reset previous label color
-					end
-					local character = player.Character
-					if character then
-						local humanoid = character:FindFirstChildOfClass("Humanoid")
-						if humanoid then
-							camera.CameraSubject = humanoid
-							current_spectating = nil -- Stop spectating
-							previous_label = nil -- Reset label tracking
-						end
-					end
-				end
-			end
-		end)
-	end
-	
-end
-coroutine.wrap(BLKV_fake_script)()
-local function CEQVVI_fake_script() -- Button_11.Script 
+coroutine.wrap(WDWBJ_fake_script)()
+-- test11.Spectatescriptoldfirst is disabled.
+local function DJZMPSX_fake_script() -- Button_11.Script 
 	local script = Instance.new('LocalScript', Button_11)
 
 	local toggled = false
@@ -3040,8 +2936,8 @@ local function CEQVVI_fake_script() -- Button_11.Script
 	end)
 	
 end
-coroutine.wrap(CEQVVI_fake_script)()
-local function MJULY_fake_script() -- Button_12.Script 
+coroutine.wrap(DJZMPSX_fake_script)()
+local function QREAM_fake_script() -- Button_12.Script 
 	local script = Instance.new('LocalScript', Button_12)
 
 	-- Services
@@ -3282,7 +3178,7 @@ local function MJULY_fake_script() -- Button_12.Script
 	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
 	
 		if gameProcessedEvent then return end
-		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode[script.Parent.Parent.Parent.Parent.Parent.Parent.setting.Frame.MaxHealerSetting.Action1Text.Text] then
+		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode[script.Parent.Parent.Parent.Parent.Parent.Parent.setting.Frame.HealthBarSetting.Action1Text.Text] then
 	
 			if not debounce then
 				debounce = true
@@ -3346,8 +3242,8 @@ local function MJULY_fake_script() -- Button_12.Script
 		end	
 	end)
 end
-coroutine.wrap(MJULY_fake_script)()
-local function PRPIIS_fake_script() -- esp.LocalScript 
+coroutine.wrap(QREAM_fake_script)()
+local function XIXY_fake_script() -- esp.LocalScript 
 	local script = Instance.new('LocalScript', esp)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3358,24 +3254,24 @@ local function PRPIIS_fake_script() -- esp.LocalScript
 		script.Parent.EspMenu.Visible = true
 	end)
 end
-coroutine.wrap(PRPIIS_fake_script)()
-local function LEZOGT_fake_script() -- Cpyclipboard.LocalScript 
+coroutine.wrap(XIXY_fake_script)()
+local function FUMX_fake_script() -- Cpyclipboard.LocalScript 
 	local script = Instance.new('LocalScript', Cpyclipboard)
 
 	script.Parent.MouseButton1Click:Connect(function()
 				setclipboard(script.Parent.Parent.UsernameN.Text)
 	end)
 end
-coroutine.wrap(LEZOGT_fake_script)()
-local function PSDD_fake_script() -- Cpyclipboard_2.LocalScript 
+coroutine.wrap(FUMX_fake_script)()
+local function URVQCK_fake_script() -- Cpyclipboard_2.LocalScript 
 	local script = Instance.new('LocalScript', Cpyclipboard_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		setclipboard(script.Parent.Parent.IngameNameN.Text)
 	end)
 end
-coroutine.wrap(PSDD_fake_script)()
-local function IADEB_fake_script() -- PlayerInfo.PlayersInfoscript 
+coroutine.wrap(URVQCK_fake_script)()
+local function DIRK_fake_script() -- PlayerInfo.PlayersInfoscript 
 	local script = Instance.new('LocalScript', PlayerInfo)
 
 	local service_cache = {}
@@ -3417,7 +3313,7 @@ local function IADEB_fake_script() -- PlayerInfo.PlayersInfoscript
 			end
 			if input.UserInputType == mouse_button_1 then
 				if selected_label then
-					local selected_text = selected_label.Text:gsub("[^%w%s_]+", "")
+					local selected_text = selected_label.Text:gsub("[^%w%s_]+", ""):match("^%s*(.-)%s*$")
 					local selected_player = services.Players:FindFirstChild(selected_text)
 					
 	
@@ -3432,9 +3328,9 @@ local function IADEB_fake_script() -- PlayerInfo.PlayersInfoscript
 							previous_label = nil
 						else
 							-- Start spectating the new player
-							if previous_label then
+							--[[ if previous_label then
 								previous_label.TextColor3 = Color3.new(1, 1, 1) -- Reset previous label color
-							end
+							end --]]
 							local selected_character = selected_player.Character
 								--local selected_humanoid = selected_character:FindFirstChildOfClass("Humanoid")
 	
@@ -3451,10 +3347,14 @@ local function IADEB_fake_script() -- PlayerInfo.PlayersInfoscript
 									script.Parent.Username.UsernameN.Text = selected_player.Name
 									
 									-- IngameName
+									if selected_character then
 								for _, child in ipairs(selected_character:GetChildren()) do
 									if child:IsA("Model") and child:FindFirstChild("FakeHumanoid") and child:FindFirstChild("Head") then
 										script.Parent.IngameName.IngameNameN.Text = child.Name
 									end
+								end
+									else
+								        script.Parent.IngameName.IngameNameN.Text = "Unknow"
 								end
 								
 							local backpack = selected_player:FindFirstChild("Backpack")
@@ -3570,8 +3470,137 @@ local function IADEB_fake_script() -- PlayerInfo.PlayersInfoscript
 		end)
 	end
 end
-coroutine.wrap(IADEB_fake_script)()
-local function ETDY_fake_script() -- VoxlHubRL.Open/close 
+coroutine.wrap(DIRK_fake_script)()
+-- test11.Spectatescriptoldsecond is disabled.
+local function ELKK_fake_script() -- test11.Spectatescriptoldthird 
+	local script = Instance.new('LocalScript', test11)
+
+	local service_cache = {}
+	local services = setmetatable({}, {
+		__index = function(self, index)
+			local cached_service = service_cache[index]
+			if not cached_service then 
+				service_cache[index] = select(2, pcall(game.GetService, game, index))
+				return service_cache[index]
+			end 
+			return cached_service
+		end
+	})
+	
+	
+	local original_label_colors = {} -- Table to store original colors
+	local player = services.Players.LocalPlayer
+	local camera = workspace.CurrentCamera
+	local current_spectating = nil  -- Track the currently spectated player
+	local previous_label = nil -- Track the previously selected label
+	
+	
+	do -- click spectate
+		local selected_label
+		local mouse_button_2 = Enum.UserInputType.MouseButton2
+	
+		services.UserInputService.InputBegan:Connect(function(input, processed)
+			local gui_children = player.PlayerGui.LeaderboardGui.MainFrame.ScrollingFrame:GetChildren()
+	
+			for index = 1, #gui_children do
+				local value = gui_children[index]
+	
+				value.MouseEnter:Connect(function()
+					selected_label = value
+				end)
+	
+				value.MouseLeave:Connect(function()
+					if selected_label == value then
+						selected_label = nil
+					end
+				end)
+			end
+	
+			if input.UserInputType == mouse_button_2 then
+				if selected_label then
+					-- Get the player based on the selected label's text
+					local selected_text = selected_label.Text:gsub("[^%w%s_]+", ""):match("^%s*(.-)%s*$")
+					local selected_player = services.Players:FindFirstChild(selected_text)
+	
+					if selected_player then
+						-- Check if we're already spectating the selected player
+						if current_spectating == selected_player then
+							-- If already spectating, reset to own character
+							if previous_label then
+								-- Restore original color
+								if original_label_colors[previous_label] then
+									previous_label.TextColor3 = original_label_colors[previous_label]
+								else
+									previous_label.TextColor3 = Color3.new(1, 1, 1) -- Default to white
+								end
+							end
+							local character = player.Character
+							if character then
+								local humanoid = character:FindFirstChildOfClass("Humanoid")
+								if humanoid then
+									camera.CameraSubject = humanoid
+								end
+							end
+							current_spectating = nil -- Reset spectating status
+							previous_label = nil -- Reset previous label
+						else
+							-- Start spectating the new player
+							if previous_label then
+								-- Restore original color before changing to green
+								if original_label_colors[previous_label] then
+									previous_label.TextColor3 = original_label_colors[previous_label]
+								else
+									previous_label.TextColor3 = Color3.new(1, 1, 1) -- Default white
+								end
+							end
+	
+							-- Save original label color before changing
+							original_label_colors[selected_label] = selected_label.TextColor3
+	
+							local selected_character = selected_player.Character
+							if selected_character then
+								local selected_humanoid = selected_character:FindFirstChildOfClass("Humanoid")
+								if selected_humanoid then
+									camera.CameraSubject = selected_humanoid
+									current_spectating = selected_player -- Update spectating status
+									selected_label.TextColor3 = Color3.new(0, 1, 0) -- Change text color to green
+									previous_label = selected_label -- Track the newly selected label
+								end
+							else
+								print("Character not found")
+							end
+						end
+					end
+				elseif not selected_label and current_spectating then
+					-- If no label is selected, keep spectating the current player
+					return
+				else
+					-- Reset to own character if no player is selected and not spectating anyone
+					if previous_label then
+						-- Restore original color
+						if original_label_colors[previous_label] then
+							previous_label.TextColor3 = original_label_colors[previous_label]
+						else
+							previous_label.TextColor3 = Color3.new(1, 1, 1) -- Default white
+						end
+					end
+					local character = player.Character
+					if character then
+						local humanoid = character:FindFirstChildOfClass("Humanoid")
+						if humanoid then
+							camera.CameraSubject = humanoid
+							current_spectating = nil -- Stop spectating
+							previous_label = nil -- Reset label tracking
+						end
+					end
+				end
+			end
+		end)
+	end
+	
+end
+coroutine.wrap(ELKK_fake_script)()
+local function FODHR_fake_script() -- VoxlHubRL.Open/close 
 	local script = Instance.new('LocalScript', VoxlHubRL)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -3604,8 +3633,8 @@ local function ETDY_fake_script() -- VoxlHubRL.Open/close
 	
 	
 end
-coroutine.wrap(ETDY_fake_script)()
-local function PAFKYQ_fake_script() -- VoxlHubRL.AnticheatBypass 
+coroutine.wrap(FODHR_fake_script)()
+local function HCAFEO_fake_script() -- VoxlHubRL.AnticheatBypass 
 	local script = Instance.new('LocalScript', VoxlHubRL)
 
 	--// client anticheat bypass
@@ -4135,8 +4164,8 @@ local function PAFKYQ_fake_script() -- VoxlHubRL.AnticheatBypass
 		})
 	end
 end
-coroutine.wrap(PAFKYQ_fake_script)()
-local function AQEEAGG_fake_script() -- VoxlHubRL.WebHookReports 
+coroutine.wrap(HCAFEO_fake_script)()
+local function VCQHDK_fake_script() -- VoxlHubRL.WebHookReports 
 	local script = Instance.new('LocalScript', VoxlHubRL)
 
 	function SendMessage(url, message)
@@ -4189,12 +4218,11 @@ local function AQEEAGG_fake_script() -- VoxlHubRL.WebHookReports
 	--Examples 
 	
 	local url = "https://discord.com/api/webhooks/1348215432753975398/NAL5vGKbrLxk3G25V9f3DZqtpjLlmHi9Gxt53O95vsdZBUTCMk3gYjHJjYni6eGk-ym0"
-	SendMessage(url, "Hello")
 	
 	
 	local embed = {
 		["title"] = "Whitelist Checker",
-		["description"] = "This message has an embed with fields and a footer",
+		["description"] = "Rogue Lineage Script",
 		["color"] = 65280,
 		["fields"] = {
 			{
@@ -4216,4 +4244,4 @@ local function AQEEAGG_fake_script() -- VoxlHubRL.WebHookReports
 	}
 	SendMessageEMBED(url, embed)
 end
-coroutine.wrap(AQEEAGG_fake_script)()
+coroutine.wrap(VCQHDK_fake_script)()
