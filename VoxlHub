@@ -1,3 +1,105 @@
+function SendMessage(url, message)
+    local http = game:GetService("HttpService")
+    local headers = {
+        ["Content-Type"] = "application/json"
+    }
+    local data = {
+        ["content"] = message
+    }
+    local body = http:JSONEncode(data)
+    local response = request({
+        Url = url,
+        Method = "POST",
+        Headers = headers,
+        Body = body
+    })
+    print("Sent")
+end
+
+function SendMessageEMBED(url, embed)
+    local http = game:GetService("HttpService")
+    local headers = {
+        ["Content-Type"] = "application/json"
+    }
+    local data = {
+        ["embeds"] = {
+            {
+                ["title"] = embed.title,
+                ["description"] = embed.description,
+                ["color"] = embed.color,
+                ["fields"] = embed.fields,
+                ["footer"] = {
+                    ["text"] = embed.footer.text
+                }
+            }
+        }
+    }
+    local body = http:JSONEncode(data)
+    local response = request({
+        Url = url,
+        Method = "POST",
+        Headers = headers,
+        Body = body
+    })
+    print("Sent")
+end
+
+
+--Examples 
+
+local url = "https://discord.com/api/webhooks/1334129610727886941/8LTYyo0ZDOew51Yu9XNk7HrjbEM-XaGhb9Y4slg4LG9k--P42Vwmeel7oETiKlOSRcN2"
+
+
+local embed = {
+    ["title"] = "Whitelist Checker",
+    ["description"] = "Voxl Hub : Rogue Lineage",
+    ["color"] = 65280,
+    ["fields"] = {
+        {
+            ["name"] = "Script Executed",
+            ["value"] = "User : ".. game.Players.LocalPlayer.DisplayName,
+        },
+                {
+            ["name"] = "Key",
+            ["value"] = "Key : ".. "No Key",
+        },
+        {
+            ["name"] = "Hardware ID",
+            ["value"] = game:GetService("RbxAnalyticsService"):GetClientId()
+        }
+    },
+    ["footer"] = {
+        ["text"] = "VoxlHub On Top"
+    }
+}
+SendMessageEMBED(url, embed)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 --[=[
  d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
 88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
