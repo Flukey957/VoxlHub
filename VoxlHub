@@ -1,1770 +1,2203 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
-local test11 = Instance.new("Frame")
-local setting = Instance.new("TextButton")
-local combat = Instance.new("TextButton")
-local Player = Instance.new("TextButton")
-local Main = Instance.new("TextButton")
-local ImageLabel = Instance.new("ImageLabel")
-local UICorner = Instance.new("UICorner")
-local esp = Instance.new("TextButton")
-local fly = Instance.new("TextButton")
-local PlayerInfo = Instance.new("Frame")
-local Username = Instance.new("TextLabel")
-local UsernameN = Instance.new("TextLabel")
-local Cpyclipboard = Instance.new("TextButton")
-local IngameName = Instance.new("TextLabel")
-local IngameNameN = Instance.new("TextLabel")
-local Cpyclipboard_2 = Instance.new("TextButton")
-local Class = Instance.new("TextLabel")
-local ClassN = Instance.new("TextLabel")
-local SkillNN = Instance.new("TextLabel")
-local PlayerInfoo = Instance.new("TextLabel")
-local Skill = Instance.new("ScrollingFrame")
-local SkillN = Instance.new("TextLabel")
-local SettingFrame = Instance.new("ScrollingFrame")
-local UICorner_2 = Instance.new("UICorner")
-local KeybindSetting = Instance.new("TextLabel")
-local UICorner_3 = Instance.new("UICorner")
-local MaxHealerSetting = Instance.new("TextLabel")
-local UICorner_4 = Instance.new("UICorner")
-local Action1 = Instance.new("TextButton")
-local Action1Text = Instance.new("TextLabel")
-local UICorner_5 = Instance.new("UICorner")
-local ToggleUI = Instance.new("TextLabel")
-local UICorner_6 = Instance.new("UICorner")
-local Action1_2 = Instance.new("TextButton")
-local Action1Text_2 = Instance.new("TextLabel")
-local UICorner_7 = Instance.new("UICorner")
-local WorldPulseSetting = Instance.new("TextLabel")
-local UICorner_8 = Instance.new("UICorner")
-local Action1_3 = Instance.new("TextButton")
-local Action1Text_3 = Instance.new("TextLabel")
-local UICorner_9 = Instance.new("UICorner")
-local Text = Instance.new("TextLabel")
-local HealthBarSetting = Instance.new("TextLabel")
-local UICorner_10 = Instance.new("UICorner")
-local Action1_4 = Instance.new("TextButton")
-local Action1Text_4 = Instance.new("TextLabel")
-local UICorner_11 = Instance.new("UICorner")
-local AimbotGrappleSetting = Instance.new("TextLabel")
-local UICorner_12 = Instance.new("UICorner")
-local Action1_5 = Instance.new("TextButton")
-local Action1Text_5 = Instance.new("TextLabel")
-local UICorner_13 = Instance.new("UICorner")
-local Text_2 = Instance.new("TextLabel")
-local MainFrame = Instance.new("ScrollingFrame")
-local UICorner_14 = Instance.new("UICorner")
-local Nofall = Instance.new("TextLabel")
-local Toggle = Instance.new("ImageLabel")
-local UICorner_15 = Instance.new("UICorner")
-local Button = Instance.new("TextButton")
-local Circle = Instance.new("Frame")
-local UICorner_16 = Instance.new("UICorner")
-local UICorner_17 = Instance.new("UICorner")
-local Nofire = Instance.new("TextLabel")
-local Toggle_2 = Instance.new("ImageLabel")
-local UICorner_18 = Instance.new("UICorner")
-local Button_2 = Instance.new("TextButton")
-local Circle_2 = Instance.new("Frame")
-local UICorner_19 = Instance.new("UICorner")
-local UICorner_20 = Instance.new("UICorner")
-local NoInjuries = Instance.new("TextLabel")
-local Toggle_3 = Instance.new("ImageLabel")
-local UICorner_21 = Instance.new("UICorner")
-local Button_3 = Instance.new("TextButton")
-local Circle_3 = Instance.new("Frame")
-local UICorner_22 = Instance.new("UICorner")
-local UICorner_23 = Instance.new("UICorner")
-local Text_3 = Instance.new("TextLabel")
-local Text_4 = Instance.new("TextLabel")
-local NoOrderField = Instance.new("TextLabel")
-local Toggle_4 = Instance.new("ImageLabel")
-local UICorner_24 = Instance.new("UICorner")
-local Button_4 = Instance.new("TextButton")
-local Circle_4 = Instance.new("Frame")
-local UICorner_25 = Instance.new("UICorner")
-local UICorner_26 = Instance.new("UICorner")
-local Text_5 = Instance.new("TextLabel")
-local Text_6 = Instance.new("TextLabel")
-local PlayerFrame = Instance.new("ScrollingFrame")
-local UICorner_27 = Instance.new("UICorner")
-local MaxHealer = Instance.new("TextLabel")
-local Toggle_5 = Instance.new("ImageLabel")
-local UICorner_28 = Instance.new("UICorner")
-local Button_5 = Instance.new("TextButton")
-local Circle_5 = Instance.new("Frame")
-local UICorner_29 = Instance.new("UICorner")
-local UICorner_30 = Instance.new("UICorner")
-local WorldPulse = Instance.new("TextLabel")
-local Toggle_6 = Instance.new("ImageLabel")
-local UICorner_31 = Instance.new("UICorner")
-local Button_6 = Instance.new("TextButton")
-local Circle_6 = Instance.new("Frame")
-local UICorner_32 = Instance.new("UICorner")
-local UICorner_33 = Instance.new("UICorner")
-local Text_7 = Instance.new("TextLabel")
-local Intent = Instance.new("TextLabel")
-local Toggle_7 = Instance.new("ImageLabel")
-local UICorner_34 = Instance.new("UICorner")
-local Button_7 = Instance.new("TextButton")
-local Circle_7 = Instance.new("Frame")
-local UICorner_35 = Instance.new("UICorner")
-local UICorner_36 = Instance.new("UICorner")
-local Text_8 = Instance.new("TextLabel")
-local CombatFrame = Instance.new("ScrollingFrame")
-local UICorner_37 = Instance.new("UICorner")
-local AimbotGrapple = Instance.new("TextLabel")
-local Toggle_8 = Instance.new("ImageLabel")
-local UICorner_38 = Instance.new("UICorner")
-local Button_8 = Instance.new("TextButton")
-local Circle_8 = Instance.new("Frame")
-local UICorner_39 = Instance.new("UICorner")
-local UICorner_40 = Instance.new("UICorner")
-local Text_9 = Instance.new("TextLabel")
-local Text_10 = Instance.new("TextLabel")
-local Slider = Instance.new("Frame")
-local Fill = Instance.new("Frame")
-local UICorner_41 = Instance.new("UICorner")
-local Trigger = Instance.new("TextButton")
-local Label = Instance.new("TextLabel")
-local UICorner_42 = Instance.new("UICorner")
-local Autobard = Instance.new("TextLabel")
-local Toggle_9 = Instance.new("ImageLabel")
-local UICorner_43 = Instance.new("UICorner")
-local Button_9 = Instance.new("TextButton")
-local Circle_9 = Instance.new("Frame")
-local UICorner_44 = Instance.new("UICorner")
-local UICorner_45 = Instance.new("UICorner")
-local Text_11 = Instance.new("TextLabel")
-local BardStacking = Instance.new("TextLabel")
-local Toggle_10 = Instance.new("ImageLabel")
-local UICorner_46 = Instance.new("UICorner")
-local Button_10 = Instance.new("TextButton")
-local Circle_10 = Instance.new("Frame")
-local UICorner_47 = Instance.new("UICorner")
-local UICorner_48 = Instance.new("UICorner")
-local Text_12 = Instance.new("TextLabel")
-local DJump = Instance.new("TextLabel")
-local Toggle_11 = Instance.new("ImageLabel")
-local UICorner_49 = Instance.new("UICorner")
-local Button_11 = Instance.new("TextButton")
-local Circle_11 = Instance.new("Frame")
-local UICorner_50 = Instance.new("UICorner")
-local UICorner_51 = Instance.new("UICorner")
-local Text_13 = Instance.new("TextLabel")
-local Text_14 = Instance.new("TextLabel")
-local EspFrame = Instance.new("ScrollingFrame")
-local UICorner_52 = Instance.new("UICorner")
-local Player_2 = Instance.new("TextLabel")
-local Toggle_12 = Instance.new("ImageLabel")
-local UICorner_53 = Instance.new("UICorner")
-local Button_12 = Instance.new("TextButton")
-local Circle_12 = Instance.new("Frame")
-local UICorner_54 = Instance.new("UICorner")
-local UICorner_55 = Instance.new("UICorner")
-local PlayerEsp = Instance.new("TextLabel")
-local UICorner_56 = Instance.new("UICorner")
-local TrinketEsp = Instance.new("TextLabel")
-local UICorner_57 = Instance.new("UICorner")
-local HealthBar = Instance.new("TextLabel")
-local Toggle_13 = Instance.new("ImageLabel")
-local UICorner_58 = Instance.new("UICorner")
-local Button_13 = Instance.new("TextButton")
-local Circle_13 = Instance.new("Frame")
-local UICorner_59 = Instance.new("UICorner")
-local UICorner_60 = Instance.new("UICorner")
-local health = Instance.new("TextLabel")
-local Bar = Instance.new("TextLabel")
-
---Properties:
-
-test11.Name = "test1.1"
-test11.Parent = game.StarterGui.VoxlHubRL
-test11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-test11.BackgroundTransparency = 0.600
-test11.BorderColor3 = Color3.fromRGB(0, 0, 0)
-test11.BorderSizePixel = 0
-test11.Position = UDim2.new(0.68190819, 0, 0.567372441, 0)
-test11.Size = UDim2.new(0, 450, 0, 325)
-
-setting.Name = "setting"
-setting.Parent = test11
-setting.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-setting.BackgroundTransparency = 0.850
-setting.BorderColor3 = Color3.fromRGB(0, 0, 0)
-setting.BorderSizePixel = 0
-setting.Position = UDim2.new(0.779999971, 0, 0.041538462, 0)
-setting.Size = UDim2.new(0, 90, 0, 30)
-setting.Font = Enum.Font.SourceSansBold
-setting.Text = "Setting"
-setting.TextColor3 = Color3.fromRGB(0, 0, 0)
-setting.TextSize = 20.000
-
-combat.Name = "combat"
-combat.Parent = test11
-combat.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-combat.BackgroundTransparency = 0.850
-combat.BorderColor3 = Color3.fromRGB(0, 0, 0)
-combat.BorderSizePixel = 0
-combat.Position = UDim2.new(0.568000019, 0, 0.041538462, 0)
-combat.Size = UDim2.new(0, 87, 0, 30)
-combat.Font = Enum.Font.SourceSansBold
-combat.Text = "Combat"
-combat.TextColor3 = Color3.fromRGB(0, 0, 0)
-combat.TextSize = 20.000
-
-Player.Name = "Player"
-Player.Parent = test11
-Player.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Player.BackgroundTransparency = 0.850
-Player.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Player.BorderSizePixel = 0
-Player.Position = UDim2.new(0.349999994, 0, 0.0419999994, 0)
-Player.Size = UDim2.new(0, 90, 0, 30)
-Player.Font = Enum.Font.SourceSansBold
-Player.Text = "Player"
-Player.TextColor3 = Color3.fromRGB(0, 0, 0)
-Player.TextSize = 20.000
-
-Main.Name = "Main"
-Main.Parent = test11
-Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Main.BackgroundTransparency = 0.850
-Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0.129999995, 0, 0.041538462, 0)
-Main.Size = UDim2.new(0, 90, 0, 30)
-Main.Font = Enum.Font.SourceSansBold
-Main.Text = "Main"
-Main.TextColor3 = Color3.fromRGB(0, 0, 0)
-Main.TextSize = 20.000
-
-ImageLabel.Parent = test11
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.BackgroundTransparency = 1.000
-ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(-0.0177777782, 0, -0.0461538471, 0)
-ImageLabel.Size = UDim2.new(0, 66, 0, 80)
-ImageLabel.Image = "rbxassetid://83493970525178"
-
-UICorner.Parent = test11
-
-esp.Name = "esp"
-esp.Parent = test11
-esp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-esp.BackgroundTransparency = 0.850
-esp.BorderColor3 = Color3.fromRGB(0, 0, 0)
-esp.BorderSizePixel = 0
-esp.Position = UDim2.new(0.00899999961, 0, 0.197999999, 0)
-esp.Size = UDim2.new(0, 90, 0, 30)
-esp.Font = Enum.Font.SourceSansBold
-esp.Text = "Esp"
-esp.TextColor3 = Color3.fromRGB(0, 0, 0)
-esp.TextSize = 20.000
-
-fly.Name = "fly"
-fly.Parent = test11
-fly.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-fly.BackgroundTransparency = 0.850
-fly.BorderColor3 = Color3.fromRGB(0, 0, 0)
-fly.BorderSizePixel = 0
-fly.Position = UDim2.new(0.00899999961, 0, 0.326999992, 0)
-fly.Size = UDim2.new(0, 90, 0, 30)
-fly.Font = Enum.Font.SourceSansBold
-fly.Text = "Fly"
-fly.TextColor3 = Color3.fromRGB(0, 0, 0)
-fly.TextSize = 20.000
-
-PlayerInfo.Name = "PlayerInfo"
-PlayerInfo.Parent = test11
-PlayerInfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-PlayerInfo.BackgroundTransparency = 0.600
-PlayerInfo.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PlayerInfo.BorderSizePixel = 0
-PlayerInfo.Position = UDim2.new(0.2588889, 0, -1.54461539, 0)
-PlayerInfo.Size = UDim2.new(0, 243, 0, 322)
-PlayerInfo.Visible = false
-
-Username.Name = "Username"
-Username.Parent = PlayerInfo
-Username.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Username.BackgroundTransparency = 1.000
-Username.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Username.BorderSizePixel = 0
-Username.Position = UDim2.new(0.0450000018, 0, 0, 17)
-Username.Size = UDim2.new(0, 57, 0, 50)
-Username.Font = Enum.Font.SourceSans
-Username.Text = "Username :"
-Username.TextColor3 = Color3.fromRGB(0, 0, 0)
-Username.TextSize = 14.000
-Username.TextXAlignment = Enum.TextXAlignment.Left
-
-UsernameN.Name = "UsernameN"
-UsernameN.Parent = Username
-UsernameN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-UsernameN.BackgroundTransparency = 1.000
-UsernameN.BorderColor3 = Color3.fromRGB(0, 0, 0)
-UsernameN.BorderSizePixel = 0
-UsernameN.Position = UDim2.new(1.03133821, 0, 0, 0)
-UsernameN.Size = UDim2.new(0, 188, 0, 50)
-UsernameN.Font = Enum.Font.SourceSans
-UsernameN.Text = "Unknow"
-UsernameN.TextColor3 = Color3.fromRGB(0, 0, 0)
-UsernameN.TextSize = 14.000
-UsernameN.TextXAlignment = Enum.TextXAlignment.Left
-
-Cpyclipboard.Name = "Cpyclipboard"
-Cpyclipboard.Parent = Username
-Cpyclipboard.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Cpyclipboard.BackgroundTransparency = 0.850
-Cpyclipboard.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Cpyclipboard.BorderSizePixel = 0
-Cpyclipboard.Position = UDim2.new(3.32299995, 0, 0.437999994, 0)
-Cpyclipboard.Size = UDim2.new(0, 32, 0, 11)
-Cpyclipboard.Font = Enum.Font.SourceSans
-Cpyclipboard.Text = "Copy"
-Cpyclipboard.TextColor3 = Color3.fromRGB(0, 0, 0)
-Cpyclipboard.TextSize = 13.000
-
-IngameName.Name = "IngameName"
-IngameName.Parent = PlayerInfo
-IngameName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-IngameName.BackgroundTransparency = 1.000
-IngameName.BorderColor3 = Color3.fromRGB(0, 0, 0)
-IngameName.BorderSizePixel = 0
-IngameName.Position = UDim2.new(0.0450000018, 0, 0.119999997, 0)
-IngameName.Size = UDim2.new(0, 66, 0, 50)
-IngameName.Font = Enum.Font.SourceSans
-IngameName.Text = "Ingame Name :"
-IngameName.TextColor3 = Color3.fromRGB(0, 0, 0)
-IngameName.TextSize = 14.000
-IngameName.TextXAlignment = Enum.TextXAlignment.Left
-
-IngameNameN.Name = "IngameNameN"
-IngameNameN.Parent = IngameName
-IngameNameN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-IngameNameN.BackgroundTransparency = 1.000
-IngameNameN.BorderColor3 = Color3.fromRGB(0, 0, 0)
-IngameNameN.BorderSizePixel = 0
-IngameNameN.Position = UDim2.new(1.15441513, 0, 0, 0)
-IngameNameN.Size = UDim2.new(0, 188, 0, 50)
-IngameNameN.Font = Enum.Font.SourceSans
-IngameNameN.Text = "Unknow"
-IngameNameN.TextColor3 = Color3.fromRGB(0, 0, 0)
-IngameNameN.TextSize = 14.000
-IngameNameN.TextXAlignment = Enum.TextXAlignment.Left
-
-Cpyclipboard_2.Name = "Cpyclipboard"
-Cpyclipboard_2.Parent = IngameName
-Cpyclipboard_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Cpyclipboard_2.BackgroundTransparency = 0.850
-Cpyclipboard_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Cpyclipboard_2.BorderSizePixel = 0
-Cpyclipboard_2.Position = UDim2.new(2.86845446, 0, 0.458000481, 0)
-Cpyclipboard_2.Size = UDim2.new(0, 32, 0, 11)
-Cpyclipboard_2.Font = Enum.Font.SourceSans
-Cpyclipboard_2.Text = "Copy"
-Cpyclipboard_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-Cpyclipboard_2.TextSize = 13.000
-
-Class.Name = "Class"
-Class.Parent = PlayerInfo
-Class.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Class.BackgroundTransparency = 1.000
-Class.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Class.BorderSizePixel = 0
-Class.Position = UDim2.new(0.0450000018, 0, 0.185000002, 0)
-Class.Size = UDim2.new(0, 43, 0, 50)
-Class.Font = Enum.Font.SourceSans
-Class.Text = "Class :"
-Class.TextColor3 = Color3.fromRGB(0, 0, 0)
-Class.TextSize = 14.000
-Class.TextXAlignment = Enum.TextXAlignment.Left
-
-ClassN.Name = "ClassN"
-ClassN.Parent = Class
-ClassN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ClassN.BackgroundTransparency = 1.000
-ClassN.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ClassN.BorderSizePixel = 0
-ClassN.Position = UDim2.new(0.800569057, 0, 0, 0)
-ClassN.Size = UDim2.new(0, 188, 0, 50)
-ClassN.Font = Enum.Font.SourceSans
-ClassN.Text = "Unknow"
-ClassN.TextColor3 = Color3.fromRGB(0, 0, 0)
-ClassN.TextSize = 14.000
-ClassN.TextXAlignment = Enum.TextXAlignment.Left
-
-SkillNN.Name = "SkillNN"
-SkillNN.Parent = PlayerInfo
-SkillNN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SkillNN.BackgroundTransparency = 1.000
-SkillNN.BorderColor3 = Color3.fromRGB(0, 0, 0)
-SkillNN.BorderSizePixel = 0
-SkillNN.Position = UDim2.new(0.0452674888, 0, 0.25, 0)
-SkillNN.Size = UDim2.new(0, 36, 0, 50)
-SkillNN.Font = Enum.Font.SourceSans
-SkillNN.Text = "Skill :"
-SkillNN.TextColor3 = Color3.fromRGB(0, 0, 0)
-SkillNN.TextSize = 14.000
-SkillNN.TextXAlignment = Enum.TextXAlignment.Left
-
-PlayerInfoo.Name = "PlayerInfoo"
-PlayerInfoo.Parent = PlayerInfo
-PlayerInfoo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-PlayerInfoo.BackgroundTransparency = 1.000
-PlayerInfoo.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PlayerInfoo.BorderSizePixel = 0
-PlayerInfoo.Position = UDim2.new(0.151995867, 0, -0.0745341629, 17)
-PlayerInfoo.Size = UDim2.new(0, 168, 0, 50)
-PlayerInfoo.Font = Enum.Font.SourceSans
-PlayerInfoo.Text = "Player Information"
-PlayerInfoo.TextColor3 = Color3.fromRGB(0, 0, 0)
-PlayerInfoo.TextSize = 25.000
-PlayerInfoo.TextXAlignment = Enum.TextXAlignment.Left
-
-Skill.Name = "Skill"
-Skill.Parent = PlayerInfo
-Skill.Active = true
-Skill.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Skill.BackgroundTransparency = 1.000
-Skill.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Skill.BorderSizePixel = 0
-Skill.Position = UDim2.new(0.151999995, 0, 0.307999998, 0)
-Skill.Size = UDim2.new(0, 206, 0, 221)
-Skill.ScrollBarThickness = 3
-
-SkillN.Name = "SkillN"
-SkillN.Parent = Skill
-SkillN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SkillN.BackgroundTransparency = 1.000
-SkillN.BorderColor3 = Color3.fromRGB(0, 0, 0)
-SkillN.BorderSizePixel = 0
-SkillN.Position = UDim2.new(0.023, 0, -0, 0)
-SkillN.Size = UDim2.new(0, 184, 0, 497)
-SkillN.Font = Enum.Font.SourceSans
-SkillN.Text = "Unknow"
-SkillN.TextColor3 = Color3.fromRGB(0, 0, 0)
-SkillN.TextSize = 14.000
-SkillN.TextWrapped = true
-SkillN.TextXAlignment = Enum.TextXAlignment.Left
-SkillN.TextYAlignment = Enum.TextYAlignment.Top
-
-SettingFrame.Name = "SettingFrame"
-SettingFrame.Parent = test11
-SettingFrame.Active = true
-SettingFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-SettingFrame.BackgroundTransparency = 0.500
-SettingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-SettingFrame.BorderSizePixel = 0
-SettingFrame.Position = UDim2.new(0.226666674, 0, 0.172307685, 0)
-SettingFrame.Size = UDim2.new(0, 339, 0, 263)
-SettingFrame.ScrollBarThickness = 2
-
-UICorner_2.Parent = SettingFrame
-
-KeybindSetting.Name = "KeybindSetting"
-KeybindSetting.Parent = SettingFrame
-KeybindSetting.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-KeybindSetting.BackgroundTransparency = 1.000
-KeybindSetting.BorderColor3 = Color3.fromRGB(0, 0, 0)
-KeybindSetting.BorderSizePixel = 0
-KeybindSetting.Position = UDim2.new(0.355953872, 0, 0.00418636203, 0)
-KeybindSetting.Size = UDim2.new(0, 99, 0, 39)
-KeybindSetting.Font = Enum.Font.SourceSansBold
-KeybindSetting.Text = "Keybind Setting"
-KeybindSetting.TextColor3 = Color3.fromRGB(255, 255, 255)
-KeybindSetting.TextSize = 15.000
-
-UICorner_3.Parent = KeybindSetting
-
-MaxHealerSetting.Name = "MaxHealerSetting"
-MaxHealerSetting.Parent = SettingFrame
-MaxHealerSetting.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-MaxHealerSetting.BackgroundTransparency = 0.650
-MaxHealerSetting.BorderColor3 = Color3.fromRGB(0, 0, 0)
-MaxHealerSetting.BorderSizePixel = 0
-MaxHealerSetting.Position = UDim2.new(0.0140000004, 0, 0.0599999987, 0)
-MaxHealerSetting.Size = UDim2.new(0, 99, 0, 39)
-MaxHealerSetting.Font = Enum.Font.SourceSans
-MaxHealerSetting.Text = "     Healer"
-MaxHealerSetting.TextColor3 = Color3.fromRGB(255, 255, 255)
-MaxHealerSetting.TextSize = 14.000
-MaxHealerSetting.TextWrapped = true
-MaxHealerSetting.TextXAlignment = Enum.TextXAlignment.Left
-
-UICorner_4.Parent = MaxHealerSetting
-
-Action1.Name = "Action1"
-Action1.Parent = MaxHealerSetting
-Action1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Action1.BackgroundTransparency = 1.000
-Action1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Action1.BorderSizePixel = 0
-Action1.Position = UDim2.new(0, 0, 0.0619225129, 0)
-Action1.Size = UDim2.new(0, 98, 0, 35)
-Action1.Font = Enum.Font.SourceSans
-Action1.Text = ""
-Action1.TextColor3 = Color3.fromRGB(0, 0, 0)
-Action1.TextSize = 14.000
-
-Action1Text.Name = "Action1Text"
-Action1Text.Parent = MaxHealerSetting
-Action1Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Action1Text.BackgroundTransparency = 0.500
-Action1Text.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Action1Text.BorderSizePixel = 0
-Action1Text.Position = UDim2.new(0.569999993, 0, 0.187000006, 0)
-Action1Text.Size = UDim2.new(0, 29, 0, 25)
-Action1Text.Font = Enum.Font.SourceSans
-Action1Text.Text = "None"
-Action1Text.TextColor3 = Color3.fromRGB(255, 255, 255)
-Action1Text.TextSize = 14.000
-
-UICorner_5.Parent = Action1Text
-
-ToggleUI.Name = "ToggleUI"
-ToggleUI.Parent = SettingFrame
-ToggleUI.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ToggleUI.BackgroundTransparency = 0.650
-ToggleUI.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ToggleUI.BorderSizePixel = 0
-ToggleUI.Position = UDim2.new(0.354999989, 0, 0.0599999987, 0)
-ToggleUI.Size = UDim2.new(0, 99, 0, 39)
-ToggleUI.Font = Enum.Font.SourceSans
-ToggleUI.Text = "  Toggle UI"
-ToggleUI.TextColor3 = Color3.fromRGB(255, 255, 255)
-ToggleUI.TextSize = 14.000
-ToggleUI.TextWrapped = true
-ToggleUI.TextXAlignment = Enum.TextXAlignment.Left
-
-UICorner_6.Parent = ToggleUI
-
-Action1_2.Name = "Action1"
-Action1_2.Parent = ToggleUI
-Action1_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Action1_2.BackgroundTransparency = 1.000
-Action1_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Action1_2.BorderSizePixel = 0
-Action1_2.Position = UDim2.new(0, 0, 0.0619225129, 0)
-Action1_2.Size = UDim2.new(0, 98, 0, 35)
-Action1_2.Font = Enum.Font.SourceSans
-Action1_2.Text = ""
-Action1_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-Action1_2.TextSize = 14.000
-
-Action1Text_2.Name = "Action1Text"
-Action1Text_2.Parent = ToggleUI
-Action1Text_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Action1Text_2.BackgroundTransparency = 0.500
-Action1Text_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Action1Text_2.BorderSizePixel = 0
-Action1Text_2.Position = UDim2.new(0.569999993, 0, 0.187000006, 0)
-Action1Text_2.Size = UDim2.new(0, 29, 0, 25)
-Action1Text_2.Font = Enum.Font.SourceSans
-Action1Text_2.Text = "LeftAlt"
-Action1Text_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Action1Text_2.TextSize = 14.000
-
-UICorner_7.Parent = Action1Text_2
-
-WorldPulseSetting.Name = "WorldPulseSetting"
-WorldPulseSetting.Parent = SettingFrame
-WorldPulseSetting.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-WorldPulseSetting.BackgroundTransparency = 0.650
-WorldPulseSetting.BorderColor3 = Color3.fromRGB(0, 0, 0)
-WorldPulseSetting.BorderSizePixel = 0
-WorldPulseSetting.Position = UDim2.new(0.698000014, 0, 0.0599999987, 0)
-WorldPulseSetting.Size = UDim2.new(0, 99, 0, 39)
-WorldPulseSetting.Font = Enum.Font.SourceSans
-WorldPulseSetting.Text = ""
-WorldPulseSetting.TextColor3 = Color3.fromRGB(255, 255, 255)
-WorldPulseSetting.TextSize = 14.000
-WorldPulseSetting.TextWrapped = true
-WorldPulseSetting.TextXAlignment = Enum.TextXAlignment.Left
-
-UICorner_8.Parent = WorldPulseSetting
-
-Action1_3.Name = "Action1"
-Action1_3.Parent = WorldPulseSetting
-Action1_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Action1_3.BackgroundTransparency = 1.000
-Action1_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Action1_3.BorderSizePixel = 0
-Action1_3.Position = UDim2.new(0, 0, 0.0619225129, 0)
-Action1_3.Size = UDim2.new(0, 98, 0, 35)
-Action1_3.Font = Enum.Font.SourceSans
-Action1_3.Text = ""
-Action1_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-Action1_3.TextSize = 14.000
-
-Action1Text_3.Name = "Action1Text"
-Action1Text_3.Parent = WorldPulseSetting
-Action1Text_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Action1Text_3.BackgroundTransparency = 0.500
-Action1Text_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Action1Text_3.BorderSizePixel = 0
-Action1Text_3.Position = UDim2.new(0.569999993, 0, 0.187000006, 0)
-Action1Text_3.Size = UDim2.new(0, 29, 0, 25)
-Action1Text_3.Font = Enum.Font.SourceSans
-Action1Text_3.Text = "None"
-Action1Text_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-Action1Text_3.TextSize = 14.000
-
-UICorner_9.Parent = Action1Text_3
-
-Text.Name = "Text"
-Text.Parent = WorldPulseSetting
-Text.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Text.BackgroundTransparency = 1.000
-Text.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Text.BorderSizePixel = 0
-Text.Position = UDim2.new(0.0581856146, 0, 0.124103256, 0)
-Text.Size = UDim2.new(0, 46, 0, 28)
-Text.Font = Enum.Font.SourceSans
-Text.Text = "World  Pulse"
-Text.TextColor3 = Color3.fromRGB(255, 255, 255)
-Text.TextSize = 14.000
-Text.TextWrapped = true
-
-HealthBarSetting.Name = "HealthBarSetting"
-HealthBarSetting.Parent = SettingFrame
-HealthBarSetting.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-HealthBarSetting.BackgroundTransparency = 0.650
-HealthBarSetting.BorderColor3 = Color3.fromRGB(0, 0, 0)
-HealthBarSetting.BorderSizePixel = 0
-HealthBarSetting.Position = UDim2.new(0.0140000004, 0, 0.129999995, 0)
-HealthBarSetting.Size = UDim2.new(0, 99, 0, 39)
-HealthBarSetting.Font = Enum.Font.SourceSans
-HealthBarSetting.Text = "  HealthBar"
-HealthBarSetting.TextColor3 = Color3.fromRGB(255, 255, 255)
-HealthBarSetting.TextSize = 14.000
-HealthBarSetting.TextWrapped = true
-HealthBarSetting.TextXAlignment = Enum.TextXAlignment.Left
-
-UICorner_10.Parent = HealthBarSetting
-
-Action1_4.Name = "Action1"
-Action1_4.Parent = HealthBarSetting
-Action1_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Action1_4.BackgroundTransparency = 1.000
-Action1_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Action1_4.BorderSizePixel = 0
-Action1_4.Position = UDim2.new(0, 0, 0.0619225129, 0)
-Action1_4.Size = UDim2.new(0, 98, 0, 35)
-Action1_4.Font = Enum.Font.SourceSans
-Action1_4.Text = ""
-Action1_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-Action1_4.TextSize = 14.000
-
-Action1Text_4.Name = "Action1Text"
-Action1Text_4.Parent = HealthBarSetting
-Action1Text_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Action1Text_4.BackgroundTransparency = 0.500
-Action1Text_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Action1Text_4.BorderSizePixel = 0
-Action1Text_4.Position = UDim2.new(0.569999993, 0, 0.187000006, 0)
-Action1Text_4.Size = UDim2.new(0, 29, 0, 25)
-Action1Text_4.Font = Enum.Font.SourceSans
-Action1Text_4.Text = "None"
-Action1Text_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-Action1Text_4.TextSize = 14.000
-
-UICorner_11.Parent = Action1Text_4
-
-AimbotGrappleSetting.Name = "AimbotGrappleSetting"
-AimbotGrappleSetting.Parent = SettingFrame
-AimbotGrappleSetting.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-AimbotGrappleSetting.BackgroundTransparency = 0.650
-AimbotGrappleSetting.BorderColor3 = Color3.fromRGB(0, 0, 0)
-AimbotGrappleSetting.BorderSizePixel = 0
-AimbotGrappleSetting.Position = UDim2.new(0.354999989, 0, 0.129999995, 0)
-AimbotGrappleSetting.Size = UDim2.new(0, 99, 0, 39)
-AimbotGrappleSetting.Font = Enum.Font.SourceSans
-AimbotGrappleSetting.Text = ""
-AimbotGrappleSetting.TextColor3 = Color3.fromRGB(255, 255, 255)
-AimbotGrappleSetting.TextSize = 14.000
-AimbotGrappleSetting.TextWrapped = true
-AimbotGrappleSetting.TextXAlignment = Enum.TextXAlignment.Left
-
-UICorner_12.Parent = AimbotGrappleSetting
-
-Action1_5.Name = "Action1"
-Action1_5.Parent = AimbotGrappleSetting
-Action1_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Action1_5.BackgroundTransparency = 1.000
-Action1_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Action1_5.BorderSizePixel = 0
-Action1_5.Position = UDim2.new(0, 0, 0.0619225129, 0)
-Action1_5.Size = UDim2.new(0, 98, 0, 35)
-Action1_5.Font = Enum.Font.SourceSans
-Action1_5.Text = ""
-Action1_5.TextColor3 = Color3.fromRGB(0, 0, 0)
-Action1_5.TextSize = 14.000
-
-Action1Text_5.Name = "Action1Text"
-Action1Text_5.Parent = AimbotGrappleSetting
-Action1Text_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Action1Text_5.BackgroundTransparency = 0.500
-Action1Text_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Action1Text_5.BorderSizePixel = 0
-Action1Text_5.Position = UDim2.new(0.569999993, 0, 0.187000006, 0)
-Action1Text_5.Size = UDim2.new(0, 29, 0, 25)
-Action1Text_5.Font = Enum.Font.SourceSans
-Action1Text_5.Text = "None"
-Action1Text_5.TextColor3 = Color3.fromRGB(255, 255, 255)
-Action1Text_5.TextSize = 14.000
-
-UICorner_13.Parent = Action1Text_5
-
-Text_2.Name = "Text"
-Text_2.Parent = AimbotGrappleSetting
-Text_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Text_2.BackgroundTransparency = 1.000
-Text_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Text_2.BorderSizePixel = 0
-Text_2.Position = UDim2.new(0.0581856146, 0, 0.124103256, 0)
-Text_2.Size = UDim2.new(0, 46, 0, 28)
-Text_2.Font = Enum.Font.SourceSans
-Text_2.Text = "Aimbot Grapple"
-Text_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Text_2.TextSize = 14.000
-Text_2.TextWrapped = true
-
-MainFrame.Name = "MainFrame"
-MainFrame.Parent = test11
-MainFrame.Active = true
-MainFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-MainFrame.BackgroundTransparency = 0.500
-MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-MainFrame.BorderSizePixel = 0
-MainFrame.Position = UDim2.new(0.226666674, 0, 0.172307685, 0)
-MainFrame.Size = UDim2.new(0, 339, 0, 263)
-MainFrame.Visible = false
-MainFrame.ScrollBarThickness = 2
-
-UICorner_14.Parent = MainFrame
-
-Nofall.Name = "Nofall"
-Nofall.Parent = MainFrame
-Nofall.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Nofall.BackgroundTransparency = 0.650
-Nofall.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Nofall.BorderSizePixel = 0
-Nofall.Position = UDim2.new(0.356000006, 0, 0.0149999997, 0)
-Nofall.Size = UDim2.new(0, 99, 0, 39)
-Nofall.Font = Enum.Font.SourceSans
-Nofall.Text = "     NoFall"
-Nofall.TextColor3 = Color3.fromRGB(255, 255, 255)
-Nofall.TextSize = 14.000
-Nofall.TextXAlignment = Enum.TextXAlignment.Left
-
-Toggle.Name = "Toggle"
-Toggle.Parent = Nofall
-Toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggle.BorderSizePixel = 0
-Toggle.Position = UDim2.new(0.532343686, 0, 0.222000003, 0)
-Toggle.Size = UDim2.new(0, 37, 0, 22)
-Toggle.Image = "rbxassetid://16382316568"
-Toggle.ImageColor3 = Color3.fromRGB(200, 200, 200)
-
-UICorner_15.CornerRadius = UDim.new(1, 0)
-UICorner_15.Parent = Toggle
-
-Button.Name = "Button"
-Button.Parent = Toggle
-Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Button.BackgroundTransparency = 1.000
-Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button.BorderSizePixel = 0
-Button.Position = UDim2.new(-1.41086555, 0, -0.376512021, 0)
-Button.Size = UDim2.new(0, 98, 0, 39)
-Button.Font = Enum.Font.SourceSans
-Button.Text = ""
-Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-Button.TextSize = 14.000
-
-Circle.Name = "Circle"
-Circle.Parent = Toggle
-Circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Circle.BorderSizePixel = 0
-Circle.Position = UDim2.new(0.0500000007, 0, 0, 2)
-Circle.Size = UDim2.new(0, 18, 0, 18)
-
-UICorner_16.CornerRadius = UDim.new(1, 0)
-UICorner_16.Parent = Circle
-
-UICorner_17.Parent = Nofall
-
-Nofire.Name = "Nofire"
-Nofire.Parent = MainFrame
-Nofire.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Nofire.BackgroundTransparency = 0.650
-Nofire.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Nofire.BorderSizePixel = 0
-Nofire.Position = UDim2.new(0.0140000004, 0, 0.0149999997, 0)
-Nofire.Size = UDim2.new(0, 99, 0, 39)
-Nofire.Font = Enum.Font.SourceSans
-Nofire.Text = "     NoFire"
-Nofire.TextColor3 = Color3.fromRGB(255, 255, 255)
-Nofire.TextSize = 14.000
-Nofire.TextXAlignment = Enum.TextXAlignment.Left
-
-Toggle_2.Name = "Toggle"
-Toggle_2.Parent = Nofire
-Toggle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Toggle_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggle_2.BorderSizePixel = 0
-Toggle_2.Position = UDim2.new(0.532343686, 0, 0.222000003, 0)
-Toggle_2.Size = UDim2.new(0, 37, 0, 22)
-Toggle_2.Image = "rbxassetid://16382316568"
-Toggle_2.ImageColor3 = Color3.fromRGB(200, 200, 200)
-
-UICorner_18.CornerRadius = UDim.new(1, 0)
-UICorner_18.Parent = Toggle_2
-
-Button_2.Name = "Button"
-Button_2.Parent = Toggle_2
-Button_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Button_2.BackgroundTransparency = 1.000
-Button_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_2.BorderSizePixel = 0
-Button_2.Position = UDim2.new(-1.41086555, 0, -0.376512021, 0)
-Button_2.Size = UDim2.new(0, 98, 0, 39)
-Button_2.Font = Enum.Font.SourceSans
-Button_2.Text = ""
-Button_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-Button_2.TextSize = 14.000
-
-Circle_2.Name = "Circle"
-Circle_2.Parent = Toggle_2
-Circle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Circle_2.BorderSizePixel = 0
-Circle_2.Position = UDim2.new(0.0500000007, 0, 0, 2)
-Circle_2.Size = UDim2.new(0, 18, 0, 18)
-
-UICorner_19.CornerRadius = UDim.new(1, 0)
-UICorner_19.Parent = Circle_2
-
-UICorner_20.Parent = Nofire
-
-NoInjuries.Name = "NoInjuries"
-NoInjuries.Parent = MainFrame
-NoInjuries.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-NoInjuries.BackgroundTransparency = 0.650
-NoInjuries.BorderColor3 = Color3.fromRGB(0, 0, 0)
-NoInjuries.BorderSizePixel = 0
-NoInjuries.Position = UDim2.new(0.698000014, 0, 0.0149999997, 0)
-NoInjuries.Size = UDim2.new(0, 99, 0, 39)
-NoInjuries.Font = Enum.Font.SourceSans
-NoInjuries.Text = ""
-NoInjuries.TextColor3 = Color3.fromRGB(255, 255, 255)
-NoInjuries.TextSize = 14.000
-NoInjuries.TextXAlignment = Enum.TextXAlignment.Left
-
-Toggle_3.Name = "Toggle"
-Toggle_3.Parent = NoInjuries
-Toggle_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Toggle_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggle_3.BorderSizePixel = 0
-Toggle_3.Position = UDim2.new(0.532343686, 0, 0.222000003, 0)
-Toggle_3.Size = UDim2.new(0, 37, 0, 22)
-Toggle_3.Image = "rbxassetid://16382316568"
-Toggle_3.ImageColor3 = Color3.fromRGB(200, 200, 200)
-
-UICorner_21.CornerRadius = UDim.new(1, 0)
-UICorner_21.Parent = Toggle_3
-
-Button_3.Name = "Button"
-Button_3.Parent = Toggle_3
-Button_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Button_3.BackgroundTransparency = 1.000
-Button_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_3.BorderSizePixel = 0
-Button_3.Position = UDim2.new(-1.41086555, 0, -0.376512021, 0)
-Button_3.Size = UDim2.new(0, 98, 0, 39)
-Button_3.Font = Enum.Font.SourceSans
-Button_3.Text = ""
-Button_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-Button_3.TextSize = 14.000
-
-Circle_3.Name = "Circle"
-Circle_3.Parent = Toggle_3
-Circle_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Circle_3.BorderSizePixel = 0
-Circle_3.Position = UDim2.new(0.0500000007, 0, 0, 2)
-Circle_3.Size = UDim2.new(0, 18, 0, 18)
-
-UICorner_22.CornerRadius = UDim.new(1, 0)
-UICorner_22.Parent = Circle_3
-
-UICorner_23.Parent = NoInjuries
-
-Text_3.Name = "Text"
-Text_3.Parent = NoInjuries
-Text_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Text_3.BackgroundTransparency = 1.000
-Text_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Text_3.BorderSizePixel = 0
-Text_3.Position = UDim2.new(0.0989999995, 0, 0.377999991, 0)
-Text_3.Size = UDim2.new(0, 44, 0, 28)
-Text_3.Font = Enum.Font.SourceSans
-Text_3.Text = "Part"
-Text_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-Text_3.TextSize = 14.000
-Text_3.TextWrapped = true
-
-Text_4.Name = "Text"
-Text_4.Parent = NoInjuries
-Text_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Text_4.BackgroundTransparency = 1.000
-Text_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Text_4.BorderSizePixel = 0
-Text_4.Position = UDim2.new(0.0599999987, 0, -0.00400000019, 0)
-Text_4.Size = UDim2.new(0, 44, 0, 28)
-Text_4.Font = Enum.Font.SourceSans
-Text_4.Text = "No Injury"
-Text_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-Text_4.TextSize = 14.000
-Text_4.TextXAlignment = Enum.TextXAlignment.Left
-
-NoOrderField.Name = "NoOrderField"
-NoOrderField.Parent = MainFrame
-NoOrderField.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-NoOrderField.BackgroundTransparency = 0.650
-NoOrderField.BorderColor3 = Color3.fromRGB(0, 0, 0)
-NoOrderField.BorderSizePixel = 0
-NoOrderField.Position = UDim2.new(0.0140000004, 0, 0.0850000009, 0)
-NoOrderField.Size = UDim2.new(0, 99, 0, 39)
-NoOrderField.Font = Enum.Font.SourceSans
-NoOrderField.Text = ""
-NoOrderField.TextColor3 = Color3.fromRGB(255, 255, 255)
-NoOrderField.TextSize = 14.000
-NoOrderField.TextXAlignment = Enum.TextXAlignment.Left
-
-Toggle_4.Name = "Toggle"
-Toggle_4.Parent = NoOrderField
-Toggle_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Toggle_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggle_4.BorderSizePixel = 0
-Toggle_4.Position = UDim2.new(0.532343686, 0, 0.222000003, 0)
-Toggle_4.Size = UDim2.new(0, 37, 0, 22)
-Toggle_4.Image = "rbxassetid://16382316568"
-Toggle_4.ImageColor3 = Color3.fromRGB(200, 200, 200)
-
-UICorner_24.CornerRadius = UDim.new(1, 0)
-UICorner_24.Parent = Toggle_4
-
-Button_4.Name = "Button"
-Button_4.Parent = Toggle_4
-Button_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Button_4.BackgroundTransparency = 1.000
-Button_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_4.BorderSizePixel = 0
-Button_4.Position = UDim2.new(-1.41086555, 0, -0.376512021, 0)
-Button_4.Size = UDim2.new(0, 98, 0, 39)
-Button_4.Font = Enum.Font.SourceSans
-Button_4.Text = ""
-Button_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-Button_4.TextSize = 14.000
-
-Circle_4.Name = "Circle"
-Circle_4.Parent = Toggle_4
-Circle_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Circle_4.BorderSizePixel = 0
-Circle_4.Position = UDim2.new(0.0500000007, 0, 0, 2)
-Circle_4.Size = UDim2.new(0, 18, 0, 18)
-
-UICorner_25.CornerRadius = UDim.new(1, 0)
-UICorner_25.Parent = Circle_4
-
-UICorner_26.Parent = NoOrderField
-
-Text_5.Name = "Text"
-Text_5.Parent = NoOrderField
-Text_5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Text_5.BackgroundTransparency = 1.000
-Text_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Text_5.BorderSizePixel = 0
-Text_5.Position = UDim2.new(0.0579999983, 0, 0.00999999978, 0)
-Text_5.Size = UDim2.new(0, 44, 0, 28)
-Text_5.Font = Enum.Font.SourceSans
-Text_5.Text = "No Order"
-Text_5.TextColor3 = Color3.fromRGB(255, 255, 255)
-Text_5.TextSize = 14.000
-Text_5.TextXAlignment = Enum.TextXAlignment.Left
-
-Text_6.Name = "Text"
-Text_6.Parent = NoOrderField
-Text_6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Text_6.BackgroundTransparency = 1.000
-Text_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Text_6.BorderSizePixel = 0
-Text_6.Position = UDim2.new(0.0579999983, 0, 0.400000006, 0)
-Text_6.Size = UDim2.new(0, 44, 0, 28)
-Text_6.Font = Enum.Font.SourceSans
-Text_6.Text = "Field"
-Text_6.TextColor3 = Color3.fromRGB(255, 255, 255)
-Text_6.TextSize = 14.000
-
-PlayerFrame.Name = "PlayerFrame"
-PlayerFrame.Parent = test11
-PlayerFrame.Active = true
-PlayerFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-PlayerFrame.BackgroundTransparency = 0.500
-PlayerFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PlayerFrame.BorderSizePixel = 0
-PlayerFrame.Position = UDim2.new(0.226666674, 0, 0.172307685, 0)
-PlayerFrame.Size = UDim2.new(0, 339, 0, 263)
-PlayerFrame.Visible = false
-PlayerFrame.ScrollBarThickness = 2
-
-UICorner_27.Parent = PlayerFrame
-
-MaxHealer.Name = "MaxHealer"
-MaxHealer.Parent = PlayerFrame
-MaxHealer.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-MaxHealer.BackgroundTransparency = 0.650
-MaxHealer.BorderColor3 = Color3.fromRGB(0, 0, 0)
-MaxHealer.BorderSizePixel = 0
-MaxHealer.Position = UDim2.new(0.0140000004, 0, 0.0149999997, 0)
-MaxHealer.Size = UDim2.new(0, 99, 0, 39)
-MaxHealer.Font = Enum.Font.SourceSans
-MaxHealer.Text = "     Healer"
-MaxHealer.TextColor3 = Color3.fromRGB(255, 255, 255)
-MaxHealer.TextSize = 14.000
-MaxHealer.TextXAlignment = Enum.TextXAlignment.Left
-
-Toggle_5.Name = "Toggle"
-Toggle_5.Parent = MaxHealer
-Toggle_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Toggle_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggle_5.BorderSizePixel = 0
-Toggle_5.Position = UDim2.new(0.532343686, 0, 0.222000003, 0)
-Toggle_5.Size = UDim2.new(0, 37, 0, 22)
-Toggle_5.Image = "rbxassetid://16382316568"
-Toggle_5.ImageColor3 = Color3.fromRGB(200, 200, 200)
-
-UICorner_28.CornerRadius = UDim.new(1, 0)
-UICorner_28.Parent = Toggle_5
-
-Button_5.Name = "Button"
-Button_5.Parent = Toggle_5
-Button_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Button_5.BackgroundTransparency = 1.000
-Button_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_5.BorderSizePixel = 0
-Button_5.Position = UDim2.new(-1.41086555, 0, -0.376512021, 0)
-Button_5.Size = UDim2.new(0, 98, 0, 39)
-Button_5.Font = Enum.Font.SourceSans
-Button_5.Text = ""
-Button_5.TextColor3 = Color3.fromRGB(0, 0, 0)
-Button_5.TextSize = 14.000
-
-Circle_5.Name = "Circle"
-Circle_5.Parent = Toggle_5
-Circle_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Circle_5.BorderSizePixel = 0
-Circle_5.Position = UDim2.new(0.0500000007, 0, 0, 2)
-Circle_5.Size = UDim2.new(0, 18, 0, 18)
-
-UICorner_29.CornerRadius = UDim.new(1, 0)
-UICorner_29.Parent = Circle_5
-
-UICorner_30.Parent = MaxHealer
-
-WorldPulse.Name = "WorldPulse"
-WorldPulse.Parent = PlayerFrame
-WorldPulse.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-WorldPulse.BackgroundTransparency = 0.650
-WorldPulse.BorderColor3 = Color3.fromRGB(0, 0, 0)
-WorldPulse.BorderSizePixel = 0
-WorldPulse.Position = UDim2.new(0.356000006, 0, 0.0149999997, 0)
-WorldPulse.Size = UDim2.new(0, 99, 0, 39)
-WorldPulse.Font = Enum.Font.SourceSans
-WorldPulse.Text = ""
-WorldPulse.TextColor3 = Color3.fromRGB(255, 255, 255)
-WorldPulse.TextSize = 14.000
-WorldPulse.TextWrapped = true
-WorldPulse.TextXAlignment = Enum.TextXAlignment.Left
-
-Toggle_6.Name = "Toggle"
-Toggle_6.Parent = WorldPulse
-Toggle_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Toggle_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggle_6.BorderSizePixel = 0
-Toggle_6.Position = UDim2.new(0.532343686, 0, 0.222000003, 0)
-Toggle_6.Size = UDim2.new(0, 37, 0, 22)
-Toggle_6.Image = "rbxassetid://16382316568"
-Toggle_6.ImageColor3 = Color3.fromRGB(200, 200, 200)
-
-UICorner_31.CornerRadius = UDim.new(1, 0)
-UICorner_31.Parent = Toggle_6
-
-Button_6.Name = "Button"
-Button_6.Parent = Toggle_6
-Button_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Button_6.BackgroundTransparency = 1.000
-Button_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_6.BorderSizePixel = 0
-Button_6.Position = UDim2.new(-1.41086555, 0, -0.376512021, 0)
-Button_6.Size = UDim2.new(0, 98, 0, 39)
-Button_6.Font = Enum.Font.SourceSans
-Button_6.Text = ""
-Button_6.TextColor3 = Color3.fromRGB(0, 0, 0)
-Button_6.TextSize = 14.000
-
-Circle_6.Name = "Circle"
-Circle_6.Parent = Toggle_6
-Circle_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Circle_6.BorderSizePixel = 0
-Circle_6.Position = UDim2.new(0.0500000007, 0, 0, 2)
-Circle_6.Size = UDim2.new(0, 18, 0, 18)
-
-UICorner_32.CornerRadius = UDim.new(1, 0)
-UICorner_32.Parent = Circle_6
-
-UICorner_33.Parent = WorldPulse
-
-Text_7.Name = "Text"
-Text_7.Parent = WorldPulse
-Text_7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Text_7.BackgroundTransparency = 1.000
-Text_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Text_7.BorderSizePixel = 0
-Text_7.Position = UDim2.new(0.0581856146, 0, 0.124103256, 0)
-Text_7.Size = UDim2.new(0, 46, 0, 28)
-Text_7.Font = Enum.Font.SourceSans
-Text_7.Text = "World  Pulse"
-Text_7.TextColor3 = Color3.fromRGB(255, 255, 255)
-Text_7.TextSize = 14.000
-Text_7.TextWrapped = true
-
-Intent.Name = "Intent"
-Intent.Parent = PlayerFrame
-Intent.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Intent.BackgroundTransparency = 0.650
-Intent.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Intent.BorderSizePixel = 0
-Intent.Position = UDim2.new(0.698000014, 0, 0.0149999997, 0)
-Intent.Size = UDim2.new(0, 99, 0, 39)
-Intent.Font = Enum.Font.SourceSans
-Intent.Text = ""
-Intent.TextColor3 = Color3.fromRGB(255, 255, 255)
-Intent.TextSize = 14.000
-Intent.TextWrapped = true
-Intent.TextXAlignment = Enum.TextXAlignment.Left
-
-Toggle_7.Name = "Toggle"
-Toggle_7.Parent = Intent
-Toggle_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Toggle_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggle_7.BorderSizePixel = 0
-Toggle_7.Position = UDim2.new(0.532343686, 0, 0.222000003, 0)
-Toggle_7.Size = UDim2.new(0, 37, 0, 22)
-Toggle_7.Image = "rbxassetid://16382316568"
-Toggle_7.ImageColor3 = Color3.fromRGB(200, 200, 200)
-
-UICorner_34.CornerRadius = UDim.new(1, 0)
-UICorner_34.Parent = Toggle_7
-
-Button_7.Name = "Button"
-Button_7.Parent = Toggle_7
-Button_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Button_7.BackgroundTransparency = 1.000
-Button_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_7.BorderSizePixel = 0
-Button_7.Position = UDim2.new(-1.41086555, 0, -0.376512021, 0)
-Button_7.Size = UDim2.new(0, 98, 0, 39)
-Button_7.Font = Enum.Font.SourceSans
-Button_7.Text = ""
-Button_7.TextColor3 = Color3.fromRGB(0, 0, 0)
-Button_7.TextSize = 14.000
-
-Circle_7.Name = "Circle"
-Circle_7.Parent = Toggle_7
-Circle_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Circle_7.BorderSizePixel = 0
-Circle_7.Position = UDim2.new(0.0500000007, 0, 0, 2)
-Circle_7.Size = UDim2.new(0, 18, 0, 18)
-
-UICorner_35.CornerRadius = UDim.new(1, 0)
-UICorner_35.Parent = Circle_7
-
-UICorner_36.Parent = Intent
-
-Text_8.Name = "Text"
-Text_8.Parent = Intent
-Text_8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Text_8.BackgroundTransparency = 1.000
-Text_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Text_8.BorderSizePixel = 0
-Text_8.Position = UDim2.new(0.0500000007, 0, 0.123999998, 0)
-Text_8.Size = UDim2.new(0, 46, 0, 28)
-Text_8.Font = Enum.Font.SourceSans
-Text_8.Text = "Intent"
-Text_8.TextColor3 = Color3.fromRGB(255, 255, 255)
-Text_8.TextSize = 14.000
-Text_8.TextWrapped = true
-
-CombatFrame.Name = "CombatFrame"
-CombatFrame.Parent = test11
-CombatFrame.Active = true
-CombatFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-CombatFrame.BackgroundTransparency = 0.500
-CombatFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-CombatFrame.BorderSizePixel = 0
-CombatFrame.Position = UDim2.new(0.226666674, 0, 0.172307685, 0)
-CombatFrame.Size = UDim2.new(0, 339, 0, 263)
-CombatFrame.Visible = false
-CombatFrame.ScrollBarThickness = 2
-
-UICorner_37.Parent = CombatFrame
-
-AimbotGrapple.Name = "AimbotGrapple"
-AimbotGrapple.Parent = CombatFrame
-AimbotGrapple.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-AimbotGrapple.BackgroundTransparency = 0.650
-AimbotGrapple.BorderColor3 = Color3.fromRGB(0, 0, 0)
-AimbotGrapple.BorderSizePixel = 0
-AimbotGrapple.Position = UDim2.new(0.0140000004, 0, 0.0850000009, 0)
-AimbotGrapple.Size = UDim2.new(0, 99, 0, 39)
-AimbotGrapple.Font = Enum.Font.SourceSans
-AimbotGrapple.Text = ""
-AimbotGrapple.TextColor3 = Color3.fromRGB(255, 255, 255)
-AimbotGrapple.TextSize = 14.000
-AimbotGrapple.TextWrapped = true
-AimbotGrapple.TextXAlignment = Enum.TextXAlignment.Left
-
-Toggle_8.Name = "Toggle"
-Toggle_8.Parent = AimbotGrapple
-Toggle_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Toggle_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggle_8.BorderSizePixel = 0
-Toggle_8.Position = UDim2.new(0.532343686, 0, 0.222000003, 0)
-Toggle_8.Size = UDim2.new(0, 37, 0, 22)
-Toggle_8.Image = "rbxassetid://16382316568"
-Toggle_8.ImageColor3 = Color3.fromRGB(200, 200, 200)
-
-UICorner_38.CornerRadius = UDim.new(1, 0)
-UICorner_38.Parent = Toggle_8
-
-Button_8.Name = "Button"
-Button_8.Parent = Toggle_8
-Button_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Button_8.BackgroundTransparency = 1.000
-Button_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_8.BorderSizePixel = 0
-Button_8.Position = UDim2.new(-1.41086555, 0, -0.376512021, 0)
-Button_8.Size = UDim2.new(0, 98, 0, 39)
-Button_8.Font = Enum.Font.SourceSans
-Button_8.Text = ""
-Button_8.TextColor3 = Color3.fromRGB(255, 255, 255)
-Button_8.TextSize = 14.000
-
-Circle_8.Name = "Circle"
-Circle_8.Parent = Toggle_8
-Circle_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Circle_8.BorderSizePixel = 0
-Circle_8.Position = UDim2.new(0.0500000007, 0, 0, 2)
-Circle_8.Size = UDim2.new(0, 18, 0, 18)
-
-UICorner_39.CornerRadius = UDim.new(1, 0)
-UICorner_39.Parent = Circle_8
-
-UICorner_40.Parent = AimbotGrapple
-
-Text_9.Name = "Text"
-Text_9.Parent = AimbotGrapple
-Text_9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Text_9.BackgroundTransparency = 1.000
-Text_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Text_9.BorderSizePixel = 0
-Text_9.Position = UDim2.new(0.109999999, 0, -0.00400000019, 0)
-Text_9.Size = UDim2.new(0, 44, 0, 28)
-Text_9.Font = Enum.Font.SourceSans
-Text_9.Text = "Aimbot"
-Text_9.TextColor3 = Color3.fromRGB(255, 255, 255)
-Text_9.TextSize = 14.000
-Text_9.TextWrapped = true
-Text_9.TextXAlignment = Enum.TextXAlignment.Left
-
-Text_10.Name = "Text"
-Text_10.Parent = AimbotGrapple
-Text_10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Text_10.BackgroundTransparency = 1.000
-Text_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Text_10.BorderSizePixel = 0
-Text_10.Position = UDim2.new(0.0985896587, 0, 0.277949393, 0)
-Text_10.Size = UDim2.new(0, 44, 0, 28)
-Text_10.Font = Enum.Font.SourceSans
-Text_10.Text = "Grapple"
-Text_10.TextColor3 = Color3.fromRGB(255, 255, 255)
-Text_10.TextSize = 14.000
-Text_10.TextWrapped = true
-Text_10.TextXAlignment = Enum.TextXAlignment.Left
-
-Slider.Name = "Slider"
-Slider.Parent = AimbotGrapple
-Slider.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Slider.BackgroundTransparency = 0.650
-Slider.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Slider.BorderSizePixel = 0
-Slider.Position = UDim2.new(0, 0, 1.15384614, 0)
-Slider.Size = UDim2.new(0, 100, 0, 9)
-
-Fill.Name = "Fill"
-Fill.Parent = Slider
-Fill.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
-Fill.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Fill.BorderSizePixel = 0
-Fill.Size = UDim2.new(0, 54, 0, 9)
-
-UICorner_41.Parent = Fill
-
-Trigger.Name = "Trigger"
-Trigger.Parent = Slider
-Trigger.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Trigger.BackgroundTransparency = 1.000
-Trigger.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Trigger.BorderSizePixel = 0
-Trigger.Size = UDim2.new(0, 99, 0, 9)
-Trigger.Font = Enum.Font.SourceSans
-Trigger.Text = ""
-Trigger.TextColor3 = Color3.fromRGB(0, 0, 0)
-Trigger.TextSize = 14.000
-
-Label.Name = "Label"
-Label.Parent = Slider
-Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Label.BackgroundTransparency = 1.000
-Label.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Label.BorderSizePixel = 0
-Label.Size = UDim2.new(0, 99, 0, 9)
-Label.Font = Enum.Font.SourceSans
-Label.Text = "Fov"
-Label.TextColor3 = Color3.fromRGB(0, 0, 0)
-Label.TextSize = 12.000
-
-UICorner_42.Parent = Slider
-
-Autobard.Name = "Autobard"
-Autobard.Parent = CombatFrame
-Autobard.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Autobard.BackgroundTransparency = 0.650
-Autobard.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Autobard.BorderSizePixel = 0
-Autobard.Position = UDim2.new(0.356000006, 0, 0.0149999997, 0)
-Autobard.Size = UDim2.new(0, 99, 0, 39)
-Autobard.Font = Enum.Font.SourceSans
-Autobard.Text = ""
-Autobard.TextColor3 = Color3.fromRGB(255, 255, 255)
-Autobard.TextSize = 14.000
-Autobard.TextWrapped = true
-Autobard.TextXAlignment = Enum.TextXAlignment.Left
-
-Toggle_9.Name = "Toggle"
-Toggle_9.Parent = Autobard
-Toggle_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Toggle_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggle_9.BorderSizePixel = 0
-Toggle_9.Position = UDim2.new(0.532343686, 0, 0.222000003, 0)
-Toggle_9.Size = UDim2.new(0, 37, 0, 22)
-Toggle_9.Image = "rbxassetid://16382316568"
-Toggle_9.ImageColor3 = Color3.fromRGB(200, 200, 200)
-
-UICorner_43.CornerRadius = UDim.new(1, 0)
-UICorner_43.Parent = Toggle_9
-
-Button_9.Name = "Button"
-Button_9.Parent = Toggle_9
-Button_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Button_9.BackgroundTransparency = 1.000
-Button_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_9.BorderSizePixel = 0
-Button_9.Position = UDim2.new(-1.41086555, 0, -0.376512021, 0)
-Button_9.Size = UDim2.new(0, 98, 0, 39)
-Button_9.Font = Enum.Font.SourceSans
-Button_9.Text = ""
-Button_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-Button_9.TextSize = 14.000
-
-Circle_9.Name = "Circle"
-Circle_9.Parent = Toggle_9
-Circle_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Circle_9.BorderSizePixel = 0
-Circle_9.Position = UDim2.new(0.0500000007, 0, 0, 2)
-Circle_9.Size = UDim2.new(0, 18, 0, 18)
-
-UICorner_44.CornerRadius = UDim.new(1, 0)
-UICorner_44.Parent = Circle_9
-
-UICorner_45.Parent = Autobard
-
-Text_11.Name = "Text"
-Text_11.Parent = Autobard
-Text_11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Text_11.BackgroundTransparency = 1.000
-Text_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Text_11.BorderSizePixel = 0
-Text_11.Position = UDim2.new(0.138993695, 0, 0.124103256, 0)
-Text_11.Size = UDim2.new(0, 32, 0, 28)
-Text_11.Font = Enum.Font.SourceSans
-Text_11.Text = "Auto Bard"
-Text_11.TextColor3 = Color3.fromRGB(255, 255, 255)
-Text_11.TextSize = 14.000
-Text_11.TextWrapped = true
-Text_11.TextXAlignment = Enum.TextXAlignment.Left
-
-BardStacking.Name = "BardStacking"
-BardStacking.Parent = CombatFrame
-BardStacking.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-BardStacking.BackgroundTransparency = 0.650
-BardStacking.BorderColor3 = Color3.fromRGB(0, 0, 0)
-BardStacking.BorderSizePixel = 0
-BardStacking.Position = UDim2.new(0.356000006, 0, 0.0850000009, 0)
-BardStacking.Size = UDim2.new(0, 99, 0, 39)
-BardStacking.Font = Enum.Font.SourceSans
-BardStacking.Text = ""
-BardStacking.TextColor3 = Color3.fromRGB(255, 255, 255)
-BardStacking.TextSize = 14.000
-BardStacking.TextWrapped = true
-BardStacking.TextXAlignment = Enum.TextXAlignment.Left
-
-Toggle_10.Name = "Toggle"
-Toggle_10.Parent = BardStacking
-Toggle_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Toggle_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggle_10.BorderSizePixel = 0
-Toggle_10.Position = UDim2.new(0.532343686, 0, 0.222000003, 0)
-Toggle_10.Size = UDim2.new(0, 37, 0, 22)
-Toggle_10.Image = "rbxassetid://16382316568"
-Toggle_10.ImageColor3 = Color3.fromRGB(200, 200, 200)
-
-UICorner_46.CornerRadius = UDim.new(1, 0)
-UICorner_46.Parent = Toggle_10
-
-Button_10.Name = "Button"
-Button_10.Parent = Toggle_10
-Button_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Button_10.BackgroundTransparency = 1.000
-Button_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_10.BorderSizePixel = 0
-Button_10.Position = UDim2.new(-1.41086555, 0, -0.376512021, 0)
-Button_10.Size = UDim2.new(0, 98, 0, 39)
-Button_10.Font = Enum.Font.SourceSans
-Button_10.Text = ""
-Button_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-Button_10.TextSize = 14.000
-
-Circle_10.Name = "Circle"
-Circle_10.Parent = Toggle_10
-Circle_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Circle_10.BorderSizePixel = 0
-Circle_10.Position = UDim2.new(0.0500000007, 0, 0, 2)
-Circle_10.Size = UDim2.new(0, 18, 0, 18)
-
-UICorner_47.CornerRadius = UDim.new(1, 0)
-UICorner_47.Parent = Circle_10
-
-UICorner_48.Parent = BardStacking
-
-Text_12.Name = "Text"
-Text_12.Parent = BardStacking
-Text_12.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Text_12.BackgroundTransparency = 1.000
-Text_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Text_12.BorderSizePixel = 0
-Text_12.Position = UDim2.new(0.0480846055, 0, 0.124103256, 0)
-Text_12.Size = UDim2.new(0, 46, 0, 28)
-Text_12.Font = Enum.Font.SourceSans
-Text_12.Text = "     Bard Stacking"
-Text_12.TextColor3 = Color3.fromRGB(255, 255, 255)
-Text_12.TextSize = 14.000
-Text_12.TextWrapped = true
-Text_12.TextXAlignment = Enum.TextXAlignment.Left
-
-DJump.Name = "DJump"
-DJump.Parent = CombatFrame
-DJump.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-DJump.BackgroundTransparency = 0.650
-DJump.BorderColor3 = Color3.fromRGB(0, 0, 0)
-DJump.BorderSizePixel = 0
-DJump.Position = UDim2.new(0.0140000004, 0, 0.0149999997, 0)
-DJump.Size = UDim2.new(0, 99, 0, 39)
-DJump.Font = Enum.Font.SourceSans
-DJump.Text = ""
-DJump.TextColor3 = Color3.fromRGB(255, 255, 255)
-DJump.TextSize = 14.000
-DJump.TextWrapped = true
-DJump.TextXAlignment = Enum.TextXAlignment.Left
-
-Toggle_11.Name = "Toggle"
-Toggle_11.Parent = DJump
-Toggle_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Toggle_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggle_11.BorderSizePixel = 0
-Toggle_11.Position = UDim2.new(0.532343686, 0, 0.222000003, 0)
-Toggle_11.Size = UDim2.new(0, 37, 0, 22)
-Toggle_11.Image = "rbxassetid://16382316568"
-Toggle_11.ImageColor3 = Color3.fromRGB(200, 200, 200)
-
-UICorner_49.CornerRadius = UDim.new(1, 0)
-UICorner_49.Parent = Toggle_11
-
-Button_11.Name = "Button"
-Button_11.Parent = Toggle_11
-Button_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Button_11.BackgroundTransparency = 1.000
-Button_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_11.BorderSizePixel = 0
-Button_11.Position = UDim2.new(-1.41086555, 0, -0.376512021, 0)
-Button_11.Size = UDim2.new(0, 98, 0, 39)
-Button_11.Font = Enum.Font.SourceSans
-Button_11.Text = ""
-Button_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-Button_11.TextSize = 14.000
-
-Circle_11.Name = "Circle"
-Circle_11.Parent = Toggle_11
-Circle_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Circle_11.BorderSizePixel = 0
-Circle_11.Position = UDim2.new(0.0500000007, 0, 0, 2)
-Circle_11.Size = UDim2.new(0, 18, 0, 18)
-
-UICorner_50.CornerRadius = UDim.new(1, 0)
-UICorner_50.Parent = Circle_11
-
-UICorner_51.Parent = DJump
-
-Text_13.Name = "Text"
-Text_13.Parent = DJump
-Text_13.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Text_13.BackgroundTransparency = 1.000
-Text_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Text_13.BorderSizePixel = 0
-Text_13.Position = UDim2.new(0.078387633, 0, -0.0041018757, 0)
-Text_13.Size = UDim2.new(0, 44, 0, 28)
-Text_13.Font = Enum.Font.SourceSans
-Text_13.Text = "Double"
-Text_13.TextColor3 = Color3.fromRGB(255, 255, 255)
-Text_13.TextSize = 14.000
-Text_13.TextWrapped = true
-Text_13.TextXAlignment = Enum.TextXAlignment.Left
-
-Text_14.Name = "Text"
-Text_14.Parent = DJump
-Text_14.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Text_14.BackgroundTransparency = 1.000
-Text_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Text_14.BorderSizePixel = 0
-Text_14.Position = UDim2.new(0.0985896587, 0, 0.277949393, 0)
-Text_14.Size = UDim2.new(0, 44, 0, 28)
-Text_14.Font = Enum.Font.SourceSans
-Text_14.Text = "Jump"
-Text_14.TextColor3 = Color3.fromRGB(255, 255, 255)
-Text_14.TextSize = 14.000
-Text_14.TextWrapped = true
-Text_14.TextXAlignment = Enum.TextXAlignment.Left
-
-EspFrame.Name = "EspFrame"
-EspFrame.Parent = test11
-EspFrame.Active = true
-EspFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-EspFrame.BackgroundTransparency = 0.500
-EspFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-EspFrame.BorderSizePixel = 0
-EspFrame.Position = UDim2.new(0.226666674, 0, 0.172307685, 0)
-EspFrame.Size = UDim2.new(0, 339, 0, 263)
-EspFrame.Visible = false
-EspFrame.ScrollBarThickness = 2
-
-UICorner_52.Parent = EspFrame
-
-Player_2.Name = "Player"
-Player_2.Parent = EspFrame
-Player_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Player_2.BackgroundTransparency = 0.650
-Player_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Player_2.BorderSizePixel = 0
-Player_2.Position = UDim2.new(0.0140000004, 0, 0.0599999987, 0)
-Player_2.Size = UDim2.new(0, 99, 0, 39)
-Player_2.Font = Enum.Font.SourceSans
-Player_2.Text = "	 Player"
-Player_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Player_2.TextSize = 14.000
-Player_2.TextXAlignment = Enum.TextXAlignment.Left
-
-Toggle_12.Name = "Toggle"
-Toggle_12.Parent = Player_2
-Toggle_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Toggle_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggle_12.BorderSizePixel = 0
-Toggle_12.Position = UDim2.new(0.532343686, 0, 0.222000003, 0)
-Toggle_12.Size = UDim2.new(0, 37, 0, 22)
-Toggle_12.Image = "rbxassetid://16382316568"
-Toggle_12.ImageColor3 = Color3.fromRGB(200, 200, 200)
-
-UICorner_53.CornerRadius = UDim.new(1, 0)
-UICorner_53.Parent = Toggle_12
-
-Button_12.Name = "Button"
-Button_12.Parent = Toggle_12
-Button_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Button_12.BackgroundTransparency = 1.000
-Button_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_12.BorderSizePixel = 0
-Button_12.Position = UDim2.new(-1.41086555, 0, -0.376512021, 0)
-Button_12.Size = UDim2.new(0, 98, 0, 39)
-Button_12.Font = Enum.Font.SourceSans
-Button_12.Text = ""
-Button_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-Button_12.TextSize = 14.000
-
-Circle_12.Name = "Circle"
-Circle_12.Parent = Toggle_12
-Circle_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Circle_12.BorderSizePixel = 0
-Circle_12.Position = UDim2.new(0.0500000007, 0, 0, 2)
-Circle_12.Size = UDim2.new(0, 18, 0, 18)
-
-UICorner_54.CornerRadius = UDim.new(1, 0)
-UICorner_54.Parent = Circle_12
-
-UICorner_55.Parent = Player_2
-
-PlayerEsp.Name = "Player Esp"
-PlayerEsp.Parent = EspFrame
-PlayerEsp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-PlayerEsp.BackgroundTransparency = 1.000
-PlayerEsp.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PlayerEsp.BorderSizePixel = 0
-PlayerEsp.Position = UDim2.new(0.0140000004, 0, 0.00400000019, 0)
-PlayerEsp.Size = UDim2.new(0, 99, 0, 39)
-PlayerEsp.Font = Enum.Font.SourceSansBold
-PlayerEsp.Text = "Player Esp"
-PlayerEsp.TextColor3 = Color3.fromRGB(255, 255, 255)
-PlayerEsp.TextSize = 15.000
-
-UICorner_56.Parent = PlayerEsp
-
-TrinketEsp.Name = "Trinket Esp"
-TrinketEsp.Parent = EspFrame
-TrinketEsp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TrinketEsp.BackgroundTransparency = 1.000
-TrinketEsp.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TrinketEsp.BorderSizePixel = 0
-TrinketEsp.Position = UDim2.new(0.698000014, 0, 0.00400000019, 0)
-TrinketEsp.Size = UDim2.new(0, 99, 0, 39)
-TrinketEsp.Font = Enum.Font.SourceSansBold
-TrinketEsp.Text = "Trinket Esp"
-TrinketEsp.TextColor3 = Color3.fromRGB(255, 255, 255)
-TrinketEsp.TextSize = 15.000
-
-UICorner_57.Parent = TrinketEsp
-
-HealthBar.Name = "Health Bar"
-HealthBar.Parent = EspFrame
-HealthBar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-HealthBar.BackgroundTransparency = 0.650
-HealthBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
-HealthBar.BorderSizePixel = 0
-HealthBar.Position = UDim2.new(0.0140000004, 0, 0.129999995, 0)
-HealthBar.Size = UDim2.new(0, 99, 0, 39)
-HealthBar.Font = Enum.Font.SourceSans
-HealthBar.Text = "	 "
-HealthBar.TextColor3 = Color3.fromRGB(255, 255, 255)
-HealthBar.TextSize = 14.000
-HealthBar.TextXAlignment = Enum.TextXAlignment.Left
-
-Toggle_13.Name = "Toggle"
-Toggle_13.Parent = HealthBar
-Toggle_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Toggle_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggle_13.BorderSizePixel = 0
-Toggle_13.Position = UDim2.new(0.532343686, 0, 0.222000003, 0)
-Toggle_13.Size = UDim2.new(0, 37, 0, 22)
-Toggle_13.Image = "rbxassetid://16382316568"
-Toggle_13.ImageColor3 = Color3.fromRGB(200, 200, 200)
-
-UICorner_58.CornerRadius = UDim.new(1, 0)
-UICorner_58.Parent = Toggle_13
-
-Button_13.Name = "Button"
-Button_13.Parent = Toggle_13
-Button_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Button_13.BackgroundTransparency = 1.000
-Button_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_13.BorderSizePixel = 0
-Button_13.Position = UDim2.new(-1.41086555, 0, -0.376512021, 0)
-Button_13.Size = UDim2.new(0, 98, 0, 39)
-Button_13.Font = Enum.Font.SourceSans
-Button_13.Text = ""
-Button_13.TextColor3 = Color3.fromRGB(0, 0, 0)
-Button_13.TextSize = 14.000
-
-Circle_13.Name = "Circle"
-Circle_13.Parent = Toggle_13
-Circle_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Circle_13.BorderSizePixel = 0
-Circle_13.Position = UDim2.new(0.0500000007, 0, 0, 2)
-Circle_13.Size = UDim2.new(0, 18, 0, 18)
-
-UICorner_59.CornerRadius = UDim.new(1, 0)
-UICorner_59.Parent = Circle_13
-
-UICorner_60.Parent = HealthBar
-
-health.Name = "health"
-health.Parent = HealthBar
-health.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-health.BackgroundTransparency = 1.000
-health.BorderColor3 = Color3.fromRGB(0, 0, 0)
-health.BorderSizePixel = 0
-health.Position = UDim2.new(0.0860000029, 0, -0.0219999999, 0)
-health.Size = UDim2.new(0, 44, 0, 28)
-health.Font = Enum.Font.SourceSans
-health.Text = "Health"
-health.TextColor3 = Color3.fromRGB(255, 255, 255)
-health.TextSize = 14.000
-
-Bar.Name = "Bar"
-Bar.Parent = HealthBar
-Bar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Bar.BackgroundTransparency = 1.000
-Bar.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Bar.BorderSizePixel = 0
-Bar.Position = UDim2.new(0.0700000003, 0, 0.300000012, 2)
-Bar.Size = UDim2.new(0, 44, 0, 28)
-Bar.Font = Enum.Font.SourceSans
-Bar.Text = "Bar"
-Bar.TextColor3 = Color3.fromRGB(255, 255, 255)
-Bar.TextSize = 14.000
-
--- Scripts:
-
-local function TMZA_fake_script() -- setting.LocalScript 
-	local script = Instance.new('LocalScript', setting)
-
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 213 | Scripts: 35 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.VoxlHubRL
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[VoxlHubRL]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
+
+
+-- StarterGui.VoxlHubRL.test1.1
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2"]["Size"] = UDim2.new(0, 450, 0, 325);
+G2L["2"]["Position"] = UDim2.new(0.68191, 0, 0.56737, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[test1.1]];
+G2L["2"]["BackgroundTransparency"] = 0.6;
+
+
+-- StarterGui.VoxlHubRL.test1.1.setting
+G2L["3"] = Instance.new("TextButton", G2L["2"]);
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["TextSize"] = 20;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["3"]["Size"] = UDim2.new(0, 90, 0, 30);
+G2L["3"]["BackgroundTransparency"] = 0.85;
+G2L["3"]["Name"] = [[setting]];
+G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["Text"] = [[Setting]];
+G2L["3"]["Position"] = UDim2.new(0.78, 0, 0.04154, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.setting.LocalScript
+G2L["4"] = Instance.new("LocalScript", G2L["3"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.combat
+G2L["5"] = Instance.new("TextButton", G2L["2"]);
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["TextSize"] = 20;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["5"]["Size"] = UDim2.new(0, 87, 0, 30);
+G2L["5"]["BackgroundTransparency"] = 0.85;
+G2L["5"]["Name"] = [[combat]];
+G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["Text"] = [[Combat]];
+G2L["5"]["Position"] = UDim2.new(0.568, 0, 0.04154, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.combat.LocalScript
+G2L["6"] = Instance.new("LocalScript", G2L["5"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.Player
+G2L["7"] = Instance.new("TextButton", G2L["2"]);
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["TextSize"] = 20;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["7"]["Size"] = UDim2.new(0, 90, 0, 30);
+G2L["7"]["BackgroundTransparency"] = 0.85;
+G2L["7"]["Name"] = [[Player]];
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Text"] = [[Player]];
+G2L["7"]["Position"] = UDim2.new(0.35, 0, 0.042, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.Player.LocalScript
+G2L["8"] = Instance.new("LocalScript", G2L["7"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.Main
+G2L["9"] = Instance.new("TextButton", G2L["2"]);
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["TextSize"] = 20;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["9"]["Size"] = UDim2.new(0, 90, 0, 30);
+G2L["9"]["BackgroundTransparency"] = 0.85;
+G2L["9"]["Name"] = [[Main]];
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Text"] = [[Main]];
+G2L["9"]["Position"] = UDim2.new(0.13, 0, 0.04154, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.Main.LocalScript
+G2L["a"] = Instance.new("LocalScript", G2L["9"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.ImageLabel
+G2L["b"] = Instance.new("ImageLabel", G2L["2"]);
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["Image"] = [[rbxassetid://83493970525178]];
+G2L["b"]["Size"] = UDim2.new(0, 66, 0, 80);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["BackgroundTransparency"] = 1;
+G2L["b"]["Position"] = UDim2.new(-0.01778, 0, -0.04615, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.UICorner
+G2L["c"] = Instance.new("UICorner", G2L["2"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.LootingTime
+G2L["d"] = Instance.new("LocalScript", G2L["2"]);
+G2L["d"]["Name"] = [[LootingTime]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.Spectatescriptoldfirst
+G2L["e"] = Instance.new("LocalScript", G2L["2"]);
+G2L["e"]["Enabled"] = false;
+G2L["e"]["Name"] = [[Spectatescriptoldfirst]];
+G2L["e"]["Disabled"] = true;
+
+
+-- StarterGui.VoxlHubRL.test1.1.esp
+G2L["f"] = Instance.new("TextButton", G2L["2"]);
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["TextSize"] = 20;
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["f"]["Size"] = UDim2.new(0, 90, 0, 30);
+G2L["f"]["BackgroundTransparency"] = 0.85;
+G2L["f"]["Name"] = [[esp]];
+G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["Text"] = [[Esp]];
+G2L["f"]["Position"] = UDim2.new(0.009, 0, 0.198, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.esp.LocalScript
+G2L["10"] = Instance.new("LocalScript", G2L["f"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.fly
+G2L["11"] = Instance.new("TextButton", G2L["2"]);
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["TextSize"] = 20;
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["11"]["Size"] = UDim2.new(0, 90, 0, 30);
+G2L["11"]["BackgroundTransparency"] = 0.85;
+G2L["11"]["Name"] = [[fly]];
+G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["Text"] = [[Fly]];
+G2L["11"]["Position"] = UDim2.new(0.009, 0, 0.327, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerInfo
+G2L["12"] = Instance.new("Frame", G2L["2"]);
+G2L["12"]["Visible"] = false;
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["Size"] = UDim2.new(0, 243, 0, 322);
+G2L["12"]["Position"] = UDim2.new(0.25889, 0, -1.54462, 0);
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Name"] = [[PlayerInfo]];
+G2L["12"]["BackgroundTransparency"] = 0.6;
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerInfo.Username
+G2L["13"] = Instance.new("TextLabel", G2L["12"]);
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["TextSize"] = 14;
+G2L["13"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["13"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["BackgroundTransparency"] = 1;
+G2L["13"]["Size"] = UDim2.new(0, 57, 0, 50);
+G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["Text"] = [[Username :]];
+G2L["13"]["Name"] = [[Username]];
+G2L["13"]["Position"] = UDim2.new(0.045, 0, 0, 17);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerInfo.Username.UsernameN
+G2L["14"] = Instance.new("TextLabel", G2L["13"]);
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["TextSize"] = 14;
+G2L["14"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["14"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["14"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["BackgroundTransparency"] = 1;
+G2L["14"]["Size"] = UDim2.new(0, 188, 0, 50);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["Text"] = [[Unknow]];
+G2L["14"]["Name"] = [[UsernameN]];
+G2L["14"]["Position"] = UDim2.new(1.03134, 0, 0, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerInfo.Username.Cpyclipboard
+G2L["15"] = Instance.new("TextButton", G2L["13"]);
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["TextSize"] = 13;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["15"]["Size"] = UDim2.new(0, 32, 0, 11);
+G2L["15"]["BackgroundTransparency"] = 0.85;
+G2L["15"]["Name"] = [[Cpyclipboard]];
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Text"] = [[Copy]];
+G2L["15"]["Position"] = UDim2.new(3.323, 0, 0.438, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerInfo.Username.Cpyclipboard.LocalScript
+G2L["16"] = Instance.new("LocalScript", G2L["15"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerInfo.IngameName
+G2L["17"] = Instance.new("TextLabel", G2L["12"]);
+G2L["17"]["BorderSizePixel"] = 0;
+G2L["17"]["TextSize"] = 14;
+G2L["17"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["17"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["17"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["17"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["17"]["BackgroundTransparency"] = 1;
+G2L["17"]["Size"] = UDim2.new(0, 66, 0, 50);
+G2L["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["17"]["Text"] = [[Ingame Name :]];
+G2L["17"]["Name"] = [[IngameName]];
+G2L["17"]["Position"] = UDim2.new(0.045, 0, 0.12, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerInfo.IngameName.IngameNameN
+G2L["18"] = Instance.new("TextLabel", G2L["17"]);
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["TextSize"] = 14;
+G2L["18"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["18"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["BackgroundTransparency"] = 1;
+G2L["18"]["Size"] = UDim2.new(0, 188, 0, 50);
+G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["Text"] = [[Unknow]];
+G2L["18"]["Name"] = [[IngameNameN]];
+G2L["18"]["Position"] = UDim2.new(1.15442, 0, 0, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerInfo.IngameName.Cpyclipboard
+G2L["19"] = Instance.new("TextButton", G2L["17"]);
+G2L["19"]["BorderSizePixel"] = 0;
+G2L["19"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["19"]["TextSize"] = 13;
+G2L["19"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["19"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["19"]["Size"] = UDim2.new(0, 32, 0, 11);
+G2L["19"]["BackgroundTransparency"] = 0.85;
+G2L["19"]["Name"] = [[Cpyclipboard]];
+G2L["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["19"]["Text"] = [[Copy]];
+G2L["19"]["Position"] = UDim2.new(2.86845, 0, 0.458, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerInfo.IngameName.Cpyclipboard.LocalScript
+G2L["1a"] = Instance.new("LocalScript", G2L["19"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerInfo.Class
+G2L["1b"] = Instance.new("TextLabel", G2L["12"]);
+G2L["1b"]["BorderSizePixel"] = 0;
+G2L["1b"]["TextSize"] = 14;
+G2L["1b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1b"]["BackgroundTransparency"] = 1;
+G2L["1b"]["Size"] = UDim2.new(0, 43, 0, 50);
+G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1b"]["Text"] = [[Class :]];
+G2L["1b"]["Name"] = [[Class]];
+G2L["1b"]["Position"] = UDim2.new(0.045, 0, 0.185, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerInfo.Class.ClassN
+G2L["1c"] = Instance.new("TextLabel", G2L["1b"]);
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["TextSize"] = 14;
+G2L["1c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["BackgroundTransparency"] = 1;
+G2L["1c"]["Size"] = UDim2.new(0, 188, 0, 50);
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["Text"] = [[Unknow]];
+G2L["1c"]["Name"] = [[ClassN]];
+G2L["1c"]["Position"] = UDim2.new(0.80057, 0, 0, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerInfo.SkillNN
+G2L["1d"] = Instance.new("TextLabel", G2L["12"]);
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["TextSize"] = 14;
+G2L["1d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["BackgroundTransparency"] = 1;
+G2L["1d"]["Size"] = UDim2.new(0, 36, 0, 50);
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["Text"] = [[Skill :]];
+G2L["1d"]["Name"] = [[SkillNN]];
+G2L["1d"]["Position"] = UDim2.new(0.04527, 0, 0.25, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerInfo.PlayersInfoscript
+G2L["1e"] = Instance.new("LocalScript", G2L["12"]);
+G2L["1e"]["Name"] = [[PlayersInfoscript]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerInfo.PlayerInfoo
+G2L["1f"] = Instance.new("TextLabel", G2L["12"]);
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["TextSize"] = 25;
+G2L["1f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["BackgroundTransparency"] = 1;
+G2L["1f"]["Size"] = UDim2.new(0, 168, 0, 50);
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["Text"] = [[Player Information]];
+G2L["1f"]["Name"] = [[PlayerInfoo]];
+G2L["1f"]["Position"] = UDim2.new(0.152, 0, -0.07453, 17);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerInfo.Skill
+G2L["20"] = Instance.new("ScrollingFrame", G2L["12"]);
+G2L["20"]["Active"] = true;
+G2L["20"]["BorderSizePixel"] = 0;
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["20"]["Name"] = [[Skill]];
+G2L["20"]["Size"] = UDim2.new(0, 206, 0, 221);
+G2L["20"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["Position"] = UDim2.new(0.152, 0, 0.308, 0);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["ScrollBarThickness"] = 3;
+G2L["20"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerInfo.Skill.SkillN
+G2L["21"] = Instance.new("TextLabel", G2L["20"]);
+G2L["21"]["TextWrapped"] = true;
+G2L["21"]["BorderSizePixel"] = 0;
+G2L["21"]["TextSize"] = 14;
+G2L["21"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["21"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["21"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["21"]["BackgroundTransparency"] = 1;
+G2L["21"]["Size"] = UDim2.new(0, 184, 0, 497);
+G2L["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["21"]["Text"] = [[Unknow]];
+G2L["21"]["Name"] = [[SkillN]];
+G2L["21"]["Position"] = UDim2.new(0.023, 0, 0, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.Spectatescriptoldsecond
+G2L["22"] = Instance.new("LocalScript", G2L["2"]);
+G2L["22"]["Enabled"] = false;
+G2L["22"]["Name"] = [[Spectatescriptoldsecond]];
+G2L["22"]["Disabled"] = true;
+
+
+-- StarterGui.VoxlHubRL.test1.1.Spectatescriptoldthird
+G2L["23"] = Instance.new("LocalScript", G2L["2"]);
+G2L["23"]["Name"] = [[Spectatescriptoldthird]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame
+G2L["24"] = Instance.new("ScrollingFrame", G2L["2"]);
+G2L["24"]["Active"] = true;
+G2L["24"]["BorderSizePixel"] = 0;
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["Name"] = [[SettingFrame]];
+G2L["24"]["Size"] = UDim2.new(0, 339, 0, 263);
+G2L["24"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["Position"] = UDim2.new(0.22667, 0, 0.17231, 0);
+G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["ScrollBarThickness"] = 2;
+G2L["24"]["BackgroundTransparency"] = 0.5;
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.UICorner
+G2L["25"] = Instance.new("UICorner", G2L["24"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.KeybindSetting
+G2L["26"] = Instance.new("TextLabel", G2L["24"]);
+G2L["26"]["BorderSizePixel"] = 0;
+G2L["26"]["TextSize"] = 15;
+G2L["26"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["26"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["26"]["BackgroundTransparency"] = 1;
+G2L["26"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["Text"] = [[Keybind Setting]];
+G2L["26"]["Name"] = [[KeybindSetting]];
+G2L["26"]["Position"] = UDim2.new(0.35595, 0, 0.00419, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.KeybindSetting.UICorner
+G2L["27"] = Instance.new("UICorner", G2L["26"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.MaxHealerSetting
+G2L["28"] = Instance.new("TextLabel", G2L["24"]);
+G2L["28"]["TextWrapped"] = true;
+G2L["28"]["BorderSizePixel"] = 0;
+G2L["28"]["TextSize"] = 14;
+G2L["28"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["28"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["28"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["28"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["28"]["BackgroundTransparency"] = 0.65;
+G2L["28"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["28"]["Text"] = [[     Healer]];
+G2L["28"]["Name"] = [[MaxHealerSetting]];
+G2L["28"]["Position"] = UDim2.new(0.014, 0, 0.06, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.MaxHealerSetting.UICorner
+G2L["29"] = Instance.new("UICorner", G2L["28"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.MaxHealerSetting.Action1
+G2L["2a"] = Instance.new("TextButton", G2L["28"]);
+G2L["2a"]["BorderSizePixel"] = 0;
+G2L["2a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2a"]["TextSize"] = 14;
+G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2a"]["Size"] = UDim2.new(0, 98, 0, 35);
+G2L["2a"]["BackgroundTransparency"] = 1;
+G2L["2a"]["Name"] = [[Action1]];
+G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2a"]["Text"] = [[]];
+G2L["2a"]["Position"] = UDim2.new(0, 0, 0.06192, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.MaxHealerSetting.Action1Text
+G2L["2b"] = Instance.new("TextLabel", G2L["28"]);
+G2L["2b"]["BorderSizePixel"] = 0;
+G2L["2b"]["TextSize"] = 14;
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2b"]["BackgroundTransparency"] = 0.5;
+G2L["2b"]["Size"] = UDim2.new(0, 29, 0, 25);
+G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2b"]["Text"] = [[None]];
+G2L["2b"]["Name"] = [[Action1Text]];
+G2L["2b"]["Position"] = UDim2.new(0.57, 0, 0.187, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.MaxHealerSetting.Action1Text.UICorner
+G2L["2c"] = Instance.new("UICorner", G2L["2b"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.MaxHealerSetting.LocalScript
+G2L["2d"] = Instance.new("LocalScript", G2L["28"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.ToggleUI
+G2L["2e"] = Instance.new("TextLabel", G2L["24"]);
+G2L["2e"]["TextWrapped"] = true;
+G2L["2e"]["BorderSizePixel"] = 0;
+G2L["2e"]["TextSize"] = 14;
+G2L["2e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2e"]["BackgroundTransparency"] = 0.65;
+G2L["2e"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["Text"] = [[  Toggle UI]];
+G2L["2e"]["Name"] = [[ToggleUI]];
+G2L["2e"]["Position"] = UDim2.new(0.355, 0, 0.06, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.ToggleUI.UICorner
+G2L["2f"] = Instance.new("UICorner", G2L["2e"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.ToggleUI.Action1
+G2L["30"] = Instance.new("TextButton", G2L["2e"]);
+G2L["30"]["BorderSizePixel"] = 0;
+G2L["30"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["30"]["TextSize"] = 14;
+G2L["30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["30"]["Size"] = UDim2.new(0, 98, 0, 35);
+G2L["30"]["BackgroundTransparency"] = 1;
+G2L["30"]["Name"] = [[Action1]];
+G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["30"]["Text"] = [[]];
+G2L["30"]["Position"] = UDim2.new(0, 0, 0.06192, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.ToggleUI.Action1Text
+G2L["31"] = Instance.new("TextLabel", G2L["2e"]);
+G2L["31"]["BorderSizePixel"] = 0;
+G2L["31"]["TextSize"] = 14;
+G2L["31"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["31"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["31"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["31"]["BackgroundTransparency"] = 0.5;
+G2L["31"]["Size"] = UDim2.new(0, 29, 0, 25);
+G2L["31"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["31"]["Text"] = [[LeftAlt]];
+G2L["31"]["Name"] = [[Action1Text]];
+G2L["31"]["Position"] = UDim2.new(0.57, 0, 0.187, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.ToggleUI.Action1Text.UICorner
+G2L["32"] = Instance.new("UICorner", G2L["31"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.ToggleUI.LocalScript
+G2L["33"] = Instance.new("LocalScript", G2L["2e"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.WorldPulseSetting
+G2L["34"] = Instance.new("TextLabel", G2L["24"]);
+G2L["34"]["TextWrapped"] = true;
+G2L["34"]["BorderSizePixel"] = 0;
+G2L["34"]["TextSize"] = 14;
+G2L["34"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["34"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["34"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["34"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["34"]["BackgroundTransparency"] = 0.65;
+G2L["34"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["34"]["Text"] = [[]];
+G2L["34"]["Name"] = [[WorldPulseSetting]];
+G2L["34"]["Position"] = UDim2.new(0.698, 0, 0.06, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.WorldPulseSetting.UICorner
+G2L["35"] = Instance.new("UICorner", G2L["34"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.WorldPulseSetting.Action1
+G2L["36"] = Instance.new("TextButton", G2L["34"]);
+G2L["36"]["BorderSizePixel"] = 0;
+G2L["36"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["36"]["TextSize"] = 14;
+G2L["36"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["36"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["36"]["Size"] = UDim2.new(0, 98, 0, 35);
+G2L["36"]["BackgroundTransparency"] = 1;
+G2L["36"]["Name"] = [[Action1]];
+G2L["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["36"]["Text"] = [[]];
+G2L["36"]["Position"] = UDim2.new(0, 0, 0.06192, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.WorldPulseSetting.Action1Text
+G2L["37"] = Instance.new("TextLabel", G2L["34"]);
+G2L["37"]["BorderSizePixel"] = 0;
+G2L["37"]["TextSize"] = 14;
+G2L["37"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["37"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["37"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["37"]["BackgroundTransparency"] = 0.5;
+G2L["37"]["Size"] = UDim2.new(0, 29, 0, 25);
+G2L["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["37"]["Text"] = [[None]];
+G2L["37"]["Name"] = [[Action1Text]];
+G2L["37"]["Position"] = UDim2.new(0.57, 0, 0.187, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.WorldPulseSetting.Action1Text.UICorner
+G2L["38"] = Instance.new("UICorner", G2L["37"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.WorldPulseSetting.LocalScript
+G2L["39"] = Instance.new("LocalScript", G2L["34"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.WorldPulseSetting.Text
+G2L["3a"] = Instance.new("TextLabel", G2L["34"]);
+G2L["3a"]["TextWrapped"] = true;
+G2L["3a"]["BorderSizePixel"] = 0;
+G2L["3a"]["TextSize"] = 14;
+G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["3a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3a"]["BackgroundTransparency"] = 1;
+G2L["3a"]["Size"] = UDim2.new(0, 46, 0, 28);
+G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["Text"] = [[World  Pulse]];
+G2L["3a"]["Name"] = [[Text]];
+G2L["3a"]["Position"] = UDim2.new(0.05819, 0, 0.1241, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.HealthBarSetting
+G2L["3b"] = Instance.new("TextLabel", G2L["24"]);
+G2L["3b"]["TextWrapped"] = true;
+G2L["3b"]["BorderSizePixel"] = 0;
+G2L["3b"]["TextSize"] = 14;
+G2L["3b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3b"]["BackgroundTransparency"] = 0.65;
+G2L["3b"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3b"]["Text"] = [[  HealthBar]];
+G2L["3b"]["Name"] = [[HealthBarSetting]];
+G2L["3b"]["Position"] = UDim2.new(0.014, 0, 0.13, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.HealthBarSetting.UICorner
+G2L["3c"] = Instance.new("UICorner", G2L["3b"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.HealthBarSetting.Action1
+G2L["3d"] = Instance.new("TextButton", G2L["3b"]);
+G2L["3d"]["BorderSizePixel"] = 0;
+G2L["3d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3d"]["TextSize"] = 14;
+G2L["3d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3d"]["Size"] = UDim2.new(0, 98, 0, 35);
+G2L["3d"]["BackgroundTransparency"] = 1;
+G2L["3d"]["Name"] = [[Action1]];
+G2L["3d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3d"]["Text"] = [[]];
+G2L["3d"]["Position"] = UDim2.new(0, 0, 0.06192, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.HealthBarSetting.Action1Text
+G2L["3e"] = Instance.new("TextLabel", G2L["3b"]);
+G2L["3e"]["BorderSizePixel"] = 0;
+G2L["3e"]["TextSize"] = 14;
+G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3e"]["BackgroundTransparency"] = 0.5;
+G2L["3e"]["Size"] = UDim2.new(0, 29, 0, 25);
+G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3e"]["Text"] = [[None]];
+G2L["3e"]["Name"] = [[Action1Text]];
+G2L["3e"]["Position"] = UDim2.new(0.57, 0, 0.187, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.HealthBarSetting.Action1Text.UICorner
+G2L["3f"] = Instance.new("UICorner", G2L["3e"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.HealthBarSetting.LocalScript
+G2L["40"] = Instance.new("LocalScript", G2L["3b"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.AimbotGrappleSetting
+G2L["41"] = Instance.new("TextLabel", G2L["24"]);
+G2L["41"]["TextWrapped"] = true;
+G2L["41"]["BorderSizePixel"] = 0;
+G2L["41"]["TextSize"] = 14;
+G2L["41"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["41"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["41"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["41"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["41"]["BackgroundTransparency"] = 0.65;
+G2L["41"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["41"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["41"]["Text"] = [[]];
+G2L["41"]["Name"] = [[AimbotGrappleSetting]];
+G2L["41"]["Position"] = UDim2.new(0.355, 0, 0.13, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.AimbotGrappleSetting.UICorner
+G2L["42"] = Instance.new("UICorner", G2L["41"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.AimbotGrappleSetting.Action1
+G2L["43"] = Instance.new("TextButton", G2L["41"]);
+G2L["43"]["BorderSizePixel"] = 0;
+G2L["43"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["43"]["TextSize"] = 14;
+G2L["43"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["43"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["43"]["Size"] = UDim2.new(0, 98, 0, 35);
+G2L["43"]["BackgroundTransparency"] = 1;
+G2L["43"]["Name"] = [[Action1]];
+G2L["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["43"]["Text"] = [[]];
+G2L["43"]["Position"] = UDim2.new(0, 0, 0.06192, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.AimbotGrappleSetting.Action1Text
+G2L["44"] = Instance.new("TextLabel", G2L["41"]);
+G2L["44"]["BorderSizePixel"] = 0;
+G2L["44"]["TextSize"] = 14;
+G2L["44"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["44"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["44"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["44"]["BackgroundTransparency"] = 0.5;
+G2L["44"]["Size"] = UDim2.new(0, 29, 0, 25);
+G2L["44"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["44"]["Text"] = [[None]];
+G2L["44"]["Name"] = [[Action1Text]];
+G2L["44"]["Position"] = UDim2.new(0.57, 0, 0.187, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.AimbotGrappleSetting.Action1Text.UICorner
+G2L["45"] = Instance.new("UICorner", G2L["44"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.AimbotGrappleSetting.LocalScript
+G2L["46"] = Instance.new("LocalScript", G2L["41"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.AimbotGrappleSetting.Text
+G2L["47"] = Instance.new("TextLabel", G2L["41"]);
+G2L["47"]["TextWrapped"] = true;
+G2L["47"]["BorderSizePixel"] = 0;
+G2L["47"]["TextSize"] = 14;
+G2L["47"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["47"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["47"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["47"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["47"]["BackgroundTransparency"] = 1;
+G2L["47"]["Size"] = UDim2.new(0, 46, 0, 28);
+G2L["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["47"]["Text"] = [[Aimbot Grapple]];
+G2L["47"]["Name"] = [[Text]];
+G2L["47"]["Position"] = UDim2.new(0.05819, 0, 0.1241, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame
+G2L["48"] = Instance.new("ScrollingFrame", G2L["2"]);
+G2L["48"]["Visible"] = false;
+G2L["48"]["Active"] = true;
+G2L["48"]["BorderSizePixel"] = 0;
+G2L["48"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["48"]["Name"] = [[MainFrame]];
+G2L["48"]["Size"] = UDim2.new(0, 339, 0, 263);
+G2L["48"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["48"]["Position"] = UDim2.new(0.22667, 0, 0.17231, 0);
+G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["48"]["ScrollBarThickness"] = 2;
+G2L["48"]["BackgroundTransparency"] = 0.5;
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.UICorner
+G2L["49"] = Instance.new("UICorner", G2L["48"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofall
+G2L["4a"] = Instance.new("TextLabel", G2L["48"]);
+G2L["4a"]["BorderSizePixel"] = 0;
+G2L["4a"]["TextSize"] = 14;
+G2L["4a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["4a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4a"]["BackgroundTransparency"] = 0.65;
+G2L["4a"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["4a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4a"]["Text"] = [[     NoFall]];
+G2L["4a"]["Name"] = [[Nofall]];
+G2L["4a"]["Position"] = UDim2.new(0.356, 0, 0.015, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofall.Toggle
+G2L["4b"] = Instance.new("ImageLabel", G2L["4a"]);
+G2L["4b"]["BorderSizePixel"] = 0;
+G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4b"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["4b"]["Image"] = [[rbxassetid://16382316568]];
+G2L["4b"]["Size"] = UDim2.new(0, 37, 0, 22);
+G2L["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4b"]["Name"] = [[Toggle]];
+G2L["4b"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofall.Toggle.UICorner
+G2L["4c"] = Instance.new("UICorner", G2L["4b"]);
+G2L["4c"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofall.Toggle.Button
+G2L["4d"] = Instance.new("TextButton", G2L["4b"]);
+G2L["4d"]["BorderSizePixel"] = 0;
+G2L["4d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4d"]["TextSize"] = 14;
+G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4d"]["Size"] = UDim2.new(0, 98, 0, 39);
+G2L["4d"]["BackgroundTransparency"] = 1;
+G2L["4d"]["Name"] = [[Button]];
+G2L["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4d"]["Text"] = [[]];
+G2L["4d"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofall.Toggle.Button.Script
+G2L["4e"] = Instance.new("LocalScript", G2L["4d"]);
+G2L["4e"]["Name"] = [[Script]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofall.Toggle.Circle
+G2L["4f"] = Instance.new("Frame", G2L["4b"]);
+G2L["4f"]["BorderSizePixel"] = 0;
+G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4f"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["4f"]["Position"] = UDim2.new(0.05, 0, 0, 2);
+G2L["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4f"]["Name"] = [[Circle]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofall.Toggle.Circle.UICorner
+G2L["50"] = Instance.new("UICorner", G2L["4f"]);
+G2L["50"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofall.UICorner
+G2L["51"] = Instance.new("UICorner", G2L["4a"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofire
+G2L["52"] = Instance.new("TextLabel", G2L["48"]);
+G2L["52"]["BorderSizePixel"] = 0;
+G2L["52"]["TextSize"] = 14;
+G2L["52"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["52"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["52"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["52"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["52"]["BackgroundTransparency"] = 0.65;
+G2L["52"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["52"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["52"]["Text"] = [[     NoFire]];
+G2L["52"]["Name"] = [[Nofire]];
+G2L["52"]["Position"] = UDim2.new(0.014, 0, 0.015, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofire.Toggle
+G2L["53"] = Instance.new("ImageLabel", G2L["52"]);
+G2L["53"]["BorderSizePixel"] = 0;
+G2L["53"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["53"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["53"]["Image"] = [[rbxassetid://16382316568]];
+G2L["53"]["Size"] = UDim2.new(0, 37, 0, 22);
+G2L["53"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["53"]["Name"] = [[Toggle]];
+G2L["53"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofire.Toggle.UICorner
+G2L["54"] = Instance.new("UICorner", G2L["53"]);
+G2L["54"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofire.Toggle.Button
+G2L["55"] = Instance.new("TextButton", G2L["53"]);
+G2L["55"]["BorderSizePixel"] = 0;
+G2L["55"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["55"]["TextSize"] = 14;
+G2L["55"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["55"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["55"]["Size"] = UDim2.new(0, 98, 0, 39);
+G2L["55"]["BackgroundTransparency"] = 1;
+G2L["55"]["Name"] = [[Button]];
+G2L["55"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["55"]["Text"] = [[]];
+G2L["55"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofire.Toggle.Button.Script
+G2L["56"] = Instance.new("LocalScript", G2L["55"]);
+G2L["56"]["Name"] = [[Script]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofire.Toggle.Circle
+G2L["57"] = Instance.new("Frame", G2L["53"]);
+G2L["57"]["BorderSizePixel"] = 0;
+G2L["57"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["57"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["57"]["Position"] = UDim2.new(0.05, 0, 0, 2);
+G2L["57"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["57"]["Name"] = [[Circle]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofire.Toggle.Circle.UICorner
+G2L["58"] = Instance.new("UICorner", G2L["57"]);
+G2L["58"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofire.UICorner
+G2L["59"] = Instance.new("UICorner", G2L["52"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoInjuries
+G2L["5a"] = Instance.new("TextLabel", G2L["48"]);
+G2L["5a"]["BorderSizePixel"] = 0;
+G2L["5a"]["TextSize"] = 14;
+G2L["5a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["5a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5a"]["BackgroundTransparency"] = 0.65;
+G2L["5a"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["5a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5a"]["Text"] = [[]];
+G2L["5a"]["Name"] = [[NoInjuries]];
+G2L["5a"]["Position"] = UDim2.new(0.698, 0, 0.015, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoInjuries.Toggle
+G2L["5b"] = Instance.new("ImageLabel", G2L["5a"]);
+G2L["5b"]["BorderSizePixel"] = 0;
+G2L["5b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5b"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["5b"]["Image"] = [[rbxassetid://16382316568]];
+G2L["5b"]["Size"] = UDim2.new(0, 37, 0, 22);
+G2L["5b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5b"]["Name"] = [[Toggle]];
+G2L["5b"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoInjuries.Toggle.UICorner
+G2L["5c"] = Instance.new("UICorner", G2L["5b"]);
+G2L["5c"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoInjuries.Toggle.Button
+G2L["5d"] = Instance.new("TextButton", G2L["5b"]);
+G2L["5d"]["BorderSizePixel"] = 0;
+G2L["5d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5d"]["TextSize"] = 14;
+G2L["5d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5d"]["Size"] = UDim2.new(0, 98, 0, 39);
+G2L["5d"]["BackgroundTransparency"] = 1;
+G2L["5d"]["Name"] = [[Button]];
+G2L["5d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5d"]["Text"] = [[]];
+G2L["5d"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoInjuries.Toggle.Button.Script
+G2L["5e"] = Instance.new("LocalScript", G2L["5d"]);
+G2L["5e"]["Name"] = [[Script]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoInjuries.Toggle.Circle
+G2L["5f"] = Instance.new("Frame", G2L["5b"]);
+G2L["5f"]["BorderSizePixel"] = 0;
+G2L["5f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5f"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["5f"]["Position"] = UDim2.new(0.05, 0, 0, 2);
+G2L["5f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5f"]["Name"] = [[Circle]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoInjuries.Toggle.Circle.UICorner
+G2L["60"] = Instance.new("UICorner", G2L["5f"]);
+G2L["60"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoInjuries.UICorner
+G2L["61"] = Instance.new("UICorner", G2L["5a"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoInjuries.Text
+G2L["62"] = Instance.new("TextLabel", G2L["5a"]);
+G2L["62"]["TextWrapped"] = true;
+G2L["62"]["BorderSizePixel"] = 0;
+G2L["62"]["TextSize"] = 14;
+G2L["62"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["62"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["62"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["62"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["62"]["BackgroundTransparency"] = 1;
+G2L["62"]["Size"] = UDim2.new(0, 44, 0, 28);
+G2L["62"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["62"]["Text"] = [[Part]];
+G2L["62"]["Name"] = [[Text]];
+G2L["62"]["Position"] = UDim2.new(0.099, 0, 0.378, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoInjuries.Text
+G2L["63"] = Instance.new("TextLabel", G2L["5a"]);
+G2L["63"]["BorderSizePixel"] = 0;
+G2L["63"]["TextSize"] = 14;
+G2L["63"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["63"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["63"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["63"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["63"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["63"]["BackgroundTransparency"] = 1;
+G2L["63"]["Size"] = UDim2.new(0, 44, 0, 28);
+G2L["63"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["63"]["Text"] = [[No Injury]];
+G2L["63"]["Name"] = [[Text]];
+G2L["63"]["Position"] = UDim2.new(0.06, 0, -0.004, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoOrderField
+G2L["64"] = Instance.new("TextLabel", G2L["48"]);
+G2L["64"]["BorderSizePixel"] = 0;
+G2L["64"]["TextSize"] = 14;
+G2L["64"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["64"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["64"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["64"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["64"]["BackgroundTransparency"] = 0.65;
+G2L["64"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["64"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["64"]["Text"] = [[]];
+G2L["64"]["Name"] = [[NoOrderField]];
+G2L["64"]["Position"] = UDim2.new(0.014, 0, 0.085, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoOrderField.Toggle
+G2L["65"] = Instance.new("ImageLabel", G2L["64"]);
+G2L["65"]["BorderSizePixel"] = 0;
+G2L["65"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["65"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["65"]["Image"] = [[rbxassetid://16382316568]];
+G2L["65"]["Size"] = UDim2.new(0, 37, 0, 22);
+G2L["65"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["65"]["Name"] = [[Toggle]];
+G2L["65"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoOrderField.Toggle.UICorner
+G2L["66"] = Instance.new("UICorner", G2L["65"]);
+G2L["66"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoOrderField.Toggle.Button
+G2L["67"] = Instance.new("TextButton", G2L["65"]);
+G2L["67"]["BorderSizePixel"] = 0;
+G2L["67"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["67"]["TextSize"] = 14;
+G2L["67"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["67"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["67"]["Size"] = UDim2.new(0, 98, 0, 39);
+G2L["67"]["BackgroundTransparency"] = 1;
+G2L["67"]["Name"] = [[Button]];
+G2L["67"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["67"]["Text"] = [[]];
+G2L["67"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoOrderField.Toggle.Button.Script
+G2L["68"] = Instance.new("LocalScript", G2L["67"]);
+G2L["68"]["Name"] = [[Script]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoOrderField.Toggle.Circle
+G2L["69"] = Instance.new("Frame", G2L["65"]);
+G2L["69"]["BorderSizePixel"] = 0;
+G2L["69"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["69"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["69"]["Position"] = UDim2.new(0.05, 0, 0, 2);
+G2L["69"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["69"]["Name"] = [[Circle]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoOrderField.Toggle.Circle.UICorner
+G2L["6a"] = Instance.new("UICorner", G2L["69"]);
+G2L["6a"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoOrderField.UICorner
+G2L["6b"] = Instance.new("UICorner", G2L["64"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoOrderField.Text
+G2L["6c"] = Instance.new("TextLabel", G2L["64"]);
+G2L["6c"]["BorderSizePixel"] = 0;
+G2L["6c"]["TextSize"] = 14;
+G2L["6c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["6c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6c"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["6c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6c"]["BackgroundTransparency"] = 1;
+G2L["6c"]["Size"] = UDim2.new(0, 44, 0, 28);
+G2L["6c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6c"]["Text"] = [[No Order]];
+G2L["6c"]["Name"] = [[Text]];
+G2L["6c"]["Position"] = UDim2.new(0.058, 0, 0.01, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoOrderField.Text
+G2L["6d"] = Instance.new("TextLabel", G2L["64"]);
+G2L["6d"]["BorderSizePixel"] = 0;
+G2L["6d"]["TextSize"] = 14;
+G2L["6d"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6d"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["6d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6d"]["BackgroundTransparency"] = 1;
+G2L["6d"]["Size"] = UDim2.new(0, 44, 0, 28);
+G2L["6d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6d"]["Text"] = [[Field]];
+G2L["6d"]["Name"] = [[Text]];
+G2L["6d"]["Position"] = UDim2.new(0.058, 0, 0.4, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame
+G2L["6e"] = Instance.new("ScrollingFrame", G2L["2"]);
+G2L["6e"]["Visible"] = false;
+G2L["6e"]["Active"] = true;
+G2L["6e"]["BorderSizePixel"] = 0;
+G2L["6e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6e"]["Name"] = [[PlayerFrame]];
+G2L["6e"]["Size"] = UDim2.new(0, 339, 0, 263);
+G2L["6e"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6e"]["Position"] = UDim2.new(0.22667, 0, 0.17231, 0);
+G2L["6e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6e"]["ScrollBarThickness"] = 2;
+G2L["6e"]["BackgroundTransparency"] = 0.5;
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.UICorner
+G2L["6f"] = Instance.new("UICorner", G2L["6e"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.MaxHealer
+G2L["70"] = Instance.new("TextLabel", G2L["6e"]);
+G2L["70"]["BorderSizePixel"] = 0;
+G2L["70"]["TextSize"] = 14;
+G2L["70"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["70"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["70"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["70"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["70"]["BackgroundTransparency"] = 0.65;
+G2L["70"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["70"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["70"]["Text"] = [[     Healer]];
+G2L["70"]["Name"] = [[MaxHealer]];
+G2L["70"]["Position"] = UDim2.new(0.014, 0, 0.015, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.MaxHealer.Toggle
+G2L["71"] = Instance.new("ImageLabel", G2L["70"]);
+G2L["71"]["BorderSizePixel"] = 0;
+G2L["71"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["71"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["71"]["Image"] = [[rbxassetid://16382316568]];
+G2L["71"]["Size"] = UDim2.new(0, 37, 0, 22);
+G2L["71"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["71"]["Name"] = [[Toggle]];
+G2L["71"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.MaxHealer.Toggle.UICorner
+G2L["72"] = Instance.new("UICorner", G2L["71"]);
+G2L["72"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.MaxHealer.Toggle.Button
+G2L["73"] = Instance.new("TextButton", G2L["71"]);
+G2L["73"]["BorderSizePixel"] = 0;
+G2L["73"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["73"]["TextSize"] = 14;
+G2L["73"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["73"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["73"]["Size"] = UDim2.new(0, 98, 0, 39);
+G2L["73"]["BackgroundTransparency"] = 1;
+G2L["73"]["Name"] = [[Button]];
+G2L["73"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["73"]["Text"] = [[]];
+G2L["73"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.MaxHealer.Toggle.Button.Script
+G2L["74"] = Instance.new("LocalScript", G2L["73"]);
+G2L["74"]["Name"] = [[Script]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.MaxHealer.Toggle.Circle
+G2L["75"] = Instance.new("Frame", G2L["71"]);
+G2L["75"]["BorderSizePixel"] = 0;
+G2L["75"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["75"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["75"]["Position"] = UDim2.new(0.05, 0, 0, 2);
+G2L["75"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["75"]["Name"] = [[Circle]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.MaxHealer.Toggle.Circle.UICorner
+G2L["76"] = Instance.new("UICorner", G2L["75"]);
+G2L["76"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.MaxHealer.UICorner
+G2L["77"] = Instance.new("UICorner", G2L["70"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.WorldPulse
+G2L["78"] = Instance.new("TextLabel", G2L["6e"]);
+G2L["78"]["TextWrapped"] = true;
+G2L["78"]["BorderSizePixel"] = 0;
+G2L["78"]["TextSize"] = 14;
+G2L["78"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["78"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["78"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["78"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["78"]["BackgroundTransparency"] = 0.65;
+G2L["78"]["RichText"] = true;
+G2L["78"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["78"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["78"]["Text"] = [[]];
+G2L["78"]["Name"] = [[WorldPulse]];
+G2L["78"]["Position"] = UDim2.new(0.356, 0, 0.015, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.WorldPulse.Toggle
+G2L["79"] = Instance.new("ImageLabel", G2L["78"]);
+G2L["79"]["BorderSizePixel"] = 0;
+G2L["79"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["79"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["79"]["Image"] = [[rbxassetid://16382316568]];
+G2L["79"]["Size"] = UDim2.new(0, 37, 0, 22);
+G2L["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["79"]["Name"] = [[Toggle]];
+G2L["79"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.WorldPulse.Toggle.UICorner
+G2L["7a"] = Instance.new("UICorner", G2L["79"]);
+G2L["7a"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.WorldPulse.Toggle.Button
+G2L["7b"] = Instance.new("TextButton", G2L["79"]);
+G2L["7b"]["BorderSizePixel"] = 0;
+G2L["7b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7b"]["TextSize"] = 14;
+G2L["7b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7b"]["Size"] = UDim2.new(0, 98, 0, 39);
+G2L["7b"]["BackgroundTransparency"] = 1;
+G2L["7b"]["Name"] = [[Button]];
+G2L["7b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7b"]["Text"] = [[]];
+G2L["7b"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.WorldPulse.Toggle.Button.Script
+G2L["7c"] = Instance.new("LocalScript", G2L["7b"]);
+G2L["7c"]["Name"] = [[Script]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.WorldPulse.Toggle.Circle
+G2L["7d"] = Instance.new("Frame", G2L["79"]);
+G2L["7d"]["BorderSizePixel"] = 0;
+G2L["7d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7d"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["7d"]["Position"] = UDim2.new(0.05, 0, 0, 2);
+G2L["7d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7d"]["Name"] = [[Circle]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.WorldPulse.Toggle.Circle.UICorner
+G2L["7e"] = Instance.new("UICorner", G2L["7d"]);
+G2L["7e"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.WorldPulse.UICorner
+G2L["7f"] = Instance.new("UICorner", G2L["78"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.WorldPulse.Text
+G2L["80"] = Instance.new("TextLabel", G2L["78"]);
+G2L["80"]["TextWrapped"] = true;
+G2L["80"]["BorderSizePixel"] = 0;
+G2L["80"]["TextSize"] = 14;
+G2L["80"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["80"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["80"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["80"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["80"]["BackgroundTransparency"] = 1;
+G2L["80"]["Size"] = UDim2.new(0, 46, 0, 28);
+G2L["80"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["80"]["Text"] = [[World  Pulse]];
+G2L["80"]["Name"] = [[Text]];
+G2L["80"]["Position"] = UDim2.new(0.05819, 0, 0.1241, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.Intent
+G2L["81"] = Instance.new("TextLabel", G2L["6e"]);
+G2L["81"]["TextWrapped"] = true;
+G2L["81"]["BorderSizePixel"] = 0;
+G2L["81"]["TextSize"] = 14;
+G2L["81"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["81"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["81"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["81"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["81"]["BackgroundTransparency"] = 0.65;
+G2L["81"]["RichText"] = true;
+G2L["81"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["81"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["81"]["Text"] = [[]];
+G2L["81"]["Name"] = [[Intent]];
+G2L["81"]["Position"] = UDim2.new(0.698, 0, 0.015, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.Intent.Toggle
+G2L["82"] = Instance.new("ImageLabel", G2L["81"]);
+G2L["82"]["BorderSizePixel"] = 0;
+G2L["82"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["82"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["82"]["Image"] = [[rbxassetid://16382316568]];
+G2L["82"]["Size"] = UDim2.new(0, 37, 0, 22);
+G2L["82"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["82"]["Name"] = [[Toggle]];
+G2L["82"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.Intent.Toggle.UICorner
+G2L["83"] = Instance.new("UICorner", G2L["82"]);
+G2L["83"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.Intent.Toggle.Button
+G2L["84"] = Instance.new("TextButton", G2L["82"]);
+G2L["84"]["BorderSizePixel"] = 0;
+G2L["84"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["84"]["TextSize"] = 14;
+G2L["84"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["84"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["84"]["Size"] = UDim2.new(0, 98, 0, 39);
+G2L["84"]["BackgroundTransparency"] = 1;
+G2L["84"]["Name"] = [[Button]];
+G2L["84"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["84"]["Text"] = [[]];
+G2L["84"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.Intent.Toggle.Button.Script
+G2L["85"] = Instance.new("LocalScript", G2L["84"]);
+G2L["85"]["Name"] = [[Script]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.Intent.Toggle.Circle
+G2L["86"] = Instance.new("Frame", G2L["82"]);
+G2L["86"]["BorderSizePixel"] = 0;
+G2L["86"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["86"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["86"]["Position"] = UDim2.new(0.05, 0, 0, 2);
+G2L["86"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["86"]["Name"] = [[Circle]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.Intent.Toggle.Circle.UICorner
+G2L["87"] = Instance.new("UICorner", G2L["86"]);
+G2L["87"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.Intent.UICorner
+G2L["88"] = Instance.new("UICorner", G2L["81"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.Intent.Text
+G2L["89"] = Instance.new("TextLabel", G2L["81"]);
+G2L["89"]["TextWrapped"] = true;
+G2L["89"]["BorderSizePixel"] = 0;
+G2L["89"]["TextSize"] = 14;
+G2L["89"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["89"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["89"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["89"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["89"]["BackgroundTransparency"] = 1;
+G2L["89"]["Size"] = UDim2.new(0, 46, 0, 28);
+G2L["89"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["89"]["Text"] = [[Intent]];
+G2L["89"]["Name"] = [[Text]];
+G2L["89"]["Position"] = UDim2.new(0.05, 0, 0.124, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame
+G2L["8a"] = Instance.new("ScrollingFrame", G2L["2"]);
+G2L["8a"]["Visible"] = false;
+G2L["8a"]["Active"] = true;
+G2L["8a"]["BorderSizePixel"] = 0;
+G2L["8a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8a"]["Name"] = [[CombatFrame]];
+G2L["8a"]["Size"] = UDim2.new(0, 339, 0, 263);
+G2L["8a"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8a"]["Position"] = UDim2.new(0.22667, 0, 0.17231, 0);
+G2L["8a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8a"]["ScrollBarThickness"] = 2;
+G2L["8a"]["BackgroundTransparency"] = 0.5;
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.UICorner
+G2L["8b"] = Instance.new("UICorner", G2L["8a"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple
+G2L["8c"] = Instance.new("TextLabel", G2L["8a"]);
+G2L["8c"]["TextWrapped"] = true;
+G2L["8c"]["BorderSizePixel"] = 0;
+G2L["8c"]["TextSize"] = 14;
+G2L["8c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["8c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8c"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["8c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8c"]["BackgroundTransparency"] = 0.65;
+G2L["8c"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["8c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8c"]["Text"] = [[]];
+G2L["8c"]["Name"] = [[AimbotGrapple]];
+G2L["8c"]["Position"] = UDim2.new(0.014, 0, 0.085, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle
+G2L["8d"] = Instance.new("ImageLabel", G2L["8c"]);
+G2L["8d"]["BorderSizePixel"] = 0;
+G2L["8d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8d"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["8d"]["Image"] = [[rbxassetid://16382316568]];
+G2L["8d"]["Size"] = UDim2.new(0, 37, 0, 22);
+G2L["8d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8d"]["Name"] = [[Toggle]];
+G2L["8d"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.UICorner
+G2L["8e"] = Instance.new("UICorner", G2L["8d"]);
+G2L["8e"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.Button
+G2L["8f"] = Instance.new("TextButton", G2L["8d"]);
+G2L["8f"]["BorderSizePixel"] = 0;
+G2L["8f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8f"]["TextSize"] = 14;
+G2L["8f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8f"]["Size"] = UDim2.new(0, 98, 0, 39);
+G2L["8f"]["BackgroundTransparency"] = 1;
+G2L["8f"]["Name"] = [[Button]];
+G2L["8f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8f"]["Text"] = [[]];
+G2L["8f"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.Button.oLDONE
+G2L["90"] = Instance.new("LocalScript", G2L["8f"]);
+G2L["90"]["Enabled"] = false;
+G2L["90"]["Name"] = [[oLDONE]];
+G2L["90"]["Disabled"] = true;
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.Button.newoneWORKED
+G2L["91"] = Instance.new("LocalScript", G2L["8f"]);
+G2L["91"]["Name"] = [[newoneWORKED]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.Circle
+G2L["92"] = Instance.new("Frame", G2L["8d"]);
+G2L["92"]["BorderSizePixel"] = 0;
+G2L["92"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["92"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["92"]["Position"] = UDim2.new(0.05, 0, 0, 2);
+G2L["92"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["92"]["Name"] = [[Circle]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.Circle.UICorner
+G2L["93"] = Instance.new("UICorner", G2L["92"]);
+G2L["93"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.UICorner
+G2L["94"] = Instance.new("UICorner", G2L["8c"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Text
+G2L["95"] = Instance.new("TextLabel", G2L["8c"]);
+G2L["95"]["TextWrapped"] = true;
+G2L["95"]["BorderSizePixel"] = 0;
+G2L["95"]["TextSize"] = 14;
+G2L["95"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["95"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["95"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["95"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["95"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["95"]["BackgroundTransparency"] = 1;
+G2L["95"]["Size"] = UDim2.new(0, 44, 0, 28);
+G2L["95"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["95"]["Text"] = [[Aimbot]];
+G2L["95"]["Name"] = [[Text]];
+G2L["95"]["Position"] = UDim2.new(0.11, 0, -0.004, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Text
+G2L["96"] = Instance.new("TextLabel", G2L["8c"]);
+G2L["96"]["TextWrapped"] = true;
+G2L["96"]["BorderSizePixel"] = 0;
+G2L["96"]["TextSize"] = 14;
+G2L["96"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["96"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["96"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["96"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["96"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["96"]["BackgroundTransparency"] = 1;
+G2L["96"]["Size"] = UDim2.new(0, 44, 0, 28);
+G2L["96"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["96"]["Text"] = [[Grapple]];
+G2L["96"]["Name"] = [[Text]];
+G2L["96"]["Position"] = UDim2.new(0.09859, 0, 0.27795, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider
+G2L["97"] = Instance.new("Frame", G2L["8c"]);
+G2L["97"]["BorderSizePixel"] = 0;
+G2L["97"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["97"]["Size"] = UDim2.new(0, 100, 0, 9);
+G2L["97"]["Position"] = UDim2.new(0, 0, 1.15385, 0);
+G2L["97"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["97"]["Name"] = [[Slider]];
+G2L["97"]["BackgroundTransparency"] = 0.65;
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.Updater
+G2L["98"] = Instance.new("LocalScript", G2L["97"]);
+G2L["98"]["Enabled"] = false;
+G2L["98"]["Name"] = [[Updater]];
+G2L["98"]["Disabled"] = true;
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.Fill
+G2L["99"] = Instance.new("Frame", G2L["97"]);
+G2L["99"]["BorderSizePixel"] = 0;
+G2L["99"]["BackgroundColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["99"]["Size"] = UDim2.new(0, 54, 0, 9);
+G2L["99"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["99"]["Name"] = [[Fill]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.Fill.UICorner
+G2L["9a"] = Instance.new("UICorner", G2L["99"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.Trigger
+G2L["9b"] = Instance.new("TextButton", G2L["97"]);
+G2L["9b"]["BorderSizePixel"] = 0;
+G2L["9b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9b"]["TextSize"] = 14;
+G2L["9b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9b"]["Size"] = UDim2.new(0, 99, 0, 9);
+G2L["9b"]["BackgroundTransparency"] = 1;
+G2L["9b"]["Name"] = [[Trigger]];
+G2L["9b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9b"]["Text"] = [[]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.OutputValue
+G2L["9c"] = Instance.new("IntValue", G2L["97"]);
+G2L["9c"]["Name"] = [[OutputValue]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.Label
+G2L["9d"] = Instance.new("TextLabel", G2L["97"]);
+G2L["9d"]["BorderSizePixel"] = 0;
+G2L["9d"]["TextSize"] = 12;
+G2L["9d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9d"]["BackgroundTransparency"] = 1;
+G2L["9d"]["Size"] = UDim2.new(0, 99, 0, 9);
+G2L["9d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9d"]["Text"] = [[Fov]];
+G2L["9d"]["Name"] = [[Label]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.UICorner
+G2L["9e"] = Instance.new("UICorner", G2L["97"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard
+G2L["9f"] = Instance.new("TextLabel", G2L["8a"]);
+G2L["9f"]["TextWrapped"] = true;
+G2L["9f"]["BorderSizePixel"] = 0;
+G2L["9f"]["TextSize"] = 14;
+G2L["9f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["9f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9f"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["9f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9f"]["BackgroundTransparency"] = 0.65;
+G2L["9f"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["9f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9f"]["Text"] = [[]];
+G2L["9f"]["Name"] = [[Autobard]];
+G2L["9f"]["Position"] = UDim2.new(0.356, 0, 0.015, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle
+G2L["a0"] = Instance.new("ImageLabel", G2L["9f"]);
+G2L["a0"]["BorderSizePixel"] = 0;
+G2L["a0"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a0"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["a0"]["Image"] = [[rbxassetid://16382316568]];
+G2L["a0"]["Size"] = UDim2.new(0, 37, 0, 22);
+G2L["a0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a0"]["Name"] = [[Toggle]];
+G2L["a0"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle.UICorner
+G2L["a1"] = Instance.new("UICorner", G2L["a0"]);
+G2L["a1"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle.Button
+G2L["a2"] = Instance.new("TextButton", G2L["a0"]);
+G2L["a2"]["BorderSizePixel"] = 0;
+G2L["a2"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a2"]["TextSize"] = 14;
+G2L["a2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a2"]["Size"] = UDim2.new(0, 98, 0, 39);
+G2L["a2"]["BackgroundTransparency"] = 1;
+G2L["a2"]["Name"] = [[Button]];
+G2L["a2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a2"]["Text"] = [[]];
+G2L["a2"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle.Button.Script
+G2L["a3"] = Instance.new("LocalScript", G2L["a2"]);
+G2L["a3"]["Name"] = [[Script]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle.Circle
+G2L["a4"] = Instance.new("Frame", G2L["a0"]);
+G2L["a4"]["BorderSizePixel"] = 0;
+G2L["a4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a4"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["a4"]["Position"] = UDim2.new(0.05, 0, 0, 2);
+G2L["a4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a4"]["Name"] = [[Circle]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle.Circle.UICorner
+G2L["a5"] = Instance.new("UICorner", G2L["a4"]);
+G2L["a5"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.UICorner
+G2L["a6"] = Instance.new("UICorner", G2L["9f"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Text
+G2L["a7"] = Instance.new("TextLabel", G2L["9f"]);
+G2L["a7"]["TextWrapped"] = true;
+G2L["a7"]["BorderSizePixel"] = 0;
+G2L["a7"]["TextSize"] = 14;
+G2L["a7"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["a7"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a7"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["a7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a7"]["BackgroundTransparency"] = 1;
+G2L["a7"]["Size"] = UDim2.new(0, 32, 0, 28);
+G2L["a7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a7"]["Text"] = [[Auto Bard]];
+G2L["a7"]["Name"] = [[Text]];
+G2L["a7"]["Position"] = UDim2.new(0.13899, 0, 0.1241, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking
+G2L["a8"] = Instance.new("TextLabel", G2L["8a"]);
+G2L["a8"]["TextWrapped"] = true;
+G2L["a8"]["BorderSizePixel"] = 0;
+G2L["a8"]["TextSize"] = 14;
+G2L["a8"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["a8"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a8"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["a8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a8"]["BackgroundTransparency"] = 0.65;
+G2L["a8"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["a8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a8"]["Text"] = [[]];
+G2L["a8"]["Name"] = [[BardStacking]];
+G2L["a8"]["Position"] = UDim2.new(0.356, 0, 0.085, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle
+G2L["a9"] = Instance.new("ImageLabel", G2L["a8"]);
+G2L["a9"]["BorderSizePixel"] = 0;
+G2L["a9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a9"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["a9"]["Image"] = [[rbxassetid://16382316568]];
+G2L["a9"]["Size"] = UDim2.new(0, 37, 0, 22);
+G2L["a9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a9"]["Name"] = [[Toggle]];
+G2L["a9"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle.UICorner
+G2L["aa"] = Instance.new("UICorner", G2L["a9"]);
+G2L["aa"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle.Button
+G2L["ab"] = Instance.new("TextButton", G2L["a9"]);
+G2L["ab"]["BorderSizePixel"] = 0;
+G2L["ab"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ab"]["TextSize"] = 14;
+G2L["ab"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ab"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["ab"]["Size"] = UDim2.new(0, 98, 0, 39);
+G2L["ab"]["BackgroundTransparency"] = 1;
+G2L["ab"]["Name"] = [[Button]];
+G2L["ab"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ab"]["Text"] = [[]];
+G2L["ab"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle.Button.Script
+G2L["ac"] = Instance.new("LocalScript", G2L["ab"]);
+G2L["ac"]["Name"] = [[Script]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle.Circle
+G2L["ad"] = Instance.new("Frame", G2L["a9"]);
+G2L["ad"]["BorderSizePixel"] = 0;
+G2L["ad"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ad"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["ad"]["Position"] = UDim2.new(0.05, 0, 0, 2);
+G2L["ad"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ad"]["Name"] = [[Circle]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle.Circle.UICorner
+G2L["ae"] = Instance.new("UICorner", G2L["ad"]);
+G2L["ae"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.UICorner
+G2L["af"] = Instance.new("UICorner", G2L["a8"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Text
+G2L["b0"] = Instance.new("TextLabel", G2L["a8"]);
+G2L["b0"]["TextWrapped"] = true;
+G2L["b0"]["BorderSizePixel"] = 0;
+G2L["b0"]["TextSize"] = 14;
+G2L["b0"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["b0"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b0"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["b0"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["b0"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b0"]["BackgroundTransparency"] = 1;
+G2L["b0"]["Size"] = UDim2.new(0, 46, 0, 28);
+G2L["b0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b0"]["Text"] = [[     Bard Stacking]];
+G2L["b0"]["Name"] = [[Text]];
+G2L["b0"]["Position"] = UDim2.new(0.04808, 0, 0.1241, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump
+G2L["b1"] = Instance.new("TextLabel", G2L["8a"]);
+G2L["b1"]["TextWrapped"] = true;
+G2L["b1"]["BorderSizePixel"] = 0;
+G2L["b1"]["TextSize"] = 14;
+G2L["b1"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["b1"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b1"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["b1"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["b1"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b1"]["BackgroundTransparency"] = 0.65;
+G2L["b1"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["b1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b1"]["Text"] = [[]];
+G2L["b1"]["Name"] = [[DJump]];
+G2L["b1"]["Position"] = UDim2.new(0.014, 0, 0.015, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle
+G2L["b2"] = Instance.new("ImageLabel", G2L["b1"]);
+G2L["b2"]["BorderSizePixel"] = 0;
+G2L["b2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b2"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["b2"]["Image"] = [[rbxassetid://16382316568]];
+G2L["b2"]["Size"] = UDim2.new(0, 37, 0, 22);
+G2L["b2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b2"]["Name"] = [[Toggle]];
+G2L["b2"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle.UICorner
+G2L["b3"] = Instance.new("UICorner", G2L["b2"]);
+G2L["b3"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle.Button
+G2L["b4"] = Instance.new("TextButton", G2L["b2"]);
+G2L["b4"]["BorderSizePixel"] = 0;
+G2L["b4"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b4"]["TextSize"] = 14;
+G2L["b4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["b4"]["Size"] = UDim2.new(0, 98, 0, 39);
+G2L["b4"]["BackgroundTransparency"] = 1;
+G2L["b4"]["Name"] = [[Button]];
+G2L["b4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b4"]["Text"] = [[]];
+G2L["b4"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle.Button.Script
+G2L["b5"] = Instance.new("LocalScript", G2L["b4"]);
+G2L["b5"]["Name"] = [[Script]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle.Circle
+G2L["b6"] = Instance.new("Frame", G2L["b2"]);
+G2L["b6"]["BorderSizePixel"] = 0;
+G2L["b6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b6"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["b6"]["Position"] = UDim2.new(0.05, 0, 0, 2);
+G2L["b6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b6"]["Name"] = [[Circle]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle.Circle.UICorner
+G2L["b7"] = Instance.new("UICorner", G2L["b6"]);
+G2L["b7"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.UICorner
+G2L["b8"] = Instance.new("UICorner", G2L["b1"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Text
+G2L["b9"] = Instance.new("TextLabel", G2L["b1"]);
+G2L["b9"]["TextWrapped"] = true;
+G2L["b9"]["BorderSizePixel"] = 0;
+G2L["b9"]["TextSize"] = 14;
+G2L["b9"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["b9"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b9"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["b9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["b9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b9"]["BackgroundTransparency"] = 1;
+G2L["b9"]["Size"] = UDim2.new(0, 44, 0, 28);
+G2L["b9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b9"]["Text"] = [[Double]];
+G2L["b9"]["Name"] = [[Text]];
+G2L["b9"]["Position"] = UDim2.new(0.07839, 0, -0.0041, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Text
+G2L["ba"] = Instance.new("TextLabel", G2L["b1"]);
+G2L["ba"]["TextWrapped"] = true;
+G2L["ba"]["BorderSizePixel"] = 0;
+G2L["ba"]["TextSize"] = 14;
+G2L["ba"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["ba"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ba"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["ba"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["ba"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ba"]["BackgroundTransparency"] = 1;
+G2L["ba"]["Size"] = UDim2.new(0, 44, 0, 28);
+G2L["ba"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ba"]["Text"] = [[Jump]];
+G2L["ba"]["Name"] = [[Text]];
+G2L["ba"]["Position"] = UDim2.new(0.09859, 0, 0.27795, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame
+G2L["bb"] = Instance.new("ScrollingFrame", G2L["2"]);
+G2L["bb"]["Visible"] = false;
+G2L["bb"]["Active"] = true;
+G2L["bb"]["BorderSizePixel"] = 0;
+G2L["bb"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["bb"]["Name"] = [[EspFrame]];
+G2L["bb"]["Size"] = UDim2.new(0, 339, 0, 263);
+G2L["bb"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["bb"]["Position"] = UDim2.new(0.22667, 0, 0.17231, 0);
+G2L["bb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["bb"]["ScrollBarThickness"] = 2;
+G2L["bb"]["BackgroundTransparency"] = 0.5;
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.UICorner
+G2L["bc"] = Instance.new("UICorner", G2L["bb"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Player
+G2L["bd"] = Instance.new("TextLabel", G2L["bb"]);
+G2L["bd"]["BorderSizePixel"] = 0;
+G2L["bd"]["TextSize"] = 14;
+G2L["bd"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["bd"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["bd"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["bd"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["bd"]["BackgroundTransparency"] = 0.65;
+G2L["bd"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["bd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["bd"]["Text"] = [[	 Player]];
+G2L["bd"]["Name"] = [[Player]];
+G2L["bd"]["Position"] = UDim2.new(0.014, 0, 0.06, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Player.Toggle
+G2L["be"] = Instance.new("ImageLabel", G2L["bd"]);
+G2L["be"]["BorderSizePixel"] = 0;
+G2L["be"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["be"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["be"]["Image"] = [[rbxassetid://16382316568]];
+G2L["be"]["Size"] = UDim2.new(0, 37, 0, 22);
+G2L["be"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["be"]["Name"] = [[Toggle]];
+G2L["be"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Player.Toggle.UICorner
+G2L["bf"] = Instance.new("UICorner", G2L["be"]);
+G2L["bf"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Player.Toggle.Button
+G2L["c0"] = Instance.new("TextButton", G2L["be"]);
+G2L["c0"]["BorderSizePixel"] = 0;
+G2L["c0"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c0"]["TextSize"] = 14;
+G2L["c0"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c0"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c0"]["Size"] = UDim2.new(0, 98, 0, 39);
+G2L["c0"]["BackgroundTransparency"] = 1;
+G2L["c0"]["Name"] = [[Button]];
+G2L["c0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c0"]["Text"] = [[]];
+G2L["c0"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Player.Toggle.Button.Script
+G2L["c1"] = Instance.new("LocalScript", G2L["c0"]);
+G2L["c1"]["Name"] = [[Script]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Player.Toggle.Circle
+G2L["c2"] = Instance.new("Frame", G2L["be"]);
+G2L["c2"]["BorderSizePixel"] = 0;
+G2L["c2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c2"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["c2"]["Position"] = UDim2.new(0.05, 0, 0, 2);
+G2L["c2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c2"]["Name"] = [[Circle]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Player.Toggle.Circle.UICorner
+G2L["c3"] = Instance.new("UICorner", G2L["c2"]);
+G2L["c3"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Player.UICorner
+G2L["c4"] = Instance.new("UICorner", G2L["bd"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Player Esp
+G2L["c5"] = Instance.new("TextLabel", G2L["bb"]);
+G2L["c5"]["BorderSizePixel"] = 0;
+G2L["c5"]["TextSize"] = 15;
+G2L["c5"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["c5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c5"]["BackgroundTransparency"] = 1;
+G2L["c5"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["c5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c5"]["Text"] = [[Player Esp]];
+G2L["c5"]["Name"] = [[Player Esp]];
+G2L["c5"]["Position"] = UDim2.new(0.014, 0, 0.004, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Player Esp.UICorner
+G2L["c6"] = Instance.new("UICorner", G2L["c5"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Trinket Esp
+G2L["c7"] = Instance.new("TextLabel", G2L["bb"]);
+G2L["c7"]["BorderSizePixel"] = 0;
+G2L["c7"]["TextSize"] = 15;
+G2L["c7"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["c7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c7"]["BackgroundTransparency"] = 1;
+G2L["c7"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["c7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c7"]["Text"] = [[Trinket Esp]];
+G2L["c7"]["Name"] = [[Trinket Esp]];
+G2L["c7"]["Position"] = UDim2.new(0.698, 0, 0.004, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Trinket Esp.UICorner
+G2L["c8"] = Instance.new("UICorner", G2L["c7"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar
+G2L["c9"] = Instance.new("TextLabel", G2L["bb"]);
+G2L["c9"]["BorderSizePixel"] = 0;
+G2L["c9"]["TextSize"] = 14;
+G2L["c9"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["c9"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c9"]["BackgroundTransparency"] = 0.65;
+G2L["c9"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["c9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c9"]["Text"] = [[	 ]];
+G2L["c9"]["Name"] = [[Health Bar]];
+G2L["c9"]["Position"] = UDim2.new(0.014, 0, 0.13, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.Toggle
+G2L["ca"] = Instance.new("ImageLabel", G2L["c9"]);
+G2L["ca"]["BorderSizePixel"] = 0;
+G2L["ca"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ca"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["ca"]["Image"] = [[rbxassetid://16382316568]];
+G2L["ca"]["Size"] = UDim2.new(0, 37, 0, 22);
+G2L["ca"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ca"]["Name"] = [[Toggle]];
+G2L["ca"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.Toggle.UICorner
+G2L["cb"] = Instance.new("UICorner", G2L["ca"]);
+G2L["cb"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.Toggle.Button
+G2L["cc"] = Instance.new("TextButton", G2L["ca"]);
+G2L["cc"]["BorderSizePixel"] = 0;
+G2L["cc"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["cc"]["TextSize"] = 14;
+G2L["cc"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["cc"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["cc"]["Size"] = UDim2.new(0, 98, 0, 39);
+G2L["cc"]["BackgroundTransparency"] = 1;
+G2L["cc"]["Name"] = [[Button]];
+G2L["cc"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["cc"]["Text"] = [[]];
+G2L["cc"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.Toggle.Button.Script
+G2L["cd"] = Instance.new("LocalScript", G2L["cc"]);
+G2L["cd"]["Name"] = [[Script]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.Toggle.Circle
+G2L["ce"] = Instance.new("Frame", G2L["ca"]);
+G2L["ce"]["BorderSizePixel"] = 0;
+G2L["ce"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ce"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["ce"]["Position"] = UDim2.new(0.05, 0, 0, 2);
+G2L["ce"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ce"]["Name"] = [[Circle]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.Toggle.Circle.UICorner
+G2L["cf"] = Instance.new("UICorner", G2L["ce"]);
+G2L["cf"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.UICorner
+G2L["d0"] = Instance.new("UICorner", G2L["c9"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.health
+G2L["d1"] = Instance.new("TextLabel", G2L["c9"]);
+G2L["d1"]["BorderSizePixel"] = 0;
+G2L["d1"]["TextSize"] = 14;
+G2L["d1"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d1"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["d1"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d1"]["BackgroundTransparency"] = 1;
+G2L["d1"]["Size"] = UDim2.new(0, 44, 0, 28);
+G2L["d1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d1"]["Text"] = [[Health]];
+G2L["d1"]["Name"] = [[health]];
+G2L["d1"]["Position"] = UDim2.new(0.086, 0, -0.022, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.Bar
+G2L["d2"] = Instance.new("TextLabel", G2L["c9"]);
+G2L["d2"]["BorderSizePixel"] = 0;
+G2L["d2"]["TextSize"] = 14;
+G2L["d2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["d2"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d2"]["BackgroundTransparency"] = 1;
+G2L["d2"]["Size"] = UDim2.new(0, 44, 0, 28);
+G2L["d2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d2"]["Text"] = [[Bar]];
+G2L["d2"]["Name"] = [[Bar]];
+G2L["d2"]["Position"] = UDim2.new(0.07, 0, 0.3, 2);
+
+
+-- StarterGui.VoxlHubRL.test1.1.Alwayssetposition
+G2L["d3"] = Instance.new("LocalScript", G2L["2"]);
+G2L["d3"]["Name"] = [[Alwayssetposition]];
+
+
+-- StarterGui.VoxlHubRL.Open/close
+G2L["d4"] = Instance.new("LocalScript", G2L["1"]);
+G2L["d4"]["Name"] = [[Open/close]];
+
+
+-- StarterGui.VoxlHubRL.AnticheatBypass
+G2L["d5"] = Instance.new("LocalScript", G2L["1"]);
+G2L["d5"]["Name"] = [[AnticheatBypass]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.setting.LocalScript
+local function C_4()
+local script = G2L["4"];
 	local Main = script.Parent.Parent.MainFrame
 	local Setting = script.Parent.Parent.SettingFrame
 	local Esp = script.Parent.Parent.EspFrame
@@ -1778,11 +2211,11 @@ local function TMZA_fake_script() -- setting.LocalScript
 		Combat.Visible = false
 		Player.Visible = false
 	end)
-end
-coroutine.wrap(TMZA_fake_script)()
-local function TJCHGEC_fake_script() -- combat.LocalScript 
-	local script = Instance.new('LocalScript', combat)
-
+end;
+task.spawn(C_4);
+-- StarterGui.VoxlHubRL.test1.1.combat.LocalScript
+local function C_6()
+local script = G2L["6"];
 	local Main = script.Parent.Parent.MainFrame
 	local Setting = script.Parent.Parent.SettingFrame
 	local Esp = script.Parent.Parent.EspFrame
@@ -1796,11 +2229,11 @@ local function TJCHGEC_fake_script() -- combat.LocalScript
 		Combat.Visible = true
 		Player.Visible = false
 	end)
-end
-coroutine.wrap(TJCHGEC_fake_script)()
-local function TLQHB_fake_script() -- Player.LocalScript 
-	local script = Instance.new('LocalScript', Player)
-
+end;
+task.spawn(C_6);
+-- StarterGui.VoxlHubRL.test1.1.Player.LocalScript
+local function C_8()
+local script = G2L["8"];
 	local Main = script.Parent.Parent.MainFrame
 	local Setting = script.Parent.Parent.SettingFrame
 	local Esp = script.Parent.Parent.EspFrame
@@ -1814,11 +2247,11 @@ local function TLQHB_fake_script() -- Player.LocalScript
 		Combat.Visible = false
 		Player.Visible = true
 	end)
-end
-coroutine.wrap(TLQHB_fake_script)()
-local function IYNKI_fake_script() -- Main.LocalScript 
-	local script = Instance.new('LocalScript', Main)
-
+end;
+task.spawn(C_8);
+-- StarterGui.VoxlHubRL.test1.1.Main.LocalScript
+local function C_a()
+local script = G2L["a"];
 	local Main = script.Parent.Parent.MainFrame
 	local Setting = script.Parent.Parent.SettingFrame
 	local Esp = script.Parent.Parent.EspFrame
@@ -1832,11 +2265,11 @@ local function IYNKI_fake_script() -- Main.LocalScript
 		 Combat.Visible = false
 		 Player.Visible = false
 	end)
-end
-coroutine.wrap(IYNKI_fake_script)()
-local function ZZIA_fake_script() -- test11.LootingTime 
-	local script = Instance.new('LocalScript', test11)
-
+end;
+task.spawn(C_a);
+-- StarterGui.VoxlHubRL.test1.1.LootingTime
+local function C_d()
+local script = G2L["d"];
 	repeat wait(0.25) until game:IsLoaded() wait(0.5)
 	
 	if game.PlaceId == 3016661674 or game.GameId ~= 1087859240 then return end
@@ -1893,12 +2326,11 @@ local function ZZIA_fake_script() -- test11.LootingTime
 			lb.Transparency = 1
 		end
 	end)
-end
-coroutine.wrap(ZZIA_fake_script)()
--- test11.Spectatescriptoldfirst is disabled.
-local function KJQKQ_fake_script() -- esp.LocalScript 
-	local script = Instance.new('LocalScript', esp)
-
+end;
+task.spawn(C_d);
+-- StarterGui.VoxlHubRL.test1.1.esp.LocalScript
+local function C_10()
+local script = G2L["10"];
 	local Main = script.Parent.Parent.MainFrame
 	local Setting = script.Parent.Parent.SettingFrame
 	local Esp = script.Parent.Parent.EspFrame
@@ -1912,27 +2344,27 @@ local function KJQKQ_fake_script() -- esp.LocalScript
 		Combat.Visible = false
 		Player.Visible = false
 	end)
-end
-coroutine.wrap(KJQKQ_fake_script)()
-local function CHLBNAA_fake_script() -- Cpyclipboard.LocalScript 
-	local script = Instance.new('LocalScript', Cpyclipboard)
-
+end;
+task.spawn(C_10);
+-- StarterGui.VoxlHubRL.test1.1.PlayerInfo.Username.Cpyclipboard.LocalScript
+local function C_16()
+local script = G2L["16"];
 	script.Parent.MouseButton1Click:Connect(function()
 				setclipboard(script.Parent.Parent.UsernameN.Text)
 	end)
-end
-coroutine.wrap(CHLBNAA_fake_script)()
-local function EIMTWAM_fake_script() -- Cpyclipboard_2.LocalScript 
-	local script = Instance.new('LocalScript', Cpyclipboard_2)
-
+end;
+task.spawn(C_16);
+-- StarterGui.VoxlHubRL.test1.1.PlayerInfo.IngameName.Cpyclipboard.LocalScript
+local function C_1a()
+local script = G2L["1a"];
 	script.Parent.MouseButton1Click:Connect(function()
 		setclipboard(script.Parent.Parent.IngameNameN.Text)
 	end)
-end
-coroutine.wrap(EIMTWAM_fake_script)()
-local function DOZECJ_fake_script() -- PlayerInfo.PlayersInfoscript 
-	local script = Instance.new('LocalScript', PlayerInfo)
-
+end;
+task.spawn(C_1a);
+-- StarterGui.VoxlHubRL.test1.1.PlayerInfo.PlayersInfoscript
+local function C_1e()
+local script = G2L["1e"];
 	local service_cache = {}
 	local services = setmetatable({}, {
 		__index = function(self, index)
@@ -2128,12 +2560,11 @@ local function DOZECJ_fake_script() -- PlayerInfo.PlayersInfoscript
 			
 		end)
 	end
-end
-coroutine.wrap(DOZECJ_fake_script)()
--- test11.Spectatescriptoldsecond is disabled.
-local function VXCRRZA_fake_script() -- test11.Spectatescriptoldthird 
-	local script = Instance.new('LocalScript', test11)
-
+end;
+task.spawn(C_1e);
+-- StarterGui.VoxlHubRL.test1.1.Spectatescriptoldthird
+local function C_23()
+local script = G2L["23"];
 	local service_cache = {}
 	local services = setmetatable({}, {
 		__index = function(self, index)
@@ -2257,11 +2688,11 @@ local function VXCRRZA_fake_script() -- test11.Spectatescriptoldthird
 		end)
 	end
 	
-end
-coroutine.wrap(VXCRRZA_fake_script)()
-local function BYRH_fake_script() -- MaxHealerSetting.LocalScript 
-	local script = Instance.new('LocalScript', MaxHealerSetting)
-
+end;
+task.spawn(C_23);
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.MaxHealerSetting.LocalScript
+local function C_2d()
+local script = G2L["2d"];
 	local button = script.Parent.Action1
 	local textLabel = script.Parent.Action1Text
 	local userInputService = game:GetService("UserInputService")
@@ -2284,11 +2715,11 @@ local function BYRH_fake_script() -- MaxHealerSetting.LocalScript
 		end
 	end)
 	
-end
-coroutine.wrap(BYRH_fake_script)()
-local function MYGCD_fake_script() -- ToggleUI.LocalScript 
-	local script = Instance.new('LocalScript', ToggleUI)
-
+end;
+task.spawn(C_2d);
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.ToggleUI.LocalScript
+local function C_33()
+local script = G2L["33"];
 	local button = script.Parent.Action1
 	local textLabel = script.Parent.Action1Text
 	local userInputService = game:GetService("UserInputService")
@@ -2311,11 +2742,11 @@ local function MYGCD_fake_script() -- ToggleUI.LocalScript
 		end
 	end)
 	
-end
-coroutine.wrap(MYGCD_fake_script)()
-local function XYXMOTW_fake_script() -- WorldPulseSetting.LocalScript 
-	local script = Instance.new('LocalScript', WorldPulseSetting)
-
+end;
+task.spawn(C_33);
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.WorldPulseSetting.LocalScript
+local function C_39()
+local script = G2L["39"];
 	local button = script.Parent.Action1
 	local textLabel = script.Parent.Action1Text
 	local userInputService = game:GetService("UserInputService")
@@ -2338,11 +2769,11 @@ local function XYXMOTW_fake_script() -- WorldPulseSetting.LocalScript
 		end
 	end)
 	
-end
-coroutine.wrap(XYXMOTW_fake_script)()
-local function ZVLIRPU_fake_script() -- HealthBarSetting.LocalScript 
-	local script = Instance.new('LocalScript', HealthBarSetting)
-
+end;
+task.spawn(C_39);
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.HealthBarSetting.LocalScript
+local function C_40()
+local script = G2L["40"];
 	local button = script.Parent.Action1
 	local textLabel = script.Parent.Action1Text
 	local userInputService = game:GetService("UserInputService")
@@ -2365,11 +2796,11 @@ local function ZVLIRPU_fake_script() -- HealthBarSetting.LocalScript
 		end
 	end)
 	
-end
-coroutine.wrap(ZVLIRPU_fake_script)()
-local function GEQCHJB_fake_script() -- AimbotGrappleSetting.LocalScript 
-	local script = Instance.new('LocalScript', AimbotGrappleSetting)
-
+end;
+task.spawn(C_40);
+-- StarterGui.VoxlHubRL.test1.1.SettingFrame.AimbotGrappleSetting.LocalScript
+local function C_46()
+local script = G2L["46"];
 	local button = script.Parent.Action1
 	local textLabel = script.Parent.Action1Text
 	local userInputService = game:GetService("UserInputService")
@@ -2392,11 +2823,11 @@ local function GEQCHJB_fake_script() -- AimbotGrappleSetting.LocalScript
 		end
 	end)
 	
-end
-coroutine.wrap(GEQCHJB_fake_script)()
-local function PCQOBFH_fake_script() -- Button.Script 
-	local script = Instance.new('LocalScript', Button)
-
+end;
+task.spawn(C_46);
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofall.Toggle.Button.Script
+local function C_4e()
+local script = G2L["4e"];
 	local toggled = false
 	local debounce = false
 	local nofall = false
@@ -2471,11 +2902,11 @@ local function PCQOBFH_fake_script() -- Button.Script
 		end
 	end)
 	
-end
-coroutine.wrap(PCQOBFH_fake_script)()
-local function UCFGAMJ_fake_script() -- Button_2.Script 
-	local script = Instance.new('LocalScript', Button_2)
-
+end;
+task.spawn(C_4e);
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofire.Toggle.Button.Script
+local function C_56()
+local script = G2L["56"];
 	local toggled = false
 	local debounce = false
 	local nofire = false
@@ -2519,11 +2950,11 @@ local function UCFGAMJ_fake_script() -- Button_2.Script
 		end
 	end)
 	
-end
-coroutine.wrap(UCFGAMJ_fake_script)()
-local function OOVRA_fake_script() -- Button_3.Script 
-	local script = Instance.new('LocalScript', Button_3)
-
+end;
+task.spawn(C_56);
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoInjuries.Toggle.Button.Script
+local function C_5e()
+local script = G2L["5e"];
 	local toggled = false
 	local debounce = false
 	
@@ -2567,11 +2998,11 @@ local function OOVRA_fake_script() -- Button_3.Script
 		end
 	end)
 	
-end
-coroutine.wrap(OOVRA_fake_script)()
-local function GBGEC_fake_script() -- Button_4.Script 
-	local script = Instance.new('LocalScript', Button_4)
-
+end;
+task.spawn(C_5e);
+-- StarterGui.VoxlHubRL.test1.1.MainFrame.NoOrderField.Toggle.Button.Script
+local function C_68()
+local script = G2L["68"];
 	local map = game.Workspace:FindFirstChild("Map")
 	local enable = false
 	
@@ -2675,11 +3106,11 @@ local function GBGEC_fake_script() -- Button_4.Script
 		end
 	end)
 	
-end
-coroutine.wrap(GBGEC_fake_script)()
-local function RBNWQ_fake_script() -- Button_5.Script 
-	local script = Instance.new('LocalScript', Button_5)
-
+end;
+task.spawn(C_68);
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.MaxHealer.Toggle.Button.Script
+local function C_74()
+local script = G2L["74"];
 	
 	
 	
@@ -2843,11 +3274,11 @@ local function RBNWQ_fake_script() -- Button_5.Script
 			end
 		end	
 	end)
-end
-coroutine.wrap(RBNWQ_fake_script)()
-local function HPZAGKF_fake_script() -- Button_6.Script 
-	local script = Instance.new('LocalScript', Button_6)
-
+end;
+task.spawn(C_74);
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.WorldPulse.Toggle.Button.Script
+local function C_7c()
+local script = G2L["7c"];
 	local Players = game:GetService("Players")
 	local RunService = game:GetService("RunService")
 	local UserInputService = game:GetService("UserInputService")
@@ -3080,11 +3511,11 @@ local function HPZAGKF_fake_script() -- Button_6.Script
 			end
 		end	
 	end)
-end
-coroutine.wrap(HPZAGKF_fake_script)()
-local function XCUVPB_fake_script() -- Button_7.Script 
-	local script = Instance.new('LocalScript', Button_7)
-
+end;
+task.spawn(C_7c);
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.Intent.Toggle.Button.Script
+local function C_85()
+local script = G2L["85"];
 	local toggled = false
 	local debounce = false
 	local nofire = false
@@ -3128,12 +3559,11 @@ local function XCUVPB_fake_script() -- Button_7.Script
 		end
 	end)
 	
-end
-coroutine.wrap(XCUVPB_fake_script)()
--- Button_8.oLDONE is disabled.
-local function MDSH_fake_script() -- Button_8.newoneWORKED 
-	local script = Instance.new('LocalScript', Button_8)
-
+end;
+task.spawn(C_85);
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.Button.newoneWORKED
+local function C_91()
+local script = G2L["91"];
 	local Mouse = game.Players.LocalPlayer:GetMouse()
 	local Slider = script.Parent.Parent.Parent.Slider
 	local Fill = Slider.Fill
@@ -3323,12 +3753,11 @@ local function MDSH_fake_script() -- Button_8.newoneWORKED
 			end
 		end	
 	end)
-end
-coroutine.wrap(MDSH_fake_script)()
--- Slider.Updater is disabled.
-local function KBKFJ_fake_script() -- Button_9.Script 
-	local script = Instance.new('LocalScript', Button_9)
-
+end;
+task.spawn(C_91);
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle.Button.Script
+local function C_a3()
+local script = G2L["a3"];
 	local toggled = false
 	local debounce = false
 	local autobardenabled = false
@@ -3434,11 +3863,11 @@ local function KBKFJ_fake_script() -- Button_9.Script
 		end
 	end)
 	
-end
-coroutine.wrap(KBKFJ_fake_script)()
-local function FGIRK_fake_script() -- Button_10.Script 
-	local script = Instance.new('LocalScript', Button_10)
-
+end;
+task.spawn(C_a3);
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle.Button.Script
+local function C_ac()
+local script = G2L["ac"];
 	local toggled = false
 	local debounce = false
 	local autobardstackenabled = false
@@ -3533,11 +3962,11 @@ local function FGIRK_fake_script() -- Button_10.Script
 		end
 	end)
 	
-end
-coroutine.wrap(FGIRK_fake_script)()
-local function RXNUQ_fake_script() -- Button_11.Script 
-	local script = Instance.new('LocalScript', Button_11)
-
+end;
+task.spawn(C_ac);
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle.Button.Script
+local function C_b5()
+local script = G2L["b5"];
 	local toggled = false
 	local debounce = false
 	
@@ -3622,11 +4051,11 @@ local function RXNUQ_fake_script() -- Button_11.Script
 		end
 	end)
 	
-end
-coroutine.wrap(RXNUQ_fake_script)()
-local function UCEV_fake_script() -- Button_12.Script 
-	local script = Instance.new('LocalScript', Button_12)
-
+end;
+task.spawn(C_b5);
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Player.Toggle.Button.Script
+local function C_c1()
+local script = G2L["c1"];
 	local toggled = false
 	local debounce = false
 	
@@ -3670,11 +4099,11 @@ local function UCEV_fake_script() -- Button_12.Script
 		end
 	end)
 	
-end
-coroutine.wrap(UCEV_fake_script)()
-local function CVPTUH_fake_script() -- Button_13.Script 
-	local script = Instance.new('LocalScript', Button_13)
-
+end;
+task.spawn(C_c1);
+-- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.Toggle.Button.Script
+local function C_cd()
+local script = G2L["cd"];
 	-- Services
 	local Players = game:GetService("Players")
 	local LocalPlayer = Players.LocalPlayer
@@ -3976,5 +4405,578 @@ local function CVPTUH_fake_script() -- Button_13.Script
 			end
 		end	
 	end)
-end
-coroutine.wrap(CVPTUH_fake_script)()
+end;
+task.spawn(C_cd);
+-- StarterGui.VoxlHubRL.test1.1.Alwayssetposition
+local function C_d3()
+local script = G2L["d3"];
+	script.Parent.Position = UDim2.new(0.760, 0, 0.665, 0)
+end;
+task.spawn(C_d3);
+-- StarterGui.VoxlHubRL.Open/close
+local function C_d4()
+local script = G2L["d4"];
+	local UserInputService = game:GetService("UserInputService")
+	local player = game.Players.LocalPlayer
+	local playerGui = player:WaitForChild("PlayerGui")
+	
+	local isVisible = false
+	
+	-- Function to toggle the GUI visibility
+	local function toggleGuiVisibility()
+		if isVisible == false then
+			isVisible = true
+			script.Parent["test1.1"].Visible = true
+		else
+			isVisible = false
+			script.Parent["test1.1"].Visible = false
+		end
+	end
+	
+	-- Listen for key presses
+	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+		-- Make sure it's not a game-processed event (e.g., typing in a textbox)
+		if gameProcessedEvent then return end
+	
+		-- Check if the pressed key is Left Alt
+		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode[script.Parent["test1.1"].SettingFrame.ToggleUI.Action1Text.Text] then
+			toggleGuiVisibility()
+		end
+	end)
+	
+	
+end;
+task.spawn(C_d4);
+-- StarterGui.VoxlHubRL.AnticheatBypass
+local function C_d5()
+local script = G2L["d5"];
+	--// client anticheat bypass
+	
+	do
+		local function trigger_callback()
+			local anticheat_mode = library.flags["Anticheat Mode"]
+	
+			if anticheat_mode == "Block" then 
+				task_spawn(function()
+					global_variables.block_all_remotes = true
+					global_variables.block_all_animations = true
+	
+					wait(1)
+	
+					global_variables.block_all_animations = false
+					global_variables.block_all_remotes = false
+				end)
+			elseif anticheat_mode == "Kick" then 
+				player:Kick("Anticheat Triggered")
+			end
+		end 
+	
+		local nil_instances = getnilinstances()
+		local ban_animation_ids = {}
+	
+		for index = 1, #nil_instances do 
+			local value = nil_instances[index]
+	
+			if value.ClassName == "AnimationTrack" then 
+				local animation_instance = value.Animation
+	
+				if not animation_instance.Parent then
+					ban_animation_ids[animation_instance.AnimationId] = true
+				end
+			end
+		end
+	
+		if not ban_animation_ids["rbxassetid://4595066903"] then 
+			ban_animation_ids["rbxassetid://4595066903"] = true
+		end
+	
+		local humanoid = workspace.NPCs:FindFirstChildWhichIsA("Humanoid", true)
+	
+		local animation = instance_new("Animation")
+		animation.AnimationId = "rbxassetid://180435571"
+	
+		local animation_play = humanoid:LoadAnimation(animation).Play
+	
+		local old_animation_play
+		old_animation_play = replaceclosure(animation_play, newcclosure(function(self, ...)
+			if global_variables.block_all_animations then 
+				return
+			end 
+	
+			if typeof(self) == "Instance" and self.ClassName == "AnimationTrack" then
+				local animation_id = self.Animation.AnimationId:gsub("[^%w%s_]+", "")
+	
+				if ban_animation_ids[animation_id] then 
+					return trigger_callback()
+				end
+			end
+	
+			return old_animation_play(self, ...)
+		end))
+	
+		local blacklisted_character_descendants = {}
+	
+		local function update_character_blacklist(character)
+			wait(1)
+	
+			local character_descendants = character:GetDescendants()
+	
+			for index = 1, #character_descendants do 
+				local descendant = character_descendants[index]
+	
+				if not ((descendant.ClassName == "Accessory" and (descendant.Name == "Charge" or descendant.Name == "Blindness" or descendant.Name == "DamageMPStack" or descendant.Name == "VisionBlur" or descendant.Name == "Sprint" or descendant.Name == "Climbing" or descendant.Name == "ClimbCooldown")) or (descendant.ClassName == "BodyVelocity" and descendant.Name == "DodgeVel") or (descendant.ClassName == "BodyPosition" and descendant.Name == "BodyPosition")) then 
+					blacklisted_character_descendants[descendant] = true
+				end
+			end
+		end
+	
+		local character = player.Character or player.CharacterAdded:Wait()
+	
+		update_character_blacklist(character)
+		player.CharacterAdded:Connect(update_character_blacklist)
+	
+		local old_destroy
+		old_destroy = replaceclosure(game.Destroy, newcclosure(function(self)
+			if typeof(self) == "Instance" and blacklisted_character_descendants[self] then
+				return trigger_callback()
+			end
+	
+			return old_destroy(self)
+		end))
+	
+		local old_remove
+		old_remove = replaceclosure(game.Remove, newcclosure(function(self)
+			if typeof(self) == "Instance" and blacklisted_character_descendants[self] then
+				return trigger_callback()
+			end
+	
+			return old_remove(self)
+		end))
+	
+		local old_destroy_2
+		old_destroy_2 = replaceclosure(game.destroy, newcclosure(function(self)
+			if typeof(self) == "Instance" and blacklisted_character_descendants[self] then
+				return trigger_callback()
+			end
+	
+			return old_destroy_2(self)
+		end))
+	
+		local old_remove_2
+		old_remove_2 = replaceclosure(game.remove, newcclosure(function(self)
+			if typeof(self) == "Instance" and blacklisted_character_descendants[self] then
+				return trigger_callback()
+			end
+	
+			return old_remove_2(self)
+		end))
+	
+		local old_add_item
+		old_add_item = replaceclosure(services.Debris.AddItem, newcclosure(function(self, object, duration)
+			if blacklisted_character_descendants[object] then
+				return trigger_callback()
+			end
+	
+			return old_add_item(self, object, duration)
+		end))
+	
+		local old_add_item_2
+		old_add_item_2 = replaceclosure(services.Debris.addItem, newcclosure(function(self, object, duration)
+			if blacklisted_character_descendants[object] then
+				return trigger_callback()
+			end
+	
+			return old_add_item(self, object, duration)
+		end))
+	
+		local old_clear_all_children
+		old_clear_all_children = replaceclosure(game.ClearAllChildren, newcclosure(function(self)
+			local character = player.Character
+	
+			if character and self == character then 
+				return trigger_callback() 
+			end
+	
+			return old_clear_all_children(self)
+		end))
+	
+		local old_clear_all_children_2
+		old_clear_all_children_2 = replaceclosure(game.clearAllChildren, newcclosure(function(self)
+			local character = player.Character
+	
+			if character and self == character then 
+				return trigger_callback() 
+			end
+	
+			return old_clear_all_children_2(self)
+		end))
+	
+		local old_coroutine_wrap
+		old_coroutine_wrap = replaceclosure(coroutine.wrap, newcclosure(function(func)
+			if type(func) == "function" and islclosure(func) then
+				local upvalues = getupvalues(func)
+	
+				if #upvalues == 1 and upvalues[1] == services.RunService and getinfo(func, "n").name == "" then
+					return function() end
+				end
+			end
+	
+			return old_coroutine_wrap(func)
+		end))
+	
+		local old_namecall
+		old_namecall = hookmetamethod(game, "__namecall", function(self, ...)
+			local arguments = {...}
+			local method = string.lower(getnamecallmethod())
+	
+			if ((not checkcaller() and method == "destroy") or method == "remove") and typeof(self) == "Instance" and blacklisted_character_descendants[self] then 
+				return trigger_callback()
+			elseif method == "additem" and self == services.Debris then 
+				local object = arguments[1]
+	
+				if typeof(object) == "instance" and blacklisted_character_descendants[object] then
+					return trigger_callback()
+				end
+			elseif method == "clearallchildren" then
+				local character = player.Character
+	
+				if character and self == character then 
+					return trigger_callback()
+				end
+			elseif method == "play" and typeof(self) == "Instance" and self.ClassName == "AnimationTrack" and ban_animation_ids[self.Animation.AnimationId] then 
+				return trigger_callback()
+			end
+	
+			return old_namecall(self, ...)
+		end)
+	
+		local connections = getconnections(game.ScriptContext.Error)
+	
+		for index = 1, #connections do 
+			connections[index]:Disable()
+		end
+	end
+	
+	--// keyhandler bypass
+	
+	do
+		local key_handler = services.ReplicatedStorage:WaitForChild("Assets"):WaitForChild("Modules"):WaitForChild("KeyHandler")
+	
+		local patcher = {}
+		patcher.__index = patcher
+	
+		local psu_struct = {
+			stack_next = "sBgaL",
+			register_c = 639954,
+			register_bx = "jDWh3",
+			register_b = -50014
+		}
+	
+		function patcher.new(psu_function)
+			return setmetatable({
+				upvalues = getupvalues(psu_function),
+				instructions = nil,
+				stack = nil,
+				indexes = {},
+				current_instruction = 0
+			}, patcher)
+		end
+	
+		function patcher:grab_dependencies()
+			for index, upvalue in ipairs(self.upvalues) do 
+				if type(upvalue) == "table" then
+					if upvalue[0] then
+						local entry = upvalue[0]
+	
+						if entry and type(entry) == "table" then 
+							if entry[psu_struct.stack_next] then 
+								self.instructions = upvalue
+							end
+						end
+					else
+						self.stack = upvalue
+					end
+				end
+			end
+	
+			assert(self.instructions, "unable to find instructions!")
+			assert(self.stack, "unable to find stack!")
+		end
+	
+		function patcher:patch_instruction(old_value, new_value)
+			for index, value in next, new_value do 
+				old_value[index] = value
+			end
+		end
+	
+		function patcher:patch_method(method, ...)
+			if method == 1 then
+				local current_instruction = self.current_instruction
+				local eq_amount = 0
+	
+				while true do
+					local instruction = self.instructions[current_instruction] 
+	
+					if type(instruction[psu_struct.register_b]) == "table" then 
+						eq_amount = eq_amount + 1
+					else
+						eq_amount = 0
+					end
+	
+					if eq_amount == 2 then 
+						local to_patch_instruction = self.instructions[current_instruction - 1]
+						local go_to_instruction = instruction[psu_struct.register_b]
+	
+						self:patch_instruction(to_patch_instruction, go_to_instruction)
+						current_instruction = table_find(self.instructions, go_to_instruction)
+						break
+					end
+	
+					current_instruction = current_instruction + 1
+				end
+	
+				self.current_instruction = current_instruction
+			elseif method == 2 then 
+				local current_instruction = self.current_instruction
+				local to_patch_instruction
+	
+				while true do 
+					local instruction = self.instructions[current_instruction]
+	
+					if type(instruction[psu_struct.register_b]) == "table" then 
+						if self.instructions[current_instruction + 2][psu_struct.register_c] == "LocalPlayer" then 
+							local to_patch_instruction = instruction
+							local go_to_instruction = instruction[psu_struct.register_b]
+	
+							self:patch_instruction(to_patch_instruction, go_to_instruction)
+							current_instruction = table_find(self.instructions, go_to_instruction)
+							break
+						end
+					end
+	
+					current_instruction = current_instruction + 1
+				end
+	
+				self.current_instruction = current_instruction
+			elseif method == 3 then
+				local current_instruction = self.current_instruction
+				local to_patch_instruction
+	
+				while true do 
+					local instruction = self.instructions[current_instruction]
+	
+					if type(instruction[psu_struct.register_b]) == "table" then 
+						if self.instructions[current_instruction - 3][psu_struct.register_c] == "FindFirstChild" then 
+							local to_patch_instruction = instruction
+							local go_to_instruction = instruction[psu_struct.register_b]
+	
+							self:patch_instruction(to_patch_instruction, go_to_instruction)
+							current_instruction = table_find(self.instructions, go_to_instruction)
+							break
+						end
+					end
+	
+					current_instruction = current_instruction + 1
+				end
+	
+				self.current_instruction = current_instruction
+			elseif method == 4 then
+				local current_instruction = self.current_instruction
+				local to_patch_instruction
+	
+				while true do 
+					local instruction = self.instructions[current_instruction]
+	
+					if type(instruction[psu_struct.register_b]) == "table" then 
+						if type(self.instructions[current_instruction + 2][psu_struct.register_bx]) == "table" and type(self.instructions[current_instruction + 5][psu_struct.register_bx]) == "table" then 
+							local to_patch_instruction = instruction
+							local go_to_instruction = instruction[psu_struct.register_b]
+	
+							self:patch_instruction(to_patch_instruction, go_to_instruction)
+							current_instruction = table_find(self.instructions, go_to_instruction)
+							break
+						end
+					end
+	
+					current_instruction = current_instruction + 1
+				end
+	
+				self.current_instruction = current_instruction
+			elseif method == 5 then
+				local current_instruction = self.current_instruction
+				local to_patch_instruction
+	
+				local arguments = {...}
+	
+				while true do 
+					local instruction = self.instructions[current_instruction]
+	
+					if type(instruction[psu_struct.register_b]) == "table" then 
+						if self.instructions[current_instruction + arguments[1]][psu_struct.register_b] == "EEKEWAEJIWAJDOIWAJDIOJAWDIOJAWODJOAIW" then 
+							local to_patch_instruction = instruction
+							local go_to_instruction = instruction[psu_struct.register_b]
+	
+							self:patch_instruction(to_patch_instruction, go_to_instruction)
+							current_instruction = table_find(self.instructions, go_to_instruction)
+							break
+						end
+					end
+	
+					current_instruction = current_instruction + 1
+				end
+	
+				self.current_instruction = current_instruction
+			elseif method == 6 then
+				local current_instruction = self.current_instruction
+				local to_patch_instruction
+	
+				while true do 
+					local instruction = self.instructions[current_instruction]
+	
+					if type(instruction[psu_struct.register_b]) == "table" then 
+						if type(self.instructions[current_instruction + 4][psu_struct.register_b]) == "table" then 
+							local to_patch_instruction = instruction
+							local go_to_instruction = self.instructions[current_instruction + 4][psu_struct.register_b]
+	
+							self:patch_instruction(to_patch_instruction, go_to_instruction)
+							current_instruction = table_find(self.instructions, go_to_instruction)
+							break
+						end
+					end
+	
+					current_instruction = current_instruction + 1
+				end
+	
+				self.current_instruction = current_instruction
+			elseif method == 7 then
+				local current_instruction = self.current_instruction
+				local to_patch_instruction
+	
+				while true do 
+					local instruction = self.instructions[current_instruction]
+	
+					if type(instruction[psu_struct.register_b]) == "table" then 
+						local success = true
+						for index = 1, 5 do 
+							if type(self.instructions[current_instruction + index][psu_struct.register_b]) ~= "table" then 
+								success = false
+							end
+						end
+	
+						if success then
+							local to_patch_instruction = instruction
+							local go_to_instruction = instruction[psu_struct.register_b]
+	
+							self:patch_instruction(to_patch_instruction, go_to_instruction)
+							current_instruction = table_find(self.instructions, go_to_instruction)
+							break
+						end
+					end
+	
+					current_instruction = current_instruction + 1
+				end
+	
+				self.current_instruction = current_instruction
+			end
+		end
+	
+		function patcher:patch_instructions(patch_type)
+			if patch_type == 1 then -- module type
+				self.instructions[0] = self.instructions[#self.instructions - 5]
+			elseif patch_type == 2 then -- getkey type
+				for index = 1, 7 do 
+					if index == 5 then 
+						self:patch_method(5, 9)
+						self:patch_method(5, 6)
+						self:patch_method(5, 6)
+					else 
+						self:patch_method(index)
+					end
+				end
+			end
+		end
+	
+		function patcher:patch(patch_type)
+			self:grab_dependencies()
+	
+			self:patch_instructions(patch_type)
+		end
+	
+		--// assert(getscripthash(key_handler) == "28607f8aeb5399560e87712f42c5a6700c96c6c4d9f3209004c89bfa7766916410af5b0e6492eafb55c57b261693b192", "KeyHandler Script Updated!")
+	
+		local character = player.Character or player.CharacterAdded:Wait()
+		local input_script = character:WaitForChild("CharacterHandler"):WaitForChild("Input")
+	
+		--// assert(getscripthash(input_script) == "29e1a68e700408e58d97ab1b19afb63a8b50a0c868635d7e8abc4a81002639a3b63f4061a726c7dfc1eecf989da70931", "Input Script Updated!")
+	
+		local input_protos = getprotos(getscriptclosure(input_script))
+	
+		for index = 1, #input_protos do 
+			local proto = input_protos[index]
+			local constants = getconstants(proto)
+	
+			if table_find(constants, "SpeedBoost") and table_find(constants, "HasHammer") then 
+				local dodge_function = getproto(proto, 1)
+	
+				setupvalue(dodge_function, 1, function() end)
+				setupvalue(dodge_function, 2,  function(key)
+					dodge_fpe_key = tonumber(("%0.50f"):format(key)) -- terrible method
+				end)
+				setupvalue(dodge_function, 3, tonumber)
+				setupvalue(dodge_function, 4, tostring)
+				setupvalue(dodge_function, 5, function() end)
+	
+				dodge_function()
+	
+				break
+			end
+		end
+	
+		local keyhandler_module = require(key_handler)
+	
+		local module_patcher = patcher.new(keyhandler_module)
+		module_patcher:patch(1)
+	
+		local get_key = keyhandler_module()[1]
+	
+		local get_key_patcher = patcher.new(get_key)
+		get_key_patcher:patch(2)
+	
+		local remote_cache = {}
+		local character_cache
+		local live_folder = workspace:WaitForChild("Live")
+	
+		global_variables.remotes = setmetatable({}, {
+			__index = function(self, index)
+				local cached_remote = remote_cache[index]
+				local remote_result
+	
+				if player.Character ~= character_cache then
+					remote_result = get_key(index == "Dodge" and dodge_fpe_key or index, "plum")
+	
+					if remote_result and typeof(remote_result) == "Instance" and remote_result:IsDescendantOf(live_folder) then 
+						character_cache = player.Character
+	
+						remote_cache[index] = remote_result
+						return remote_result
+					end
+				end
+	
+				if not cached_remote then 
+					remote_result = remote_result or get_key(index == "Dodge" and dodge_fpe_key or index, "plum")
+	
+					if remote_result and typeof(remote_result) == "Instance" then
+						remote_cache[index] = remote_result
+					end 
+	
+					return remote_result
+				end 
+	
+				return cached_remote
+			end
+		})
+	end
+end;
+task.spawn(C_d5);
+
+return G2L["1"], require;
