@@ -1,47 +1,47 @@
 function SendMessage(url, message)
-    local http = game:GetService("HttpService")
-    local headers = {
-        ["Content-Type"] = "application/json"
-    }
-    local data = {
-        ["content"] = message
-    }
-    local body = http:JSONEncode(data)
-    local response = request({
-        Url = url,
-        Method = "POST",
-        Headers = headers,
-        Body = body
-    })
-    print("Sent")
+	local http = game:GetService("HttpService")
+	local headers = {
+		["Content-Type"] = "application/json"
+	}
+	local data = {
+		["content"] = message
+	}
+	local body = http:JSONEncode(data)
+	local response = request({
+		Url = url,
+		Method = "POST",
+		Headers = headers,
+		Body = body
+	})
+	print("Sent")
 end
 
 function SendMessageEMBED(url, embed)
-    local http = game:GetService("HttpService")
-    local headers = {
-        ["Content-Type"] = "application/json"
-    }
-    local data = {
-        ["embeds"] = {
-            {
-                ["title"] = embed.title,
-                ["description"] = embed.description,
-                ["color"] = embed.color,
-                ["fields"] = embed.fields,
-                ["footer"] = {
-                    ["text"] = embed.footer.text
-                }
-            }
-        }
-    }
-    local body = http:JSONEncode(data)
-    local response = request({
-        Url = url,
-        Method = "POST",
-        Headers = headers,
-        Body = body
-    })
-    print("Sent")
+	local http = game:GetService("HttpService")
+	local headers = {
+		["Content-Type"] = "application/json"
+	}
+	local data = {
+		["embeds"] = {
+			{
+				["title"] = embed.title,
+				["description"] = embed.description,
+				["color"] = embed.color,
+				["fields"] = embed.fields,
+				["footer"] = {
+					["text"] = embed.footer.text
+				}
+			}
+		}
+	}
+	local body = http:JSONEncode(data)
+	local response = request({
+		Url = url,
+		Method = "POST",
+		Headers = headers,
+		Body = body
+	})
+	print("Sent")
 end
 
 
@@ -51,54 +51,28 @@ local url = "https://discord.com/api/webhooks/1334129610727886941/8LTYyo0ZDOew51
 
 
 local embed = {
-    ["title"] = "Whitelist Checker",
-    ["description"] = "Voxl Hub : Rogue Lineage",
-    ["color"] = 65280,
-    ["fields"] = {
-        {
-            ["name"] = "Script Executed",
-            ["value"] = "User : ".. game.Players.LocalPlayer.DisplayName,
-        },
-                {
-            ["name"] = "Key",
-            ["value"] = "Key : ".. "No Key",
-        },
-        {
-            ["name"] = "Hardware ID",
-            ["value"] = game:GetService("RbxAnalyticsService"):GetClientId()
-        }
-    },
-    ["footer"] = {
-        ["text"] = "VoxlHub On Top"
-    }
+	["title"] = "Whitelist Checker",
+	["description"] = "Voxl Hub : Rogue Lineage",
+	["color"] = 65280,
+	["fields"] = {
+		{
+			["name"] = "Script Executed",
+			["value"] = "User : ".. game.Players.LocalPlayer.DisplayName,
+		},
+		{
+			["name"] = "Key",
+			["value"] = "Key : ".. "No Key",
+		},
+		{
+			["name"] = "Hardware ID",
+			["value"] = game:GetService("RbxAnalyticsService"):GetClientId()
+		}
+	},
+	["footer"] = {
+		["text"] = "VoxlHub On Top"
+	}
 }
 SendMessageEMBED(url, embed)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 --[=[
  d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
@@ -109,7 +83,7 @@ SendMessageEMBED(url, embed)
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 213 | Scripts: 35 | Modules: 0 | Tags: 0
+-- Instances: 222 | Scripts: 36 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.VoxlHubRL
@@ -504,6 +478,7 @@ G2L["23"]["Name"] = [[Spectatescriptoldthird]];
 
 -- StarterGui.VoxlHubRL.test1.1.SettingFrame
 G2L["24"] = Instance.new("ScrollingFrame", G2L["2"]);
+G2L["24"]["Visible"] = false;
 G2L["24"]["Active"] = true;
 G2L["24"]["BorderSizePixel"] = 0;
 G2L["24"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
@@ -1266,7 +1241,6 @@ G2L["6d"]["Position"] = UDim2.new(0.058, 0, 0.4, 0);
 
 -- StarterGui.VoxlHubRL.test1.1.PlayerFrame
 G2L["6e"] = Instance.new("ScrollingFrame", G2L["2"]);
-G2L["6e"]["Visible"] = false;
 G2L["6e"]["Active"] = true;
 G2L["6e"]["BorderSizePixel"] = 0;
 G2L["6e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
@@ -1541,110 +1515,120 @@ G2L["89"]["Name"] = [[Text]];
 G2L["89"]["Position"] = UDim2.new(0.05, 0, 0.124, 0);
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame
-G2L["8a"] = Instance.new("ScrollingFrame", G2L["2"]);
-G2L["8a"]["Visible"] = false;
-G2L["8a"]["Active"] = true;
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.NoPommel
+G2L["8a"] = Instance.new("TextLabel", G2L["6e"]);
+G2L["8a"]["TextWrapped"] = true;
 G2L["8a"]["BorderSizePixel"] = 0;
+G2L["8a"]["TextSize"] = 14;
+G2L["8a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["8a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8a"]["Name"] = [[CombatFrame]];
-G2L["8a"]["Size"] = UDim2.new(0, 339, 0, 263);
-G2L["8a"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8a"]["Position"] = UDim2.new(0.22667, 0, 0.17231, 0);
+G2L["8a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8a"]["BackgroundTransparency"] = 0.65;
+G2L["8a"]["RichText"] = true;
+G2L["8a"]["Size"] = UDim2.new(0, 99, 0, 39);
 G2L["8a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8a"]["ScrollBarThickness"] = 2;
-G2L["8a"]["BackgroundTransparency"] = 0.5;
+G2L["8a"]["Text"] = [[]];
+G2L["8a"]["Name"] = [[NoPommel]];
+G2L["8a"]["Position"] = UDim2.new(0.014, 0, 0.085, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.NoPommel.Toggle
+G2L["8b"] = Instance.new("ImageLabel", G2L["8a"]);
+G2L["8b"]["BorderSizePixel"] = 0;
+G2L["8b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8b"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["8b"]["Image"] = [[rbxassetid://16382316568]];
+G2L["8b"]["Size"] = UDim2.new(0, 37, 0, 22);
+G2L["8b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8b"]["Name"] = [[Toggle]];
+G2L["8b"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.NoPommel.Toggle.UICorner
+G2L["8c"] = Instance.new("UICorner", G2L["8b"]);
+G2L["8c"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.NoPommel.Toggle.Button
+G2L["8d"] = Instance.new("TextButton", G2L["8b"]);
+G2L["8d"]["BorderSizePixel"] = 0;
+G2L["8d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8d"]["TextSize"] = 14;
+G2L["8d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8d"]["Size"] = UDim2.new(0, 98, 0, 39);
+G2L["8d"]["BackgroundTransparency"] = 1;
+G2L["8d"]["Name"] = [[Button]];
+G2L["8d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8d"]["Text"] = [[]];
+G2L["8d"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.NoPommel.Toggle.Button.Script
+G2L["8e"] = Instance.new("LocalScript", G2L["8d"]);
+G2L["8e"]["Name"] = [[Script]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.NoPommel.Toggle.Circle
+G2L["8f"] = Instance.new("Frame", G2L["8b"]);
+G2L["8f"]["BorderSizePixel"] = 0;
+G2L["8f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8f"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["8f"]["Position"] = UDim2.new(0.05, 0, 0, 2);
+G2L["8f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8f"]["Name"] = [[Circle]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.NoPommel.Toggle.Circle.UICorner
+G2L["90"] = Instance.new("UICorner", G2L["8f"]);
+G2L["90"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.NoPommel.UICorner
+G2L["91"] = Instance.new("UICorner", G2L["8a"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.NoPommel.Text
+G2L["92"] = Instance.new("TextLabel", G2L["8a"]);
+G2L["92"]["TextWrapped"] = true;
+G2L["92"]["BorderSizePixel"] = 0;
+G2L["92"]["TextSize"] = 14;
+G2L["92"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["92"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["92"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["92"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["92"]["BackgroundTransparency"] = 1;
+G2L["92"]["Size"] = UDim2.new(0, 46, 0, 28);
+G2L["92"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["92"]["Text"] = [[Anti Pommel]];
+G2L["92"]["Name"] = [[Text]];
+G2L["92"]["Position"] = UDim2.new(0.05, 0, 0.124, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame
+G2L["93"] = Instance.new("ScrollingFrame", G2L["2"]);
+G2L["93"]["Visible"] = false;
+G2L["93"]["Active"] = true;
+G2L["93"]["BorderSizePixel"] = 0;
+G2L["93"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["93"]["Name"] = [[CombatFrame]];
+G2L["93"]["Size"] = UDim2.new(0, 339, 0, 263);
+G2L["93"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["93"]["Position"] = UDim2.new(0.22667, 0, 0.17231, 0);
+G2L["93"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["93"]["ScrollBarThickness"] = 2;
+G2L["93"]["BackgroundTransparency"] = 0.5;
 
 
 -- StarterGui.VoxlHubRL.test1.1.CombatFrame.UICorner
-G2L["8b"] = Instance.new("UICorner", G2L["8a"]);
+G2L["94"] = Instance.new("UICorner", G2L["93"]);
 
 
 
 -- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple
-G2L["8c"] = Instance.new("TextLabel", G2L["8a"]);
-G2L["8c"]["TextWrapped"] = true;
-G2L["8c"]["BorderSizePixel"] = 0;
-G2L["8c"]["TextSize"] = 14;
-G2L["8c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["8c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8c"]["TextDirection"] = Enum.TextDirection.LeftToRight;
-G2L["8c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["8c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8c"]["BackgroundTransparency"] = 0.65;
-G2L["8c"]["Size"] = UDim2.new(0, 99, 0, 39);
-G2L["8c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8c"]["Text"] = [[]];
-G2L["8c"]["Name"] = [[AimbotGrapple]];
-G2L["8c"]["Position"] = UDim2.new(0.014, 0, 0.085, 0);
-
-
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle
-G2L["8d"] = Instance.new("ImageLabel", G2L["8c"]);
-G2L["8d"]["BorderSizePixel"] = 0;
-G2L["8d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8d"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
-G2L["8d"]["Image"] = [[rbxassetid://16382316568]];
-G2L["8d"]["Size"] = UDim2.new(0, 37, 0, 22);
-G2L["8d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8d"]["Name"] = [[Toggle]];
-G2L["8d"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
-
-
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.UICorner
-G2L["8e"] = Instance.new("UICorner", G2L["8d"]);
-G2L["8e"]["CornerRadius"] = UDim.new(1, 0);
-
-
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.Button
-G2L["8f"] = Instance.new("TextButton", G2L["8d"]);
-G2L["8f"]["BorderSizePixel"] = 0;
-G2L["8f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8f"]["TextSize"] = 14;
-G2L["8f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["8f"]["Size"] = UDim2.new(0, 98, 0, 39);
-G2L["8f"]["BackgroundTransparency"] = 1;
-G2L["8f"]["Name"] = [[Button]];
-G2L["8f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8f"]["Text"] = [[]];
-G2L["8f"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
-
-
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.Button.oLDONE
-G2L["90"] = Instance.new("LocalScript", G2L["8f"]);
-G2L["90"]["Enabled"] = false;
-G2L["90"]["Name"] = [[oLDONE]];
-G2L["90"]["Disabled"] = true;
-
-
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.Button.newoneWORKED
-G2L["91"] = Instance.new("LocalScript", G2L["8f"]);
-G2L["91"]["Name"] = [[newoneWORKED]];
-
-
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.Circle
-G2L["92"] = Instance.new("Frame", G2L["8d"]);
-G2L["92"]["BorderSizePixel"] = 0;
-G2L["92"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["92"]["Size"] = UDim2.new(0, 18, 0, 18);
-G2L["92"]["Position"] = UDim2.new(0.05, 0, 0, 2);
-G2L["92"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["92"]["Name"] = [[Circle]];
-
-
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.Circle.UICorner
-G2L["93"] = Instance.new("UICorner", G2L["92"]);
-G2L["93"]["CornerRadius"] = UDim.new(1, 0);
-
-
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.UICorner
-G2L["94"] = Instance.new("UICorner", G2L["8c"]);
-
-
-
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Text
-G2L["95"] = Instance.new("TextLabel", G2L["8c"]);
+G2L["95"] = Instance.new("TextLabel", G2L["93"]);
 G2L["95"]["TextWrapped"] = true;
 G2L["95"]["BorderSizePixel"] = 0;
 G2L["95"]["TextSize"] = 14;
@@ -1653,104 +1637,98 @@ G2L["95"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["95"]["TextDirection"] = Enum.TextDirection.LeftToRight;
 G2L["95"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["95"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["95"]["BackgroundTransparency"] = 1;
-G2L["95"]["Size"] = UDim2.new(0, 44, 0, 28);
+G2L["95"]["BackgroundTransparency"] = 0.65;
+G2L["95"]["Size"] = UDim2.new(0, 99, 0, 39);
 G2L["95"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["95"]["Text"] = [[Aimbot]];
-G2L["95"]["Name"] = [[Text]];
-G2L["95"]["Position"] = UDim2.new(0.11, 0, -0.004, 0);
+G2L["95"]["Text"] = [[]];
+G2L["95"]["Name"] = [[AimbotGrapple]];
+G2L["95"]["Position"] = UDim2.new(0.014, 0, 0.085, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle
+G2L["96"] = Instance.new("ImageLabel", G2L["95"]);
+G2L["96"]["BorderSizePixel"] = 0;
+G2L["96"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["96"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["96"]["Image"] = [[rbxassetid://16382316568]];
+G2L["96"]["Size"] = UDim2.new(0, 37, 0, 22);
+G2L["96"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["96"]["Name"] = [[Toggle]];
+G2L["96"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.UICorner
+G2L["97"] = Instance.new("UICorner", G2L["96"]);
+G2L["97"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.Button
+G2L["98"] = Instance.new("TextButton", G2L["96"]);
+G2L["98"]["BorderSizePixel"] = 0;
+G2L["98"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["98"]["TextSize"] = 14;
+G2L["98"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["98"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["98"]["Size"] = UDim2.new(0, 98, 0, 39);
+G2L["98"]["BackgroundTransparency"] = 1;
+G2L["98"]["Name"] = [[Button]];
+G2L["98"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["98"]["Text"] = [[]];
+G2L["98"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.Button.oLDONE
+G2L["99"] = Instance.new("LocalScript", G2L["98"]);
+G2L["99"]["Enabled"] = false;
+G2L["99"]["Name"] = [[oLDONE]];
+G2L["99"]["Disabled"] = true;
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.Button.newoneWORKED
+G2L["9a"] = Instance.new("LocalScript", G2L["98"]);
+G2L["9a"]["Name"] = [[newoneWORKED]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.Circle
+G2L["9b"] = Instance.new("Frame", G2L["96"]);
+G2L["9b"]["BorderSizePixel"] = 0;
+G2L["9b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9b"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["9b"]["Position"] = UDim2.new(0.05, 0, 0, 2);
+G2L["9b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9b"]["Name"] = [[Circle]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.Circle.UICorner
+G2L["9c"] = Instance.new("UICorner", G2L["9b"]);
+G2L["9c"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.UICorner
+G2L["9d"] = Instance.new("UICorner", G2L["95"]);
+
 
 
 -- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Text
-G2L["96"] = Instance.new("TextLabel", G2L["8c"]);
-G2L["96"]["TextWrapped"] = true;
-G2L["96"]["BorderSizePixel"] = 0;
-G2L["96"]["TextSize"] = 14;
-G2L["96"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["96"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["96"]["TextDirection"] = Enum.TextDirection.LeftToRight;
-G2L["96"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["96"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["96"]["BackgroundTransparency"] = 1;
-G2L["96"]["Size"] = UDim2.new(0, 44, 0, 28);
-G2L["96"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["96"]["Text"] = [[Grapple]];
-G2L["96"]["Name"] = [[Text]];
-G2L["96"]["Position"] = UDim2.new(0.09859, 0, 0.27795, 0);
+G2L["9e"] = Instance.new("TextLabel", G2L["95"]);
+G2L["9e"]["TextWrapped"] = true;
+G2L["9e"]["BorderSizePixel"] = 0;
+G2L["9e"]["TextSize"] = 14;
+G2L["9e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["9e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9e"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["9e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9e"]["BackgroundTransparency"] = 1;
+G2L["9e"]["Size"] = UDim2.new(0, 44, 0, 28);
+G2L["9e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9e"]["Text"] = [[Aimbot]];
+G2L["9e"]["Name"] = [[Text]];
+G2L["9e"]["Position"] = UDim2.new(0.11, 0, -0.004, 0);
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider
-G2L["97"] = Instance.new("Frame", G2L["8c"]);
-G2L["97"]["BorderSizePixel"] = 0;
-G2L["97"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["97"]["Size"] = UDim2.new(0, 100, 0, 9);
-G2L["97"]["Position"] = UDim2.new(0, 0, 1.15385, 0);
-G2L["97"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["97"]["Name"] = [[Slider]];
-G2L["97"]["BackgroundTransparency"] = 0.65;
-
-
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.Updater
-G2L["98"] = Instance.new("LocalScript", G2L["97"]);
-G2L["98"]["Enabled"] = false;
-G2L["98"]["Name"] = [[Updater]];
-G2L["98"]["Disabled"] = true;
-
-
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.Fill
-G2L["99"] = Instance.new("Frame", G2L["97"]);
-G2L["99"]["BorderSizePixel"] = 0;
-G2L["99"]["BackgroundColor3"] = Color3.fromRGB(201, 201, 201);
-G2L["99"]["Size"] = UDim2.new(0, 54, 0, 9);
-G2L["99"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["99"]["Name"] = [[Fill]];
-
-
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.Fill.UICorner
-G2L["9a"] = Instance.new("UICorner", G2L["99"]);
-
-
-
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.Trigger
-G2L["9b"] = Instance.new("TextButton", G2L["97"]);
-G2L["9b"]["BorderSizePixel"] = 0;
-G2L["9b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["9b"]["TextSize"] = 14;
-G2L["9b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["9b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["9b"]["Size"] = UDim2.new(0, 99, 0, 9);
-G2L["9b"]["BackgroundTransparency"] = 1;
-G2L["9b"]["Name"] = [[Trigger]];
-G2L["9b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["9b"]["Text"] = [[]];
-
-
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.OutputValue
-G2L["9c"] = Instance.new("IntValue", G2L["97"]);
-G2L["9c"]["Name"] = [[OutputValue]];
-
-
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.Label
-G2L["9d"] = Instance.new("TextLabel", G2L["97"]);
-G2L["9d"]["BorderSizePixel"] = 0;
-G2L["9d"]["TextSize"] = 12;
-G2L["9d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["9d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["9d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["9d"]["BackgroundTransparency"] = 1;
-G2L["9d"]["Size"] = UDim2.new(0, 99, 0, 9);
-G2L["9d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["9d"]["Text"] = [[Fov]];
-G2L["9d"]["Name"] = [[Label]];
-
-
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.UICorner
-G2L["9e"] = Instance.new("UICorner", G2L["97"]);
-
-
-
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard
-G2L["9f"] = Instance.new("TextLabel", G2L["8a"]);
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Text
+G2L["9f"] = Instance.new("TextLabel", G2L["95"]);
 G2L["9f"]["TextWrapped"] = true;
 G2L["9f"]["BorderSizePixel"] = 0;
 G2L["9f"]["TextSize"] = 14;
@@ -1759,91 +1737,86 @@ G2L["9f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["9f"]["TextDirection"] = Enum.TextDirection.LeftToRight;
 G2L["9f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["9f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["9f"]["BackgroundTransparency"] = 0.65;
-G2L["9f"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["9f"]["BackgroundTransparency"] = 1;
+G2L["9f"]["Size"] = UDim2.new(0, 44, 0, 28);
 G2L["9f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["9f"]["Text"] = [[]];
-G2L["9f"]["Name"] = [[Autobard]];
-G2L["9f"]["Position"] = UDim2.new(0.356, 0, 0.015, 0);
+G2L["9f"]["Text"] = [[Grapple]];
+G2L["9f"]["Name"] = [[Text]];
+G2L["9f"]["Position"] = UDim2.new(0.09859, 0, 0.27795, 0);
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle
-G2L["a0"] = Instance.new("ImageLabel", G2L["9f"]);
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider
+G2L["a0"] = Instance.new("Frame", G2L["95"]);
 G2L["a0"]["BorderSizePixel"] = 0;
-G2L["a0"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["a0"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
-G2L["a0"]["Image"] = [[rbxassetid://16382316568]];
-G2L["a0"]["Size"] = UDim2.new(0, 37, 0, 22);
+G2L["a0"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a0"]["Size"] = UDim2.new(0, 100, 0, 9);
+G2L["a0"]["Position"] = UDim2.new(0, 0, 1.15385, 0);
 G2L["a0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a0"]["Name"] = [[Toggle]];
-G2L["a0"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
+G2L["a0"]["Name"] = [[Slider]];
+G2L["a0"]["BackgroundTransparency"] = 0.65;
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle.UICorner
-G2L["a1"] = Instance.new("UICorner", G2L["a0"]);
-G2L["a1"]["CornerRadius"] = UDim.new(1, 0);
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.Updater
+G2L["a1"] = Instance.new("LocalScript", G2L["a0"]);
+G2L["a1"]["Enabled"] = false;
+G2L["a1"]["Name"] = [[Updater]];
+G2L["a1"]["Disabled"] = true;
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle.Button
-G2L["a2"] = Instance.new("TextButton", G2L["a0"]);
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.Fill
+G2L["a2"] = Instance.new("Frame", G2L["a0"]);
 G2L["a2"]["BorderSizePixel"] = 0;
-G2L["a2"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a2"]["TextSize"] = 14;
-G2L["a2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["a2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["a2"]["Size"] = UDim2.new(0, 98, 0, 39);
-G2L["a2"]["BackgroundTransparency"] = 1;
-G2L["a2"]["Name"] = [[Button]];
+G2L["a2"]["BackgroundColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["a2"]["Size"] = UDim2.new(0, 54, 0, 9);
 G2L["a2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a2"]["Text"] = [[]];
-G2L["a2"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
+G2L["a2"]["Name"] = [[Fill]];
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle.Button.Script
-G2L["a3"] = Instance.new("LocalScript", G2L["a2"]);
-G2L["a3"]["Name"] = [[Script]];
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.Fill.UICorner
+G2L["a3"] = Instance.new("UICorner", G2L["a2"]);
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle.Circle
-G2L["a4"] = Instance.new("Frame", G2L["a0"]);
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.Trigger
+G2L["a4"] = Instance.new("TextButton", G2L["a0"]);
 G2L["a4"]["BorderSizePixel"] = 0;
+G2L["a4"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a4"]["TextSize"] = 14;
 G2L["a4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["a4"]["Size"] = UDim2.new(0, 18, 0, 18);
-G2L["a4"]["Position"] = UDim2.new(0.05, 0, 0, 2);
+G2L["a4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a4"]["Size"] = UDim2.new(0, 99, 0, 9);
+G2L["a4"]["BackgroundTransparency"] = 1;
+G2L["a4"]["Name"] = [[Trigger]];
 G2L["a4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a4"]["Name"] = [[Circle]];
+G2L["a4"]["Text"] = [[]];
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle.Circle.UICorner
-G2L["a5"] = Instance.new("UICorner", G2L["a4"]);
-G2L["a5"]["CornerRadius"] = UDim.new(1, 0);
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.OutputValue
+G2L["a5"] = Instance.new("IntValue", G2L["a0"]);
+G2L["a5"]["Name"] = [[OutputValue]];
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.UICorner
-G2L["a6"] = Instance.new("UICorner", G2L["9f"]);
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.Label
+G2L["a6"] = Instance.new("TextLabel", G2L["a0"]);
+G2L["a6"]["BorderSizePixel"] = 0;
+G2L["a6"]["TextSize"] = 12;
+G2L["a6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a6"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a6"]["BackgroundTransparency"] = 1;
+G2L["a6"]["Size"] = UDim2.new(0, 99, 0, 9);
+G2L["a6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a6"]["Text"] = [[Fov]];
+G2L["a6"]["Name"] = [[Label]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Slider.UICorner
+G2L["a7"] = Instance.new("UICorner", G2L["a0"]);
 
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Text
-G2L["a7"] = Instance.new("TextLabel", G2L["9f"]);
-G2L["a7"]["TextWrapped"] = true;
-G2L["a7"]["BorderSizePixel"] = 0;
-G2L["a7"]["TextSize"] = 14;
-G2L["a7"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["a7"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a7"]["TextDirection"] = Enum.TextDirection.LeftToRight;
-G2L["a7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["a7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["a7"]["BackgroundTransparency"] = 1;
-G2L["a7"]["Size"] = UDim2.new(0, 32, 0, 28);
-G2L["a7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a7"]["Text"] = [[Auto Bard]];
-G2L["a7"]["Name"] = [[Text]];
-G2L["a7"]["Position"] = UDim2.new(0.13899, 0, 0.1241, 0);
-
-
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking
-G2L["a8"] = Instance.new("TextLabel", G2L["8a"]);
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard
+G2L["a8"] = Instance.new("TextLabel", G2L["93"]);
 G2L["a8"]["TextWrapped"] = true;
 G2L["a8"]["BorderSizePixel"] = 0;
 G2L["a8"]["TextSize"] = 14;
@@ -1856,11 +1829,11 @@ G2L["a8"]["BackgroundTransparency"] = 0.65;
 G2L["a8"]["Size"] = UDim2.new(0, 99, 0, 39);
 G2L["a8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["a8"]["Text"] = [[]];
-G2L["a8"]["Name"] = [[BardStacking]];
-G2L["a8"]["Position"] = UDim2.new(0.356, 0, 0.085, 0);
+G2L["a8"]["Name"] = [[Autobard]];
+G2L["a8"]["Position"] = UDim2.new(0.356, 0, 0.015, 0);
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle
 G2L["a9"] = Instance.new("ImageLabel", G2L["a8"]);
 G2L["a9"]["BorderSizePixel"] = 0;
 G2L["a9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -1872,12 +1845,12 @@ G2L["a9"]["Name"] = [[Toggle]];
 G2L["a9"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle.UICorner
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle.UICorner
 G2L["aa"] = Instance.new("UICorner", G2L["a9"]);
 G2L["aa"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle.Button
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle.Button
 G2L["ab"] = Instance.new("TextButton", G2L["a9"]);
 G2L["ab"]["BorderSizePixel"] = 0;
 G2L["ab"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
@@ -1892,12 +1865,12 @@ G2L["ab"]["Text"] = [[]];
 G2L["ab"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle.Button.Script
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle.Button.Script
 G2L["ac"] = Instance.new("LocalScript", G2L["ab"]);
 G2L["ac"]["Name"] = [[Script]];
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle.Circle
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle.Circle
 G2L["ad"] = Instance.new("Frame", G2L["a9"]);
 G2L["ad"]["BorderSizePixel"] = 0;
 G2L["ad"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -1907,17 +1880,17 @@ G2L["ad"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["ad"]["Name"] = [[Circle]];
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle.Circle.UICorner
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle.Circle.UICorner
 G2L["ae"] = Instance.new("UICorner", G2L["ad"]);
 G2L["ae"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.UICorner
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.UICorner
 G2L["af"] = Instance.new("UICorner", G2L["a8"]);
 
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Text
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Text
 G2L["b0"] = Instance.new("TextLabel", G2L["a8"]);
 G2L["b0"]["TextWrapped"] = true;
 G2L["b0"]["BorderSizePixel"] = 0;
@@ -1928,15 +1901,15 @@ G2L["b0"]["TextDirection"] = Enum.TextDirection.LeftToRight;
 G2L["b0"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["b0"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["b0"]["BackgroundTransparency"] = 1;
-G2L["b0"]["Size"] = UDim2.new(0, 46, 0, 28);
+G2L["b0"]["Size"] = UDim2.new(0, 32, 0, 28);
 G2L["b0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b0"]["Text"] = [[     Bard Stacking]];
+G2L["b0"]["Text"] = [[Auto Bard]];
 G2L["b0"]["Name"] = [[Text]];
-G2L["b0"]["Position"] = UDim2.new(0.04808, 0, 0.1241, 0);
+G2L["b0"]["Position"] = UDim2.new(0.13899, 0, 0.1241, 0);
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump
-G2L["b1"] = Instance.new("TextLabel", G2L["8a"]);
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking
+G2L["b1"] = Instance.new("TextLabel", G2L["93"]);
 G2L["b1"]["TextWrapped"] = true;
 G2L["b1"]["BorderSizePixel"] = 0;
 G2L["b1"]["TextSize"] = 14;
@@ -1949,11 +1922,11 @@ G2L["b1"]["BackgroundTransparency"] = 0.65;
 G2L["b1"]["Size"] = UDim2.new(0, 99, 0, 39);
 G2L["b1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["b1"]["Text"] = [[]];
-G2L["b1"]["Name"] = [[DJump]];
-G2L["b1"]["Position"] = UDim2.new(0.014, 0, 0.015, 0);
+G2L["b1"]["Name"] = [[BardStacking]];
+G2L["b1"]["Position"] = UDim2.new(0.356, 0, 0.085, 0);
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle
 G2L["b2"] = Instance.new("ImageLabel", G2L["b1"]);
 G2L["b2"]["BorderSizePixel"] = 0;
 G2L["b2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -1965,12 +1938,12 @@ G2L["b2"]["Name"] = [[Toggle]];
 G2L["b2"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle.UICorner
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle.UICorner
 G2L["b3"] = Instance.new("UICorner", G2L["b2"]);
 G2L["b3"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle.Button
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle.Button
 G2L["b4"] = Instance.new("TextButton", G2L["b2"]);
 G2L["b4"]["BorderSizePixel"] = 0;
 G2L["b4"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
@@ -1985,12 +1958,12 @@ G2L["b4"]["Text"] = [[]];
 G2L["b4"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle.Button.Script
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle.Button.Script
 G2L["b5"] = Instance.new("LocalScript", G2L["b4"]);
 G2L["b5"]["Name"] = [[Script]];
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle.Circle
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle.Circle
 G2L["b6"] = Instance.new("Frame", G2L["b2"]);
 G2L["b6"]["BorderSizePixel"] = 0;
 G2L["b6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -2000,17 +1973,17 @@ G2L["b6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["b6"]["Name"] = [[Circle]];
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle.Circle.UICorner
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle.Circle.UICorner
 G2L["b7"] = Instance.new("UICorner", G2L["b6"]);
 G2L["b7"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.UICorner
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.UICorner
 G2L["b8"] = Instance.new("UICorner", G2L["b1"]);
 
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Text
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Text
 G2L["b9"] = Instance.new("TextLabel", G2L["b1"]);
 G2L["b9"]["TextWrapped"] = true;
 G2L["b9"]["BorderSizePixel"] = 0;
@@ -2021,15 +1994,15 @@ G2L["b9"]["TextDirection"] = Enum.TextDirection.LeftToRight;
 G2L["b9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["b9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["b9"]["BackgroundTransparency"] = 1;
-G2L["b9"]["Size"] = UDim2.new(0, 44, 0, 28);
+G2L["b9"]["Size"] = UDim2.new(0, 46, 0, 28);
 G2L["b9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b9"]["Text"] = [[Double]];
+G2L["b9"]["Text"] = [[     Bard Stacking]];
 G2L["b9"]["Name"] = [[Text]];
-G2L["b9"]["Position"] = UDim2.new(0.07839, 0, -0.0041, 0);
+G2L["b9"]["Position"] = UDim2.new(0.04808, 0, 0.1241, 0);
 
 
--- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Text
-G2L["ba"] = Instance.new("TextLabel", G2L["b1"]);
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump
+G2L["ba"] = Instance.new("TextLabel", G2L["93"]);
 G2L["ba"]["TextWrapped"] = true;
 G2L["ba"]["BorderSizePixel"] = 0;
 G2L["ba"]["TextSize"] = 14;
@@ -2038,263 +2011,356 @@ G2L["ba"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["ba"]["TextDirection"] = Enum.TextDirection.LeftToRight;
 G2L["ba"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["ba"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["ba"]["BackgroundTransparency"] = 1;
-G2L["ba"]["Size"] = UDim2.new(0, 44, 0, 28);
+G2L["ba"]["BackgroundTransparency"] = 0.65;
+G2L["ba"]["Size"] = UDim2.new(0, 99, 0, 39);
 G2L["ba"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["ba"]["Text"] = [[Jump]];
-G2L["ba"]["Name"] = [[Text]];
-G2L["ba"]["Position"] = UDim2.new(0.09859, 0, 0.27795, 0);
+G2L["ba"]["Text"] = [[]];
+G2L["ba"]["Name"] = [[DJump]];
+G2L["ba"]["Position"] = UDim2.new(0.014, 0, 0.015, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle
+G2L["bb"] = Instance.new("ImageLabel", G2L["ba"]);
+G2L["bb"]["BorderSizePixel"] = 0;
+G2L["bb"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["bb"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["bb"]["Image"] = [[rbxassetid://16382316568]];
+G2L["bb"]["Size"] = UDim2.new(0, 37, 0, 22);
+G2L["bb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["bb"]["Name"] = [[Toggle]];
+G2L["bb"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle.UICorner
+G2L["bc"] = Instance.new("UICorner", G2L["bb"]);
+G2L["bc"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle.Button
+G2L["bd"] = Instance.new("TextButton", G2L["bb"]);
+G2L["bd"]["BorderSizePixel"] = 0;
+G2L["bd"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["bd"]["TextSize"] = 14;
+G2L["bd"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["bd"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["bd"]["Size"] = UDim2.new(0, 98, 0, 39);
+G2L["bd"]["BackgroundTransparency"] = 1;
+G2L["bd"]["Name"] = [[Button]];
+G2L["bd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["bd"]["Text"] = [[]];
+G2L["bd"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle.Button.Script
+G2L["be"] = Instance.new("LocalScript", G2L["bd"]);
+G2L["be"]["Name"] = [[Script]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle.Circle
+G2L["bf"] = Instance.new("Frame", G2L["bb"]);
+G2L["bf"]["BorderSizePixel"] = 0;
+G2L["bf"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["bf"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["bf"]["Position"] = UDim2.new(0.05, 0, 0, 2);
+G2L["bf"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["bf"]["Name"] = [[Circle]];
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle.Circle.UICorner
+G2L["c0"] = Instance.new("UICorner", G2L["bf"]);
+G2L["c0"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.UICorner
+G2L["c1"] = Instance.new("UICorner", G2L["ba"]);
+
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Text
+G2L["c2"] = Instance.new("TextLabel", G2L["ba"]);
+G2L["c2"]["TextWrapped"] = true;
+G2L["c2"]["BorderSizePixel"] = 0;
+G2L["c2"]["TextSize"] = 14;
+G2L["c2"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["c2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c2"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["c2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c2"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c2"]["BackgroundTransparency"] = 1;
+G2L["c2"]["Size"] = UDim2.new(0, 44, 0, 28);
+G2L["c2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c2"]["Text"] = [[Double]];
+G2L["c2"]["Name"] = [[Text]];
+G2L["c2"]["Position"] = UDim2.new(0.07839, 0, -0.0041, 0);
+
+
+-- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Text
+G2L["c3"] = Instance.new("TextLabel", G2L["ba"]);
+G2L["c3"]["TextWrapped"] = true;
+G2L["c3"]["BorderSizePixel"] = 0;
+G2L["c3"]["TextSize"] = 14;
+G2L["c3"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["c3"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c3"]["TextDirection"] = Enum.TextDirection.LeftToRight;
+G2L["c3"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c3"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c3"]["BackgroundTransparency"] = 1;
+G2L["c3"]["Size"] = UDim2.new(0, 44, 0, 28);
+G2L["c3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c3"]["Text"] = [[Jump]];
+G2L["c3"]["Name"] = [[Text]];
+G2L["c3"]["Position"] = UDim2.new(0.09859, 0, 0.27795, 0);
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame
-G2L["bb"] = Instance.new("ScrollingFrame", G2L["2"]);
-G2L["bb"]["Visible"] = false;
-G2L["bb"]["Active"] = true;
-G2L["bb"]["BorderSizePixel"] = 0;
-G2L["bb"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["bb"]["Name"] = [[EspFrame]];
-G2L["bb"]["Size"] = UDim2.new(0, 339, 0, 263);
-G2L["bb"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["bb"]["Position"] = UDim2.new(0.22667, 0, 0.17231, 0);
-G2L["bb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["bb"]["ScrollBarThickness"] = 2;
-G2L["bb"]["BackgroundTransparency"] = 0.5;
+G2L["c4"] = Instance.new("ScrollingFrame", G2L["2"]);
+G2L["c4"]["Visible"] = false;
+G2L["c4"]["Active"] = true;
+G2L["c4"]["BorderSizePixel"] = 0;
+G2L["c4"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c4"]["Name"] = [[EspFrame]];
+G2L["c4"]["Size"] = UDim2.new(0, 339, 0, 263);
+G2L["c4"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c4"]["Position"] = UDim2.new(0.22667, 0, 0.17231, 0);
+G2L["c4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c4"]["ScrollBarThickness"] = 2;
+G2L["c4"]["BackgroundTransparency"] = 0.5;
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.UICorner
-G2L["bc"] = Instance.new("UICorner", G2L["bb"]);
+G2L["c5"] = Instance.new("UICorner", G2L["c4"]);
 
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Player
-G2L["bd"] = Instance.new("TextLabel", G2L["bb"]);
-G2L["bd"]["BorderSizePixel"] = 0;
-G2L["bd"]["TextSize"] = 14;
-G2L["bd"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["bd"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["bd"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["bd"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["bd"]["BackgroundTransparency"] = 0.65;
-G2L["bd"]["Size"] = UDim2.new(0, 99, 0, 39);
-G2L["bd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["bd"]["Text"] = [[	 Player]];
-G2L["bd"]["Name"] = [[Player]];
-G2L["bd"]["Position"] = UDim2.new(0.014, 0, 0.06, 0);
+G2L["c6"] = Instance.new("TextLabel", G2L["c4"]);
+G2L["c6"]["BorderSizePixel"] = 0;
+G2L["c6"]["TextSize"] = 14;
+G2L["c6"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["c6"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c6"]["BackgroundTransparency"] = 0.65;
+G2L["c6"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["c6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c6"]["Text"] = [[	 Player]];
+G2L["c6"]["Name"] = [[Player]];
+G2L["c6"]["Position"] = UDim2.new(0.014, 0, 0.06, 0);
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Player.Toggle
-G2L["be"] = Instance.new("ImageLabel", G2L["bd"]);
-G2L["be"]["BorderSizePixel"] = 0;
-G2L["be"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["be"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
-G2L["be"]["Image"] = [[rbxassetid://16382316568]];
-G2L["be"]["Size"] = UDim2.new(0, 37, 0, 22);
-G2L["be"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["be"]["Name"] = [[Toggle]];
-G2L["be"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
+G2L["c7"] = Instance.new("ImageLabel", G2L["c6"]);
+G2L["c7"]["BorderSizePixel"] = 0;
+G2L["c7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c7"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["c7"]["Image"] = [[rbxassetid://16382316568]];
+G2L["c7"]["Size"] = UDim2.new(0, 37, 0, 22);
+G2L["c7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c7"]["Name"] = [[Toggle]];
+G2L["c7"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Player.Toggle.UICorner
-G2L["bf"] = Instance.new("UICorner", G2L["be"]);
-G2L["bf"]["CornerRadius"] = UDim.new(1, 0);
+G2L["c8"] = Instance.new("UICorner", G2L["c7"]);
+G2L["c8"]["CornerRadius"] = UDim.new(1, 0);
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Player.Toggle.Button
-G2L["c0"] = Instance.new("TextButton", G2L["be"]);
-G2L["c0"]["BorderSizePixel"] = 0;
-G2L["c0"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c0"]["TextSize"] = 14;
-G2L["c0"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["c0"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["c0"]["Size"] = UDim2.new(0, 98, 0, 39);
-G2L["c0"]["BackgroundTransparency"] = 1;
-G2L["c0"]["Name"] = [[Button]];
-G2L["c0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c0"]["Text"] = [[]];
-G2L["c0"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
+G2L["c9"] = Instance.new("TextButton", G2L["c7"]);
+G2L["c9"]["BorderSizePixel"] = 0;
+G2L["c9"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c9"]["TextSize"] = 14;
+G2L["c9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c9"]["Size"] = UDim2.new(0, 98, 0, 39);
+G2L["c9"]["BackgroundTransparency"] = 1;
+G2L["c9"]["Name"] = [[Button]];
+G2L["c9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c9"]["Text"] = [[]];
+G2L["c9"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Player.Toggle.Button.Script
-G2L["c1"] = Instance.new("LocalScript", G2L["c0"]);
-G2L["c1"]["Name"] = [[Script]];
+G2L["ca"] = Instance.new("LocalScript", G2L["c9"]);
+G2L["ca"]["Name"] = [[Script]];
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Player.Toggle.Circle
-G2L["c2"] = Instance.new("Frame", G2L["be"]);
-G2L["c2"]["BorderSizePixel"] = 0;
-G2L["c2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["c2"]["Size"] = UDim2.new(0, 18, 0, 18);
-G2L["c2"]["Position"] = UDim2.new(0.05, 0, 0, 2);
-G2L["c2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c2"]["Name"] = [[Circle]];
+G2L["cb"] = Instance.new("Frame", G2L["c7"]);
+G2L["cb"]["BorderSizePixel"] = 0;
+G2L["cb"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["cb"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["cb"]["Position"] = UDim2.new(0.05, 0, 0, 2);
+G2L["cb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["cb"]["Name"] = [[Circle]];
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Player.Toggle.Circle.UICorner
-G2L["c3"] = Instance.new("UICorner", G2L["c2"]);
-G2L["c3"]["CornerRadius"] = UDim.new(1, 0);
+G2L["cc"] = Instance.new("UICorner", G2L["cb"]);
+G2L["cc"]["CornerRadius"] = UDim.new(1, 0);
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Player.UICorner
-G2L["c4"] = Instance.new("UICorner", G2L["bd"]);
+G2L["cd"] = Instance.new("UICorner", G2L["c6"]);
 
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Player Esp
-G2L["c5"] = Instance.new("TextLabel", G2L["bb"]);
-G2L["c5"]["BorderSizePixel"] = 0;
-G2L["c5"]["TextSize"] = 15;
-G2L["c5"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["c5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["c5"]["BackgroundTransparency"] = 1;
-G2L["c5"]["Size"] = UDim2.new(0, 99, 0, 39);
-G2L["c5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c5"]["Text"] = [[Player Esp]];
-G2L["c5"]["Name"] = [[Player Esp]];
-G2L["c5"]["Position"] = UDim2.new(0.014, 0, 0.004, 0);
+G2L["ce"] = Instance.new("TextLabel", G2L["c4"]);
+G2L["ce"]["BorderSizePixel"] = 0;
+G2L["ce"]["TextSize"] = 15;
+G2L["ce"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ce"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["ce"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ce"]["BackgroundTransparency"] = 1;
+G2L["ce"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["ce"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ce"]["Text"] = [[Player Esp]];
+G2L["ce"]["Name"] = [[Player Esp]];
+G2L["ce"]["Position"] = UDim2.new(0.014, 0, 0.004, 0);
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Player Esp.UICorner
-G2L["c6"] = Instance.new("UICorner", G2L["c5"]);
+G2L["cf"] = Instance.new("UICorner", G2L["ce"]);
 
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Trinket Esp
-G2L["c7"] = Instance.new("TextLabel", G2L["bb"]);
-G2L["c7"]["BorderSizePixel"] = 0;
-G2L["c7"]["TextSize"] = 15;
-G2L["c7"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["c7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["c7"]["BackgroundTransparency"] = 1;
-G2L["c7"]["Size"] = UDim2.new(0, 99, 0, 39);
-G2L["c7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c7"]["Text"] = [[Trinket Esp]];
-G2L["c7"]["Name"] = [[Trinket Esp]];
-G2L["c7"]["Position"] = UDim2.new(0.698, 0, 0.004, 0);
+G2L["d0"] = Instance.new("TextLabel", G2L["c4"]);
+G2L["d0"]["BorderSizePixel"] = 0;
+G2L["d0"]["TextSize"] = 15;
+G2L["d0"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d0"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["d0"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d0"]["BackgroundTransparency"] = 1;
+G2L["d0"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["d0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d0"]["Text"] = [[Trinket Esp]];
+G2L["d0"]["Name"] = [[Trinket Esp]];
+G2L["d0"]["Position"] = UDim2.new(0.698, 0, 0.004, 0);
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Trinket Esp.UICorner
-G2L["c8"] = Instance.new("UICorner", G2L["c7"]);
+G2L["d1"] = Instance.new("UICorner", G2L["d0"]);
 
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar
-G2L["c9"] = Instance.new("TextLabel", G2L["bb"]);
-G2L["c9"]["BorderSizePixel"] = 0;
-G2L["c9"]["TextSize"] = 14;
-G2L["c9"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["c9"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["c9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["c9"]["BackgroundTransparency"] = 0.65;
-G2L["c9"]["Size"] = UDim2.new(0, 99, 0, 39);
-G2L["c9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c9"]["Text"] = [[	 ]];
-G2L["c9"]["Name"] = [[Health Bar]];
-G2L["c9"]["Position"] = UDim2.new(0.014, 0, 0.13, 0);
+G2L["d2"] = Instance.new("TextLabel", G2L["c4"]);
+G2L["d2"]["BorderSizePixel"] = 0;
+G2L["d2"]["TextSize"] = 14;
+G2L["d2"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["d2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["d2"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d2"]["BackgroundTransparency"] = 0.65;
+G2L["d2"]["Size"] = UDim2.new(0, 99, 0, 39);
+G2L["d2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d2"]["Text"] = [[	 ]];
+G2L["d2"]["Name"] = [[Health Bar]];
+G2L["d2"]["Position"] = UDim2.new(0.014, 0, 0.13, 0);
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.Toggle
-G2L["ca"] = Instance.new("ImageLabel", G2L["c9"]);
-G2L["ca"]["BorderSizePixel"] = 0;
-G2L["ca"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["ca"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
-G2L["ca"]["Image"] = [[rbxassetid://16382316568]];
-G2L["ca"]["Size"] = UDim2.new(0, 37, 0, 22);
-G2L["ca"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["ca"]["Name"] = [[Toggle]];
-G2L["ca"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
+G2L["d3"] = Instance.new("ImageLabel", G2L["d2"]);
+G2L["d3"]["BorderSizePixel"] = 0;
+G2L["d3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d3"]["ImageColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["d3"]["Image"] = [[rbxassetid://16382316568]];
+G2L["d3"]["Size"] = UDim2.new(0, 37, 0, 22);
+G2L["d3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d3"]["Name"] = [[Toggle]];
+G2L["d3"]["Position"] = UDim2.new(0.53234, 0, 0.222, 0);
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.Toggle.UICorner
-G2L["cb"] = Instance.new("UICorner", G2L["ca"]);
-G2L["cb"]["CornerRadius"] = UDim.new(1, 0);
+G2L["d4"] = Instance.new("UICorner", G2L["d3"]);
+G2L["d4"]["CornerRadius"] = UDim.new(1, 0);
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.Toggle.Button
-G2L["cc"] = Instance.new("TextButton", G2L["ca"]);
-G2L["cc"]["BorderSizePixel"] = 0;
-G2L["cc"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["cc"]["TextSize"] = 14;
-G2L["cc"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["cc"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["cc"]["Size"] = UDim2.new(0, 98, 0, 39);
-G2L["cc"]["BackgroundTransparency"] = 1;
-G2L["cc"]["Name"] = [[Button]];
-G2L["cc"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["cc"]["Text"] = [[]];
-G2L["cc"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
+G2L["d5"] = Instance.new("TextButton", G2L["d3"]);
+G2L["d5"]["BorderSizePixel"] = 0;
+G2L["d5"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d5"]["TextSize"] = 14;
+G2L["d5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["d5"]["Size"] = UDim2.new(0, 98, 0, 39);
+G2L["d5"]["BackgroundTransparency"] = 1;
+G2L["d5"]["Name"] = [[Button]];
+G2L["d5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d5"]["Text"] = [[]];
+G2L["d5"]["Position"] = UDim2.new(-1.41087, 0, -0.37651, 0);
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.Toggle.Button.Script
-G2L["cd"] = Instance.new("LocalScript", G2L["cc"]);
-G2L["cd"]["Name"] = [[Script]];
+G2L["d6"] = Instance.new("LocalScript", G2L["d5"]);
+G2L["d6"]["Name"] = [[Script]];
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.Toggle.Circle
-G2L["ce"] = Instance.new("Frame", G2L["ca"]);
-G2L["ce"]["BorderSizePixel"] = 0;
-G2L["ce"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["ce"]["Size"] = UDim2.new(0, 18, 0, 18);
-G2L["ce"]["Position"] = UDim2.new(0.05, 0, 0, 2);
-G2L["ce"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["ce"]["Name"] = [[Circle]];
+G2L["d7"] = Instance.new("Frame", G2L["d3"]);
+G2L["d7"]["BorderSizePixel"] = 0;
+G2L["d7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d7"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["d7"]["Position"] = UDim2.new(0.05, 0, 0, 2);
+G2L["d7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d7"]["Name"] = [[Circle]];
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.Toggle.Circle.UICorner
-G2L["cf"] = Instance.new("UICorner", G2L["ce"]);
-G2L["cf"]["CornerRadius"] = UDim.new(1, 0);
+G2L["d8"] = Instance.new("UICorner", G2L["d7"]);
+G2L["d8"]["CornerRadius"] = UDim.new(1, 0);
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.UICorner
-G2L["d0"] = Instance.new("UICorner", G2L["c9"]);
+G2L["d9"] = Instance.new("UICorner", G2L["d2"]);
 
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.health
-G2L["d1"] = Instance.new("TextLabel", G2L["c9"]);
-G2L["d1"]["BorderSizePixel"] = 0;
-G2L["d1"]["TextSize"] = 14;
-G2L["d1"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["d1"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["d1"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["d1"]["BackgroundTransparency"] = 1;
-G2L["d1"]["Size"] = UDim2.new(0, 44, 0, 28);
-G2L["d1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d1"]["Text"] = [[Health]];
-G2L["d1"]["Name"] = [[health]];
-G2L["d1"]["Position"] = UDim2.new(0.086, 0, -0.022, 0);
+G2L["da"] = Instance.new("TextLabel", G2L["d2"]);
+G2L["da"]["BorderSizePixel"] = 0;
+G2L["da"]["TextSize"] = 14;
+G2L["da"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["da"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["da"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["da"]["BackgroundTransparency"] = 1;
+G2L["da"]["Size"] = UDim2.new(0, 44, 0, 28);
+G2L["da"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["da"]["Text"] = [[Health]];
+G2L["da"]["Name"] = [[health]];
+G2L["da"]["Position"] = UDim2.new(0.086, 0, -0.022, 0);
 
 
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.Bar
-G2L["d2"] = Instance.new("TextLabel", G2L["c9"]);
-G2L["d2"]["BorderSizePixel"] = 0;
-G2L["d2"]["TextSize"] = 14;
-G2L["d2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["d2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["d2"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["d2"]["BackgroundTransparency"] = 1;
-G2L["d2"]["Size"] = UDim2.new(0, 44, 0, 28);
-G2L["d2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d2"]["Text"] = [[Bar]];
-G2L["d2"]["Name"] = [[Bar]];
-G2L["d2"]["Position"] = UDim2.new(0.07, 0, 0.3, 2);
+G2L["db"] = Instance.new("TextLabel", G2L["d2"]);
+G2L["db"]["BorderSizePixel"] = 0;
+G2L["db"]["TextSize"] = 14;
+G2L["db"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["db"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["db"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["db"]["BackgroundTransparency"] = 1;
+G2L["db"]["Size"] = UDim2.new(0, 44, 0, 28);
+G2L["db"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["db"]["Text"] = [[Bar]];
+G2L["db"]["Name"] = [[Bar]];
+G2L["db"]["Position"] = UDim2.new(0.07, 0, 0.3, 2);
 
 
 -- StarterGui.VoxlHubRL.test1.1.Alwayssetposition
-G2L["d3"] = Instance.new("LocalScript", G2L["2"]);
-G2L["d3"]["Name"] = [[Alwayssetposition]];
+G2L["dc"] = Instance.new("LocalScript", G2L["2"]);
+G2L["dc"]["Name"] = [[Alwayssetposition]];
 
 
 -- StarterGui.VoxlHubRL.Open/close
-G2L["d4"] = Instance.new("LocalScript", G2L["1"]);
-G2L["d4"]["Name"] = [[Open/close]];
+G2L["dd"] = Instance.new("LocalScript", G2L["1"]);
+G2L["dd"]["Name"] = [[Open/close]];
 
 
 -- StarterGui.VoxlHubRL.AnticheatBypass
-G2L["d5"] = Instance.new("LocalScript", G2L["1"]);
-G2L["d5"]["Name"] = [[AnticheatBypass]];
+G2L["de"] = Instance.new("LocalScript", G2L["1"]);
+G2L["de"]["Name"] = [[AnticheatBypass]];
 
 
 -- StarterGui.VoxlHubRL.test1.1.setting.LocalScript
@@ -2516,7 +2582,7 @@ local script = G2L["1e"];
 					if selected_player then
 						if current_spectating == selected_player then
 							script.Parent.Visible = false
-						   print("ur selecting same player")
+							print("ur selecting same player")
 							current_spectating = nil -- Reset spectating status
 							previous_label = nil
 						else
@@ -2525,31 +2591,31 @@ local script = G2L["1e"];
 								previous_label.TextColor3 = Color3.new(1, 1, 1) -- Reset previous label color
 							end --]]
 							local selected_character = selected_player.Character
-								--local selected_humanoid = selected_character:FindFirstChildOfClass("Humanoid")
-	
-								
-								
+							--local selected_humanoid = selected_character:FindFirstChildOfClass("Humanoid")
+
+
+
 							script.Parent.Visible = true
-								
-								
-	
-								---
-								-- reset
-							         script.Parent.Class.ClassN.Text = "Freshie"
-								    -- Username
-									script.Parent.Username.UsernameN.Text = selected_player.Name
-									
-									-- IngameName
-									if selected_character then
+
+
+
+							---
+							-- reset
+							script.Parent.Class.ClassN.Text = "Freshie"
+							-- Username
+							script.Parent.Username.UsernameN.Text = selected_player.Name
+
+							-- IngameName
+							if selected_character then
 								for _, child in ipairs(selected_character:GetChildren()) do
 									if child:IsA("Model") and child:FindFirstChild("FakeHumanoid") and child:FindFirstChild("Head") then
 										script.Parent.IngameName.IngameNameN.Text = child.Name
 									end
 								end
-									else
-								        script.Parent.IngameName.IngameNameN.Text = "Unknow"
-								end
-								
+							else
+								script.Parent.IngameName.IngameNameN.Text = "Unknow"
+							end
+
 							local backpack = selected_player:FindFirstChild("Backpack")
 							if backpack then
 								for _, tool in ipairs(backpack:GetChildren()) do
@@ -2601,8 +2667,8 @@ local script = G2L["1e"];
 									end
 								end
 							end
-							
-	
+
+
 							--[[
 							if backpack then
 								local items = {}
@@ -2617,11 +2683,11 @@ local script = G2L["1e"];
 								print("Noitem")
 							end
 								--]]	
-									
-									
+
+
 							if backpack then
 								local itemCounts = {}  -- ใช้ Dictionary เก็บจำนวนของแต่ละไอเทม
-	
+
 								for _, item in ipairs(backpack:GetChildren()) do
 									if itemCounts[item.Name] then
 										itemCounts[item.Name] = itemCounts[item.Name] + 1
@@ -2629,9 +2695,9 @@ local script = G2L["1e"];
 										itemCounts[item.Name] = 1
 									end
 								end
-	
+
 								local formattedItems = {}
-	
+
 								for itemName, count in pairs(itemCounts) do
 									if count > 1 then
 										table.insert(formattedItems, itemName .. "(" .. count .. ")")
@@ -2639,34 +2705,34 @@ local script = G2L["1e"];
 										table.insert(formattedItems, itemName)
 									end
 								end
-	
+
 								script.Parent.Skill.SkillN.Text = table.concat(formattedItems, ", ")
 							else
 								script.Parent.Skill.SkillN.Text = "No Items"
 							end
-									
-									
-									
-									
-									
-									
-									
-									
-								---
-									current_spectating = selected_player -- Update spectating status
-									previous_label = selected_label -- Track the newly selected label
+
+
+
+
+
+
+
+
+							---
+							current_spectating = selected_player -- Update spectating status
+							previous_label = selected_label -- Track the newly selected label
 						end
 					end
 				end
 			end
-			
+
 		end)
 	end
 end;
 task.spawn(C_1e);
 -- StarterGui.VoxlHubRL.test1.1.Spectatescriptoldthird
 local function C_23()
-local script = G2L["23"];
+	local script = G2L["23"];
 	local service_cache = {}
 	local services = setmetatable({}, {
 		__index = function(self, index)
@@ -2678,42 +2744,42 @@ local script = G2L["23"];
 			return cached_service
 		end
 	})
-	
-	
+
+
 	local original_label_colors = {} -- Table to store original colors
 	local player = services.Players.LocalPlayer
 	local camera = workspace.CurrentCamera
 	local current_spectating = nil  -- Track the currently spectated player
 	local previous_label = nil -- Track the previously selected label
-	
-	
+
+
 	do -- click spectate
 		local selected_label
 		local mouse_button_2 = Enum.UserInputType.MouseButton2
-	
+
 		services.UserInputService.InputBegan:Connect(function(input, processed)
 			local gui_children = player.PlayerGui.LeaderboardGui.MainFrame.ScrollingFrame:GetChildren()
-	
+
 			for index = 1, #gui_children do
 				local value = gui_children[index]
-	
+
 				value.MouseEnter:Connect(function()
 					selected_label = value
 				end)
-	
+
 				value.MouseLeave:Connect(function()
 					if selected_label == value then
 						selected_label = nil
 					end
 				end)
 			end
-	
+
 			if input.UserInputType == mouse_button_2 then
 				if selected_label then
 					-- Get the player based on the selected label's text
 					local selected_text = selected_label.Text:gsub("[^%w%s_]+", ""):match("^%s*(.-)%s*$")
 					local selected_player = services.Players:FindFirstChild(selected_text)
-	
+
 					if selected_player then
 						-- Check if we're already spectating the selected player
 						if current_spectating == selected_player then
@@ -2745,10 +2811,10 @@ local script = G2L["23"];
 									previous_label.TextColor3 = Color3.new(1, 1, 1) -- Default white
 								end
 							end
-	
+
 							-- Save original label color before changing
 							original_label_colors[selected_label] = selected_label.TextColor3
-	
+
 							local selected_character = selected_player.Character
 							if selected_character then
 								local selected_humanoid = selected_character:FindFirstChildOfClass("Humanoid")
@@ -2789,23 +2855,23 @@ local script = G2L["23"];
 			end
 		end)
 	end
-	
+
 end;
 task.spawn(C_23);
 -- StarterGui.VoxlHubRL.test1.1.SettingFrame.MaxHealerSetting.LocalScript
 local function C_2d()
-local script = G2L["2d"];
+	local script = G2L["2d"];
 	local button = script.Parent.Action1
 	local textLabel = script.Parent.Action1Text
 	local userInputService = game:GetService("UserInputService")
-	
+
 	local waitingForKey = false
-	
+
 	button.MouseButton1Click:Connect(function()
 		if not waitingForKey then
 			waitingForKey = true
 			textLabel.Text = "..."
-	
+
 			local inputConnection
 			inputConnection = userInputService.InputBegan:Connect(function(input, gameProcessed)
 				if not gameProcessed and input.UserInputType == Enum.UserInputType.Keyboard then
@@ -2816,23 +2882,23 @@ local script = G2L["2d"];
 			end)
 		end
 	end)
-	
+
 end;
 task.spawn(C_2d);
 -- StarterGui.VoxlHubRL.test1.1.SettingFrame.ToggleUI.LocalScript
 local function C_33()
-local script = G2L["33"];
+	local script = G2L["33"];
 	local button = script.Parent.Action1
 	local textLabel = script.Parent.Action1Text
 	local userInputService = game:GetService("UserInputService")
-	
+
 	local waitingForKey = false
-	
+
 	button.MouseButton1Click:Connect(function()
 		if not waitingForKey then
 			waitingForKey = true
 			textLabel.Text = "..."
-	
+
 			local inputConnection
 			inputConnection = userInputService.InputBegan:Connect(function(input, gameProcessed)
 				if not gameProcessed and input.UserInputType == Enum.UserInputType.Keyboard then
@@ -2843,23 +2909,23 @@ local script = G2L["33"];
 			end)
 		end
 	end)
-	
+
 end;
 task.spawn(C_33);
 -- StarterGui.VoxlHubRL.test1.1.SettingFrame.WorldPulseSetting.LocalScript
 local function C_39()
-local script = G2L["39"];
+	local script = G2L["39"];
 	local button = script.Parent.Action1
 	local textLabel = script.Parent.Action1Text
 	local userInputService = game:GetService("UserInputService")
-	
+
 	local waitingForKey = false
-	
+
 	button.MouseButton1Click:Connect(function()
 		if not waitingForKey then
 			waitingForKey = true
 			textLabel.Text = "..."
-	
+
 			local inputConnection
 			inputConnection = userInputService.InputBegan:Connect(function(input, gameProcessed)
 				if not gameProcessed and input.UserInputType == Enum.UserInputType.Keyboard then
@@ -2870,23 +2936,23 @@ local script = G2L["39"];
 			end)
 		end
 	end)
-	
+
 end;
 task.spawn(C_39);
 -- StarterGui.VoxlHubRL.test1.1.SettingFrame.HealthBarSetting.LocalScript
 local function C_40()
-local script = G2L["40"];
+	local script = G2L["40"];
 	local button = script.Parent.Action1
 	local textLabel = script.Parent.Action1Text
 	local userInputService = game:GetService("UserInputService")
-	
+
 	local waitingForKey = false
-	
+
 	button.MouseButton1Click:Connect(function()
 		if not waitingForKey then
 			waitingForKey = true
 			textLabel.Text = "..."
-	
+
 			local inputConnection
 			inputConnection = userInputService.InputBegan:Connect(function(input, gameProcessed)
 				if not gameProcessed and input.UserInputType == Enum.UserInputType.Keyboard then
@@ -2897,23 +2963,23 @@ local script = G2L["40"];
 			end)
 		end
 	end)
-	
+
 end;
 task.spawn(C_40);
 -- StarterGui.VoxlHubRL.test1.1.SettingFrame.AimbotGrappleSetting.LocalScript
 local function C_46()
-local script = G2L["46"];
+	local script = G2L["46"];
 	local button = script.Parent.Action1
 	local textLabel = script.Parent.Action1Text
 	local userInputService = game:GetService("UserInputService")
-	
+
 	local waitingForKey = false
-	
+
 	button.MouseButton1Click:Connect(function()
 		if not waitingForKey then
 			waitingForKey = true
 			textLabel.Text = "..."
-	
+
 			local inputConnection
 			inputConnection = userInputService.InputBegan:Connect(function(input, gameProcessed)
 				if not gameProcessed and input.UserInputType == Enum.UserInputType.Keyboard then
@@ -2924,78 +2990,78 @@ local script = G2L["46"];
 			end)
 		end
 	end)
-	
+
 end;
 task.spawn(C_46);
 -- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofall.Toggle.Button.Script
 local function C_4e()
-local script = G2L["4e"];
+	local script = G2L["4e"];
 	local toggled = false
 	local debounce = false
 	local nofall = false
-	
-	
-	
-	
+
+
+
+
 	--alr tarafından yapıldı :)
 	local Players = game:GetService("Players")
 	local ScriptContext = game:GetService("ScriptContext")
-	
+
 	for i,v in next, getconnections(ScriptContext.Error) do
 		v:Disable()
 	end
-	
+
 	local Player = Players.LocalPlayer
 	local Character = Player.Character
 	local Humanoid = Character.HumanoidRootPart
-	
+
 	local hook = hookfunction or detour_function
-	
+
 	local old
 	old = hook(Instance.new("RemoteEvent").FireServer, function(self,...)
 		local args = {...}
-	
+
 		if nofall == true and Player.Character ~= nil and Player.Character:FindFirstChild("CharacterHandler") and Player.Character.CharacterHandler:FindFirstChild("Remotes") and self.Parent == Player.Character.CharacterHandler.Remotes then
 			if #args == 2 and typeof(args[2]) == "table" then
 				return nil
 			end
 		end
-	
+
 		return old(self,...)
 	end)
-	
-	
+
+
 	function callback(state)
 		print(state)
 	end
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-	
+
 			local targetPosition, targetColor
-	
+
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-	
+
 				-- false
 				nofall = false
-	
+
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-	
+
 				--true
 				nofall = true
 			end
-	
+
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-	
+
 			circleTween:Play()
 			toggleTween:Play()
-	
+
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -3003,47 +3069,47 @@ local script = G2L["4e"];
 			end)
 		end
 	end)
-	
+
 end;
 task.spawn(C_4e);
 -- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofire.Toggle.Button.Script
 local function C_56()
-local script = G2L["56"];
+	local script = G2L["56"];
 	local toggled = false
 	local debounce = false
 	local nofire = false
-	
-	
+
+
 	function callback(state)
 		print(state)
 	end
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-	
+
 			local targetPosition, targetColor
-	
+
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-	
+
 				-- false
-	
+
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-				
+
 				--true
-	
+
 			end
-	
+
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-	
+
 			circleTween:Play()
 			toggleTween:Play()
-	
+
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -3051,47 +3117,78 @@ local script = G2L["56"];
 			end)
 		end
 	end)
-	
+
 end;
 task.spawn(C_56);
 -- StarterGui.VoxlHubRL.test1.1.MainFrame.NoInjuries.Toggle.Button.Script
 local function C_5e()
-local script = G2L["5e"];
+	local script = G2L["5e"];
+	local map = game.Workspace:FindFirstChild("Map")
+	local enable = false
+
+	local function toggle()
+		enable = not enable
+
+		if enable then
+			if map then
+				for _, part in pairs(map:GetChildren()) do
+					if part:IsA("BasePart") and part.Name == "PoisonField" then
+						part.CanTouch = false -- Delete the part
+					end
+				end
+			end
+
+
+		else
+			if map then
+				for _, part in pairs(map:GetChildren()) do
+					if part:IsA("BasePart") and part.Name == "PoisonField" then
+						part.CanTouch = true -- Delete the part
+					end
+				end
+			end
+
+		end
+
+	end
+
+
+
 	local toggled = false
 	local debounce = false
-	
-	
-	
+
+
+
 	function callback(state)
 		print(state)
 	end
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-	
+
 			local targetPosition, targetColor
-	
+
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-	
+
 				-- false
-	
+				toggle()
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-				
+
 				--true
-	
+				toggle()
 			end
-	
+
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-	
+
 			circleTween:Play()
 			toggleTween:Play()
-	
+
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -3099,38 +3196,38 @@ local script = G2L["5e"];
 			end)
 		end
 	end)
-	
+
 end;
 task.spawn(C_5e);
 -- StarterGui.VoxlHubRL.test1.1.MainFrame.NoOrderField.Toggle.Button.Script
 local function C_68()
-local script = G2L["68"];
+	local script = G2L["68"];
 	local map = game.Workspace:FindFirstChild("Map")
 	local enable = false
-	
+
 	local function toggle()
 		enable = not enable
-		
-	if enable then
-		if map then
-			for _, part in pairs(map:GetChildren()) do
-				if part:IsA("BasePart") and part.Name == "MageField" then
-					part.CanCollide = false
-					part.CanTouch = false -- Delete the part
+
+		if enable then
+			if map then
+				for _, part in pairs(map:GetChildren()) do
+					if part:IsA("BasePart") and part.Name == "MageField" then
+						part.CanCollide = false
+						part.CanTouch = false -- Delete the part
+					end
 				end
 			end
-		end
-	
-	
-		if map then
-			for _, part in pairs(map:GetChildren()) do
-				if part:IsA("BasePart") and part.Name == "OrderField" then
-					part.CanCollide = false
-					part.CanTouch = false -- Delete the part
+
+
+			if map then
+				for _, part in pairs(map:GetChildren()) do
+					if part:IsA("BasePart") and part.Name == "OrderField" then
+						part.CanCollide = false
+						part.CanTouch = false -- Delete the part
+					end
 				end
 			end
-		end
-	else
+		else
 			if map then
 				for _, part in pairs(map:GetChildren()) do
 					if part:IsA("BasePart") and part.Name == "MageField" then
@@ -3139,8 +3236,8 @@ local script = G2L["68"];
 					end
 				end
 			end
-	
-	
+
+
 			if map then
 				for _, part in pairs(map:GetChildren()) do
 					if part:IsA("BasePart") and part.Name == "OrderField" then
@@ -3149,57 +3246,59 @@ local script = G2L["68"];
 					end
 				end
 			end
+		end
+
 	end
-	
-	end
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
 	local toggled = false
 	local debounce = false
 	local nofire = false
-	
-	
+
+
 	function callback(state)
 		print(state)
 	end
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-	
+
 			local targetPosition, targetColor
-	
+
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-	
+
+				toggle()
 				-- false
-	
+
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-				
+
+				toggle()
 				--true
-	
+
 			end
-	
+
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-	
+
 			circleTween:Play()
 			toggleTween:Play()
-	
+
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -3207,27 +3306,27 @@ local script = G2L["68"];
 			end)
 		end
 	end)
-	
+
 end;
 task.spawn(C_68);
 -- StarterGui.VoxlHubRL.test1.1.PlayerFrame.MaxHealer.Toggle.Button.Script
 local function C_74()
-local script = G2L["74"];
-	
-	
-	
-	
-	
-	
-	
-	
+	local script = G2L["74"];
+
+
+
+
+
+
+
+
 	local toggled = false
 	local debounce = false
 	local UserInputService = game:GetService("UserInputService")
 	local use = false
-	
-	
-	
+
+
+
 	local function HandleHealth(playerCharacter)
 		local Humanoid = playerCharacter:WaitForChild("Humanoid", 5)
 		if Humanoid then
@@ -3239,7 +3338,7 @@ local script = G2L["74"];
 			end
 		end
 	end
-	
+
 	for _, v in pairs(game.Players:GetChildren()) do
 		if v.Character ~= nil then
 			HandleHealth(v.Character)
@@ -3248,39 +3347,39 @@ local script = G2L["74"];
 			HandleHealth(createdCharacter)
 		end)
 	end
-	
+
 	game.Players.PlayerAdded:Connect(function(playerInstance)
 		playerInstance.CharacterAdded:Connect(function(createdCharacter)
 			HandleHealth(createdCharacter)
 		end)
 	end)
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
 	function callback(state)
 		print(state)
 	end
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-	
+
 			local targetPosition, targetColor
-	
+
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-				 use = false
+				use = false
 				for _, v in pairs(game.Players:GetChildren()) do
 					if v.Character ~= nil then
 						HandleHealth(v.Character)
@@ -3288,9 +3387,9 @@ local script = G2L["74"];
 					v.CharacterAdded:Connect(function(createdCharacter)
 						HandleHealth(createdCharacter)
 					end)
-					end
+				end
 				-- false
-	
+
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
@@ -3302,17 +3401,17 @@ local script = G2L["74"];
 					v.CharacterAdded:Connect(function(createdCharacter)
 						HandleHealth(createdCharacter)
 					end)
-					end
+				end
 				--true
-				
+
 			end
-	
+
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-	
+
 			circleTween:Play()
 			toggleTween:Play()
-	
+
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -3320,18 +3419,18 @@ local script = G2L["74"];
 			end)
 		end
 	end)
-	
-	
+
+
 	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
-	
+
 		if gameProcessedEvent then return end
 		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode[script.Parent.Parent.Parent.Parent.Parent.SettingFrame.MaxHealerSetting.Action1Text.Text] then
-			
+
 			if not debounce then
 				debounce = true
-	
+
 				local targetPosition, targetColor
-	
+
 				if toggled then
 					targetPosition = UDim2.new(0.05, 0,0, 2)
 					targetColor = Color3.fromRGB(200, 200, 200)
@@ -3345,7 +3444,7 @@ local script = G2L["74"];
 						end)
 					end
 					-- false
-	
+
 				else
 					targetPosition = UDim2.new(0.45, 0,0, 2)
 					targetColor = Color3.fromRGB(53, 255, 110)
@@ -3359,15 +3458,15 @@ local script = G2L["74"];
 						end)
 					end
 					--true
-	
+
 				end
-	
+
 				local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 				local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-	
+
 				circleTween:Play()
 				toggleTween:Play()
-	
+
 				circleTween.Completed:Connect(function()
 					debounce = false
 					toggled = not toggled
@@ -3380,15 +3479,15 @@ end;
 task.spawn(C_74);
 -- StarterGui.VoxlHubRL.test1.1.PlayerFrame.WorldPulse.Toggle.Button.Script
 local function C_7c()
-local script = G2L["7c"];
+	local script = G2L["7c"];
 	local Players = game:GetService("Players")
 	local RunService = game:GetService("RunService")
 	local UserInputService = game:GetService("UserInputService")
-	
+
 	local LocalPlayer = Players.LocalPlayer
 	local adornmentEnabled = false -- Set to true by default
 	local adornments = {} -- Store adornments to track them
-	
+
 	-- Function to create a BoxHandleAdornment
 	local function createBoxAdornment(part, size, player)
 		local boxAdornment = Instance.new("BoxHandleAdornment")
@@ -3399,14 +3498,14 @@ local script = G2L["7c"];
 		boxAdornment.ZIndex = 5
 		boxAdornment.AlwaysOnTop = true
 		boxAdornment.Parent = game.CoreGui -- Parent to CoreGui to ensure visibility in exploit scripts
-	    
+
 		-- Store adornment in a table associated with the player
 		if not adornments[player] then
 			adornments[player] = {}
 		end
 		table.insert(adornments[player], boxAdornment)
 	end
-	
+
 	-- Function to remove all adornments from a specific player
 	local function removeAdornments(player)
 		if adornments[player] then
@@ -3418,12 +3517,12 @@ local script = G2L["7c"];
 			adornments[player] = nil
 		end
 	end
-	
+
 	-- Function to apply adornments to a character
 	local function applyAdornments(character, player)
 		if not character or character.Parent == nil then return end
 		if player == LocalPlayer then return end -- Skip local player
-	
+
 		local bodyParts = {
 			"Torso",
 			"Right Leg",
@@ -3432,7 +3531,7 @@ local script = G2L["7c"];
 			"Left Arm",
 			"Head"
 		}
-	
+
 		for _, partName in ipairs(bodyParts) do
 			local part = character:FindFirstChild(partName)
 			if part then
@@ -3441,15 +3540,15 @@ local script = G2L["7c"];
 			end
 		end
 	end
-	
+
 	-- Function to toggle adornments
 	local function toggleAdornments()
 		adornmentEnabled = not adornmentEnabled
-	
+
 		for _, player in ipairs(Players:GetPlayers()) do
 			removeAdornments(player)
 		end
-	
+
 		if adornmentEnabled then
 			for _, player in ipairs(Players:GetPlayers()) do
 				if player.Character and player ~= LocalPlayer then
@@ -3458,7 +3557,7 @@ local script = G2L["7c"];
 			end
 		end
 	end
-	
+
 	-- Apply adornments when a player's character spawns
 	local function onCharacterAdded(character, player)
 		removeAdornments(player) -- Remove old adornments
@@ -3467,7 +3566,7 @@ local script = G2L["7c"];
 			applyAdornments(character, player)
 		end
 	end
-	
+
 	-- Connect events for existing and new players
 	for _, player in ipairs(Players:GetPlayers()) do
 		--if player ~= LocalPlayer then
@@ -3481,7 +3580,7 @@ local script = G2L["7c"];
 		end
 		--end
 	end
-	
+
 	Players.PlayerAdded:Connect(function(player)
 		if player ~= LocalPlayer then
 			player.CharacterAdded:Connect(function(character)
@@ -3489,11 +3588,11 @@ local script = G2L["7c"];
 			end)
 		end
 	end)
-	
+
 	Players.PlayerRemoving:Connect(function(player)
 		removeAdornments(player) -- Clean up when a player leaves
 	end)
-	
+
 	-- Bind toggle to "T" key
 	--[[
 	UserInputService.InputBegan:Connect(function(input, gameProcessed)
@@ -3503,63 +3602,63 @@ local script = G2L["7c"];
 		end
 	end)
 	--]]
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	local toggled = false
 	local debounce = false
 	local nofire = false
-	
-	
+
+
 	function callback(state)
 		print(state)
 	end
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-	
+
 			local targetPosition, targetColor
-	
+
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-	
+
 				toggleAdornments()
 				game:GetService("Players").LocalPlayer.PlayerGui.OverlayGui.WorldPulseR.ImageTransparency = 1
-	
-	
-	
+
+
+
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-	
+
 				toggleAdornments()
 				game:GetService("Players").LocalPlayer.PlayerGui.OverlayGui.WorldPulseR.ImageTransparency = 0.5
-	
-	
-	
+
+
+
 			end
-	
+
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-	
+
 			circleTween:Play()
 			toggleTween:Play()
-	
+
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -3567,44 +3666,44 @@ local script = G2L["7c"];
 			end)
 		end
 	end)
-	
-	
+
+
 	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
-	
+
 		if gameProcessedEvent then return end
 		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode[script.Parent.Parent.Parent.Parent.Parent.SettingFrame.WorldPulseSetting.Action1Text.Text] then
-	
+
 			if not debounce then
 				debounce = true
-	
+
 				local targetPosition, targetColor
-	
+
 				if toggled then
 					targetPosition = UDim2.new(0.05, 0,0, 2)
 					targetColor = Color3.fromRGB(200, 200, 200)
-	
+
 					toggleAdornments()
 					game:GetService("Players").LocalPlayer.PlayerGui.OverlayGui.WorldPulseR.ImageTransparency = 1
-	
-	
-	
+
+
+
 				else
 					targetPosition = UDim2.new(0.45, 0,0, 2)
 					targetColor = Color3.fromRGB(53, 255, 110)
-	
+
 					toggleAdornments()
-					game:GetService("Players").LocalPlayer.PlayerGui.OverlayGui.WorldPulseR.ImageTransparency = 0.5
-	
-	
-	
+					game:GetService("Players").LocalPlayer.PlayerGui.OverlayGui.WorldPulseR.ImageTransparency = 0.85
+
+
+
 				end
-	
+
 				local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 				local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-	
+
 				circleTween:Play()
 				toggleTween:Play()
-	
+
 				circleTween.Completed:Connect(function()
 					debounce = false
 					toggled = not toggled
@@ -3617,42 +3716,42 @@ end;
 task.spawn(C_7c);
 -- StarterGui.VoxlHubRL.test1.1.PlayerFrame.Intent.Toggle.Button.Script
 local function C_85()
-local script = G2L["85"];
+	local script = G2L["85"];
 	local toggled = false
 	local debounce = false
 	local nofire = false
-	
-	
+
+
 	function callback(state)
 		print(state)
 	end
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-	
+
 			local targetPosition, targetColor
-	
+
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-	
+
 				-- false
-	
+
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-	
+
 				--true
-	
+
 			end
-	
+
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-	
+
 			circleTween:Play()
 			toggleTween:Play()
-	
+
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -3660,41 +3759,89 @@ local script = G2L["85"];
 			end)
 		end
 	end)
-	
+
 end;
 task.spawn(C_85);
+-- StarterGui.VoxlHubRL.test1.1.PlayerFrame.NoPommel.Toggle.Button.Script
+local function C_8e()
+	local script = G2L["8e"];
+	local toggled = false
+	local debounce = false
+	local nofire = false
+
+
+	function callback(state)
+		print(state)
+	end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		if not debounce then
+			debounce = true
+
+			local targetPosition, targetColor
+
+			if toggled then
+				targetPosition = UDim2.new(0.05, 0,0, 2)
+				targetColor = Color3.fromRGB(200, 200, 200)
+
+				game:GetService("Lighting").Blur.Enabled = false
+
+			else
+				targetPosition = UDim2.new(0.45, 0,0, 2)
+				targetColor = Color3.fromRGB(53, 255, 110)
+
+				game:GetService("Lighting").Blur.Enabled = true
+
+			end
+
+			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
+			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
+
+			circleTween:Play()
+			toggleTween:Play()
+
+			circleTween.Completed:Connect(function()
+				debounce = false
+				toggled = not toggled
+				pcall(callback, toggled)
+			end)
+		end
+	end)
+
+end;
+task.spawn(C_8e);
 -- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.Button.newoneWORKED
-local function C_91()
-local script = G2L["91"];
+local function C_9a()
+	local script = G2L["9a"];
 	local Mouse = game.Players.LocalPlayer:GetMouse()
 	local Slider = script.Parent.Parent.Parent.Slider
 	local Fill = Slider.Fill
 	local Trigger = Slider.Trigger
 	local OutputValue = 0
 	local OutputLabel = Slider.Label
-	
+
 	local UserInputService = game:GetService("UserInputService")
-	
+
 	Fill.Size = UDim2.fromScale(OutputValue, 1)
 	OutputLabel.Text = "Fov : "..tostring(math.round(OutputValue * 500))
-	
+
 	local TweenService = game:GetService("TweenService")
 	local TweenStyle = TweenInfo.new(0.25, Enum.EasingStyle.Exponential)
-	
+
 	function UpdateSlider()
 		local output = math.clamp((Mouse.X - Slider.AbsolutePosition.X) / Slider.AbsoluteSize.X, 0, 1)
 		OutputLabel.Text = "Fov : "..tostring(math.round(output * 500))
-	
+
 		if OutputValue ~= output then
 			TweenService:Create(Fill, TweenStyle, {Size = UDim2.fromScale(output, 1)}):Play()
 		end
-	
+
 		OutputValue = output
 		getgenv().aimbotFOV = output * 500 -- Update aimbot FOV with slider value
 	end
-	
+
 	local sliderActive = false
-	
+
 	function ActivateSlider()
 		sliderActive = true
 		while sliderActive do
@@ -3702,47 +3849,47 @@ local script = G2L["91"];
 			task.wait()
 		end
 	end
-	
+
 	Trigger.MouseButton1Down:Connect(ActivateSlider)
-	
+
 	game:GetService("UserInputService").InputEnded:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
 			sliderActive = false
 		end
 	end)
-	
+
 	getgenv().aimbotEnabled = false -- Toggle variable
 	getgenv().aimbotFOV = 1
-	
+
 	local players = game:GetService("Players")
 	local replicatedStorage = game:GetService("ReplicatedStorage")
 	local userInputService = game:GetService("UserInputService")
-	
+
 	local localPlayer = players.LocalPlayer
 	local mouse = localPlayer:GetMouse()
 	local currentCamera = workspace.CurrentCamera
-	
+
 	local requests = replicatedStorage and replicatedStorage:WaitForChild("Requests")
 	local getMouse = requests and requests:WaitForChild("GetMouse")
-	
+
 	local function getClosest(fov)
 		local target, closest = nil, fov or math.huge
-	
+
 		for _, player in next, players:GetPlayers() do
 			if player.Character and player ~= localPlayer and player.Character:FindFirstChild("HumanoidRootPart") then
 				local position, onScreen = currentCamera:WorldToScreenPoint(player.Character.HumanoidRootPart.Position)
 				local distance = (Vector2.new(position.X, position.Y) - Vector2.new(mouse.X, mouse.Y)).Magnitude
-	
+
 				if distance < closest and onScreen then
 					closest = distance
 					target = player
 				end
 			end
 		end
-	
+
 		return target
 	end
-	
+
 	getMouse.OnClientInvoke = function()
 		if not getgenv().aimbotEnabled then
 			return {
@@ -3753,7 +3900,7 @@ local script = G2L["91"];
 				Y = mouse.Y
 			}
 		end
-	
+
 		local character = localPlayer.Character
 		local target = getClosest(getgenv().aimbotFOV)
 		local targetCharacter = target and target.Character
@@ -3764,13 +3911,13 @@ local script = G2L["91"];
 			X = mouse.X,
 			Y = mouse.Y
 		}
-	
+
 		if targetCharacter then
 			local targetTorso = targetCharacter:FindFirstChild("HumanoidRootPart")
 			if targetTorso then
 				local cameraPosition = currentCamera.CFrame.Position
 				local screenPosition, onScreen = currentCamera:WorldToViewportPoint(targetTorso.Position)
-	
+
 				return {
 					Hit = targetTorso.CFrame,
 					Target = targetTorso,
@@ -3780,23 +3927,23 @@ local script = G2L["91"];
 				}
 			end
 		end
-	
+
 		return defaultArgs
 	end
-	
+
 	local toggled = false
 	local debounce = false
-	
+
 	function callback(state)
 		print(state)
 	end
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-	
+
 			local targetPosition, targetColor
-	
+
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
@@ -3806,13 +3953,13 @@ local script = G2L["91"];
 				targetColor = Color3.fromRGB(53, 255, 110)
 				getgenv().aimbotEnabled = true
 			end
-	
+
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-	
+
 			circleTween:Play()
 			toggleTween:Play()
-	
+
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -3820,17 +3967,17 @@ local script = G2L["91"];
 			end)
 		end
 	end)
-	
-	
+
+
 	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
-	
+
 		if gameProcessedEvent then return end
 		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode[script.Parent.Parent.Parent.Parent.Parent.SettingFrame.AimbotGrappleSetting.Action1Text.Text] then
 			if not debounce then
 				debounce = true
-	
+
 				local targetPosition, targetColor
-	
+
 				if toggled then
 					targetPosition = UDim2.new(0.05, 0,0, 2)
 					targetColor = Color3.fromRGB(200, 200, 200)
@@ -3840,13 +3987,13 @@ local script = G2L["91"];
 					targetColor = Color3.fromRGB(53, 255, 110)
 					getgenv().aimbotEnabled = true
 				end
-	
+
 				local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 				local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-	
+
 				circleTween:Play()
 				toggleTween:Play()
-	
+
 				circleTween.Completed:Connect(function()
 					debounce = false
 					toggled = not toggled
@@ -3856,37 +4003,37 @@ local script = G2L["91"];
 		end	
 	end)
 end;
-task.spawn(C_91);
+task.spawn(C_9a);
 -- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle.Button.Script
-local function C_a3()
-local script = G2L["a3"];
+local function C_ac()
+	local script = G2L["ac"];
 	local toggled = false
 	local debounce = false
 	local autobardenabled = false
-	
+
 	local service_cache = {}
 	local services = setmetatable({}, {
 		__index = function(self, index)
 			local cached_service = service_cache[index]
-	
+
 			if not cached_service then 
 				service_cache[index] = select(2, pcall(game.GetService, game, index))
 				return service_cache[index]
 			end 
-	
+
 			return cached_service
 		end
 	})
-	
+
 	local player = services.Players.LocalPlayer
 	local firesignal = firesignal
-	
+
 	do -- auto bard
 		local function apply_bard(character)
 			local bard_gui = player.PlayerGui:WaitForChild("BardGui")
 			local boosts = character:WaitForChild("Boosts")
-	
-	
+
+
 			-- bardstacking
 			boosts.ChildAdded:Connect(function(child)
 				if child.Name == "MusicianBuff" then
@@ -3894,69 +4041,69 @@ local script = G2L["a3"];
 					child:Destroy()
 				end
 			end)
-	
+
 			bard_gui.ChildAdded:Connect(function(note)
 				if note.ClassName == "ImageButton" and autobardenabled == true then
 					local outer_ring = note:WaitForChild("OuterRing")
-	
+
 					repeat 
 						wait() 
 					until outer_ring.Size.X.Offset - 35 <= note.Size.X.Offset
-	
+
 					firesignal(note.MouseButton1Click)
 				end
 			end)
 		end
-	
+
 		local character = player.Character or player.CharacterAdded:Wait()
-	
+
 		apply_bard(character)
 		player.CharacterAdded:Connect(apply_bard)
-	
+
 	end
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
 	function callback(state)
 		print(state)
 	end
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-	
+
 			local targetPosition, targetColor
-	
+
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-	
+
 				-- false
 				autobardenabled = false
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-	
+
 				--true
 				autobardenabled = true
 			end
-	
+
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-	
+
 			circleTween:Play()
 			toggleTween:Play()
-	
+
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -3964,39 +4111,39 @@ local script = G2L["a3"];
 			end)
 		end
 	end)
-	
+
 end;
-task.spawn(C_a3);
+task.spawn(C_ac);
 -- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle.Button.Script
-local function C_ac()
-local script = G2L["ac"];
+local function C_b5()
+	local script = G2L["b5"];
 	local toggled = false
 	local debounce = false
 	local autobardstackenabled = false
-	
+
 	local service_cache = {}
 	local services = setmetatable({}, {
 		__index = function(self, index)
 			local cached_service = service_cache[index]
-	
+
 			if not cached_service then 
 				service_cache[index] = select(2, pcall(game.GetService, game, index))
 				return service_cache[index]
 			end 
-	
+
 			return cached_service
 		end
 	})
-	
+
 	local player = services.Players.LocalPlayer
 	local firesignal = firesignal
-	
+
 	do -- auto bard
 		local function apply_bard(character)
 			local bard_gui = player.PlayerGui:WaitForChild("BardGui")
 			local boosts = character:WaitForChild("Boosts")
-	
-	
+
+
 			-- bardstacking
 			boosts.ChildAdded:Connect(function(child)
 				if autobardstackenabled == true and child.Name == "MusicianBuff" then
@@ -4004,58 +4151,58 @@ local script = G2L["ac"];
 					child:Destroy()
 				end
 			end)
-	
+
 		end
-	
+
 		local character = player.Character or player.CharacterAdded:Wait()
-	
+
 		apply_bard(character)
 		player.CharacterAdded:Connect(apply_bard)
-	
+
 	end
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
 	function callback(state)
 		print(state)
 	end
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-	
+
 			local targetPosition, targetColor
-	
+
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-	
+
 				-- false
 				autobardstackenabled = false
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-	
+
 				--true
 				autobardstackenabled = true
 			end
-	
+
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-	
+
 			circleTween:Play()
 			toggleTween:Play()
-	
+
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -4063,88 +4210,88 @@ local script = G2L["ac"];
 			end)
 		end
 	end)
-	
+
 end;
-task.spawn(C_ac);
+task.spawn(C_b5);
 -- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle.Button.Script
-local function C_b5()
-local script = G2L["b5"];
+local function C_be()
+	local script = G2L["be"];
 	local toggled = false
 	local debounce = false
-	
-	
-	
+
+
+
 	function callback(state)
 		print(state)
 	end
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-	
+
 			local targetPosition, targetColor
-	
+
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-	
+
 				-- false
-	
+
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-				
+
 				local userInputService = game:GetService("UserInputService")
 				local lastPressTime = 0
 				local doublePressDelay = 0.4  -- Time window for double press
 				local cooldownTime = 3  -- Cooldown time in seconds
 				local isCooldown = false  -- To track whether the cooldown is active
-	
+
 				userInputService.InputBegan:Connect(function(input, ch)
 					if ch then return end  -- Ignore if the input is from the character (e.g., input from NPC)
-	
+
 					-- Check if the pressed key is Spacebar
 					if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.Space and toggled == true then
 						local currentTime = tick()
-	
+
 						-- Check if we're within the double press window and not on cooldown
 						if currentTime - lastPressTime <= doublePressDelay and not isCooldown then
 							local player = game.Players.LocalPlayer
 							local character = player.Character or player.CharacterAdded:Wait()
 							local humanoid = character:WaitForChild("Humanoid")
-	
+
 							-- Create and play the animation
 							local animation = Instance.new("Animation")
 							animation.AnimationId = "rbxassetid://3139634168"  -- Replace with your actual animation ID
 							local animationTrack = humanoid:LoadAnimation(animation)
 							animationTrack:Play()
-	
+
 							-- Apply BodyVelocity to simulate a jump or force
 							local BodyVelocity = Instance.new("BodyVelocity")
 							BodyVelocity.MaxForce = Vector3.new(1000000, 1000000, 1000000)
 							BodyVelocity.Parent = character.HumanoidRootPart
 							BodyVelocity.Velocity = Vector3.new(0, 80, 0)
 							game:GetService("Debris"):AddItem(BodyVelocity, 0.1)
-	
+
 							-- Start cooldown
 							isCooldown = true
 							wait(cooldownTime)  -- Wait for the cooldown to finish
 							isCooldown = false
 						end
-	
+
 						-- Update the last press time
 						lastPressTime = currentTime
 					end
 				end)
-	
+
 			end
-	
+
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-	
+
 			circleTween:Play()
 			toggleTween:Play()
-	
+
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -4152,47 +4299,47 @@ local script = G2L["b5"];
 			end)
 		end
 	end)
-	
+
 end;
-task.spawn(C_b5);
+task.spawn(C_be);
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Player.Toggle.Button.Script
-local function C_c1()
-local script = G2L["c1"];
+local function C_ca()
+	local script = G2L["ca"];
 	local toggled = false
 	local debounce = false
-	
-	
-	
+
+
+
 	function callback(state)
 		print(state)
 	end
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-	
+
 			local targetPosition, targetColor
-	
+
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-	
+
 				-- false
-	
+
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-				
+
 				--true
-	
+
 			end
-	
+
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-	
+
 			circleTween:Play()
 			toggleTween:Play()
-	
+
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -4200,32 +4347,32 @@ local script = G2L["c1"];
 			end)
 		end
 	end)
-	
+
 end;
-task.spawn(C_c1);
+task.spawn(C_ca);
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.Toggle.Button.Script
-local function C_cd()
-local script = G2L["cd"];
+local function C_d6()
+	local script = G2L["d6"];
 	-- Services
 	local Players = game:GetService("Players")
 	local LocalPlayer = Players.LocalPlayer
 	local UserInputService = game:GetService("UserInputService")
 	local toggled = false
-	
+
 	-- Toggle variable to control whether health bars are active
 	local healthBarsEnabled = false
 	local hascreateyet = false
-	
+
 	-- Table to store health bar references for each player
 	local healthBars = {}
-	
+
 	-- Function to update the health bar
 	local function updateHealthBar(healthFill, humanoid)
 		if humanoid then
 			local healthPercent = humanoid.Health / humanoid.MaxHealth
 			healthFill.Size = UDim2.new(1, 0, healthPercent, 0)
 			healthFill.Position = UDim2.new(0, 0, 1 - healthPercent, 0) -- Adjust position to make it decrease from top to bottom
-	
+
 			-- Change color based on health
 			if healthPercent > 0.5 then
 				healthFill.BackgroundColor3 = Color3.new(0, 1, 0) -- Green
@@ -4236,7 +4383,7 @@ local script = G2L["cd"];
 			end
 		end
 	end
-	
+
 	-- Function to create the health bar UI
 	local function createHealthBar(player, humanoid)
 		local billboardGui = Instance.new("BillboardGui")
@@ -4248,44 +4395,44 @@ local script = G2L["cd"];
 		billboardGui.MaxDistance = math.huge
 		if toggled == false then
 			billboardGui.Enabled = false
-			else
-	        billboardGui.Enabled = true
+		else
+			billboardGui.Enabled = true
 		end
-	
+
 		local background = Instance.new("Frame", billboardGui)
 		background.Size = UDim2.new(0.1, 0, 1, 0) -- Reduced width
 		background.Position = UDim2.new(0, 0, 0, 0) -- Align to the left
 		background.BackgroundColor3 = Color3.new(0, 0, 0)
 		background.BorderSizePixel = 0
-	
+
 		local healthFill = Instance.new("Frame", background)
 		healthFill.Name = "HealthFill"
 		healthFill.BorderSizePixel = 0
-	
+
 		-- Initialize health bar state
 		updateHealthBar(healthFill, humanoid)
-	
+
 		return billboardGui, healthFill
 	end
-	
+
 	-- Function to handle player character
 	local function onCharacterAdded(player)
 		-- เชื่อมต่อเมื่อผู้เล่นมีการ respawn
 		player.CharacterAdded:Connect(function(character)
 			-- รอให้ตัวละครโหลดครบถ้วน
 			task.wait(1)
-	
+
 			-- เช็คว่า character และ Humanoid มีอยู่
 			if character and character:FindFirstChild("Humanoid") then
 				local humanoid = character:FindFirstChild("Humanoid")
 				local rootPart = character:FindFirstChild("HumanoidRootPart")
-	
+
 				if humanoid and rootPart then
 					-- สร้าง health bar สำหรับตัวละครนี้
 					local healthBar, healthFill = createHealthBar(player, humanoid)
 					healthBar.Parent = rootPart
 					healthBars[player.UserId] = healthBar -- Store health bar reference
-	
+
 					-- อัพเดท health bar เมื่อสุขภาพเปลี่ยน
 					humanoid.HealthChanged:Connect(function()
 						if healthBarsEnabled then
@@ -4295,22 +4442,22 @@ local script = G2L["cd"];
 				end
 			end
 		end)
-	
+
 		-- ถ้าผู้เล่นมีตัวละครอยู่แล้วตอนเริ่ม
 		if player.Character then
 			local character = player.Character
 			task.wait(1)
-	
+
 			if character and character:FindFirstChild("Humanoid") then
 				local humanoid = character:FindFirstChild("Humanoid")
 				local rootPart = character:FindFirstChild("HumanoidRootPart")
-	
+
 				if humanoid and rootPart then
 					-- สร้าง health bar สำหรับตัวละครนี้
 					local healthBar, healthFill = createHealthBar(player, humanoid)
 					healthBar.Parent = rootPart
 					healthBars[player.UserId] = healthBar -- Store health bar reference
-	
+
 					-- อัพเดท health bar เมื่อสุขภาพเปลี่ยน
 					humanoid.HealthChanged:Connect(function()
 						if healthBarsEnabled then
@@ -4321,24 +4468,24 @@ local script = G2L["cd"];
 			end
 		end
 	end
-	
+
 	-- Detect when players join
 	Players.PlayerAdded:Connect(function(player)
 		onCharacterAdded(player) -- เชื่อมต่อเมื่อผู้เล่นมีการ respawn
 	end)
-	
+
 	-- Initial setup for all players (รวมถึงผู้เล่นที่อยู่แล้ว)
 	for _, player in pairs(Players:GetPlayers()) do
 		if player ~= LocalPlayer  then
 			onCharacterAdded(player)
 		end
 	end
-	
+
 	-- Function to toggle health bars on or off
 	local function toggleHealthBars()
 		healthBarsEnabled = not healthBarsEnabled
 		print("Health Bars Enabled: " .. tostring(healthBarsEnabled))
-	
+
 		-- Hide or show health bars based on the toggle
 		for _, player in pairs(Players:GetPlayers()) do
 			if healthBars[player.UserId] then
@@ -4352,9 +4499,9 @@ local script = G2L["cd"];
 			end
 		end
 	end
-	
+
 	-- Bind a key to toggle health bars (e.g., pressing 'H' on the keyboard)
-	
+
 	--[[
 	game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessed)
 		if gameProcessed then return end
@@ -4363,31 +4510,31 @@ local script = G2L["cd"];
 		end
 	end)
 	--]]
-	
-	
-	
+
+
+
 	local debounce = false
 	local nofire = false
-	
-	
+
+
 	function callback(state)
 		print(state)
 	end
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-	
+
 			local targetPosition, targetColor
-	
+
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-	
+
 				toggleHealthBars()
-	
+
 				local Players = game:GetService("Players")
-	
+
 				for _, player in pairs(Players:GetPlayers()) do
 					if player.Character then
 						local rootPart = player.Character:FindFirstChild("HumanoidRootPart")
@@ -4399,16 +4546,16 @@ local script = G2L["cd"];
 						end
 					end
 				end
-	
+
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-	
+
 				toggleHealthBars()
-	
-	
+
+
 				local Players = game:GetService("Players")
-	
+
 				for _, player in pairs(Players:GetPlayers()) do
 					if player.Character then
 						local rootPart = player.Character:FindFirstChild("HumanoidRootPart")
@@ -4421,13 +4568,13 @@ local script = G2L["cd"];
 					end
 				end
 			end
-	
+
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-	
+
 			circleTween:Play()
 			toggleTween:Play()
-	
+
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -4435,30 +4582,30 @@ local script = G2L["cd"];
 			end)
 		end
 	end)
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
-	
+
 		if gameProcessedEvent then return end
 		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode[script.Parent.Parent.Parent.Parent.Parent.SettingFrame.HealthBarSetting.Action1Text.Text] then
-	
+
 			if not debounce then
 				debounce = true
-	
+
 				local targetPosition, targetColor
-	
+
 				if toggled then
 					targetPosition = UDim2.new(0.05, 0,0, 2)
 					targetColor = Color3.fromRGB(200, 200, 200)
-	
+
 					toggleHealthBars()
-	
+
 					local Players = game:GetService("Players")
-	
+
 					for _, player in pairs(Players:GetPlayers()) do
 						if player.Character then
 							local rootPart = player.Character:FindFirstChild("HumanoidRootPart")
@@ -4470,16 +4617,16 @@ local script = G2L["cd"];
 							end
 						end
 					end
-	
+
 				else
 					targetPosition = UDim2.new(0.45, 0,0, 2)
 					targetColor = Color3.fromRGB(53, 255, 110)
-	
+
 					toggleHealthBars()
-	
-	
+
+
 					local Players = game:GetService("Players")
-	
+
 					for _, player in pairs(Players:GetPlayers()) do
 						if player.Character then
 							local rootPart = player.Character:FindFirstChild("HumanoidRootPart")
@@ -4492,13 +4639,13 @@ local script = G2L["cd"];
 						end
 					end
 				end
-	
+
 				local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 				local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-	
+
 				circleTween:Play()
 				toggleTween:Play()
-	
+
 				circleTween.Completed:Connect(function()
 					debounce = false
 					toggled = not toggled
@@ -4508,22 +4655,22 @@ local script = G2L["cd"];
 		end	
 	end)
 end;
-task.spawn(C_cd);
+task.spawn(C_d6);
 -- StarterGui.VoxlHubRL.test1.1.Alwayssetposition
-local function C_d3()
-local script = G2L["d3"];
+local function C_dc()
+	local script = G2L["dc"];
 	script.Parent.Position = UDim2.new(0.760, 0, 0.665, 0)
 end;
-task.spawn(C_d3);
+task.spawn(C_dc);
 -- StarterGui.VoxlHubRL.Open/close
-local function C_d4()
-local script = G2L["d4"];
+local function C_dd()
+	local script = G2L["dd"];
 	local UserInputService = game:GetService("UserInputService")
 	local player = game.Players.LocalPlayer
 	local playerGui = player:WaitForChild("PlayerGui")
-	
+
 	local isVisible = false
-	
+
 	-- Function to toggle the GUI visibility
 	local function toggleGuiVisibility()
 		if isVisible == false then
@@ -4534,37 +4681,37 @@ local script = G2L["d4"];
 			script.Parent["test1.1"].Visible = false
 		end
 	end
-	
+
 	-- Listen for key presses
 	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
 		-- Make sure it's not a game-processed event (e.g., typing in a textbox)
 		if gameProcessedEvent then return end
-	
+
 		-- Check if the pressed key is Left Alt
 		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode[script.Parent["test1.1"].SettingFrame.ToggleUI.Action1Text.Text] then
 			toggleGuiVisibility()
 		end
 	end)
-	
-	
+
+
 end;
-task.spawn(C_d4);
+task.spawn(C_dd);
 -- StarterGui.VoxlHubRL.AnticheatBypass
-local function C_d5()
-local script = G2L["d5"];
+local function C_de()
+	local script = G2L["de"];
 	--// client anticheat bypass
-	
+
 	do
 		local function trigger_callback()
 			local anticheat_mode = library.flags["Anticheat Mode"]
-	
+
 			if anticheat_mode == "Block" then 
 				task_spawn(function()
 					global_variables.block_all_remotes = true
 					global_variables.block_all_animations = true
-	
+
 					wait(1)
-	
+
 					global_variables.block_all_animations = false
 					global_variables.block_all_remotes = false
 				end)
@@ -4572,208 +4719,208 @@ local script = G2L["d5"];
 				player:Kick("Anticheat Triggered")
 			end
 		end 
-	
+
 		local nil_instances = getnilinstances()
 		local ban_animation_ids = {}
-	
+
 		for index = 1, #nil_instances do 
 			local value = nil_instances[index]
-	
+
 			if value.ClassName == "AnimationTrack" then 
 				local animation_instance = value.Animation
-	
+
 				if not animation_instance.Parent then
 					ban_animation_ids[animation_instance.AnimationId] = true
 				end
 			end
 		end
-	
+
 		if not ban_animation_ids["rbxassetid://4595066903"] then 
 			ban_animation_ids["rbxassetid://4595066903"] = true
 		end
-	
+
 		local humanoid = workspace.NPCs:FindFirstChildWhichIsA("Humanoid", true)
-	
+
 		local animation = instance_new("Animation")
 		animation.AnimationId = "rbxassetid://180435571"
-	
+
 		local animation_play = humanoid:LoadAnimation(animation).Play
-	
+
 		local old_animation_play
 		old_animation_play = replaceclosure(animation_play, newcclosure(function(self, ...)
 			if global_variables.block_all_animations then 
 				return
 			end 
-	
+
 			if typeof(self) == "Instance" and self.ClassName == "AnimationTrack" then
 				local animation_id = self.Animation.AnimationId:gsub("[^%w%s_]+", "")
-	
+
 				if ban_animation_ids[animation_id] then 
 					return trigger_callback()
 				end
 			end
-	
+
 			return old_animation_play(self, ...)
 		end))
-	
+
 		local blacklisted_character_descendants = {}
-	
+
 		local function update_character_blacklist(character)
 			wait(1)
-	
+
 			local character_descendants = character:GetDescendants()
-	
+
 			for index = 1, #character_descendants do 
 				local descendant = character_descendants[index]
-	
+
 				if not ((descendant.ClassName == "Accessory" and (descendant.Name == "Charge" or descendant.Name == "Blindness" or descendant.Name == "DamageMPStack" or descendant.Name == "VisionBlur" or descendant.Name == "Sprint" or descendant.Name == "Climbing" or descendant.Name == "ClimbCooldown")) or (descendant.ClassName == "BodyVelocity" and descendant.Name == "DodgeVel") or (descendant.ClassName == "BodyPosition" and descendant.Name == "BodyPosition")) then 
 					blacklisted_character_descendants[descendant] = true
 				end
 			end
 		end
-	
+
 		local character = player.Character or player.CharacterAdded:Wait()
-	
+
 		update_character_blacklist(character)
 		player.CharacterAdded:Connect(update_character_blacklist)
-	
+
 		local old_destroy
 		old_destroy = replaceclosure(game.Destroy, newcclosure(function(self)
 			if typeof(self) == "Instance" and blacklisted_character_descendants[self] then
 				return trigger_callback()
 			end
-	
+
 			return old_destroy(self)
 		end))
-	
+
 		local old_remove
 		old_remove = replaceclosure(game.Remove, newcclosure(function(self)
 			if typeof(self) == "Instance" and blacklisted_character_descendants[self] then
 				return trigger_callback()
 			end
-	
+
 			return old_remove(self)
 		end))
-	
+
 		local old_destroy_2
 		old_destroy_2 = replaceclosure(game.destroy, newcclosure(function(self)
 			if typeof(self) == "Instance" and blacklisted_character_descendants[self] then
 				return trigger_callback()
 			end
-	
+
 			return old_destroy_2(self)
 		end))
-	
+
 		local old_remove_2
 		old_remove_2 = replaceclosure(game.remove, newcclosure(function(self)
 			if typeof(self) == "Instance" and blacklisted_character_descendants[self] then
 				return trigger_callback()
 			end
-	
+
 			return old_remove_2(self)
 		end))
-	
+
 		local old_add_item
 		old_add_item = replaceclosure(services.Debris.AddItem, newcclosure(function(self, object, duration)
 			if blacklisted_character_descendants[object] then
 				return trigger_callback()
 			end
-	
+
 			return old_add_item(self, object, duration)
 		end))
-	
+
 		local old_add_item_2
 		old_add_item_2 = replaceclosure(services.Debris.addItem, newcclosure(function(self, object, duration)
 			if blacklisted_character_descendants[object] then
 				return trigger_callback()
 			end
-	
+
 			return old_add_item(self, object, duration)
 		end))
-	
+
 		local old_clear_all_children
 		old_clear_all_children = replaceclosure(game.ClearAllChildren, newcclosure(function(self)
 			local character = player.Character
-	
+
 			if character and self == character then 
 				return trigger_callback() 
 			end
-	
+
 			return old_clear_all_children(self)
 		end))
-	
+
 		local old_clear_all_children_2
 		old_clear_all_children_2 = replaceclosure(game.clearAllChildren, newcclosure(function(self)
 			local character = player.Character
-	
+
 			if character and self == character then 
 				return trigger_callback() 
 			end
-	
+
 			return old_clear_all_children_2(self)
 		end))
-	
+
 		local old_coroutine_wrap
 		old_coroutine_wrap = replaceclosure(coroutine.wrap, newcclosure(function(func)
 			if type(func) == "function" and islclosure(func) then
 				local upvalues = getupvalues(func)
-	
+
 				if #upvalues == 1 and upvalues[1] == services.RunService and getinfo(func, "n").name == "" then
 					return function() end
 				end
 			end
-	
+
 			return old_coroutine_wrap(func)
 		end))
-	
+
 		local old_namecall
 		old_namecall = hookmetamethod(game, "__namecall", function(self, ...)
 			local arguments = {...}
 			local method = string.lower(getnamecallmethod())
-	
+
 			if ((not checkcaller() and method == "destroy") or method == "remove") and typeof(self) == "Instance" and blacklisted_character_descendants[self] then 
 				return trigger_callback()
 			elseif method == "additem" and self == services.Debris then 
 				local object = arguments[1]
-	
+
 				if typeof(object) == "instance" and blacklisted_character_descendants[object] then
 					return trigger_callback()
 				end
 			elseif method == "clearallchildren" then
 				local character = player.Character
-	
+
 				if character and self == character then 
 					return trigger_callback()
 				end
 			elseif method == "play" and typeof(self) == "Instance" and self.ClassName == "AnimationTrack" and ban_animation_ids[self.Animation.AnimationId] then 
 				return trigger_callback()
 			end
-	
+
 			return old_namecall(self, ...)
 		end)
-	
+
 		local connections = getconnections(game.ScriptContext.Error)
-	
+
 		for index = 1, #connections do 
 			connections[index]:Disable()
 		end
 	end
-	
+
 	--// keyhandler bypass
-	
+
 	do
 		local key_handler = services.ReplicatedStorage:WaitForChild("Assets"):WaitForChild("Modules"):WaitForChild("KeyHandler")
-	
+
 		local patcher = {}
 		patcher.__index = patcher
-	
+
 		local psu_struct = {
 			stack_next = "sBgaL",
 			register_c = 639954,
 			register_bx = "jDWh3",
 			register_b = -50014
 		}
-	
+
 		function patcher.new(psu_function)
 			return setmetatable({
 				upvalues = getupvalues(psu_function),
@@ -4783,13 +4930,13 @@ local script = G2L["d5"];
 				current_instruction = 0
 			}, patcher)
 		end
-	
+
 		function patcher:grab_dependencies()
 			for index, upvalue in ipairs(self.upvalues) do 
 				if type(upvalue) == "table" then
 					if upvalue[0] then
 						local entry = upvalue[0]
-	
+
 						if entry and type(entry) == "table" then 
 							if entry[psu_struct.stack_next] then 
 								self.instructions = upvalue
@@ -4800,163 +4947,163 @@ local script = G2L["d5"];
 					end
 				end
 			end
-	
+
 			assert(self.instructions, "unable to find instructions!")
 			assert(self.stack, "unable to find stack!")
 		end
-	
+
 		function patcher:patch_instruction(old_value, new_value)
 			for index, value in next, new_value do 
 				old_value[index] = value
 			end
 		end
-	
+
 		function patcher:patch_method(method, ...)
 			if method == 1 then
 				local current_instruction = self.current_instruction
 				local eq_amount = 0
-	
+
 				while true do
 					local instruction = self.instructions[current_instruction] 
-	
+
 					if type(instruction[psu_struct.register_b]) == "table" then 
 						eq_amount = eq_amount + 1
 					else
 						eq_amount = 0
 					end
-	
+
 					if eq_amount == 2 then 
 						local to_patch_instruction = self.instructions[current_instruction - 1]
 						local go_to_instruction = instruction[psu_struct.register_b]
-	
+
 						self:patch_instruction(to_patch_instruction, go_to_instruction)
 						current_instruction = table_find(self.instructions, go_to_instruction)
 						break
 					end
-	
+
 					current_instruction = current_instruction + 1
 				end
-	
+
 				self.current_instruction = current_instruction
 			elseif method == 2 then 
 				local current_instruction = self.current_instruction
 				local to_patch_instruction
-	
+
 				while true do 
 					local instruction = self.instructions[current_instruction]
-	
+
 					if type(instruction[psu_struct.register_b]) == "table" then 
 						if self.instructions[current_instruction + 2][psu_struct.register_c] == "LocalPlayer" then 
 							local to_patch_instruction = instruction
 							local go_to_instruction = instruction[psu_struct.register_b]
-	
+
 							self:patch_instruction(to_patch_instruction, go_to_instruction)
 							current_instruction = table_find(self.instructions, go_to_instruction)
 							break
 						end
 					end
-	
+
 					current_instruction = current_instruction + 1
 				end
-	
+
 				self.current_instruction = current_instruction
 			elseif method == 3 then
 				local current_instruction = self.current_instruction
 				local to_patch_instruction
-	
+
 				while true do 
 					local instruction = self.instructions[current_instruction]
-	
+
 					if type(instruction[psu_struct.register_b]) == "table" then 
 						if self.instructions[current_instruction - 3][psu_struct.register_c] == "FindFirstChild" then 
 							local to_patch_instruction = instruction
 							local go_to_instruction = instruction[psu_struct.register_b]
-	
+
 							self:patch_instruction(to_patch_instruction, go_to_instruction)
 							current_instruction = table_find(self.instructions, go_to_instruction)
 							break
 						end
 					end
-	
+
 					current_instruction = current_instruction + 1
 				end
-	
+
 				self.current_instruction = current_instruction
 			elseif method == 4 then
 				local current_instruction = self.current_instruction
 				local to_patch_instruction
-	
+
 				while true do 
 					local instruction = self.instructions[current_instruction]
-	
+
 					if type(instruction[psu_struct.register_b]) == "table" then 
 						if type(self.instructions[current_instruction + 2][psu_struct.register_bx]) == "table" and type(self.instructions[current_instruction + 5][psu_struct.register_bx]) == "table" then 
 							local to_patch_instruction = instruction
 							local go_to_instruction = instruction[psu_struct.register_b]
-	
+
 							self:patch_instruction(to_patch_instruction, go_to_instruction)
 							current_instruction = table_find(self.instructions, go_to_instruction)
 							break
 						end
 					end
-	
+
 					current_instruction = current_instruction + 1
 				end
-	
+
 				self.current_instruction = current_instruction
 			elseif method == 5 then
 				local current_instruction = self.current_instruction
 				local to_patch_instruction
-	
+
 				local arguments = {...}
-	
+
 				while true do 
 					local instruction = self.instructions[current_instruction]
-	
+
 					if type(instruction[psu_struct.register_b]) == "table" then 
 						if self.instructions[current_instruction + arguments[1]][psu_struct.register_b] == "EEKEWAEJIWAJDOIWAJDIOJAWDIOJAWODJOAIW" then 
 							local to_patch_instruction = instruction
 							local go_to_instruction = instruction[psu_struct.register_b]
-	
+
 							self:patch_instruction(to_patch_instruction, go_to_instruction)
 							current_instruction = table_find(self.instructions, go_to_instruction)
 							break
 						end
 					end
-	
+
 					current_instruction = current_instruction + 1
 				end
-	
+
 				self.current_instruction = current_instruction
 			elseif method == 6 then
 				local current_instruction = self.current_instruction
 				local to_patch_instruction
-	
+
 				while true do 
 					local instruction = self.instructions[current_instruction]
-	
+
 					if type(instruction[psu_struct.register_b]) == "table" then 
 						if type(self.instructions[current_instruction + 4][psu_struct.register_b]) == "table" then 
 							local to_patch_instruction = instruction
 							local go_to_instruction = self.instructions[current_instruction + 4][psu_struct.register_b]
-	
+
 							self:patch_instruction(to_patch_instruction, go_to_instruction)
 							current_instruction = table_find(self.instructions, go_to_instruction)
 							break
 						end
 					end
-	
+
 					current_instruction = current_instruction + 1
 				end
-	
+
 				self.current_instruction = current_instruction
 			elseif method == 7 then
 				local current_instruction = self.current_instruction
 				local to_patch_instruction
-	
+
 				while true do 
 					local instruction = self.instructions[current_instruction]
-	
+
 					if type(instruction[psu_struct.register_b]) == "table" then 
 						local success = true
 						for index = 1, 5 do 
@@ -4964,24 +5111,24 @@ local script = G2L["d5"];
 								success = false
 							end
 						end
-	
+
 						if success then
 							local to_patch_instruction = instruction
 							local go_to_instruction = instruction[psu_struct.register_b]
-	
+
 							self:patch_instruction(to_patch_instruction, go_to_instruction)
 							current_instruction = table_find(self.instructions, go_to_instruction)
 							break
 						end
 					end
-	
+
 					current_instruction = current_instruction + 1
 				end
-	
+
 				self.current_instruction = current_instruction
 			end
 		end
-	
+
 		function patcher:patch_instructions(patch_type)
 			if patch_type == 1 then -- module type
 				self.instructions[0] = self.instructions[#self.instructions - 5]
@@ -4997,29 +5144,29 @@ local script = G2L["d5"];
 				end
 			end
 		end
-	
+
 		function patcher:patch(patch_type)
 			self:grab_dependencies()
-	
+
 			self:patch_instructions(patch_type)
 		end
-	
+
 		--// assert(getscripthash(key_handler) == "28607f8aeb5399560e87712f42c5a6700c96c6c4d9f3209004c89bfa7766916410af5b0e6492eafb55c57b261693b192", "KeyHandler Script Updated!")
-	
+
 		local character = player.Character or player.CharacterAdded:Wait()
 		local input_script = character:WaitForChild("CharacterHandler"):WaitForChild("Input")
-	
+
 		--// assert(getscripthash(input_script) == "29e1a68e700408e58d97ab1b19afb63a8b50a0c868635d7e8abc4a81002639a3b63f4061a726c7dfc1eecf989da70931", "Input Script Updated!")
-	
+
 		local input_protos = getprotos(getscriptclosure(input_script))
-	
+
 		for index = 1, #input_protos do 
 			local proto = input_protos[index]
 			local constants = getconstants(proto)
-	
+
 			if table_find(constants, "SpeedBoost") and table_find(constants, "HasHammer") then 
 				local dodge_function = getproto(proto, 1)
-	
+
 				setupvalue(dodge_function, 1, function() end)
 				setupvalue(dodge_function, 2,  function(key)
 					dodge_fpe_key = tonumber(("%0.50f"):format(key)) -- terrible method
@@ -5027,58 +5174,58 @@ local script = G2L["d5"];
 				setupvalue(dodge_function, 3, tonumber)
 				setupvalue(dodge_function, 4, tostring)
 				setupvalue(dodge_function, 5, function() end)
-	
+
 				dodge_function()
-	
+
 				break
 			end
 		end
-	
+
 		local keyhandler_module = require(key_handler)
-	
+
 		local module_patcher = patcher.new(keyhandler_module)
 		module_patcher:patch(1)
-	
+
 		local get_key = keyhandler_module()[1]
-	
+
 		local get_key_patcher = patcher.new(get_key)
 		get_key_patcher:patch(2)
-	
+
 		local remote_cache = {}
 		local character_cache
 		local live_folder = workspace:WaitForChild("Live")
-	
+
 		global_variables.remotes = setmetatable({}, {
 			__index = function(self, index)
 				local cached_remote = remote_cache[index]
 				local remote_result
-	
+
 				if player.Character ~= character_cache then
 					remote_result = get_key(index == "Dodge" and dodge_fpe_key or index, "plum")
-	
+
 					if remote_result and typeof(remote_result) == "Instance" and remote_result:IsDescendantOf(live_folder) then 
 						character_cache = player.Character
-	
+
 						remote_cache[index] = remote_result
 						return remote_result
 					end
 				end
-	
+
 				if not cached_remote then 
 					remote_result = remote_result or get_key(index == "Dodge" and dodge_fpe_key or index, "plum")
-	
+
 					if remote_result and typeof(remote_result) == "Instance" then
 						remote_cache[index] = remote_result
 					end 
-	
+
 					return remote_result
 				end 
-	
+
 				return cached_remote
 			end
 		})
 	end
 end;
-task.spawn(C_d5);
+task.spawn(C_de);
 
 return G2L["1"], require;
