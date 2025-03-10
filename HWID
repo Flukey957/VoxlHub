@@ -1,3 +1,10 @@
 local HWID = {
-	"16C4BDE7-46FC-4DCE-81C3-63A1DF44FB4A",
+	"16C4BDE7-46FC-4DCE-81C3-63A1DF44FB4Aa",
 }
+
+if HWID[table.find(HWID,game:GetService("RbxAnalyticsService"):GetClientId())] == game:GetService("RbxAnalyticsService"):GetClientId() then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Flukey957/VoxlHub/refs/heads/main/VoxlHub"))()
+else
+	print("Wrong Hwid")
+	setclipboard(game:GetService("RbxAnalyticsService"):GetClientId())
+end
