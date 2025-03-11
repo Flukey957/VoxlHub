@@ -1,6 +1,7 @@
 local HWID = {
 	"16C4BDE7-46FC-4DCE-81C3-63A1DF44FB4A",
         "6DBAB84B-7F31-465E-AA56-1FF9487432D1",
+        "34029BC7-939B-4976-84F0-7AF84F415BD0",
 }
 
 if HWID[table.find(HWID,game:GetService("RbxAnalyticsService"):GetClientId())] == game:GetService("RbxAnalyticsService"):GetClientId() then
