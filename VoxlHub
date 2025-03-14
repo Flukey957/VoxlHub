@@ -4031,7 +4031,7 @@ local script = G2L["8e"];
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
 	
-				while toggled do
+				while toggled == false do
 				wait(0.1)
 				game:GetService("Lighting").Blur.Enabled = false
 				end
