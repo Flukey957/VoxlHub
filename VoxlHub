@@ -172,7 +172,7 @@ G2L["9"]["TextSize"] = 20;
 G2L["9"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["9"]["Size"] = UDim2.new(0, 90, 0, 30);
-G2L["9"]["BackgroundTransparency"] = 0.85;
+G2L["9"]["BackgroundTransparency"] = 0.65;
 G2L["9"]["Name"] = [[Main]];
 G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["9"]["Text"] = [[Main]];
@@ -478,7 +478,6 @@ G2L["23"]["Name"] = [[Spectatescriptoldthird]];
 
 -- StarterGui.VoxlHubRL.test1.1.SettingFrame
 G2L["24"] = Instance.new("ScrollingFrame", G2L["2"]);
-G2L["24"]["Visible"] = false;
 G2L["24"]["Active"] = true;
 G2L["24"]["BorderSizePixel"] = 0;
 G2L["24"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
@@ -1241,6 +1240,7 @@ G2L["6d"]["Position"] = UDim2.new(0.058, 0, 0.4, 0);
 
 -- StarterGui.VoxlHubRL.test1.1.PlayerFrame
 G2L["6e"] = Instance.new("ScrollingFrame", G2L["2"]);
+G2L["6e"]["Visible"] = false;
 G2L["6e"]["Active"] = true;
 G2L["6e"]["BorderSizePixel"] = 0;
 G2L["6e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
@@ -2372,7 +2372,20 @@ local script = G2L["4"];
 	local Combat = script.Parent.Parent.CombatFrame
 	local Player = script.Parent.Parent.PlayerFrame
 	
+	local Main2 = script.Parent.Parent.Main
+	local Setting2 = script.Parent.Parent.setting
+	local Esp2 = script.Parent.Parent.esp
+	local Combat2 = script.Parent.Parent.combat
+	local Player2 = script.Parent.Parent.Player
+	
+	
 	script.Parent.MouseButton1Click:Connect(function()
+		Main2.BackgroundTransparency = 0.85
+		Setting2.BackgroundTransparency = 0.65
+		Esp2.BackgroundTransparency = 0.85
+		Combat2.BackgroundTransparency = 0.85
+		Player2.BackgroundTransparency = 0.85
+		
 		Main.Visible = false
 		Setting.Visible = true
 		Esp.Visible = false
@@ -2390,7 +2403,19 @@ local script = G2L["6"];
 	local Combat = script.Parent.Parent.CombatFrame
 	local Player = script.Parent.Parent.PlayerFrame
 	
+	local Main2 = script.Parent.Parent.Main
+	local Setting2 = script.Parent.Parent.setting
+	local Esp2 = script.Parent.Parent.esp
+	local Combat2 = script.Parent.Parent.combat
+	local Player2 = script.Parent.Parent.Player
+	
 	script.Parent.MouseButton1Click:Connect(function()
+		Main2.BackgroundTransparency = 0.85
+		Setting2.BackgroundTransparency = 0.85
+		Esp2.BackgroundTransparency = 0.85
+		Combat2.BackgroundTransparency = 0.65
+		Player2.BackgroundTransparency = 0.85
+		
 		Main.Visible = false
 		Setting.Visible = false
 		Esp.Visible = false
@@ -2408,7 +2433,20 @@ local script = G2L["8"];
 	local Combat = script.Parent.Parent.CombatFrame
 	local Player = script.Parent.Parent.PlayerFrame
 	
+	local Main2 = script.Parent.Parent.Main
+	local Setting2 = script.Parent.Parent.setting
+	local Esp2 = script.Parent.Parent.esp
+	local Combat2 = script.Parent.Parent.combat
+	local Player2 = script.Parent.Parent.Player
+	
+	
 	script.Parent.MouseButton1Click:Connect(function()
+		Main2.BackgroundTransparency = 0.85
+		Setting2.BackgroundTransparency = 0.85
+		Esp2.BackgroundTransparency = 0.85
+		Combat2.BackgroundTransparency = 0.85
+		Player2.BackgroundTransparency = 0.65
+		
 		Main.Visible = false
 		Setting.Visible = false
 		Esp.Visible = false
@@ -2426,7 +2464,20 @@ local script = G2L["a"];
 	local Combat = script.Parent.Parent.CombatFrame
 	local Player = script.Parent.Parent.PlayerFrame
 	
+	local Main2 = script.Parent.Parent.Main
+	local Setting2 = script.Parent.Parent.setting
+	local Esp2 = script.Parent.Parent.esp
+	local Combat2 = script.Parent.Parent.combat
+	local Player2 = script.Parent.Parent.Player
+	
+	
 	script.Parent.MouseButton1Click:Connect(function()
+		Main2.BackgroundTransparency = 0.65
+		Setting2.BackgroundTransparency = 0.85
+		Esp2.BackgroundTransparency = 0.85
+		Combat2.BackgroundTransparency = 0.85
+		Player2.BackgroundTransparency = 0.85
+		 
 		 Main.Visible = true
 		 Setting.Visible = false
 		 Esp.Visible = false
@@ -2505,7 +2556,19 @@ local script = G2L["10"];
 	local Combat = script.Parent.Parent.CombatFrame
 	local Player = script.Parent.Parent.PlayerFrame
 	
+	local Main2 = script.Parent.Parent.Main
+	local Setting2 = script.Parent.Parent.setting
+	local Esp2 = script.Parent.Parent.esp
+	local Combat2 = script.Parent.Parent.combat
+	local Player2 = script.Parent.Parent.Player
+	
 	script.Parent.MouseButton1Click:Connect(function()
+		Main2.BackgroundTransparency = 0.85
+		Setting2.BackgroundTransparency = 0.85
+		Esp2.BackgroundTransparency = 0.65
+		Combat2.BackgroundTransparency = 0.85
+		Player2.BackgroundTransparency = 0.85
+		
 		Main.Visible = false
 		Setting.Visible = false
 		Esp.Visible = true
@@ -2546,7 +2609,6 @@ local script = G2L["1e"];
 	})
 	
 	local player = services.Players.LocalPlayer
-	local camera = workspace.CurrentCamera
 	local current_spectating = nil  -- Track the currently spectated player
 	local previous_label = nil 
 	
@@ -2582,7 +2644,7 @@ local script = G2L["1e"];
 					if selected_player then
 						if current_spectating == selected_player then
 							script.Parent.Visible = false
-							print("ur selecting same player")
+						   print("ur selecting same player")
 							current_spectating = nil -- Reset spectating status
 							previous_label = nil
 						else
@@ -2591,31 +2653,31 @@ local script = G2L["1e"];
 								previous_label.TextColor3 = Color3.new(1, 1, 1) -- Reset previous label color
 							end --]]
 							local selected_character = selected_player.Character
-							--local selected_humanoid = selected_character:FindFirstChildOfClass("Humanoid")
-
-
-
+								--local selected_humanoid = selected_character:FindFirstChildOfClass("Humanoid")
+	
+								
+								
 							script.Parent.Visible = true
-
-
-
-							---
-							-- reset
-							script.Parent.Class.ClassN.Text = "Freshie"
-							-- Username
-							script.Parent.Username.UsernameN.Text = selected_player.Name
-
-							-- IngameName
-							if selected_character then
+								
+								
+	
+								---
+								-- reset
+							         script.Parent.Class.ClassN.Text = "Freshie"
+								    -- Username
+									script.Parent.Username.UsernameN.Text = selected_player.Name
+									
+									-- IngameName
+									if selected_character then
 								for _, child in ipairs(selected_character:GetChildren()) do
 									if child:IsA("Model") and child:FindFirstChild("FakeHumanoid") and child:FindFirstChild("Head") then
 										script.Parent.IngameName.IngameNameN.Text = child.Name
 									end
 								end
-							else
-								script.Parent.IngameName.IngameNameN.Text = "Unknow"
-							end
-
+									else
+								        script.Parent.IngameName.IngameNameN.Text = "Unknow"
+								end
+								
 							local backpack = selected_player:FindFirstChild("Backpack")
 							if backpack then
 								for _, tool in ipairs(backpack:GetChildren()) do
@@ -2658,7 +2720,7 @@ local script = G2L["1e"];
 									elseif tool.Name == "Dark Flame Burst" then
 										script.Parent.Class.ClassN.Text = "Dark Sigil"
 										break
-									elseif tool.Name == "Lightning Elbow" and tool.Name == "Lightning Dash" then
+									elseif tool.Name == "Lightning Elbow" or tool.Name == "Lightning Dash" then
 										script.Parent.Class.ClassN.Text = "Dragon Sage"
 										break
 									elseif tool.Name == "Axe Kick" or tool.Name == "Demon Flip" or tool.Name == "Spin Kick" then
@@ -2667,8 +2729,8 @@ local script = G2L["1e"];
 									end
 								end
 							end
-
-
+							
+	
 							--[[
 							if backpack then
 								local items = {}
@@ -2683,11 +2745,11 @@ local script = G2L["1e"];
 								print("Noitem")
 							end
 								--]]	
-
-
+									
+									
 							if backpack then
 								local itemCounts = {}  -- ใช้ Dictionary เก็บจำนวนของแต่ละไอเทม
-
+	
 								for _, item in ipairs(backpack:GetChildren()) do
 									if itemCounts[item.Name] then
 										itemCounts[item.Name] = itemCounts[item.Name] + 1
@@ -2695,9 +2757,9 @@ local script = G2L["1e"];
 										itemCounts[item.Name] = 1
 									end
 								end
-
+	
 								local formattedItems = {}
-
+	
 								for itemName, count in pairs(itemCounts) do
 									if count > 1 then
 										table.insert(formattedItems, itemName .. "(" .. count .. ")")
@@ -2705,34 +2767,34 @@ local script = G2L["1e"];
 										table.insert(formattedItems, itemName)
 									end
 								end
-
+	
 								script.Parent.Skill.SkillN.Text = table.concat(formattedItems, ", ")
 							else
 								script.Parent.Skill.SkillN.Text = "No Items"
 							end
-
-
-
-
-
-
-
-
-							---
-							current_spectating = selected_player -- Update spectating status
-							previous_label = selected_label -- Track the newly selected label
+									
+									
+									
+									
+									
+									
+									
+									
+								---
+									current_spectating = selected_player -- Update spectating status
+									previous_label = selected_label -- Track the newly selected label
 						end
 					end
 				end
 			end
-
+			
 		end)
 	end
 end;
 task.spawn(C_1e);
 -- StarterGui.VoxlHubRL.test1.1.Spectatescriptoldthird
 local function C_23()
-	local script = G2L["23"];
+local script = G2L["23"];
 	local service_cache = {}
 	local services = setmetatable({}, {
 		__index = function(self, index)
@@ -2744,42 +2806,42 @@ local function C_23()
 			return cached_service
 		end
 	})
-
-
+	
+	
 	local original_label_colors = {} -- Table to store original colors
 	local player = services.Players.LocalPlayer
 	local camera = workspace.CurrentCamera
 	local current_spectating = nil  -- Track the currently spectated player
 	local previous_label = nil -- Track the previously selected label
-
-
+	
+	
 	do -- click spectate
 		local selected_label
 		local mouse_button_2 = Enum.UserInputType.MouseButton2
-
+	
 		services.UserInputService.InputBegan:Connect(function(input, processed)
 			local gui_children = player.PlayerGui.LeaderboardGui.MainFrame.ScrollingFrame:GetChildren()
-
+	
 			for index = 1, #gui_children do
 				local value = gui_children[index]
-
+	
 				value.MouseEnter:Connect(function()
 					selected_label = value
 				end)
-
+	
 				value.MouseLeave:Connect(function()
 					if selected_label == value then
 						selected_label = nil
 					end
 				end)
 			end
-
+	
 			if input.UserInputType == mouse_button_2 then
 				if selected_label then
 					-- Get the player based on the selected label's text
 					local selected_text = selected_label.Text:gsub("[^%w%s_]+", ""):match("^%s*(.-)%s*$")
 					local selected_player = services.Players:FindFirstChild(selected_text)
-
+	
 					if selected_player then
 						-- Check if we're already spectating the selected player
 						if current_spectating == selected_player then
@@ -2796,6 +2858,9 @@ local function C_23()
 							if character then
 								local humanoid = character:FindFirstChildOfClass("Humanoid")
 								if humanoid then
+									--
+									previous_label.TextColor3 = original_label_colors[previous_label]
+									--
 									camera.CameraSubject = humanoid
 								end
 							end
@@ -2811,10 +2876,10 @@ local function C_23()
 									previous_label.TextColor3 = Color3.new(1, 1, 1) -- Default white
 								end
 							end
-
+	
 							-- Save original label color before changing
 							original_label_colors[selected_label] = selected_label.TextColor3
-
+	
 							local selected_character = selected_player.Character
 							if selected_character then
 								local selected_humanoid = selected_character:FindFirstChildOfClass("Humanoid")
@@ -2846,6 +2911,9 @@ local function C_23()
 					if character then
 						local humanoid = character:FindFirstChildOfClass("Humanoid")
 						if humanoid then
+							--
+							previous_label.TextColor3 = original_label_colors[previous_label]
+							--
 							camera.CameraSubject = humanoid
 							current_spectating = nil -- Stop spectating
 							previous_label = nil -- Reset label tracking
@@ -2855,23 +2923,23 @@ local function C_23()
 			end
 		end)
 	end
-
+	
 end;
 task.spawn(C_23);
 -- StarterGui.VoxlHubRL.test1.1.SettingFrame.MaxHealerSetting.LocalScript
 local function C_2d()
-	local script = G2L["2d"];
+local script = G2L["2d"];
 	local button = script.Parent.Action1
 	local textLabel = script.Parent.Action1Text
 	local userInputService = game:GetService("UserInputService")
-
+	
 	local waitingForKey = false
-
+	
 	button.MouseButton1Click:Connect(function()
 		if not waitingForKey then
 			waitingForKey = true
 			textLabel.Text = "..."
-
+	
 			local inputConnection
 			inputConnection = userInputService.InputBegan:Connect(function(input, gameProcessed)
 				if not gameProcessed and input.UserInputType == Enum.UserInputType.Keyboard then
@@ -2882,23 +2950,23 @@ local function C_2d()
 			end)
 		end
 	end)
-
+	
 end;
 task.spawn(C_2d);
 -- StarterGui.VoxlHubRL.test1.1.SettingFrame.ToggleUI.LocalScript
 local function C_33()
-	local script = G2L["33"];
+local script = G2L["33"];
 	local button = script.Parent.Action1
 	local textLabel = script.Parent.Action1Text
 	local userInputService = game:GetService("UserInputService")
-
+	
 	local waitingForKey = false
-
+	
 	button.MouseButton1Click:Connect(function()
 		if not waitingForKey then
 			waitingForKey = true
 			textLabel.Text = "..."
-
+	
 			local inputConnection
 			inputConnection = userInputService.InputBegan:Connect(function(input, gameProcessed)
 				if not gameProcessed and input.UserInputType == Enum.UserInputType.Keyboard then
@@ -2909,23 +2977,23 @@ local function C_33()
 			end)
 		end
 	end)
-
+	
 end;
 task.spawn(C_33);
 -- StarterGui.VoxlHubRL.test1.1.SettingFrame.WorldPulseSetting.LocalScript
 local function C_39()
-	local script = G2L["39"];
+local script = G2L["39"];
 	local button = script.Parent.Action1
 	local textLabel = script.Parent.Action1Text
 	local userInputService = game:GetService("UserInputService")
-
+	
 	local waitingForKey = false
-
+	
 	button.MouseButton1Click:Connect(function()
 		if not waitingForKey then
 			waitingForKey = true
 			textLabel.Text = "..."
-
+	
 			local inputConnection
 			inputConnection = userInputService.InputBegan:Connect(function(input, gameProcessed)
 				if not gameProcessed and input.UserInputType == Enum.UserInputType.Keyboard then
@@ -2936,23 +3004,23 @@ local function C_39()
 			end)
 		end
 	end)
-
+	
 end;
 task.spawn(C_39);
 -- StarterGui.VoxlHubRL.test1.1.SettingFrame.HealthBarSetting.LocalScript
 local function C_40()
-	local script = G2L["40"];
+local script = G2L["40"];
 	local button = script.Parent.Action1
 	local textLabel = script.Parent.Action1Text
 	local userInputService = game:GetService("UserInputService")
-
+	
 	local waitingForKey = false
-
+	
 	button.MouseButton1Click:Connect(function()
 		if not waitingForKey then
 			waitingForKey = true
 			textLabel.Text = "..."
-
+	
 			local inputConnection
 			inputConnection = userInputService.InputBegan:Connect(function(input, gameProcessed)
 				if not gameProcessed and input.UserInputType == Enum.UserInputType.Keyboard then
@@ -2963,23 +3031,23 @@ local function C_40()
 			end)
 		end
 	end)
-
+	
 end;
 task.spawn(C_40);
 -- StarterGui.VoxlHubRL.test1.1.SettingFrame.AimbotGrappleSetting.LocalScript
 local function C_46()
-	local script = G2L["46"];
+local script = G2L["46"];
 	local button = script.Parent.Action1
 	local textLabel = script.Parent.Action1Text
 	local userInputService = game:GetService("UserInputService")
-
+	
 	local waitingForKey = false
-
+	
 	button.MouseButton1Click:Connect(function()
 		if not waitingForKey then
 			waitingForKey = true
 			textLabel.Text = "..."
-
+	
 			local inputConnection
 			inputConnection = userInputService.InputBegan:Connect(function(input, gameProcessed)
 				if not gameProcessed and input.UserInputType == Enum.UserInputType.Keyboard then
@@ -2990,78 +3058,78 @@ local function C_46()
 			end)
 		end
 	end)
-
+	
 end;
 task.spawn(C_46);
 -- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofall.Toggle.Button.Script
 local function C_4e()
-	local script = G2L["4e"];
+local script = G2L["4e"];
 	local toggled = false
 	local debounce = false
 	local nofall = false
-
-
-
-
+	
+	
+	
+	
 	--alr tarafından yapıldı :)
 	local Players = game:GetService("Players")
 	local ScriptContext = game:GetService("ScriptContext")
-
+	
 	for i,v in next, getconnections(ScriptContext.Error) do
 		v:Disable()
 	end
-
+	
 	local Player = Players.LocalPlayer
 	local Character = Player.Character
 	local Humanoid = Character.HumanoidRootPart
-
+	
 	local hook = hookfunction or detour_function
-
+	
 	local old
 	old = hook(Instance.new("RemoteEvent").FireServer, function(self,...)
 		local args = {...}
-
+	
 		if nofall == true and Player.Character ~= nil and Player.Character:FindFirstChild("CharacterHandler") and Player.Character.CharacterHandler:FindFirstChild("Remotes") and self.Parent == Player.Character.CharacterHandler.Remotes then
 			if #args == 2 and typeof(args[2]) == "table" then
 				return nil
 			end
 		end
-
+	
 		return old(self,...)
 	end)
-
-
+	
+	
 	function callback(state)
 		print(state)
 	end
-
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-
+	
 			local targetPosition, targetColor
-
+	
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-
+	
 				-- false
 				nofall = false
-
+	
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-
+	
 				--true
 				nofall = true
 			end
-
+	
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-
+	
 			circleTween:Play()
 			toggleTween:Play()
-
+	
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -3069,47 +3137,47 @@ local function C_4e()
 			end)
 		end
 	end)
-
+	
 end;
 task.spawn(C_4e);
 -- StarterGui.VoxlHubRL.test1.1.MainFrame.Nofire.Toggle.Button.Script
 local function C_56()
-	local script = G2L["56"];
+local script = G2L["56"];
 	local toggled = false
 	local debounce = false
 	local nofire = false
-
-
+	
+	
 	function callback(state)
 		print(state)
 	end
-
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-
+	
 			local targetPosition, targetColor
-
+	
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-
+	
 				-- false
-
+	
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-
+				
 				--true
-
+	
 			end
-
+	
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-
+	
 			circleTween:Play()
 			toggleTween:Play()
-
+	
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -3117,18 +3185,18 @@ local function C_56()
 			end)
 		end
 	end)
-
+	
 end;
 task.spawn(C_56);
 -- StarterGui.VoxlHubRL.test1.1.MainFrame.NoInjuries.Toggle.Button.Script
 local function C_5e()
-	local script = G2L["5e"];
+local script = G2L["5e"];
 	local map = game.Workspace:FindFirstChild("Map")
 	local enable = false
-
+	
 	local function toggle()
 		enable = not enable
-
+	
 		if enable then
 			if map then
 				for _, part in pairs(map:GetChildren()) do
@@ -3137,8 +3205,8 @@ local function C_5e()
 					end
 				end
 			end
-
-
+	
+	
 		else
 			if map then
 				for _, part in pairs(map:GetChildren()) do
@@ -3147,48 +3215,48 @@ local function C_5e()
 					end
 				end
 			end
-
+	
 		end
-
+	
 	end
-
-
-
+	
+	
+	
 	local toggled = false
 	local debounce = false
-
-
-
+	
+	
+	
 	function callback(state)
 		print(state)
 	end
-
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-
+	
 			local targetPosition, targetColor
-
+	
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-
+	
 				-- false
-				toggle()
+	toggle()
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-
+				
 				--true
-				toggle()
+	toggle()
 			end
-
+	
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-
+	
 			circleTween:Play()
 			toggleTween:Play()
-
+	
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -3196,109 +3264,109 @@ local function C_5e()
 			end)
 		end
 	end)
-
+	
 end;
 task.spawn(C_5e);
 -- StarterGui.VoxlHubRL.test1.1.MainFrame.NoOrderField.Toggle.Button.Script
 local function C_68()
-	local script = G2L["68"];
+local script = G2L["68"];
 	local map = game.Workspace:FindFirstChild("Map")
 	local enable = false
-
+	
 	local function toggle()
 		enable = not enable
-
-		if enable then
-			if map then
-				for _, part in pairs(map:GetChildren()) do
-					if part:IsA("BasePart") and part.Name == "MageField" then
-						part.CanCollide = false
-						part.CanTouch = false -- Delete the part
-					end
-				end
-			end
-
-
-			if map then
-				for _, part in pairs(map:GetChildren()) do
-					if part:IsA("BasePart") and part.Name == "OrderField" then
-						part.CanCollide = false
-						part.CanTouch = false -- Delete the part
-					end
-				end
-			end
-		else
-			if map then
-				for _, part in pairs(map:GetChildren()) do
-					if part:IsA("BasePart") and part.Name == "MageField" then
-						part.CanCollide = true
-						part.CanTouch = true -- Delete the part
-					end
-				end
-			end
-
-
-			if map then
-				for _, part in pairs(map:GetChildren()) do
-					if part:IsA("BasePart") and part.Name == "OrderField" then
-						part.CanCollide = true
-						part.CanTouch = true -- Delete the part
-					end
+		
+	if enable then
+		if map then
+			for _, part in pairs(map:GetChildren()) do
+				if part:IsA("BasePart") and part.Name == "MageField" then
+					part.CanCollide = false
+					part.CanTouch = false -- Delete the part
 				end
 			end
 		end
-
+	
+	
+		if map then
+			for _, part in pairs(map:GetChildren()) do
+				if part:IsA("BasePart") and part.Name == "OrderField" then
+					part.CanCollide = false
+					part.CanTouch = false -- Delete the part
+				end
+			end
+		end
+	else
+			if map then
+				for _, part in pairs(map:GetChildren()) do
+					if part:IsA("BasePart") and part.Name == "MageField" then
+						part.CanCollide = true
+						part.CanTouch = true -- Delete the part
+					end
+				end
+			end
+	
+	
+			if map then
+				for _, part in pairs(map:GetChildren()) do
+					if part:IsA("BasePart") and part.Name == "OrderField" then
+						part.CanCollide = true
+						part.CanTouch = true -- Delete the part
+					end
+				end
+			end
 	end
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
+	end
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	local toggled = false
 	local debounce = false
 	local nofire = false
-
-
+	
+	
 	function callback(state)
 		print(state)
 	end
-
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-
+	
 			local targetPosition, targetColor
-
+	
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-
-				toggle()
+	
+	            toggle()
 				-- false
-
+	
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-
+				
 				toggle()
 				--true
-
+	
 			end
-
+	
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-
+	
 			circleTween:Play()
 			toggleTween:Play()
-
+	
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -3306,27 +3374,27 @@ local function C_68()
 			end)
 		end
 	end)
-
+	
 end;
 task.spawn(C_68);
 -- StarterGui.VoxlHubRL.test1.1.PlayerFrame.MaxHealer.Toggle.Button.Script
 local function C_74()
-	local script = G2L["74"];
-
-
-
-
-
-
-
-
+local script = G2L["74"];
+	
+	
+	
+	
+	
+	
+	
+	
 	local toggled = false
 	local debounce = false
 	local UserInputService = game:GetService("UserInputService")
 	local use = false
-
-
-
+	
+	
+	
 	local function HandleHealth(playerCharacter)
 		local Humanoid = playerCharacter:WaitForChild("Humanoid", 5)
 		if Humanoid then
@@ -3338,7 +3406,7 @@ local function C_74()
 			end
 		end
 	end
-
+	
 	for _, v in pairs(game.Players:GetChildren()) do
 		if v.Character ~= nil then
 			HandleHealth(v.Character)
@@ -3347,39 +3415,39 @@ local function C_74()
 			HandleHealth(createdCharacter)
 		end)
 	end
-
+	
 	game.Players.PlayerAdded:Connect(function(playerInstance)
 		playerInstance.CharacterAdded:Connect(function(createdCharacter)
 			HandleHealth(createdCharacter)
 		end)
 	end)
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	function callback(state)
 		print(state)
 	end
-
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-
+	
 			local targetPosition, targetColor
-
+	
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-				use = false
+				 use = false
 				for _, v in pairs(game.Players:GetChildren()) do
 					if v.Character ~= nil then
 						HandleHealth(v.Character)
@@ -3387,9 +3455,9 @@ local function C_74()
 					v.CharacterAdded:Connect(function(createdCharacter)
 						HandleHealth(createdCharacter)
 					end)
-				end
+					end
 				-- false
-
+	
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
@@ -3401,17 +3469,17 @@ local function C_74()
 					v.CharacterAdded:Connect(function(createdCharacter)
 						HandleHealth(createdCharacter)
 					end)
-				end
+					end
 				--true
-
+				
 			end
-
+	
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-
+	
 			circleTween:Play()
 			toggleTween:Play()
-
+	
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -3419,18 +3487,18 @@ local function C_74()
 			end)
 		end
 	end)
-
-
+	
+	
 	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
-
+	
 		if gameProcessedEvent then return end
 		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode[script.Parent.Parent.Parent.Parent.Parent.SettingFrame.MaxHealerSetting.Action1Text.Text] then
-
+			
 			if not debounce then
 				debounce = true
-
+	
 				local targetPosition, targetColor
-
+	
 				if toggled then
 					targetPosition = UDim2.new(0.05, 0,0, 2)
 					targetColor = Color3.fromRGB(200, 200, 200)
@@ -3444,7 +3512,7 @@ local function C_74()
 						end)
 					end
 					-- false
-
+	
 				else
 					targetPosition = UDim2.new(0.45, 0,0, 2)
 					targetColor = Color3.fromRGB(53, 255, 110)
@@ -3458,15 +3526,15 @@ local function C_74()
 						end)
 					end
 					--true
-
+	
 				end
-
+	
 				local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 				local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-
+	
 				circleTween:Play()
 				toggleTween:Play()
-
+	
 				circleTween.Completed:Connect(function()
 					debounce = false
 					toggled = not toggled
@@ -3479,15 +3547,15 @@ end;
 task.spawn(C_74);
 -- StarterGui.VoxlHubRL.test1.1.PlayerFrame.WorldPulse.Toggle.Button.Script
 local function C_7c()
-	local script = G2L["7c"];
+local script = G2L["7c"];
 	local Players = game:GetService("Players")
 	local RunService = game:GetService("RunService")
 	local UserInputService = game:GetService("UserInputService")
-
+	
 	local LocalPlayer = Players.LocalPlayer
 	local adornmentEnabled = false -- Set to true by default
 	local adornments = {} -- Store adornments to track them
-
+	
 	-- Function to create a BoxHandleAdornment
 	local function createBoxAdornment(part, size, player)
 		local boxAdornment = Instance.new("BoxHandleAdornment")
@@ -3498,14 +3566,14 @@ local function C_7c()
 		boxAdornment.ZIndex = 5
 		boxAdornment.AlwaysOnTop = true
 		boxAdornment.Parent = game.CoreGui -- Parent to CoreGui to ensure visibility in exploit scripts
-
+	    
 		-- Store adornment in a table associated with the player
 		if not adornments[player] then
 			adornments[player] = {}
 		end
 		table.insert(adornments[player], boxAdornment)
 	end
-
+	
 	-- Function to remove all adornments from a specific player
 	local function removeAdornments(player)
 		if adornments[player] then
@@ -3517,12 +3585,12 @@ local function C_7c()
 			adornments[player] = nil
 		end
 	end
-
+	
 	-- Function to apply adornments to a character
 	local function applyAdornments(character, player)
 		if not character or character.Parent == nil then return end
 		if player == LocalPlayer then return end -- Skip local player
-
+	
 		local bodyParts = {
 			"Torso",
 			"Right Leg",
@@ -3531,7 +3599,7 @@ local function C_7c()
 			"Left Arm",
 			"Head"
 		}
-
+	
 		for _, partName in ipairs(bodyParts) do
 			local part = character:FindFirstChild(partName)
 			if part then
@@ -3540,15 +3608,15 @@ local function C_7c()
 			end
 		end
 	end
-
+	
 	-- Function to toggle adornments
 	local function toggleAdornments()
 		adornmentEnabled = not adornmentEnabled
-
+	
 		for _, player in ipairs(Players:GetPlayers()) do
 			removeAdornments(player)
 		end
-
+	
 		if adornmentEnabled then
 			for _, player in ipairs(Players:GetPlayers()) do
 				if player.Character and player ~= LocalPlayer then
@@ -3557,7 +3625,7 @@ local function C_7c()
 			end
 		end
 	end
-
+	
 	-- Apply adornments when a player's character spawns
 	local function onCharacterAdded(character, player)
 		removeAdornments(player) -- Remove old adornments
@@ -3566,7 +3634,7 @@ local function C_7c()
 			applyAdornments(character, player)
 		end
 	end
-
+	
 	-- Connect events for existing and new players
 	for _, player in ipairs(Players:GetPlayers()) do
 		--if player ~= LocalPlayer then
@@ -3580,7 +3648,7 @@ local function C_7c()
 		end
 		--end
 	end
-
+	
 	Players.PlayerAdded:Connect(function(player)
 		if player ~= LocalPlayer then
 			player.CharacterAdded:Connect(function(character)
@@ -3588,11 +3656,11 @@ local function C_7c()
 			end)
 		end
 	end)
-
+	
 	Players.PlayerRemoving:Connect(function(player)
 		removeAdornments(player) -- Clean up when a player leaves
 	end)
-
+	
 	-- Bind toggle to "T" key
 	--[[
 	UserInputService.InputBegan:Connect(function(input, gameProcessed)
@@ -3602,63 +3670,63 @@ local function C_7c()
 		end
 	end)
 	--]]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	local toggled = false
 	local debounce = false
 	local nofire = false
-
-
+	
+	
 	function callback(state)
 		print(state)
 	end
-
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-
+	
 			local targetPosition, targetColor
-
+	
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-
+	
 				toggleAdornments()
 				game:GetService("Players").LocalPlayer.PlayerGui.OverlayGui.WorldPulseR.ImageTransparency = 1
-
-
-
+	
+	
+	
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-
+	
 				toggleAdornments()
 				game:GetService("Players").LocalPlayer.PlayerGui.OverlayGui.WorldPulseR.ImageTransparency = 0.5
-
-
-
+	
+	
+	
 			end
-
+	
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-
+	
 			circleTween:Play()
 			toggleTween:Play()
-
+	
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -3666,44 +3734,44 @@ local function C_7c()
 			end)
 		end
 	end)
-
-
+	
+	
 	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
-
+	
 		if gameProcessedEvent then return end
 		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode[script.Parent.Parent.Parent.Parent.Parent.SettingFrame.WorldPulseSetting.Action1Text.Text] then
-
+	
 			if not debounce then
 				debounce = true
-
+	
 				local targetPosition, targetColor
-
+	
 				if toggled then
 					targetPosition = UDim2.new(0.05, 0,0, 2)
 					targetColor = Color3.fromRGB(200, 200, 200)
-
+	
 					toggleAdornments()
 					game:GetService("Players").LocalPlayer.PlayerGui.OverlayGui.WorldPulseR.ImageTransparency = 1
-
-
-
+	
+	
+	
 				else
 					targetPosition = UDim2.new(0.45, 0,0, 2)
 					targetColor = Color3.fromRGB(53, 255, 110)
-
+	
 					toggleAdornments()
 					game:GetService("Players").LocalPlayer.PlayerGui.OverlayGui.WorldPulseR.ImageTransparency = 0.85
-
-
-
+	
+	
+	
 				end
-
+	
 				local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 				local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-
+	
 				circleTween:Play()
 				toggleTween:Play()
-
+	
 				circleTween.Completed:Connect(function()
 					debounce = false
 					toggled = not toggled
@@ -3716,42 +3784,215 @@ end;
 task.spawn(C_7c);
 -- StarterGui.VoxlHubRL.test1.1.PlayerFrame.Intent.Toggle.Button.Script
 local function C_85()
-	local script = G2L["85"];
+local script = G2L["85"];
+	local players = game:GetService("Players")
+	local localPlayer = players.LocalPlayer  
+	local isDisplayEnabled = false
+	
+	
+	local function createToolNameTag(player)
+		-- Make sure the player is not the LocalPlayer (your own character)
+		if player == localPlayer then
+			return  -- Don't create the tool name tag for the LocalPlayer
+		end
+	
+		-- Wait for the character to load (may have just respawned)
+		local function setupToolNameTag(character)
+			local head = character:WaitForChild("Head")
+	
+			-- Create a BillboardGui to display the tool name above the head
+			local billboardGui = Instance.new("BillboardGui")
+			billboardGui.Adornee = head
+			billboardGui.Parent = head
+			billboardGui.Size = UDim2.new(0, 400, 0, 100)  -- Make the size large enough for visibility at 100 studs
+			billboardGui.StudsOffset = Vector3.new(0, 3.5, 0)  -- Position above the head (can adjust for better positioning)
+			billboardGui.AlwaysOnTop = true
+			billboardGui.MaxDistance = 100  -- Ensure the BillboardGui is visible at distances up to 100 studs
+	
+			-- Create a TextLabel inside the BillboardGui
+			local toolLabel = Instance.new("TextLabel")
+			toolLabel.Parent = billboardGui
+			toolLabel.Size = UDim2.new(1, 0, 1, 0)
+			toolLabel.TextColor3 = Color3.new(1, 1, 1)  -- White text
+			toolLabel.TextStrokeTransparency = 0
+			toolLabel.BackgroundTransparency = 1
+			toolLabel.TextSize = 22  -- Set text size to 10
+			toolLabel.Text = ""  -- Default text when no tool is equipped
+			toolLabel.FontFace = Enum.Font.Antique
+	
+			-- Function to update the tool name display
+			local function updateToolName()
+				-- Get the tool the player is holding
+				local tool = character:FindFirstChildOfClass("Tool")
+	
+				-- Update the text based on the tool equipped
+				if tool then
+					toolLabel.Text = tool.Name  -- Set the label text to the tool's name
+				else
+					toolLabel.Text = ""  -- If no tool is equipped, display "No Tool"
+				end
+			end
+	
+			-- Update tool name when the character spawns or changes tools
+			character.ChildAdded:Connect(function(child)
+				if child:IsA("Tool") then
+					updateToolName()
+				end
+			end)
+	
+			character.ChildRemoved:Connect(function(child)
+				if child:IsA("Tool") then
+					updateToolName()
+				end
+			end)
+	
+			-- Initial tool check
+			updateToolName()
+		end
+	
+		-- Connect the setup function to the character being added (in case the player respawns)
+		player.CharacterAdded:Connect(function(character)
+			setupToolNameTag(character)
+		end)
+	
+		-- If the player is already in the game and has a character, create the tool name tag
+		if player.Character then
+			setupToolNameTag(player.Character)
+		end
+	end
+	
+	
+	-- Create tool name tags for all players when they join the game
+	players.PlayerAdded:Connect(function(player)
+		player.CharacterAdded:Connect(function()
+			if isDisplayEnabled then
+				createToolNameTag(player)
+			end
+		end)
+	end)
+	
+	-- Handle existing players when the script starts
+	for _, player in ipairs(players:GetPlayers()) do
+		if player.Character and isDisplayEnabled then
+			createToolNameTag(player)
+		end
+	end
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	local toggled = false
 	local debounce = false
 	local nofire = false
-
-
+	
+	
 	function callback(state)
 		print(state)
 	end
-
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-
+	
 			local targetPosition, targetColor
-
+	
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-
-				-- false
-
+	
+				isDisplayEnabled = false
+				
+				players.PlayerAdded:Connect(function(player)
+					player.CharacterAdded:Connect(function()
+						if isDisplayEnabled then
+							createToolNameTag(player)
+						end
+					end)
+				end)
+	
+				-- Handle existing players when the script starts
+				for _, player in ipairs(players:GetPlayers()) do
+					if player.Character and isDisplayEnabled then
+						createToolNameTag(player)
+					end
+				end
+	
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-
-				--true
-
+	
+				isDisplayEnabled = true
+				
+				players.PlayerAdded:Connect(function(player)
+					player.CharacterAdded:Connect(function()
+						if isDisplayEnabled then
+							createToolNameTag(player)
+						end
+					end)
+				end)
+	
+				-- Handle existing players when the script starts
+				for _, player in ipairs(players:GetPlayers()) do
+					if player.Character and isDisplayEnabled then
+						createToolNameTag(player)
+					end
+				end
+	
 			end
-
+	
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-
+	
 			circleTween:Play()
 			toggleTween:Play()
-
+	
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -3759,47 +4000,50 @@ local function C_85()
 			end)
 		end
 	end)
-
+	
 end;
 task.spawn(C_85);
 -- StarterGui.VoxlHubRL.test1.1.PlayerFrame.NoPommel.Toggle.Button.Script
 local function C_8e()
-	local script = G2L["8e"];
+local script = G2L["8e"];
 	local toggled = false
 	local debounce = false
 	local nofire = false
-
-
+	
+	
 	function callback(state)
 		print(state)
 	end
-
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-
+	
 			local targetPosition, targetColor
-
+	
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-
-				game:GetService("Lighting").Blur.Enabled = false
-
+	
+				print("noting")
+	
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-
-				game:GetService("Lighting").Blur.Enabled = true
-
+	
+				while toggled do
+				wait(0.1)
+				game:GetService("Lighting").Blur.Enabled = false
+				end
+	
 			end
-
+	
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-
+	
 			circleTween:Play()
 			toggleTween:Play()
-
+	
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -3807,41 +4051,41 @@ local function C_8e()
 			end)
 		end
 	end)
-
+	
 end;
 task.spawn(C_8e);
 -- StarterGui.VoxlHubRL.test1.1.CombatFrame.AimbotGrapple.Toggle.Button.newoneWORKED
 local function C_9a()
-	local script = G2L["9a"];
+local script = G2L["9a"];
 	local Mouse = game.Players.LocalPlayer:GetMouse()
 	local Slider = script.Parent.Parent.Parent.Slider
 	local Fill = Slider.Fill
 	local Trigger = Slider.Trigger
 	local OutputValue = 0
 	local OutputLabel = Slider.Label
-
+	
 	local UserInputService = game:GetService("UserInputService")
-
+	
 	Fill.Size = UDim2.fromScale(OutputValue, 1)
 	OutputLabel.Text = "Fov : "..tostring(math.round(OutputValue * 500))
-
+	
 	local TweenService = game:GetService("TweenService")
 	local TweenStyle = TweenInfo.new(0.25, Enum.EasingStyle.Exponential)
-
+	
 	function UpdateSlider()
 		local output = math.clamp((Mouse.X - Slider.AbsolutePosition.X) / Slider.AbsoluteSize.X, 0, 1)
 		OutputLabel.Text = "Fov : "..tostring(math.round(output * 500))
-
+	
 		if OutputValue ~= output then
 			TweenService:Create(Fill, TweenStyle, {Size = UDim2.fromScale(output, 1)}):Play()
 		end
-
+	
 		OutputValue = output
 		getgenv().aimbotFOV = output * 500 -- Update aimbot FOV with slider value
 	end
-
+	
 	local sliderActive = false
-
+	
 	function ActivateSlider()
 		sliderActive = true
 		while sliderActive do
@@ -3849,47 +4093,47 @@ local function C_9a()
 			task.wait()
 		end
 	end
-
+	
 	Trigger.MouseButton1Down:Connect(ActivateSlider)
-
+	
 	game:GetService("UserInputService").InputEnded:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
 			sliderActive = false
 		end
 	end)
-
+	
 	getgenv().aimbotEnabled = false -- Toggle variable
 	getgenv().aimbotFOV = 1
-
+	
 	local players = game:GetService("Players")
 	local replicatedStorage = game:GetService("ReplicatedStorage")
 	local userInputService = game:GetService("UserInputService")
-
+	
 	local localPlayer = players.LocalPlayer
 	local mouse = localPlayer:GetMouse()
 	local currentCamera = workspace.CurrentCamera
-
+	
 	local requests = replicatedStorage and replicatedStorage:WaitForChild("Requests")
 	local getMouse = requests and requests:WaitForChild("GetMouse")
-
+	
 	local function getClosest(fov)
 		local target, closest = nil, fov or math.huge
-
+	
 		for _, player in next, players:GetPlayers() do
 			if player.Character and player ~= localPlayer and player.Character:FindFirstChild("HumanoidRootPart") then
 				local position, onScreen = currentCamera:WorldToScreenPoint(player.Character.HumanoidRootPart.Position)
 				local distance = (Vector2.new(position.X, position.Y) - Vector2.new(mouse.X, mouse.Y)).Magnitude
-
+	
 				if distance < closest and onScreen then
 					closest = distance
 					target = player
 				end
 			end
 		end
-
+	
 		return target
 	end
-
+	
 	getMouse.OnClientInvoke = function()
 		if not getgenv().aimbotEnabled then
 			return {
@@ -3900,7 +4144,7 @@ local function C_9a()
 				Y = mouse.Y
 			}
 		end
-
+	
 		local character = localPlayer.Character
 		local target = getClosest(getgenv().aimbotFOV)
 		local targetCharacter = target and target.Character
@@ -3911,13 +4155,13 @@ local function C_9a()
 			X = mouse.X,
 			Y = mouse.Y
 		}
-
+	
 		if targetCharacter then
 			local targetTorso = targetCharacter:FindFirstChild("HumanoidRootPart")
 			if targetTorso then
 				local cameraPosition = currentCamera.CFrame.Position
 				local screenPosition, onScreen = currentCamera:WorldToViewportPoint(targetTorso.Position)
-
+	
 				return {
 					Hit = targetTorso.CFrame,
 					Target = targetTorso,
@@ -3927,23 +4171,23 @@ local function C_9a()
 				}
 			end
 		end
-
+	
 		return defaultArgs
 	end
-
+	
 	local toggled = false
 	local debounce = false
-
+	
 	function callback(state)
 		print(state)
 	end
-
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-
+	
 			local targetPosition, targetColor
-
+	
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
@@ -3953,13 +4197,13 @@ local function C_9a()
 				targetColor = Color3.fromRGB(53, 255, 110)
 				getgenv().aimbotEnabled = true
 			end
-
+	
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-
+	
 			circleTween:Play()
 			toggleTween:Play()
-
+	
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -3967,17 +4211,17 @@ local function C_9a()
 			end)
 		end
 	end)
-
-
+	
+	
 	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
-
+	
 		if gameProcessedEvent then return end
 		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode[script.Parent.Parent.Parent.Parent.Parent.SettingFrame.AimbotGrappleSetting.Action1Text.Text] then
 			if not debounce then
 				debounce = true
-
+	
 				local targetPosition, targetColor
-
+	
 				if toggled then
 					targetPosition = UDim2.new(0.05, 0,0, 2)
 					targetColor = Color3.fromRGB(200, 200, 200)
@@ -3987,13 +4231,13 @@ local function C_9a()
 					targetColor = Color3.fromRGB(53, 255, 110)
 					getgenv().aimbotEnabled = true
 				end
-
+	
 				local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 				local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-
+	
 				circleTween:Play()
 				toggleTween:Play()
-
+	
 				circleTween.Completed:Connect(function()
 					debounce = false
 					toggled = not toggled
@@ -4006,34 +4250,34 @@ end;
 task.spawn(C_9a);
 -- StarterGui.VoxlHubRL.test1.1.CombatFrame.Autobard.Toggle.Button.Script
 local function C_ac()
-	local script = G2L["ac"];
+local script = G2L["ac"];
 	local toggled = false
 	local debounce = false
 	local autobardenabled = false
-
+	
 	local service_cache = {}
 	local services = setmetatable({}, {
 		__index = function(self, index)
 			local cached_service = service_cache[index]
-
+	
 			if not cached_service then 
 				service_cache[index] = select(2, pcall(game.GetService, game, index))
 				return service_cache[index]
 			end 
-
+	
 			return cached_service
 		end
 	})
-
+	
 	local player = services.Players.LocalPlayer
 	local firesignal = firesignal
-
+	
 	do -- auto bard
 		local function apply_bard(character)
 			local bard_gui = player.PlayerGui:WaitForChild("BardGui")
 			local boosts = character:WaitForChild("Boosts")
-
-
+	
+	
 			-- bardstacking
 			boosts.ChildAdded:Connect(function(child)
 				if child.Name == "MusicianBuff" then
@@ -4041,69 +4285,69 @@ local function C_ac()
 					child:Destroy()
 				end
 			end)
-
+	
 			bard_gui.ChildAdded:Connect(function(note)
 				if note.ClassName == "ImageButton" and autobardenabled == true then
 					local outer_ring = note:WaitForChild("OuterRing")
-
+	
 					repeat 
 						wait() 
 					until outer_ring.Size.X.Offset - 35 <= note.Size.X.Offset
-
+	
 					firesignal(note.MouseButton1Click)
 				end
 			end)
 		end
-
+	
 		local character = player.Character or player.CharacterAdded:Wait()
-
+	
 		apply_bard(character)
 		player.CharacterAdded:Connect(apply_bard)
-
+	
 	end
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	function callback(state)
 		print(state)
 	end
-
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-
+	
 			local targetPosition, targetColor
-
+	
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-
+	
 				-- false
 				autobardenabled = false
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-
+	
 				--true
 				autobardenabled = true
 			end
-
+	
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-
+	
 			circleTween:Play()
 			toggleTween:Play()
-
+	
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -4111,39 +4355,39 @@ local function C_ac()
 			end)
 		end
 	end)
-
+	
 end;
 task.spawn(C_ac);
 -- StarterGui.VoxlHubRL.test1.1.CombatFrame.BardStacking.Toggle.Button.Script
 local function C_b5()
-	local script = G2L["b5"];
+local script = G2L["b5"];
 	local toggled = false
 	local debounce = false
 	local autobardstackenabled = false
-
+	
 	local service_cache = {}
 	local services = setmetatable({}, {
 		__index = function(self, index)
 			local cached_service = service_cache[index]
-
+	
 			if not cached_service then 
 				service_cache[index] = select(2, pcall(game.GetService, game, index))
 				return service_cache[index]
 			end 
-
+	
 			return cached_service
 		end
 	})
-
+	
 	local player = services.Players.LocalPlayer
 	local firesignal = firesignal
-
+	
 	do -- auto bard
 		local function apply_bard(character)
 			local bard_gui = player.PlayerGui:WaitForChild("BardGui")
 			local boosts = character:WaitForChild("Boosts")
-
-
+	
+	
 			-- bardstacking
 			boosts.ChildAdded:Connect(function(child)
 				if autobardstackenabled == true and child.Name == "MusicianBuff" then
@@ -4151,58 +4395,58 @@ local function C_b5()
 					child:Destroy()
 				end
 			end)
-
+	
 		end
-
+	
 		local character = player.Character or player.CharacterAdded:Wait()
-
+	
 		apply_bard(character)
 		player.CharacterAdded:Connect(apply_bard)
-
+	
 	end
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	function callback(state)
 		print(state)
 	end
-
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-
+	
 			local targetPosition, targetColor
-
+	
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-
+	
 				-- false
 				autobardstackenabled = false
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-
+	
 				--true
 				autobardstackenabled = true
 			end
-
+	
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-
+	
 			circleTween:Play()
 			toggleTween:Play()
-
+	
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -4210,88 +4454,88 @@ local function C_b5()
 			end)
 		end
 	end)
-
+	
 end;
 task.spawn(C_b5);
 -- StarterGui.VoxlHubRL.test1.1.CombatFrame.DJump.Toggle.Button.Script
 local function C_be()
-	local script = G2L["be"];
+local script = G2L["be"];
 	local toggled = false
 	local debounce = false
-
-
-
+	
+	
+	
 	function callback(state)
 		print(state)
 	end
-
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-
+	
 			local targetPosition, targetColor
-
+	
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-
+	
 				-- false
-
+	
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-
+				
 				local userInputService = game:GetService("UserInputService")
 				local lastPressTime = 0
 				local doublePressDelay = 0.4  -- Time window for double press
 				local cooldownTime = 3  -- Cooldown time in seconds
 				local isCooldown = false  -- To track whether the cooldown is active
-
+	
 				userInputService.InputBegan:Connect(function(input, ch)
 					if ch then return end  -- Ignore if the input is from the character (e.g., input from NPC)
-
+	
 					-- Check if the pressed key is Spacebar
 					if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.Space and toggled == true then
 						local currentTime = tick()
-
+	
 						-- Check if we're within the double press window and not on cooldown
 						if currentTime - lastPressTime <= doublePressDelay and not isCooldown then
 							local player = game.Players.LocalPlayer
 							local character = player.Character or player.CharacterAdded:Wait()
 							local humanoid = character:WaitForChild("Humanoid")
-
+	
 							-- Create and play the animation
 							local animation = Instance.new("Animation")
 							animation.AnimationId = "rbxassetid://3139634168"  -- Replace with your actual animation ID
 							local animationTrack = humanoid:LoadAnimation(animation)
 							animationTrack:Play()
-
+	
 							-- Apply BodyVelocity to simulate a jump or force
 							local BodyVelocity = Instance.new("BodyVelocity")
 							BodyVelocity.MaxForce = Vector3.new(1000000, 1000000, 1000000)
 							BodyVelocity.Parent = character.HumanoidRootPart
 							BodyVelocity.Velocity = Vector3.new(0, 80, 0)
 							game:GetService("Debris"):AddItem(BodyVelocity, 0.1)
-
+	
 							-- Start cooldown
 							isCooldown = true
 							wait(cooldownTime)  -- Wait for the cooldown to finish
 							isCooldown = false
 						end
-
+	
 						-- Update the last press time
 						lastPressTime = currentTime
 					end
 				end)
-
+	
 			end
-
+	
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-
+	
 			circleTween:Play()
 			toggleTween:Play()
-
+	
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -4299,47 +4543,47 @@ local function C_be()
 			end)
 		end
 	end)
-
+	
 end;
 task.spawn(C_be);
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Player.Toggle.Button.Script
 local function C_ca()
-	local script = G2L["ca"];
+local script = G2L["ca"];
 	local toggled = false
 	local debounce = false
-
-
-
+	
+	
+	
 	function callback(state)
 		print(state)
 	end
-
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-
+	
 			local targetPosition, targetColor
-
+	
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-
+	
 				-- false
-
+	
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-
+				
 				--true
-
+	
 			end
-
+	
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-
+	
 			circleTween:Play()
 			toggleTween:Play()
-
+	
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -4347,32 +4591,32 @@ local function C_ca()
 			end)
 		end
 	end)
-
+	
 end;
 task.spawn(C_ca);
 -- StarterGui.VoxlHubRL.test1.1.EspFrame.Health Bar.Toggle.Button.Script
 local function C_d6()
-	local script = G2L["d6"];
+local script = G2L["d6"];
 	-- Services
 	local Players = game:GetService("Players")
 	local LocalPlayer = Players.LocalPlayer
 	local UserInputService = game:GetService("UserInputService")
 	local toggled = false
-
+	
 	-- Toggle variable to control whether health bars are active
 	local healthBarsEnabled = false
 	local hascreateyet = false
-
+	
 	-- Table to store health bar references for each player
 	local healthBars = {}
-
+	
 	-- Function to update the health bar
 	local function updateHealthBar(healthFill, humanoid)
 		if humanoid then
 			local healthPercent = humanoid.Health / humanoid.MaxHealth
 			healthFill.Size = UDim2.new(1, 0, healthPercent, 0)
 			healthFill.Position = UDim2.new(0, 0, 1 - healthPercent, 0) -- Adjust position to make it decrease from top to bottom
-
+	
 			-- Change color based on health
 			if healthPercent > 0.5 then
 				healthFill.BackgroundColor3 = Color3.new(0, 1, 0) -- Green
@@ -4383,7 +4627,7 @@ local function C_d6()
 			end
 		end
 	end
-
+	
 	-- Function to create the health bar UI
 	local function createHealthBar(player, humanoid)
 		local billboardGui = Instance.new("BillboardGui")
@@ -4395,44 +4639,44 @@ local function C_d6()
 		billboardGui.MaxDistance = math.huge
 		if toggled == false then
 			billboardGui.Enabled = false
-		else
-			billboardGui.Enabled = true
+			else
+	        billboardGui.Enabled = true
 		end
-
+	
 		local background = Instance.new("Frame", billboardGui)
 		background.Size = UDim2.new(0.1, 0, 1, 0) -- Reduced width
 		background.Position = UDim2.new(0, 0, 0, 0) -- Align to the left
 		background.BackgroundColor3 = Color3.new(0, 0, 0)
 		background.BorderSizePixel = 0
-
+	
 		local healthFill = Instance.new("Frame", background)
 		healthFill.Name = "HealthFill"
 		healthFill.BorderSizePixel = 0
-
+	
 		-- Initialize health bar state
 		updateHealthBar(healthFill, humanoid)
-
+	
 		return billboardGui, healthFill
 	end
-
+	
 	-- Function to handle player character
 	local function onCharacterAdded(player)
 		-- เชื่อมต่อเมื่อผู้เล่นมีการ respawn
 		player.CharacterAdded:Connect(function(character)
 			-- รอให้ตัวละครโหลดครบถ้วน
 			task.wait(1)
-
+	
 			-- เช็คว่า character และ Humanoid มีอยู่
 			if character and character:FindFirstChild("Humanoid") then
 				local humanoid = character:FindFirstChild("Humanoid")
 				local rootPart = character:FindFirstChild("HumanoidRootPart")
-
+	
 				if humanoid and rootPart then
 					-- สร้าง health bar สำหรับตัวละครนี้
 					local healthBar, healthFill = createHealthBar(player, humanoid)
 					healthBar.Parent = rootPart
 					healthBars[player.UserId] = healthBar -- Store health bar reference
-
+	
 					-- อัพเดท health bar เมื่อสุขภาพเปลี่ยน
 					humanoid.HealthChanged:Connect(function()
 						if healthBarsEnabled then
@@ -4442,22 +4686,22 @@ local function C_d6()
 				end
 			end
 		end)
-
+	
 		-- ถ้าผู้เล่นมีตัวละครอยู่แล้วตอนเริ่ม
 		if player.Character then
 			local character = player.Character
 			task.wait(1)
-
+	
 			if character and character:FindFirstChild("Humanoid") then
 				local humanoid = character:FindFirstChild("Humanoid")
 				local rootPart = character:FindFirstChild("HumanoidRootPart")
-
+	
 				if humanoid and rootPart then
 					-- สร้าง health bar สำหรับตัวละครนี้
 					local healthBar, healthFill = createHealthBar(player, humanoid)
 					healthBar.Parent = rootPart
 					healthBars[player.UserId] = healthBar -- Store health bar reference
-
+	
 					-- อัพเดท health bar เมื่อสุขภาพเปลี่ยน
 					humanoid.HealthChanged:Connect(function()
 						if healthBarsEnabled then
@@ -4468,24 +4712,24 @@ local function C_d6()
 			end
 		end
 	end
-
+	
 	-- Detect when players join
 	Players.PlayerAdded:Connect(function(player)
 		onCharacterAdded(player) -- เชื่อมต่อเมื่อผู้เล่นมีการ respawn
 	end)
-
+	
 	-- Initial setup for all players (รวมถึงผู้เล่นที่อยู่แล้ว)
 	for _, player in pairs(Players:GetPlayers()) do
 		if player ~= LocalPlayer  then
 			onCharacterAdded(player)
 		end
 	end
-
+	
 	-- Function to toggle health bars on or off
 	local function toggleHealthBars()
 		healthBarsEnabled = not healthBarsEnabled
 		print("Health Bars Enabled: " .. tostring(healthBarsEnabled))
-
+	
 		-- Hide or show health bars based on the toggle
 		for _, player in pairs(Players:GetPlayers()) do
 			if healthBars[player.UserId] then
@@ -4499,9 +4743,9 @@ local function C_d6()
 			end
 		end
 	end
-
+	
 	-- Bind a key to toggle health bars (e.g., pressing 'H' on the keyboard)
-
+	
 	--[[
 	game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessed)
 		if gameProcessed then return end
@@ -4510,31 +4754,31 @@ local function C_d6()
 		end
 	end)
 	--]]
-
-
-
+	
+	
+	
 	local debounce = false
 	local nofire = false
-
-
+	
+	
 	function callback(state)
 		print(state)
 	end
-
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		if not debounce then
 			debounce = true
-
+	
 			local targetPosition, targetColor
-
+	
 			if toggled then
 				targetPosition = UDim2.new(0.05, 0,0, 2)
 				targetColor = Color3.fromRGB(200, 200, 200)
-
+	
 				toggleHealthBars()
-
+	
 				local Players = game:GetService("Players")
-
+	
 				for _, player in pairs(Players:GetPlayers()) do
 					if player.Character then
 						local rootPart = player.Character:FindFirstChild("HumanoidRootPart")
@@ -4546,16 +4790,16 @@ local function C_d6()
 						end
 					end
 				end
-
+	
 			else
 				targetPosition = UDim2.new(0.45, 0,0, 2)
 				targetColor = Color3.fromRGB(53, 255, 110)
-
+	
 				toggleHealthBars()
-
-
+	
+	
 				local Players = game:GetService("Players")
-
+	
 				for _, player in pairs(Players:GetPlayers()) do
 					if player.Character then
 						local rootPart = player.Character:FindFirstChild("HumanoidRootPart")
@@ -4568,13 +4812,13 @@ local function C_d6()
 					end
 				end
 			end
-
+	
 			local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 			local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-
+	
 			circleTween:Play()
 			toggleTween:Play()
-
+	
 			circleTween.Completed:Connect(function()
 				debounce = false
 				toggled = not toggled
@@ -4582,30 +4826,30 @@ local function C_d6()
 			end)
 		end
 	end)
-
-
-
-
-
-
+	
+	
+	
+	
+	
+	
 	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
-
+	
 		if gameProcessedEvent then return end
 		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode[script.Parent.Parent.Parent.Parent.Parent.SettingFrame.HealthBarSetting.Action1Text.Text] then
-
+	
 			if not debounce then
 				debounce = true
-
+	
 				local targetPosition, targetColor
-
+	
 				if toggled then
 					targetPosition = UDim2.new(0.05, 0,0, 2)
 					targetColor = Color3.fromRGB(200, 200, 200)
-
+	
 					toggleHealthBars()
-
+	
 					local Players = game:GetService("Players")
-
+	
 					for _, player in pairs(Players:GetPlayers()) do
 						if player.Character then
 							local rootPart = player.Character:FindFirstChild("HumanoidRootPart")
@@ -4617,16 +4861,16 @@ local function C_d6()
 							end
 						end
 					end
-
+	
 				else
 					targetPosition = UDim2.new(0.45, 0,0, 2)
 					targetColor = Color3.fromRGB(53, 255, 110)
-
+	
 					toggleHealthBars()
-
-
+	
+	
 					local Players = game:GetService("Players")
-
+	
 					for _, player in pairs(Players:GetPlayers()) do
 						if player.Character then
 							local rootPart = player.Character:FindFirstChild("HumanoidRootPart")
@@ -4639,13 +4883,13 @@ local function C_d6()
 						end
 					end
 				end
-
+	
 				local circleTween = game:GetService("TweenService"):Create(script.Parent.Parent.Circle, TweenInfo.new(0.25), {Position = targetPosition})
 				local toggleTween = game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(0.25), {ImageColor3 = targetColor})
-
+	
 				circleTween:Play()
 				toggleTween:Play()
-
+	
 				circleTween.Completed:Connect(function()
 					debounce = false
 					toggled = not toggled
@@ -4658,19 +4902,33 @@ end;
 task.spawn(C_d6);
 -- StarterGui.VoxlHubRL.test1.1.Alwayssetposition
 local function C_dc()
-	local script = G2L["dc"];
+local script = G2L["dc"];
+	local Main = script.Parent.Main
+	local Setting = script.Parent.setting
+	local Esp = script.Parent.esp
+	local Combat = script.Parent.combat
+	local Player = script.Parent.Player
+	
+	
+		Main.BackgroundTransparency = 0.65
+	Setting.BackgroundTransparency = 0.85
+	Esp.BackgroundTransparency = 0.85
+	Combat.BackgroundTransparency = 0.85
+	Player.BackgroundTransparency = 0.85
+	
+	
 	script.Parent.Position = UDim2.new(0.760, 0, 0.665, 0)
 end;
 task.spawn(C_dc);
 -- StarterGui.VoxlHubRL.Open/close
 local function C_dd()
-	local script = G2L["dd"];
+local script = G2L["dd"];
 	local UserInputService = game:GetService("UserInputService")
 	local player = game.Players.LocalPlayer
 	local playerGui = player:WaitForChild("PlayerGui")
-
+	
 	local isVisible = false
-
+	
 	-- Function to toggle the GUI visibility
 	local function toggleGuiVisibility()
 		if isVisible == false then
@@ -4681,37 +4939,37 @@ local function C_dd()
 			script.Parent["test1.1"].Visible = false
 		end
 	end
-
+	
 	-- Listen for key presses
 	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
 		-- Make sure it's not a game-processed event (e.g., typing in a textbox)
 		if gameProcessedEvent then return end
-
+	
 		-- Check if the pressed key is Left Alt
 		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode[script.Parent["test1.1"].SettingFrame.ToggleUI.Action1Text.Text] then
 			toggleGuiVisibility()
 		end
 	end)
-
-
+	
+	
 end;
 task.spawn(C_dd);
 -- StarterGui.VoxlHubRL.AnticheatBypass
 local function C_de()
-	local script = G2L["de"];
+local script = G2L["de"];
 	--// client anticheat bypass
-
+	
 	do
 		local function trigger_callback()
 			local anticheat_mode = library.flags["Anticheat Mode"]
-
+	
 			if anticheat_mode == "Block" then 
 				task_spawn(function()
 					global_variables.block_all_remotes = true
 					global_variables.block_all_animations = true
-
+	
 					wait(1)
-
+	
 					global_variables.block_all_animations = false
 					global_variables.block_all_remotes = false
 				end)
@@ -4719,208 +4977,208 @@ local function C_de()
 				player:Kick("Anticheat Triggered")
 			end
 		end 
-
+	
 		local nil_instances = getnilinstances()
 		local ban_animation_ids = {}
-
+	
 		for index = 1, #nil_instances do 
 			local value = nil_instances[index]
-
+	
 			if value.ClassName == "AnimationTrack" then 
 				local animation_instance = value.Animation
-
+	
 				if not animation_instance.Parent then
 					ban_animation_ids[animation_instance.AnimationId] = true
 				end
 			end
 		end
-
+	
 		if not ban_animation_ids["rbxassetid://4595066903"] then 
 			ban_animation_ids["rbxassetid://4595066903"] = true
 		end
-
+	
 		local humanoid = workspace.NPCs:FindFirstChildWhichIsA("Humanoid", true)
-
+	
 		local animation = instance_new("Animation")
 		animation.AnimationId = "rbxassetid://180435571"
-
+	
 		local animation_play = humanoid:LoadAnimation(animation).Play
-
+	
 		local old_animation_play
 		old_animation_play = replaceclosure(animation_play, newcclosure(function(self, ...)
 			if global_variables.block_all_animations then 
 				return
 			end 
-
+	
 			if typeof(self) == "Instance" and self.ClassName == "AnimationTrack" then
 				local animation_id = self.Animation.AnimationId:gsub("[^%w%s_]+", "")
-
+	
 				if ban_animation_ids[animation_id] then 
 					return trigger_callback()
 				end
 			end
-
+	
 			return old_animation_play(self, ...)
 		end))
-
+	
 		local blacklisted_character_descendants = {}
-
+	
 		local function update_character_blacklist(character)
 			wait(1)
-
+	
 			local character_descendants = character:GetDescendants()
-
+	
 			for index = 1, #character_descendants do 
 				local descendant = character_descendants[index]
-
+	
 				if not ((descendant.ClassName == "Accessory" and (descendant.Name == "Charge" or descendant.Name == "Blindness" or descendant.Name == "DamageMPStack" or descendant.Name == "VisionBlur" or descendant.Name == "Sprint" or descendant.Name == "Climbing" or descendant.Name == "ClimbCooldown")) or (descendant.ClassName == "BodyVelocity" and descendant.Name == "DodgeVel") or (descendant.ClassName == "BodyPosition" and descendant.Name == "BodyPosition")) then 
 					blacklisted_character_descendants[descendant] = true
 				end
 			end
 		end
-
+	
 		local character = player.Character or player.CharacterAdded:Wait()
-
+	
 		update_character_blacklist(character)
 		player.CharacterAdded:Connect(update_character_blacklist)
-
+	
 		local old_destroy
 		old_destroy = replaceclosure(game.Destroy, newcclosure(function(self)
 			if typeof(self) == "Instance" and blacklisted_character_descendants[self] then
 				return trigger_callback()
 			end
-
+	
 			return old_destroy(self)
 		end))
-
+	
 		local old_remove
 		old_remove = replaceclosure(game.Remove, newcclosure(function(self)
 			if typeof(self) == "Instance" and blacklisted_character_descendants[self] then
 				return trigger_callback()
 			end
-
+	
 			return old_remove(self)
 		end))
-
+	
 		local old_destroy_2
 		old_destroy_2 = replaceclosure(game.destroy, newcclosure(function(self)
 			if typeof(self) == "Instance" and blacklisted_character_descendants[self] then
 				return trigger_callback()
 			end
-
+	
 			return old_destroy_2(self)
 		end))
-
+	
 		local old_remove_2
 		old_remove_2 = replaceclosure(game.remove, newcclosure(function(self)
 			if typeof(self) == "Instance" and blacklisted_character_descendants[self] then
 				return trigger_callback()
 			end
-
+	
 			return old_remove_2(self)
 		end))
-
+	
 		local old_add_item
 		old_add_item = replaceclosure(services.Debris.AddItem, newcclosure(function(self, object, duration)
 			if blacklisted_character_descendants[object] then
 				return trigger_callback()
 			end
-
+	
 			return old_add_item(self, object, duration)
 		end))
-
+	
 		local old_add_item_2
 		old_add_item_2 = replaceclosure(services.Debris.addItem, newcclosure(function(self, object, duration)
 			if blacklisted_character_descendants[object] then
 				return trigger_callback()
 			end
-
+	
 			return old_add_item(self, object, duration)
 		end))
-
+	
 		local old_clear_all_children
 		old_clear_all_children = replaceclosure(game.ClearAllChildren, newcclosure(function(self)
 			local character = player.Character
-
+	
 			if character and self == character then 
 				return trigger_callback() 
 			end
-
+	
 			return old_clear_all_children(self)
 		end))
-
+	
 		local old_clear_all_children_2
 		old_clear_all_children_2 = replaceclosure(game.clearAllChildren, newcclosure(function(self)
 			local character = player.Character
-
+	
 			if character and self == character then 
 				return trigger_callback() 
 			end
-
+	
 			return old_clear_all_children_2(self)
 		end))
-
+	
 		local old_coroutine_wrap
 		old_coroutine_wrap = replaceclosure(coroutine.wrap, newcclosure(function(func)
 			if type(func) == "function" and islclosure(func) then
 				local upvalues = getupvalues(func)
-
+	
 				if #upvalues == 1 and upvalues[1] == services.RunService and getinfo(func, "n").name == "" then
 					return function() end
 				end
 			end
-
+	
 			return old_coroutine_wrap(func)
 		end))
-
+	
 		local old_namecall
 		old_namecall = hookmetamethod(game, "__namecall", function(self, ...)
 			local arguments = {...}
 			local method = string.lower(getnamecallmethod())
-
+	
 			if ((not checkcaller() and method == "destroy") or method == "remove") and typeof(self) == "Instance" and blacklisted_character_descendants[self] then 
 				return trigger_callback()
 			elseif method == "additem" and self == services.Debris then 
 				local object = arguments[1]
-
+	
 				if typeof(object) == "instance" and blacklisted_character_descendants[object] then
 					return trigger_callback()
 				end
 			elseif method == "clearallchildren" then
 				local character = player.Character
-
+	
 				if character and self == character then 
 					return trigger_callback()
 				end
 			elseif method == "play" and typeof(self) == "Instance" and self.ClassName == "AnimationTrack" and ban_animation_ids[self.Animation.AnimationId] then 
 				return trigger_callback()
 			end
-
+	
 			return old_namecall(self, ...)
 		end)
-
+	
 		local connections = getconnections(game.ScriptContext.Error)
-
+	
 		for index = 1, #connections do 
 			connections[index]:Disable()
 		end
 	end
-
+	
 	--// keyhandler bypass
-
+	
 	do
 		local key_handler = services.ReplicatedStorage:WaitForChild("Assets"):WaitForChild("Modules"):WaitForChild("KeyHandler")
-
+	
 		local patcher = {}
 		patcher.__index = patcher
-
+	
 		local psu_struct = {
 			stack_next = "sBgaL",
 			register_c = 639954,
 			register_bx = "jDWh3",
 			register_b = -50014
 		}
-
+	
 		function patcher.new(psu_function)
 			return setmetatable({
 				upvalues = getupvalues(psu_function),
@@ -4930,13 +5188,13 @@ local function C_de()
 				current_instruction = 0
 			}, patcher)
 		end
-
+	
 		function patcher:grab_dependencies()
 			for index, upvalue in ipairs(self.upvalues) do 
 				if type(upvalue) == "table" then
 					if upvalue[0] then
 						local entry = upvalue[0]
-
+	
 						if entry and type(entry) == "table" then 
 							if entry[psu_struct.stack_next] then 
 								self.instructions = upvalue
@@ -4947,163 +5205,163 @@ local function C_de()
 					end
 				end
 			end
-
+	
 			assert(self.instructions, "unable to find instructions!")
 			assert(self.stack, "unable to find stack!")
 		end
-
+	
 		function patcher:patch_instruction(old_value, new_value)
 			for index, value in next, new_value do 
 				old_value[index] = value
 			end
 		end
-
+	
 		function patcher:patch_method(method, ...)
 			if method == 1 then
 				local current_instruction = self.current_instruction
 				local eq_amount = 0
-
+	
 				while true do
 					local instruction = self.instructions[current_instruction] 
-
+	
 					if type(instruction[psu_struct.register_b]) == "table" then 
 						eq_amount = eq_amount + 1
 					else
 						eq_amount = 0
 					end
-
+	
 					if eq_amount == 2 then 
 						local to_patch_instruction = self.instructions[current_instruction - 1]
 						local go_to_instruction = instruction[psu_struct.register_b]
-
+	
 						self:patch_instruction(to_patch_instruction, go_to_instruction)
 						current_instruction = table_find(self.instructions, go_to_instruction)
 						break
 					end
-
+	
 					current_instruction = current_instruction + 1
 				end
-
+	
 				self.current_instruction = current_instruction
 			elseif method == 2 then 
 				local current_instruction = self.current_instruction
 				local to_patch_instruction
-
+	
 				while true do 
 					local instruction = self.instructions[current_instruction]
-
+	
 					if type(instruction[psu_struct.register_b]) == "table" then 
 						if self.instructions[current_instruction + 2][psu_struct.register_c] == "LocalPlayer" then 
 							local to_patch_instruction = instruction
 							local go_to_instruction = instruction[psu_struct.register_b]
-
+	
 							self:patch_instruction(to_patch_instruction, go_to_instruction)
 							current_instruction = table_find(self.instructions, go_to_instruction)
 							break
 						end
 					end
-
+	
 					current_instruction = current_instruction + 1
 				end
-
+	
 				self.current_instruction = current_instruction
 			elseif method == 3 then
 				local current_instruction = self.current_instruction
 				local to_patch_instruction
-
+	
 				while true do 
 					local instruction = self.instructions[current_instruction]
-
+	
 					if type(instruction[psu_struct.register_b]) == "table" then 
 						if self.instructions[current_instruction - 3][psu_struct.register_c] == "FindFirstChild" then 
 							local to_patch_instruction = instruction
 							local go_to_instruction = instruction[psu_struct.register_b]
-
+	
 							self:patch_instruction(to_patch_instruction, go_to_instruction)
 							current_instruction = table_find(self.instructions, go_to_instruction)
 							break
 						end
 					end
-
+	
 					current_instruction = current_instruction + 1
 				end
-
+	
 				self.current_instruction = current_instruction
 			elseif method == 4 then
 				local current_instruction = self.current_instruction
 				local to_patch_instruction
-
+	
 				while true do 
 					local instruction = self.instructions[current_instruction]
-
+	
 					if type(instruction[psu_struct.register_b]) == "table" then 
 						if type(self.instructions[current_instruction + 2][psu_struct.register_bx]) == "table" and type(self.instructions[current_instruction + 5][psu_struct.register_bx]) == "table" then 
 							local to_patch_instruction = instruction
 							local go_to_instruction = instruction[psu_struct.register_b]
-
+	
 							self:patch_instruction(to_patch_instruction, go_to_instruction)
 							current_instruction = table_find(self.instructions, go_to_instruction)
 							break
 						end
 					end
-
+	
 					current_instruction = current_instruction + 1
 				end
-
+	
 				self.current_instruction = current_instruction
 			elseif method == 5 then
 				local current_instruction = self.current_instruction
 				local to_patch_instruction
-
+	
 				local arguments = {...}
-
+	
 				while true do 
 					local instruction = self.instructions[current_instruction]
-
+	
 					if type(instruction[psu_struct.register_b]) == "table" then 
 						if self.instructions[current_instruction + arguments[1]][psu_struct.register_b] == "EEKEWAEJIWAJDOIWAJDIOJAWDIOJAWODJOAIW" then 
 							local to_patch_instruction = instruction
 							local go_to_instruction = instruction[psu_struct.register_b]
-
+	
 							self:patch_instruction(to_patch_instruction, go_to_instruction)
 							current_instruction = table_find(self.instructions, go_to_instruction)
 							break
 						end
 					end
-
+	
 					current_instruction = current_instruction + 1
 				end
-
+	
 				self.current_instruction = current_instruction
 			elseif method == 6 then
 				local current_instruction = self.current_instruction
 				local to_patch_instruction
-
+	
 				while true do 
 					local instruction = self.instructions[current_instruction]
-
+	
 					if type(instruction[psu_struct.register_b]) == "table" then 
 						if type(self.instructions[current_instruction + 4][psu_struct.register_b]) == "table" then 
 							local to_patch_instruction = instruction
 							local go_to_instruction = self.instructions[current_instruction + 4][psu_struct.register_b]
-
+	
 							self:patch_instruction(to_patch_instruction, go_to_instruction)
 							current_instruction = table_find(self.instructions, go_to_instruction)
 							break
 						end
 					end
-
+	
 					current_instruction = current_instruction + 1
 				end
-
+	
 				self.current_instruction = current_instruction
 			elseif method == 7 then
 				local current_instruction = self.current_instruction
 				local to_patch_instruction
-
+	
 				while true do 
 					local instruction = self.instructions[current_instruction]
-
+	
 					if type(instruction[psu_struct.register_b]) == "table" then 
 						local success = true
 						for index = 1, 5 do 
@@ -5111,24 +5369,24 @@ local function C_de()
 								success = false
 							end
 						end
-
+	
 						if success then
 							local to_patch_instruction = instruction
 							local go_to_instruction = instruction[psu_struct.register_b]
-
+	
 							self:patch_instruction(to_patch_instruction, go_to_instruction)
 							current_instruction = table_find(self.instructions, go_to_instruction)
 							break
 						end
 					end
-
+	
 					current_instruction = current_instruction + 1
 				end
-
+	
 				self.current_instruction = current_instruction
 			end
 		end
-
+	
 		function patcher:patch_instructions(patch_type)
 			if patch_type == 1 then -- module type
 				self.instructions[0] = self.instructions[#self.instructions - 5]
@@ -5144,29 +5402,29 @@ local function C_de()
 				end
 			end
 		end
-
+	
 		function patcher:patch(patch_type)
 			self:grab_dependencies()
-
+	
 			self:patch_instructions(patch_type)
 		end
-
+	
 		--// assert(getscripthash(key_handler) == "28607f8aeb5399560e87712f42c5a6700c96c6c4d9f3209004c89bfa7766916410af5b0e6492eafb55c57b261693b192", "KeyHandler Script Updated!")
-
+	
 		local character = player.Character or player.CharacterAdded:Wait()
 		local input_script = character:WaitForChild("CharacterHandler"):WaitForChild("Input")
-
+	
 		--// assert(getscripthash(input_script) == "29e1a68e700408e58d97ab1b19afb63a8b50a0c868635d7e8abc4a81002639a3b63f4061a726c7dfc1eecf989da70931", "Input Script Updated!")
-
+	
 		local input_protos = getprotos(getscriptclosure(input_script))
-
+	
 		for index = 1, #input_protos do 
 			local proto = input_protos[index]
 			local constants = getconstants(proto)
-
+	
 			if table_find(constants, "SpeedBoost") and table_find(constants, "HasHammer") then 
 				local dodge_function = getproto(proto, 1)
-
+	
 				setupvalue(dodge_function, 1, function() end)
 				setupvalue(dodge_function, 2,  function(key)
 					dodge_fpe_key = tonumber(("%0.50f"):format(key)) -- terrible method
@@ -5174,53 +5432,53 @@ local function C_de()
 				setupvalue(dodge_function, 3, tonumber)
 				setupvalue(dodge_function, 4, tostring)
 				setupvalue(dodge_function, 5, function() end)
-
+	
 				dodge_function()
-
+	
 				break
 			end
 		end
-
+	
 		local keyhandler_module = require(key_handler)
-
+	
 		local module_patcher = patcher.new(keyhandler_module)
 		module_patcher:patch(1)
-
+	
 		local get_key = keyhandler_module()[1]
-
+	
 		local get_key_patcher = patcher.new(get_key)
 		get_key_patcher:patch(2)
-
+	
 		local remote_cache = {}
 		local character_cache
 		local live_folder = workspace:WaitForChild("Live")
-
+	
 		global_variables.remotes = setmetatable({}, {
 			__index = function(self, index)
 				local cached_remote = remote_cache[index]
 				local remote_result
-
+	
 				if player.Character ~= character_cache then
 					remote_result = get_key(index == "Dodge" and dodge_fpe_key or index, "plum")
-
+	
 					if remote_result and typeof(remote_result) == "Instance" and remote_result:IsDescendantOf(live_folder) then 
 						character_cache = player.Character
-
+	
 						remote_cache[index] = remote_result
 						return remote_result
 					end
 				end
-
+	
 				if not cached_remote then 
 					remote_result = remote_result or get_key(index == "Dodge" and dodge_fpe_key or index, "plum")
-
+	
 					if remote_result and typeof(remote_result) == "Instance" then
 						remote_cache[index] = remote_result
 					end 
-
+	
 					return remote_result
 				end 
-
+	
 				return cached_remote
 			end
 		})
